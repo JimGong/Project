@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
@@ -62,6 +66,29 @@ public class WordMap {
 				WordLocation myLocation = correspondingVal.get(i);
 				System.out.println(myLocation);
 			}
+		}
+	}
+
+	public void writeWordMap(File outputPath) {
+		try {
+			FileWriter fw = new FileWriter(outputPath);
+			BufferedWriter bw = new BufferedWriter(fw);
+
+			for (String key : wordMap.keySet()) {
+				ArrayList<WordLocation> correspondingVal = wordMap.get(key);
+				// System.out.println("\n" + key);
+				bw.write("\n" + key + "\n");
+				for (int i = 0; i < correspondingVal.size(); i++) {
+					WordLocation myLocation = correspondingVal.get(i);
+					// System.out.println(myLocation);
+					bw.write(myLocation.toString());
+				}
+			}
+			bw.close();
+
+		} catch (IOException e) {
+			System.err.println("IOException!");
+			e.printStackTrace();
 		}
 
 	}

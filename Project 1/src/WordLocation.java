@@ -12,7 +12,12 @@ public class WordLocation {
 
 	@Override
 	public String toString() {
-		return fileName + ", " + positions;
+		String output = '"' + fileName + '"';
+		for (int position : positions) {
+			output += ", " + position;
+		}
+		output += "\n";
+		return output;
 	}
 
 }

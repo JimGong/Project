@@ -9,7 +9,40 @@ public class InvertedIndex {
 	WordMap wordMap = new WordMap();
 	int position = 1;
 
-	public boolean isTxtFile(String fileName) {
+	File inputDir;
+	File outputPath;
+
+	public void start(String[] args) {
+		boolean foundInputDir = false;
+		boolean foundOutputPath = false;
+		for (int i = 0; i < (args.length - 1); i++) {
+			System.out.println("i: " + i + " -- " + args[i]);
+			if (args[i].equals("-d")) {
+				System.out.println("-d found");
+				inputDir = new File(args[i + 1]);
+				foundInputDir = true;
+			}
+			if (args[i].equals("-i")) {
+				outputPath = new File(args[i + 1]);
+				foundOutputPath = true;
+			}
+		}
+
+		if (foundInputDir == false) {
+			System.out.println("You should input a directory! Try it again.");
+			System.exit(0);
+		}
+		if (foundOutputPath == false) {
+			outputPath = new File("index.txt");
+		}
+		System.out.println("input Dir: " + inputDir.getPath());
+		System.out.println("output Path: " + outputPath.getPath());
+
+		dirTraverse(inputDir);
+		writeOutput(outputPath);
+	}
+
+	private boolean isTxtFile(String fileName) {
 		if (fileName.endsWith(".txt")) {
 			return true;
 		}
@@ -19,7 +52,7 @@ public class InvertedIndex {
 
 	}
 
-	public String readline(File dir) {
+	private String readline(File dir) {
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(dir));
@@ -30,7 +63,7 @@ public class InvertedIndex {
 				// System.out.println("\n#### split it into words ####\n");
 				String[] words = splitLine(line);
 				for (int i = 0; i < words.length; i++) {
-					wordMap.buildMap(words[i], dir.getName(), position);
+					wordMap.buildMap(words[i], dir.getPath(), position);
 					position++;
 				}
 
@@ -48,12 +81,14 @@ public class InvertedIndex {
 		return "";
 	}
 
-	public String[] splitLine(String line) {
+	private String[] splitLine(String line) {
 		String[] words = line.split(" ");
 
 		for (int i = 0; i < words.length; i++) {
 			words[i] = words[i].trim();
 			words[i] = words[i].toLowerCase();
+			words[i] = words[i].replaceAll("\\s", " ");
+			words[i] = words[i].replaceAll("\\W", "");
 		}
 		// for (int i = 0; i < words.length; i++) {
 		// System.out.println(words[i]);
@@ -62,9 +97,9 @@ public class InvertedIndex {
 		return words;
 	}
 
-	public void dirTraverse(File dir) {
+	private void dirTraverse(File dir) {
 
-		System.out.println("\ncurrent at: " + dir.getPath());
+		// System.out.println("\ncurrent at: " + dir.getPath());
 		if (dir.isDirectory()) {
 			File[] subDir = dir.listFiles();
 
@@ -82,7 +117,7 @@ public class InvertedIndex {
 		}
 		if (dir.isFile()) {
 			if (isTxtFile(dir.getName())) {
-				System.err.println("--------- " + dir.getName());
+				// System.err.println("--------- " + dir.getName());
 				// should read file
 				readline(dir);
 			}
@@ -97,12 +132,9 @@ public class InvertedIndex {
 		System.err.println("---- DONE ----");
 	}
 
-	public static void main(String args[]) {
-		InvertedIndex i = new InvertedIndex();
-		File dir = new File("/Users/JiaMinGong/Desktop/TestFolder");
-		i.dirTraverse(dir);
-
-		i.printWordMap();
+	private void writeOutput(File outputPath) {
+		wordMap.writeWordMap(outputPath);
+		System.err.println("---- Output Written ----");
 	}
 
 }
