@@ -16,9 +16,9 @@ public class InvertedIndex {
 		boolean foundInputDir = false;
 		boolean foundOutputPath = false;
 		for (int i = 0; i < (args.length - 1); i++) {
-			System.out.println("i: " + i + " -- " + args[i]);
+			// System.out.println("i: " + i + " -- " + args[i]);
 			if (args[i].equals("-d")) {
-				System.out.println("-d found");
+				// System.out.println("-d found");
 				inputDir = new File(args[i + 1]);
 				foundInputDir = true;
 			}
@@ -35,10 +35,12 @@ public class InvertedIndex {
 		if (foundOutputPath == false) {
 			outputPath = new File("index.txt");
 		}
-		System.out.println("input Dir: " + inputDir.getPath());
-		System.out.println("output Path: " + outputPath.getPath());
+		// System.out.println("input Dir: " + inputDir.getPath());
+		// System.out.println("output Path: " + outputPath.getPath());
 
 		dirTraverse(inputDir);
+		printWordMap();
+
 		writeOutput(outputPath);
 	}
 
@@ -63,10 +65,9 @@ public class InvertedIndex {
 				// System.out.println("\n#### split it into words ####\n");
 				String[] words = splitLine(line);
 				for (int i = 0; i < words.length; i++) {
-					wordMap.buildMap(words[i], dir.getPath(), position);
+					wordMap.buildMap(words[i], dir.getName(), position);
 					position++;
 				}
-
 			}
 
 		} catch (FileNotFoundException e) {
@@ -77,7 +78,6 @@ public class InvertedIndex {
 			e.printStackTrace();
 			System.exit(0);
 		}
-
 		return "";
 	}
 
@@ -125,16 +125,16 @@ public class InvertedIndex {
 
 	}
 
-	public void printWordMap() {
-		System.err.println("\n---- Printing Map ----");
+	private void printWordMap() {
+		System.out.println("\n---- Printing Map ----");
 		wordMap.printWordMap();
 
-		System.err.println("---- DONE ----");
+		System.out.println("---- DONE ----");
 	}
 
 	private void writeOutput(File outputPath) {
 		wordMap.writeWordMap(outputPath);
-		System.err.println("---- Output Written ----");
+		System.out.println("---- Output Written ----");
 	}
 
 }

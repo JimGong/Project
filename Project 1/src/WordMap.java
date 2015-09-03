@@ -3,15 +3,16 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class WordMap {
 
 	private Map<String, ArrayList<WordLocation>> wordMap;
 
 	public WordMap() {
-		wordMap = new TreeMap();
+		wordMap = new HashMap();
 	}
 
 	private boolean hasKey(String key) {
@@ -19,7 +20,6 @@ public class WordMap {
 			return true;
 		}
 		return false;
-
 	}
 
 	private boolean hasFile(String key, String file) {
@@ -37,24 +37,33 @@ public class WordMap {
 
 	public void buildMap(String key, String fileName, int position) {
 		if (hasKey(key) == false) {
+			System.out.println("---- has no key ---- " + key);
 			ArrayList<WordLocation> newVal = new ArrayList<WordLocation>();
 			newVal.add(new WordLocation(fileName, position));
 			wordMap.put(key, newVal);
 		}
 		else if (hasKey(key) && hasFile(key, fileName)) {
+			System.out.println("---- has key ---- " + key
+					+ " && ---- has file ----" + fileName);
 			ArrayList<WordLocation> myVal = wordMap.get(key);
 
 			for (int i = 0; i < myVal.size(); i++) {
 				String file = myVal.get(i).fileName;
+				System.out.println("fileName: " + file + "target fileName: "
+						+ fileName + "  ==  " + file.equals(fileName));
 				if (file.equals(fileName)) {
 					myVal.get(i).positions.add(position);
 				}
 			}
 		}
 		else if (hasKey(key) && (hasFile(key, fileName) == false)) {
+			System.out.println("---- has key ---- " + key
+					+ " && ---- does not has file ----" + fileName);
 			ArrayList<WordLocation> myVal = wordMap.get(key);
 			myVal.add(new WordLocation(fileName, position));
 		}
+
+		sortArrayList();
 
 	}
 
@@ -77,12 +86,18 @@ public class WordMap {
 			for (String key : wordMap.keySet()) {
 				ArrayList<WordLocation> correspondingVal = wordMap.get(key);
 				// System.out.println("\n" + key);
-				bw.write("\n" + key + "\n");
+				bw.write(key + "\n");
 				for (int i = 0; i < correspondingVal.size(); i++) {
 					WordLocation myLocation = correspondingVal.get(i);
 					// System.out.println(myLocation);
-					bw.write(myLocation.toString());
+					bw.write(myLocation.fileName);
+					for (int position : myLocation.positions) {
+						bw.write(", " + position);
+					}
+					bw.write("\n");
+
 				}
+				bw.write("\n");
 			}
 			bw.close();
 
@@ -90,7 +105,13 @@ public class WordMap {
 			System.err.println("IOException!");
 			e.printStackTrace();
 		}
-
 	}
 
+	private void sortArrayList() {
+		// sort arraylist by fileName
+		for (String key : wordMap.keySet()) {
+			ArrayList<WordLocation> myVal = wordMap.get(key);
+			Collections.sort(myVal, WordLocation.FileNameComparator);
+		}
+	}
 }
