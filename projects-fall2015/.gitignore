@@ -1,0 +1,7 @@
+bin/
+output/
+.settings/
+.metadata
+*.class
+.DS_Store
+/*.json
