@@ -1,8 +1,3 @@
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
 
 /**
@@ -105,24 +100,26 @@ public class Driver {
 	 *            set of flag and value pairs
 	 */
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString(args));
+		System.out.println("args: " + Arrays.toString(args));
 
 		InvertedIndex i = new InvertedIndex();
-		i.dirTraverse(new File("/Users/JiaMinGong/Desktop/TestFolder"));
-		String name = "output.json";
-		Path outputPath = Paths.get(".", "output", name);
+		i.start(args);
+		// i.dirTraverse(new File("/Users/JiaMinGong/Desktop/TestFolder"));
+		// String name = "output.json";
+		// Path outputPath = Paths.get(".", "output", name);
 
-		try {
+		// try {
 
-			Files.createDirectories(outputPath.getParent());
+		// Files.createDirectories(outputPath.getParent());
 
-			Files.deleteIfExists(outputPath);
+		// Files.deleteIfExists(outputPath);
 
-		} catch (IOException e) {
-			System.out.println("screw you");
-			e.printStackTrace();
-		}
+		// } catch (IOException e) {
+		// System.out.println("screw you");
+		// e.printStackTrace();
+		// }
+		// i.printWordMap();
 
-		i.printWordMap(outputPath);
+		// i.printWordMap(outputPath);
 	}
 }

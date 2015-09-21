@@ -3,12 +3,35 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Path;
 
 public class InvertedIndex {
 
+	private ArgumentParser parser;
 	private WordMap wordMap = new WordMap();
-	private int position = 1;
+	private int position;
+
+	public void start(String[] args) {
+		// get correct input;
+		parser = new ArgumentParser(args);
+		// String inputFile = parser.getValue(Driver.INPUT_FLAG);
+
+		try {
+			dirTraverse(new File(parser.getValue(Driver.INPUT_FLAG)));
+		} catch (Exception e) {
+			System.out.println("Exception caught in getting input");
+			return;
+		}
+
+		if (parser.hasFlag(Driver.INDEX_FLAG)) {
+			if (parser.getValue(Driver.INDEX_FLAG) == null) {
+				printWordMap(new File(Driver.INDEX_DEFAULT));
+			}
+			else {
+				printWordMap(new File(parser.getValue(Driver.INDEX_FLAG)));
+			}
+		}
+
+	}
 
 	public void dirTraverse(File path) {
 
@@ -22,8 +45,9 @@ public class InvertedIndex {
 			}
 		}
 		if (path.isFile()) {
-			if (path.getName().endsWith(".txt")) {
+			if (path.getName().toLowerCase().endsWith(".txt")) {
 				System.out.println("TXT File Found ---- " + path.getName());
+				position = 1;
 				bufferedReadLine(path);
 			}
 		}
@@ -39,7 +63,7 @@ public class InvertedIndex {
 			while ((line = br.readLine()) != null) {
 				String[] words = splitLine(line);
 				for (String word : words) {
-					wordMap.add(word, dir.getName(), position);
+					wordMap.add(word, dir.getPath(), position);
 					position++;
 				}
 
@@ -79,8 +103,8 @@ public class InvertedIndex {
 
 	private final String SPLIT_REGEX = "(?U)\\p{Space}+";
 
-	public void printWordMap(Path output) {
-		wordMap.printWordMap(output);
+	public void printWordMap(File output) {
+		wordMap.printWordMap(output.toPath());
 	}
 
 }
