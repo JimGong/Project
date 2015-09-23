@@ -11,7 +11,7 @@ public class ArgumentParser {
 
 	public ArgumentParser(String[] args) {
 		this();
-		System.out.println("num args: " + args.length);
+		// System.out.println("num args: " + args.length);
 		parseArguments(args);
 	}
 
@@ -28,14 +28,14 @@ public class ArgumentParser {
 			}
 
 			if (isFlag(curArg) && isValue(nextArg)) {
-				System.out.println("flag: " + curArg + " found -- value: "
-						+ nextArg + " found");
+				// System.out.println("flag: " + curArg + " found -- value: "
+				// + nextArg + " found");
 				argumentMap.put(curArg, nextArg);
 
 				i++;
 			}
 			else if (isFlag(curArg) && (isValue(nextArg) == false)) {
-				System.out.println("flag: " + curArg + " found");
+				// System.out.println("flag: " + curArg + " found");
 				argumentMap.put(curArg, null);
 
 			}

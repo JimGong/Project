@@ -46,7 +46,7 @@ public class InvertedIndex {
 		}
 		if (path.isFile()) {
 			if (path.getName().toLowerCase().endsWith(".txt")) {
-				System.out.println("TXT File Found ---- " + path.getName());
+				// System.out.println("TXT File Found ---- " + path.getName());
 				position = 1;
 				bufferedReadLine(path);
 			}

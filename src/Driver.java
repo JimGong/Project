@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * This software driver class provides a consistent entry point for the search
  * engine. Based on the arguments provided to {@link #main(String[])}, it
@@ -100,7 +98,7 @@ public class Driver {
 	 *            set of flag and value pairs
 	 */
 	public static void main(String[] args) {
-		System.out.println("args: " + Arrays.toString(args));
+		// System.out.println("args: " + Arrays.toString(args));
 
 		InvertedIndex i = new InvertedIndex();
 		i.start(args);
