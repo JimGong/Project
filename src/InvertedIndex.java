@@ -3,12 +3,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class InvertedIndex {
 
 	private ArgumentParser parser;
 	private WordMap wordMap = new WordMap();
 	private int position;
+	private ArrayList<File> fileList = new ArrayList<>();
 
 	public void start(String[] args) {
 		// get correct input;
@@ -46,6 +49,8 @@ public class InvertedIndex {
 		}
 		if (path.isFile()) {
 			if (path.getName().toLowerCase().endsWith(".txt")) {
+
+				fileList.add(path);
 				// System.out.println("TXT File Found ---- " + path.getName());
 				position = 1;
 				bufferedReadLine(path);
@@ -102,6 +107,11 @@ public class InvertedIndex {
 	private final String CLEAN_REGEX = "(?U)[^\\p{Alnum}\\p{Space}]+";
 
 	private final String SPLIT_REGEX = "(?U)\\p{Space}+";
+
+	public ArrayList<File> getFileLists() {
+		Collections.sort(fileList);
+		return (ArrayList<File>) Collections.unmodifiableList(fileList);
+	}
 
 	public void printWordMap(File output) {
 		wordMap.printWordMap(output.toPath());
