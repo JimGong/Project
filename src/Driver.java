@@ -108,6 +108,16 @@ public class Driver {
 		InvertedIndex i = new InvertedIndex();
 		i.start(args);
 		
+		/* TODO After you change your class names...
+		   InvertedIndex index = new InvertedIndex();
+		   
+		   based on argument parsing...
+		   InvertedIndexBuilder.traverseDirectory(...);
+		   
+		   based on argument parsing...
+		   index.print(...)
+		*/
+		
 		// i.dirTraverse(new File("/Users/JiaMinGong/Desktop/TestFolder"));
 		// String name = "output.json";
 		// Path outputPath = Paths.get(".", "output", name);
