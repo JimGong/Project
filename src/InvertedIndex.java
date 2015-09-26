@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+// TODO Rename this to InvertedIndexBuilder
 public class InvertedIndex {
 
+	// TODO Remove all members, use local variables where posisble
 	private ArgumentParser parser;
 	private WordMap wordMap = new WordMap();
 	private int position;
@@ -36,8 +38,10 @@ public class InvertedIndex {
 
 	}
 
+	// TODO public static void traverseDirectory(Path directory, InvertedIndex index)
 	public void dirTraverse(File path) {
-
+		// TODO Use Java NIO (versions 7 and 8), not File with is Java 6
+		// TODO See lectures https://github.com/cs212/lectures/tree/fall2015/Files and Exceptions
 		if (path.isDirectory()) {
 			File[] subDir = path.listFiles();
 
@@ -58,9 +62,12 @@ public class InvertedIndex {
 		}
 
 	}
+	
+	// TODO No exception handling in private methods, let the public methods handle it
 
 	// read input by bufferedReader
 	private void bufferedReadLine(File dir) {
+		// TODO int position = 1 (as a local variable)
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(dir));
@@ -84,6 +91,7 @@ public class InvertedIndex {
 
 	}
 
+	// TODO public static String[] split(String line)...
 	private String[] splitLine(String str) {
 		String[] words = null;
 		str = clean(str);
@@ -97,6 +105,7 @@ public class InvertedIndex {
 		return words;
 	}
 
+	// TODO Same as above
 	private String clean(String str) {
 		str = str.toLowerCase();
 		str = str.replaceAll(CLEAN_REGEX, "");
@@ -108,6 +117,7 @@ public class InvertedIndex {
 
 	private final String SPLIT_REGEX = "(?U)\\p{Space}+";
 
+	// TODO Remove these methods after this point
 	public ArrayList<File> getFileLists() {
 		Collections.sort(fileList);
 		return (ArrayList<File>) Collections.unmodifiableList(fileList);
