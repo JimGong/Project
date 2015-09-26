@@ -1,9 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+// TODO Add back Javadoc comments to every member, method, and class.
+// TODO http://www.oracle.com/technetwork/articles/java/index-137868.html
+
 public class ArgumentParser {
 
-	private final Map<String, String> argumentMap;
+	private final Map<String, String> argumentMap; // TODO Good use of final
 
 	public ArgumentParser() {
 		argumentMap = new HashMap<>();
@@ -21,6 +24,8 @@ public class ArgumentParser {
 			String nextArg;
 
 			if ((i + 1) < args.length) {
+				// TODO Really only remove spaces at the start or the end of the String args[i + 1].trim()
+				// TODO Example: -input "/home/user/sjengle/My Documents/blah" (spaces can appear in the middle of a path)
 				nextArg = args[i + 1].replaceAll("\\s+", "");
 			}
 			else {
@@ -43,6 +48,7 @@ public class ArgumentParser {
 
 	}
 
+	// TODO Make static again: faster code and easier to reuse this method
 	public boolean isFlag(String arg) {
 		arg = arg.trim();
 		if (arg.startsWith("-") && (arg.length() > 1) && (!arg.endsWith(" "))) {
@@ -53,6 +59,7 @@ public class ArgumentParser {
 		}
 	}
 
+	// TODO Make static
 	public boolean isValue(String arg) {
 		if ((!arg.startsWith("-")) && (arg.length() >= 1) && (arg != " ")
 				&& (!arg.endsWith("-"))) {

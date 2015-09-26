@@ -7,23 +7,34 @@ import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+// TODO This should be the "InvertedIndex" class (use "Refactor" functionality in Eclipse)
 public class WordMap {
 
+	// TODO Use final (rename it to "index")
 	private TreeMap<String, TreeMap<String, TreeSet<Integer>>> wordMap;
 
 	public WordMap() {
 		wordMap = new TreeMap<>();
 	}
+	
+	/* TODO
+	   Consider adding helpful methods like hasWord(String word), hasPath(String word, String path), hasPosition(...)
+	*/
 
 	public void add(String word, String file, int position) {
 		if (wordMap.containsKey(word) == false) {
+			// TODO Rename to "positions"
 			TreeSet<Integer> positionSet = new TreeSet<Integer>();
 			positionSet.add(position);
+			
+			// TODO Rename to "fileMap"
 			TreeMap<String, TreeSet<Integer>> newSubMap = new TreeMap<String, TreeSet<Integer>>();
 			newSubMap.put(file, positionSet);
 			wordMap.put(word, newSubMap);
 		}
 		else if (wordMap.containsKey(word) == true) {
+			// TODO Rethink your variable names
+			
 			TreeMap<String, TreeSet<Integer>> myVal = wordMap.get(word);
 			// 1. create new subMap, add new file and position (file doesn't
 			// exist)
@@ -65,6 +76,10 @@ public class WordMap {
 	public void printWordMap(Path output) {
 		BufferedWriter bw;
 		FileWriter fw;
+		
+		// TODO Use try-with-resources
+		// TODO https://github.com/cs212/lectures/tree/fall2015/Files%20and%20Exceptions
+		
 		try {
 			fw = new FileWriter(output.toFile());
 			bw = new BufferedWriter(fw);
@@ -83,9 +98,10 @@ public class WordMap {
 				}
 			}
 			bw.write("\n}");
-			bw.close();
+			bw.close(); // TODO Improper way to close resources
 
 		} catch (IOException e) {
+			// TODO Not a user-friendly exception message.
 			System.out.println("### IOException in printWordMap() ####");
 			// e.printStackTrace();
 		}
@@ -97,6 +113,8 @@ public class WordMap {
 			BufferedWriter bw) {
 
 		try {
+			// TODO Call bw.newLine() to add a newline character in a system-independent way
+			
 			bw.write("\n" + indent(1) + quote(entry.getKey()));
 			bw.write(": {");
 			TreeMap<String, TreeSet<Integer>> subMap = entry.getValue();
@@ -114,6 +132,8 @@ public class WordMap {
 			bw.write("\n" + indent(1) + "}");
 
 		} catch (IOException e) {
+			// TODO Fix :)
+			// TODO Private methods almost always throws the exceptions to a public method
 			System.out.println("#### IOExcepetion in output_OutSide() ####");
 			e.printStackTrace();
 		}
