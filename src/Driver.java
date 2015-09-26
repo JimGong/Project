@@ -100,8 +100,14 @@ public class Driver {
 	public static void main(String[] args) {
 		// System.out.println("args: " + Arrays.toString(args));
 
+		// TODO Anything project-specific (like parsing and reacting to args) should be in Driver
+		// TODO All other classes should be generic (not project-specific)
+
+		// TODO Avoid 1 letter variables unless a counter (like for int i...)
+		// TODO Call it "index"
 		InvertedIndex i = new InvertedIndex();
 		i.start(args);
+		
 		// i.dirTraverse(new File("/Users/JiaMinGong/Desktop/TestFolder"));
 		// String name = "output.json";
 		// Path outputPath = Paths.get(".", "output", name);
