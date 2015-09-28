@@ -1,130 +1,260 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.nio.file.Path;
+import java.util.Map.Entry;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
-// TODO Rename this to InvertedIndexBuilder
+/**
+ * Create inverted index to store word, path and position
+ */
 public class InvertedIndex {
 
-	// TODO Remove all members, use local variables where posisble
-	private ArgumentParser parser;
-	private WordMap wordMap = new WordMap();
-	private int position;
-	private ArrayList<File> fileList = new ArrayList<>();
+	/**
+	 * Initializes an empty inverted index map, the key is the word
+	 */
+	private static TreeMap<String, TreeMap<String, TreeSet<Integer>>> index;
 
-	public void start(String[] args) {
-		// get correct input;
-		parser = new ArgumentParser(args);
-		// String inputFile = parser.getValue(Driver.INPUT_FLAG);
+	/**
+	 * Initializes an empty inverted index map, the key is the word
+	 */
+	public InvertedIndex() {
+		index = new TreeMap<>();
+	}
 
-		try {
-			dirTraverse(new File(parser.getValue(Driver.INPUT_FLAG)));
-		} catch (Exception e) {
-			System.out.println("Exception caught in getting input");
-			return;
+	/**
+	 * add word, path, position into the map. If the word is found, will attempt
+	 * to see if the path can be found. If so, the path/position pair will be
+	 * add into the map.
+	 *
+	 * @param word
+	 * @param path
+	 * @param position
+	 */
+	public void add(String word, String path, int position) {
+		if (hasWord(word) == false) {
+			TreeSet<Integer> positions = new TreeSet<Integer>();
+			positions.add(position);
+
+			TreeMap<String, TreeSet<Integer>> fileMap = new TreeMap<String, TreeSet<Integer>>();
+			fileMap.put(path, positions);
+			index.put(word, fileMap);
 		}
+		else if (hasWord(word) == true) {
 
-		if (parser.hasFlag(Driver.INDEX_FLAG)) {
-			if (parser.getValue(Driver.INDEX_FLAG) == null) {
-				printWordMap(new File(Driver.INDEX_DEFAULT));
+			TreeMap<String, TreeSet<Integer>> fileMap = index.get(word);
+			// 1. create new subMap, add new file and position (file doesn't
+			// exist)
+
+			// 2. get old subMap, add new position (file exist)
+			if (hasPath(word, path) == false) {
+				TreeSet<Integer> newSet = new TreeSet<Integer>();
+				newSet.add(position);
+				fileMap.put(path, newSet);
+				index.put(word, fileMap);
 			}
 			else {
-				printWordMap(new File(parser.getValue(Driver.INDEX_FLAG)));
+				TreeSet<Integer> set = fileMap.get(path);
+				set.add(position);
+				fileMap.put(path, set);
+				index.put(word, fileMap);
 			}
 		}
-
 	}
 
-	// TODO public static void traverseDirectory(Path directory, InvertedIndex index)
-	public void dirTraverse(File path) {
-		// TODO Use Java NIO (versions 7 and 8), not File with is Java 6
-		// TODO See lectures https://github.com/cs212/lectures/tree/fall2015/Files and Exceptions
-		if (path.isDirectory()) {
-			File[] subDir = path.listFiles();
-
-			for (int i = 0; i < subDir.length; i++) {
-				if (subDir[i].isHidden() == false) {
-					dirTraverse(subDir[i]);
-				}
-			}
+	/**
+	 * test if the the word can be found in the map.
+	 *
+	 * @param word
+	 * @return true if the map has the word
+	 */
+	private boolean hasWord(String word) {
+		if (index.containsKey(word)) {
+			return true;
 		}
-		if (path.isFile()) {
-			if (path.getName().toLowerCase().endsWith(".txt")) {
-
-				fileList.add(path);
-				// System.out.println("TXT File Found ---- " + path.getName());
-				position = 1;
-				bufferedReadLine(path);
-			}
-		}
-
+		return false;
 	}
-	
-	// TODO No exception handling in private methods, let the public methods handle it
 
-	// read input by bufferedReader
-	private void bufferedReadLine(File dir) {
-		// TODO int position = 1 (as a local variable)
-		BufferedReader br = null;
-		try {
-			br = new BufferedReader(new FileReader(dir));
-			String line = null;
-			while ((line = br.readLine()) != null) {
-				String[] words = splitLine(line);
-				for (String word : words) {
-					wordMap.add(word, dir.getPath(), position);
-					position++;
-				}
-
-				//
+	/**
+	 * test if the path can be found in the map, if the word can be found.
+	 *
+	 * @param word
+	 * @param path
+	 * @return true if the path and word both exist
+	 */
+	private boolean hasPath(String word, String path) {
+		if (hasWord(word)) {
+			TreeMap<String, TreeSet<Integer>> fileMap = index.get(word);
+			if (fileMap.containsKey(path)) {
+				return true;
 			}
-		} catch (FileNotFoundException e) {
-			System.out.println("#### File not found ####");
-			// e.printStackTrace();
+		}
+		return false;
+	}
+
+	/**
+	 * test if the position can be found in the map, if the word and path both
+	 * can be found
+	 *
+	 * @param word
+	 * @param path
+	 * @param position
+	 * @return
+	 */
+
+	private boolean hasPosition(String word, String path, int position) {
+		if (hasWord(word) && hasPath(word, path)) {
+			TreeMap<String, TreeSet<Integer>> fileMap = index.get(word);
+			TreeSet<Integer> positions = fileMap.get(path);
+			if (positions.contains(position)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Helper method to indent several times by 2 spaces each time. For example,
+	 * indent(0) will return an empty string, indent(1) will return 2 spaces,
+	 * and indent(2) will return 4 spaces.
+	 *
+	 * <p>
+	 * <em>Using this method is optional!</em>
+	 * </p>
+	 *
+	 * @param times
+	 * @return
+	 * @throws IOException
+	 */
+	private static String indent(int times) throws IOException {
+		return times > 0 ? String.format("%" + (times * 2) + "s", " ") : "";
+	}
+
+	/**
+	 * Helper method to quote text for output. This requires escaping the
+	 * quotation mark " as \" for use in Strings. For example:
+	 *
+	 * <pre>
+	 * String text = "hello world";
+	 * System.out.println(text); // output: hello world
+	 * System.out.println(quote(text)); // output: "hello world"
+	 * </pre>
+	 *
+	 * @param text
+	 *            input to surround with quotation marks
+	 * @return quoted text
+	 */
+	private static String quote(String text) {
+		return "\"" + text + "\"";
+	}
+
+	/**
+	 * Write the map as a JSON object to the specified output path using the
+	 * UTF-8 character set.
+	 *
+	 * @param output
+	 */
+	public static void printWordMap(Path output) {
+
+		try (BufferedWriter bw = new BufferedWriter(
+				new FileWriter(output.toFile()))) {
+
+			bw.write("{");
+			if (!index.isEmpty()) {
+				Entry<String, TreeMap<String, TreeSet<Integer>>> first = index
+						.firstEntry();
+
+				output_Outside(first, bw);
+
+				for (Entry<String, TreeMap<String, TreeSet<Integer>>> entry : index
+						.tailMap(first.getKey(), false).entrySet()) {
+					bw.write(",");
+					output_Outside(entry, bw);
+				}
+			}
+			bw.write("\n}");
+
 		} catch (IOException e) {
-			System.out.println("#### IOEception ####");
-			// e.printStackTrace();
+			System.err.println("NO output Found");
 		}
 
 	}
 
-	// TODO public static String[] split(String line)...
-	private String[] splitLine(String str) {
-		String[] words = null;
-		str = clean(str);
+	/**
+	 * Write the word map as JSON object to the specified output path using the
+	 * UTS character set.
+	 *
+	 * @param entry
+	 * @param bw
+	 * @throws IOException
+	 */
+	private static void output_Outside(
+			Entry<String, TreeMap<String, TreeSet<Integer>>> entry,
+			BufferedWriter bw) throws IOException {
 
-		if (str.length() != 0) {
-			words = str.split(SPLIT_REGEX);
+		bw.newLine();
+		bw.write(indent(1) + quote(entry.getKey()));
+		bw.write(": {");
+		TreeMap<String, TreeSet<Integer>> subMap = entry.getValue();
+		if (!subMap.isEmpty()) {
+			Entry<String, TreeSet<Integer>> subFirst = subMap.firstEntry();
+
+			output_Mid(subFirst, bw);
+			for (Entry<String, TreeSet<Integer>> subEntry : subMap
+					.tailMap(subFirst.getKey(), false).entrySet()) {
+				bw.write(",");
+				output_Mid(subEntry, bw);
+			}
 		}
-		else {
-			words = new String[] {};
+		bw.newLine();
+		bw.write(indent(1) + "}");
+	}
+
+	/**
+	 * Write the path/positions entry to the specified output path using the
+	 * UTF-8 character set.
+	 *
+	 * @param entry
+	 * @param bw
+	 * @throws IOException
+	 */
+	private static void output_Mid(Entry<String, TreeSet<Integer>> entry,
+			BufferedWriter bw) throws IOException {
+		bw.newLine();
+		bw.write(indent(2));
+		bw.write(quote(entry.getKey()));
+		bw.write(": [");
+		TreeSet<Integer> subTreeSet = entry.getValue();
+		output_Inside(subTreeSet, bw);
+		bw.newLine();
+		bw.write(indent(2) + "]");
+
+	}
+
+	/**
+	 * Write the positions set to the specified output path using the UTF-8
+	 * character set.
+	 *
+	 * @param elements
+	 * @param bw
+	 * @throws IOException
+	 */
+	private static void output_Inside(TreeSet<Integer> elements,
+			BufferedWriter bw) throws IOException {
+
+		if (!elements.isEmpty()) {
+			Integer first = elements.first();
+			bw.newLine();
+			bw.write(indent(3) + first);
+
+			for (int integer : elements.tailSet(first, false)) {
+				bw.write(",");
+				bw.newLine();
+				bw.write(indent(3) + integer);
+			}
 		}
-		return words;
-	}
 
-	// TODO Same as above
-	private String clean(String str) {
-		str = str.toLowerCase();
-		str = str.replaceAll(CLEAN_REGEX, "");
-		str = str.trim();
-		return str;
-	}
-
-	private final String CLEAN_REGEX = "(?U)[^\\p{Alnum}\\p{Space}]+";
-
-	private final String SPLIT_REGEX = "(?U)\\p{Space}+";
-
-	// TODO Remove these methods after this point
-	public ArrayList<File> getFileLists() {
-		Collections.sort(fileList);
-		return (ArrayList<File>) Collections.unmodifiableList(fileList);
-	}
-
-	public void printWordMap(File output) {
-		wordMap.printWordMap(output.toPath());
 	}
 
 }

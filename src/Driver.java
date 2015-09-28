@@ -1,3 +1,5 @@
+import java.nio.file.Paths;
+
 /**
  * This software driver class provides a consistent entry point for the search
  * engine. Based on the arguments provided to {@link #main(String[])}, it
@@ -98,42 +100,25 @@ public class Driver {
 	 *            set of flag and value pairs
 	 */
 	public static void main(String[] args) {
-		// System.out.println("args: " + Arrays.toString(args));
 
-		// TODO Anything project-specific (like parsing and reacting to args) should be in Driver
-		// TODO All other classes should be generic (not project-specific)
+		ArgumentParser parser = new ArgumentParser(args);
+		try {
+			InvertedIndexBuilder.traverseDirectory(
+					Paths.get((parser.getValue(INPUT_FLAG))),
+					new InvertedIndex());
+		} catch (Exception e) {
+			System.err.println("No arguments");
+		}
 
-		// TODO Avoid 1 letter variables unless a counter (like for int i...)
-		// TODO Call it "index"
-		InvertedIndex i = new InvertedIndex();
-		i.start(args);
-		
-		/* TODO After you change your class names...
-		   InvertedIndex index = new InvertedIndex();
-		   
-		   based on argument parsing...
-		   InvertedIndexBuilder.traverseDirectory(...);
-		   
-		   based on argument parsing...
-		   index.print(...)
-		*/
-		
-		// i.dirTraverse(new File("/Users/JiaMinGong/Desktop/TestFolder"));
-		// String name = "output.json";
-		// Path outputPath = Paths.get(".", "output", name);
+		if (parser.hasFlag(Driver.INDEX_FLAG)) {
+			if (parser.getValue(Driver.INDEX_FLAG) == null) {
+				InvertedIndex.printWordMap(Paths.get(INDEX_DEFAULT));
+			}
+			else {
+				InvertedIndex
+						.printWordMap(Paths.get(parser.getValue(INDEX_FLAG)));
+			}
+		}
 
-		// try {
-
-		// Files.createDirectories(outputPath.getParent());
-
-		// Files.deleteIfExists(outputPath);
-
-		// } catch (IOException e) {
-		// System.out.println("screw you");
-		// e.printStackTrace();
-		// }
-		// i.printWordMap();
-
-		// i.printWordMap(outputPath);
 	}
 }

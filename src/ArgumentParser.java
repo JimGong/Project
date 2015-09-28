@@ -4,52 +4,83 @@ import java.util.Map;
 // TODO Add back Javadoc comments to every member, method, and class.
 // TODO http://www.oracle.com/technetwork/articles/java/index-137868.html
 
+/**
+ * Parses command-line arguments into flag/value pairs for easy access.
+ */
 public class ArgumentParser {
 
-	private final Map<String, String> argumentMap; // TODO Good use of final
+	/** Stores arguments in a map, where the key is a flag. */
+	private final Map<String, String> argumentMap;
 
+	/**
+	 * Initializes an empty argument map. The method
+	 * {@link #parseArguments(String[])} should eventually be called to populate
+	 * the map.
+	 */
 	public ArgumentParser() {
 		argumentMap = new HashMap<>();
 	}
 
+	/**
+	 * Initializes the argument map with the provided command-line arguments.
+	 * Uses {@link #parseArguments(String[])} to populate the map.
+	 *
+	 * @param args
+	 *            command-line arguments
+	 * @see #parseArguments(String[])
+	 */
 	public ArgumentParser(String[] args) {
 		this();
-		// System.out.println("num args: " + args.length);
 		parseArguments(args);
 	}
 
+	/**
+	 * Iterates through the array of command-line arguments. If a flag is found,
+	 * will attempt to see if it is followed by a value. If so, the flag/value
+	 * pair is added to the map. If the flag is followed by another flag, then
+	 * the first flag is added to the map with a null value.
+	 *
+	 * @param args
+	 *            command-line arguments
+	 *
+	 * @see #isFlag(String)
+	 * @see #isValue(String)
+	 */
 	private void parseArguments(String[] args) {
 		for (int i = 0; i < args.length; i++) {
-			String curArg = args[i];
+			String curArg = args[i].trim();
 			String nextArg;
 
 			if ((i + 1) < args.length) {
-				// TODO Really only remove spaces at the start or the end of the String args[i + 1].trim()
-				// TODO Example: -input "/home/user/sjengle/My Documents/blah" (spaces can appear in the middle of a path)
-				nextArg = args[i + 1].replaceAll("\\s+", "");
+				nextArg = args[i + 1].trim();
 			}
 			else {
 				nextArg = args[i];
 			}
 
 			if (isFlag(curArg) && isValue(nextArg)) {
-				// System.out.println("flag: " + curArg + " found -- value: "
-				// + nextArg + " found");
 				argumentMap.put(curArg, nextArg);
 
 				i++;
 			}
 			else if (isFlag(curArg) && (isValue(nextArg) == false)) {
-				// System.out.println("flag: " + curArg + " found");
 				argumentMap.put(curArg, null);
 
 			}
 		}
-
 	}
 
-	// TODO Make static again: faster code and easier to reuse this method
-	public boolean isFlag(String arg) {
+	/**
+	 * Tests if the provided argument is a flag by checking that it starts with
+	 * a "-" dash symbol, and is followed by at least one non-whitespace
+	 * character. For example, "-a" and "-1" are valid flags, but "-" and "- "
+	 * are not valid flags.
+	 *
+	 * @param arg
+	 *            command-line argument
+	 * @return true if the argument is a flag
+	 */
+	public static boolean isFlag(String arg) {
 		arg = arg.trim();
 		if (arg.startsWith("-") && (arg.length() > 1) && (!arg.endsWith(" "))) {
 			return true;
@@ -59,8 +90,17 @@ public class ArgumentParser {
 		}
 	}
 
-	// TODO Make static
-	public boolean isValue(String arg) {
+	/**
+	 * Tests if the provided argument is a value by checking that it does not
+	 * start with a "-" dash symbol, and contains at least one non-whitespace
+	 * character. For example, "a" and "1" are valid values, but "-" and " " are
+	 * not valid values.
+	 *
+	 * @param arg
+	 *            command-line argument
+	 * @return true if the argument is a value
+	 */
+	public static boolean isValue(String arg) {
 		if ((!arg.startsWith("-")) && (arg.length() >= 1) && (arg != " ")
 				&& (!arg.endsWith("-"))) {
 			return true;
@@ -70,6 +110,14 @@ public class ArgumentParser {
 		}
 	}
 
+	/**
+	 * Tests if the provided flag is stored in the map.
+	 *
+	 * @param flag
+	 *            flag to check
+	 * @return value if flag exists and has a value, or null if the flag does
+	 *         not exist or does not have a value
+	 */
 	public boolean hasFlag(String flag) {
 		if (argumentMap.containsKey(flag)) {
 			return true;
@@ -77,6 +125,13 @@ public class ArgumentParser {
 		return false;
 	}
 
+	/**
+	 * Tests if the provided flag has a non-empty value.
+	 *
+	 * @param flag
+	 *            flag to check
+	 * @return true if the flag exists and has a non-null non-empty value
+	 */
 	public boolean hasValue(String flag) {
 		if (argumentMap.get(flag) != null) {
 			return true;
@@ -84,6 +139,13 @@ public class ArgumentParser {
 		return false;
 	}
 
+	/**
+	 * Returns the value of a flag if it exists, and null otherwise.
+	 *
+	 * @param flag
+	 *            flag to check
+	 * @return value of flag or null if flag does not exist or has no value
+	 */
 	public String getValue(String flag) {
 		return argumentMap.get(flag);
 	}
