@@ -1,9 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
 
-// TODO Add back Javadoc comments to every member, method, and class.
-// TODO http://www.oracle.com/technetwork/articles/java/index-137868.html
-
 /**
  * Parses command-line arguments into flag/value pairs for easy access.
  */
