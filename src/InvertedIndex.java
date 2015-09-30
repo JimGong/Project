@@ -67,6 +67,18 @@ public class InvertedIndex {
 				index.put(word, fileMap);
 			}
 		}
+		
+		/* TODO
+		if (need to init the inner map) {
+			init inner map
+		}
+
+		if (need to init the inner treeset) {
+			init inner treeset
+		}
+		
+		index.get(word).get(path).add(position);
+		*/
 	}
 
 	// TODO Make some of these methods public, makes your code more useful for others
