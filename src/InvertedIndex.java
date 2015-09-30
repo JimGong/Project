@@ -174,6 +174,7 @@ public class InvertedIndex {
 				Entry<String, TreeMap<String, TreeSet<Integer>>> first = index
 						.firstEntry();
 
+				// TODO JSONWriter.outputEntry();
 				output_Outside(first, bw);
 
 				for (Entry<String, TreeMap<String, TreeSet<Integer>>> entry : index
