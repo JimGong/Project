@@ -10,7 +10,13 @@ import java.util.TreeSet;
  * Create inverted index to store word, path and position
  */
 public class InvertedIndex {
+	
+	/* TODO Rule of thumb:
+	   Make variables/members FINAL when possible (without breaking anything else)
+	   Make functions/methods STATIC when possible (without breaking anything else)
+	*/
 
+	// TODO Make index final NOT static.
 	/**
 	 * Initializes an empty inverted index map, the key is the word
 	 */
@@ -61,8 +67,21 @@ public class InvertedIndex {
 				index.put(word, fileMap);
 			}
 		}
+		
+		/* TODO
+		if (need to init the inner map) {
+			init inner map
+		}
+
+		if (need to init the inner treeset) {
+			init inner treeset
+		}
+		
+		index.get(word).get(path).add(position);
+		*/
 	}
 
+	// TODO Make some of these methods public, makes your code more useful for others
 	/**
 	 * test if the the word can be found in the map.
 	 *
@@ -149,6 +168,8 @@ public class InvertedIndex {
 		return "\"" + text + "\"";
 	}
 
+	// TODO Should NOT be static, because your index will NOT be static.
+	// TODO Maybe call this print() or toJSON(), etc. 
 	/**
 	 * Write the map as a JSON object to the specified output path using the
 	 * UTF-8 character set.
@@ -165,6 +186,7 @@ public class InvertedIndex {
 				Entry<String, TreeMap<String, TreeSet<Integer>>> first = index
 						.firstEntry();
 
+				// TODO JSONWriter.outputEntry();
 				output_Outside(first, bw);
 
 				for (Entry<String, TreeMap<String, TreeSet<Integer>>> entry : index
@@ -173,6 +195,7 @@ public class InvertedIndex {
 					output_Outside(entry, bw);
 				}
 			}
+			// TODO bw.newLine();
 			bw.write("\n}");
 
 		} catch (IOException e) {
@@ -180,6 +203,8 @@ public class InvertedIndex {
 		}
 
 	}
+	
+	// TODO Make these public static methods in a separate JSONWriter class (might help with project 2)
 
 	/**
 	 * Write the word map as JSON object to the specified output path using the

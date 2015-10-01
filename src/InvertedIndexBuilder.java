@@ -36,6 +36,20 @@ public class InvertedIndexBuilder {
 			}
 
 		}
+		
+		/* TODO
+		try {
+			if (is directory) {
+				
+			}
+			else {
+				
+			}
+		}
+		catch (IOException) {
+			... user-friendly output here
+		}
+		*/
 	}
 
 	/**
@@ -50,6 +64,7 @@ public class InvertedIndexBuilder {
 	private static void traverse(Path path, InvertedIndex index)
 			throws IOException {
 
+		// TODO Use a try-with-resources with NO catch block
 		DirectoryStream<Path> listing = Files.newDirectoryStream(path);
 
 		for (Path file : listing) {
@@ -69,6 +84,8 @@ public class InvertedIndexBuilder {
 		listing.close();
 	}
 
+	// TODO Make this public... it will be useful for project 3...
+	// TODO Make method names describe the functionality not the implementation, parseFile(Path file, InvertedIndex index)
 	/**
 	 * Use bufferedReader to read line from a path
 	 *
@@ -79,9 +96,12 @@ public class InvertedIndexBuilder {
 	private static void bufferedReadLine(Path dir, InvertedIndex index)
 			throws IOException {
 
+		// TODO Use try-with-resources without a catch block.
 		int position = 1;
 		BufferedReader br = null;
 
+		// TODO http://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedReader-java.nio.file.Path-java.nio.charset.Charset-
+		// TODO Make sure you specify that the Charset is UTF8
 		br = new BufferedReader(new FileReader(dir.toFile()));
 		String line = null;
 		while ((line = br.readLine()) != null) {
@@ -96,6 +116,7 @@ public class InvertedIndexBuilder {
 
 	}
 
+	// TODO  Make public
 	/**
 	 * First cleans text. If the result is non-empty, splits the cleaned text
 	 * into words by whitespace. The result will be an array of words in all
@@ -122,6 +143,7 @@ public class InvertedIndexBuilder {
 		return words;
 	}
 
+	// TODO Make public
 	/**
 	 * Cleans a word by converting it to lowercase and removing any whitespace
 	 * at the start or end of the word.
