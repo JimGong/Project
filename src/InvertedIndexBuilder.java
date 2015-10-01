@@ -77,6 +77,7 @@ public class InvertedIndexBuilder {
 
 		int position = 1;
 
+		// TODO Try "reader" instead of "br" as a variable name.
 		try (BufferedReader br = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
 			String line = null;
