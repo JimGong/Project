@@ -6,6 +6,9 @@ import java.util.TreeSet;
 
 public class JSONWriter {
 
+	// TODO Avoid "bw" as a variable name.
+	// TODO There is a better name than "output_Outside". Java does not use underscore _ in variable names in general.
+	// TODO How about writeNestedMap()?
 	/**
 	 * Write the word map as JSON object to the specified output path using the
 	 * UTS character set.
@@ -36,6 +39,7 @@ public class JSONWriter {
 		bw.write(indent(1) + "}");
 	}
 
+	// TODO Rename to something better... like writeNestedSet()...
 	/**
 	 * Write the path/positions entry to the specified output path using the
 	 * UTF-8 character set.
@@ -57,6 +61,7 @@ public class JSONWriter {
 
 	}
 
+	// TODO Make public, rename writeTreeSet()?
 	/**
 	 * Write the positions set to the specified output path using the UTF-8
 	 * character set.
@@ -82,6 +87,7 @@ public class JSONWriter {
 
 	}
 
+	// TODO Could make public. Does not actually throw an IOException!
 	/**
 	 * Helper method to indent several times by 2 spaces each time. For example,
 	 * indent(0) will return an empty string, indent(1) will return 2 spaces,
@@ -99,6 +105,7 @@ public class JSONWriter {
 		return times > 0 ? String.format("%" + (times * 2) + "s", " ") : "";
 	}
 
+	// TODO Could make public.
 	/**
 	 * Helper method to quote text for output. This requires escaping the
 	 * quotation mark " as \" for use in Strings. For example:

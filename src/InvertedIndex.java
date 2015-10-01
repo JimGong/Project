@@ -30,6 +30,8 @@ public class InvertedIndex {
 		index = new TreeMap<>();
 	}
 
+	// TODO Capitalize the first word in your javadoc comments. You do usually
+	// TODO describe the parameters too, but in this case they are self-explainatory. 
 	/**
 	 * add word, path, position into the map. If the word is found, will attempt
 	 * to see if the path can be found. If so, the path/position pair will be
@@ -66,6 +68,8 @@ public class InvertedIndex {
 	 * @return true if the map has the word
 	 */
 	public boolean hasWord(String word) {
+		// TODO Can make this a 1 line method, since index.containsKey(word) returns true or false...
+		// TODO Specifically: "return index.containsKey(word);" is the only line you need to achieve the same logic.
 		if (index.containsKey(word)) {
 			return true;
 		}
@@ -80,6 +84,7 @@ public class InvertedIndex {
 	 * @return true if the path and word both exist
 	 */
 	public boolean hasPath(String word, String path) {
+		// TODO See comments in hasWord(), this can be simplified a bit.
 		if (hasWord(word)) {
 			TreeMap<String, TreeSet<Integer>> fileMap = index.get(word);
 			if (fileMap.containsKey(path)) {
@@ -99,6 +104,7 @@ public class InvertedIndex {
 	 * @return
 	 */
 	public boolean hasPosition(String word, String path, int position) {
+		// TODO See comments in hasWord(), this can be simplified a bit.
 		if (hasWord(word) && hasPath(word, path)) {
 			TreeMap<String, TreeSet<Integer>> fileMap = index.get(word);
 			TreeSet<Integer> positions = fileMap.get(path);
@@ -116,7 +122,7 @@ public class InvertedIndex {
 	 * @param output
 	 */
 	public void print(Path output) {
-
+		// TODO Try to avoid variable names like "bw". Use something like "writer" instead.
 		try (BufferedWriter bw = Files.newBufferedWriter(output,
 				Charset.forName("UTF-8"))) {
 			bw.write("{");
@@ -138,7 +144,9 @@ public class InvertedIndex {
 		} catch (IOException e) {
 			System.err.println("NO output Found");
 		}
-
+		// TODO You need try-with-resources, but you could throw the exception.
+		// TODO This will let Driver (or any other class) react to the exception.
+		// TODO For example, another version of Driver might re-prompt the user for a new output path.
 	}
 
 }
