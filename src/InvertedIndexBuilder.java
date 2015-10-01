@@ -1,6 +1,6 @@
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,44 +12,29 @@ public class InvertedIndexBuilder {
 
 	/**
 	 * Traverse the directory to build inverted index map
-	 * 
+	 *
 	 * @param directory
 	 * @param index
 	 */
 	public static void traverseDirectory(Path directory, InvertedIndex index) {
-		if (Files.isDirectory(directory)) {
-			try {
-				traverse(directory, index);
-			} catch (IOException e) {
-				System.err.println("Input file NOT found");
-			}
-		}
-		else {
-			if (directory.getFileName().toString().toLowerCase()
-					.endsWith(".txt")) {
-
-				try {
-					bufferedReadLine(directory, index);
-				} catch (IOException e) {
-					System.out.println("Input file NOT found");
-				}
-			}
-
-		}
-		
-		/* TODO
 		try {
-			if (is directory) {
-				
+			if (Files.isDirectory(directory)) {
+
+				traverse(directory, index);
+
 			}
 			else {
-				
+				if (directory.getFileName().toString().toLowerCase()
+						.endsWith(".txt")) {
+
+					parseFile(directory, index);
+
+				}
+
 			}
+		} catch (IOException e) {
+			System.out.println("Input file NOT found");
 		}
-		catch (IOException) {
-			... user-friendly output here
-		}
-		*/
 	}
 
 	/**
@@ -60,32 +45,26 @@ public class InvertedIndexBuilder {
 	 * @param index
 	 * @throws IOException
 	 */
-
 	private static void traverse(Path path, InvertedIndex index)
 			throws IOException {
 
-		// TODO Use a try-with-resources with NO catch block
-		DirectoryStream<Path> listing = Files.newDirectoryStream(path);
+		try (DirectoryStream<Path> listing = Files.newDirectoryStream(path)) {
 
-		for (Path file : listing) {
+			for (Path file : listing) {
 
-			if (Files.isDirectory(file)) {
-				traverseDirectory(file, index);
-			}
-			else {
-				if (file.getFileName().toString().toLowerCase()
-						.endsWith(".txt")) {
-					// System.out
-					// .println("File: " + file.getFileName() + " found");
-					bufferedReadLine(file, index);
+				if (Files.isDirectory(file)) {
+					traverseDirectory(file, index);
+				}
+				else {
+					if (file.getFileName().toString().toLowerCase()
+							.endsWith(".txt")) {
+						parseFile(file, index);
+					}
 				}
 			}
 		}
-		listing.close();
 	}
 
-	// TODO Make this public... it will be useful for project 3...
-	// TODO Make method names describe the functionality not the implementation, parseFile(Path file, InvertedIndex index)
 	/**
 	 * Use bufferedReader to read line from a path
 	 *
@@ -93,30 +72,25 @@ public class InvertedIndexBuilder {
 	 * @param index
 	 * @throws IOException
 	 */
-	private static void bufferedReadLine(Path dir, InvertedIndex index)
+	public static void parseFile(Path file, InvertedIndex index)
 			throws IOException {
 
-		// TODO Use try-with-resources without a catch block.
 		int position = 1;
-		BufferedReader br = null;
 
-		// TODO http://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedReader-java.nio.file.Path-java.nio.charset.Charset-
-		// TODO Make sure you specify that the Charset is UTF8
-		br = new BufferedReader(new FileReader(dir.toFile()));
-		String line = null;
-		while ((line = br.readLine()) != null) {
-			String[] words = splitLine(line);
-			for (String word : words) {
-				index.add(word, dir.toFile().getPath(), position);
-				position++;
+		try (BufferedReader br = Files.newBufferedReader(file,
+				Charset.forName("UTF-8"))) {
+			String line = null;
+			while ((line = br.readLine()) != null) {
+				String[] words = splitLine(line);
+				for (String word : words) {
+					index.add(word, file.toFile().getPath(), position);
+					position++;
+				}
+
 			}
-
 		}
-		br.close();
-
 	}
 
-	// TODO  Make public
 	/**
 	 * First cleans text. If the result is non-empty, splits the cleaned text
 	 * into words by whitespace. The result will be an array of words in all
@@ -130,7 +104,7 @@ public class InvertedIndexBuilder {
 	 * @see #clean(String)
 	 * @see #SPLIT_REGEX
 	 */
-	private static String[] splitLine(String text) {
+	public static String[] splitLine(String text) {
 		String[] words = null;
 		text = clean(text);
 
@@ -143,7 +117,6 @@ public class InvertedIndexBuilder {
 		return words;
 	}
 
-	// TODO Make public
 	/**
 	 * Cleans a word by converting it to lowercase and removing any whitespace
 	 * at the start or end of the word.
@@ -152,7 +125,7 @@ public class InvertedIndexBuilder {
 	 *            word to clean
 	 * @return cleaned word
 	 */
-	private static String clean(String str) {
+	public static String clean(String str) {
 		str = str.toLowerCase();
 		str = str.replaceAll(CLEAN_REGEX, "");
 		str = str.trim();

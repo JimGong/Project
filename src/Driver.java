@@ -102,25 +102,22 @@ public class Driver {
 	public static void main(String[] args) {
 
 		ArgumentParser parser = new ArgumentParser(args);
-		
-		// TODO InvertedIndex index = new InvertedIndex();
-		
+
+		InvertedIndex index = new InvertedIndex();
+
 		try {
 			InvertedIndexBuilder.traverseDirectory(
-					Paths.get((parser.getValue(INPUT_FLAG))),
-					new InvertedIndex()); // TODO use the index you create above
+					Paths.get((parser.getValue(INPUT_FLAG))), index);
 		} catch (Exception e) {
 			System.err.println("No arguments");
 		}
 
 		if (parser.hasFlag(Driver.INDEX_FLAG)) {
 			if (parser.getValue(Driver.INDEX_FLAG) == null) {
-				// TODO index.print(...)
-				InvertedIndex.printWordMap(Paths.get(INDEX_DEFAULT));
+				index.print(Paths.get(INDEX_DEFAULT));
 			}
 			else {
-				InvertedIndex
-						.printWordMap(Paths.get(parser.getValue(INDEX_FLAG)));
+				index.print(Paths.get(parser.getValue(INDEX_FLAG)));
 			}
 		}
 
