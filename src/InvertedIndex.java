@@ -30,15 +30,17 @@ public class InvertedIndex {
 		index = new TreeMap<>();
 	}
 
-	// TODO Capitalize the first word in your javadoc comments. You do usually
-	// TODO describe the parameters too, but in this case they are self-explainatory. 
+	// You do usually describe the parameters too, but in this case they
+	// are self-explainatory.
 	/**
-	 * add word, path, position into the map. If the word is found, will attempt
+	 * Add word, path, position into the map. If the word is found, will attempt
 	 * to see if the path can be found. If so, the path/position pair will be
 	 * add into the map.
 	 *
 	 * @param word
+	 *            the word that add into map
 	 * @param path
+	 *            the path the word belong to
 	 * @param position
 	 */
 	public void add(String word, String path, int position) {
@@ -52,8 +54,6 @@ public class InvertedIndex {
 		}
 		else if (hasWord(word) == true) {
 
-			TreeMap<String, TreeSet<Integer>> fileMap = index.get(word);
-
 			if (hasPath(word, path) == false) {
 				index.get(word).put(path, new TreeSet<Integer>());
 			}
@@ -62,40 +62,31 @@ public class InvertedIndex {
 	}
 
 	/**
-	 * test if the the word can be found in the map.
+	 * Test if the the word can be found in the map.
 	 *
 	 * @param word
 	 * @return true if the map has the word
 	 */
 	public boolean hasWord(String word) {
-		// TODO Can make this a 1 line method, since index.containsKey(word) returns true or false...
-		// TODO Specifically: "return index.containsKey(word);" is the only line you need to achieve the same logic.
-		if (index.containsKey(word)) {
-			return true;
-		}
-		return false;
+		return index.containsKey(word);
 	}
 
 	/**
-	 * test if the path can be found in the map, if the word can be found.
+	 * Test if the path can be found in the map, if the word can be found.
 	 *
 	 * @param word
 	 * @param path
 	 * @return true if the path and word both exist
 	 */
 	public boolean hasPath(String word, String path) {
-		// TODO See comments in hasWord(), this can be simplified a bit.
 		if (hasWord(word)) {
-			TreeMap<String, TreeSet<Integer>> fileMap = index.get(word);
-			if (fileMap.containsKey(path)) {
-				return true;
-			}
+			return index.get(word).containsKey(path);
 		}
 		return false;
 	}
 
 	/**
-	 * test if the position can be found in the map, if the word and path both
+	 * Test if the position can be found in the map, if the word and path both
 	 * can be found
 	 *
 	 * @param word
@@ -104,13 +95,8 @@ public class InvertedIndex {
 	 * @return
 	 */
 	public boolean hasPosition(String word, String path, int position) {
-		// TODO See comments in hasWord(), this can be simplified a bit.
 		if (hasWord(word) && hasPath(word, path)) {
-			TreeMap<String, TreeSet<Integer>> fileMap = index.get(word);
-			TreeSet<Integer> positions = fileMap.get(path);
-			if (positions.contains(position)) {
-				return true;
-			}
+			return index.get(word).get(path).contains(position);
 		}
 		return false;
 	}
@@ -121,32 +107,26 @@ public class InvertedIndex {
 	 *
 	 * @param output
 	 */
-	public void print(Path output) {
-		// TODO Try to avoid variable names like "bw". Use something like "writer" instead.
-		try (BufferedWriter bw = Files.newBufferedWriter(output,
+	public void print(Path output) throws IOException {
+
+		try (BufferedWriter writer = Files.newBufferedWriter(output,
 				Charset.forName("UTF-8"))) {
-			bw.write("{");
+			writer.write("{");
 			if (!index.isEmpty()) {
 				Entry<String, TreeMap<String, TreeSet<Integer>>> first = index
 						.firstEntry();
 
-				JSONWriter.output_Outside(first, bw);
+				JSONWriter.writeNestedMap(first, writer);
 
 				for (Entry<String, TreeMap<String, TreeSet<Integer>>> entry : index
 						.tailMap(first.getKey(), false).entrySet()) {
-					bw.write(",");
-					JSONWriter.output_Outside(entry, bw);
+					writer.write(",");
+					JSONWriter.writeNestedMap(entry, writer);
 				}
 			}
-			bw.newLine();
-			bw.write("}");
-
-		} catch (IOException e) {
-			System.err.println("NO output Found");
+			writer.newLine();
+			writer.write("}");
 		}
-		// TODO You need try-with-resources, but you could throw the exception.
-		// TODO This will let Driver (or any other class) react to the exception.
-		// TODO For example, another version of Driver might re-prompt the user for a new output path.
 	}
 
 }

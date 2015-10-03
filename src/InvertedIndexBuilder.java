@@ -77,11 +77,10 @@ public class InvertedIndexBuilder {
 
 		int position = 1;
 
-		// TODO Try "reader" instead of "br" as a variable name.
-		try (BufferedReader br = Files.newBufferedReader(file,
+		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
 			String line = null;
-			while ((line = br.readLine()) != null) {
+			while ((line = reader.readLine()) != null) {
 				String[] words = splitLine(line);
 				for (String word : words) {
 					index.add(word, file.toFile().getPath(), position);

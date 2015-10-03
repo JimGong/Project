@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.nio.file.Paths;
 
 /**
@@ -111,14 +112,17 @@ public class Driver {
 		} catch (Exception e) {
 			System.err.println("No arguments");
 		}
-
-		if (parser.hasFlag(Driver.INDEX_FLAG)) {
-			if (parser.getValue(Driver.INDEX_FLAG) == null) {
-				index.print(Paths.get(INDEX_DEFAULT));
+		try {
+			if (parser.hasFlag(Driver.INDEX_FLAG)) {
+				if (parser.getValue(Driver.INDEX_FLAG) == null) {
+					index.print(Paths.get(INDEX_DEFAULT));
+				}
+				else {
+					index.print(Paths.get(parser.getValue(INDEX_FLAG)));
+				}
 			}
-			else {
-				index.print(Paths.get(parser.getValue(INDEX_FLAG)));
-			}
+		} catch (IOException e) {
+			System.err.println("No file can be printed. Try it again");
 		}
 
 	}
