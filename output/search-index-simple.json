@@ -1,0 +1,40 @@
+{
+  "aa": [
+    {
+      "where": "input/index/gutenberg/4300.txt",
+      "count": 6,
+      "index": 88188
+    }
+  ],
+  "chicka-dee": [
+    {
+      "where": "input/index/gutenberg/1322.txt",
+      "count": 1,
+      "index": 8903
+    }
+  ],
+  "elephANT & ANTelope": [
+    {
+      "where": "input/index/gutenberg/4300.txt",
+      "count": 7,
+      "index": 177151
+      "where": "input/index/gutenberg/1322.txt",
+      "count": 8,
+      "index": 33762
+    }
+  ],
+  "t": [
+    {
+      "where": "input/index/gutenberg/4300.txt",
+      "count": 2777,
+      "index": 199796
+    }
+  ],
+  "two": [
+    {
+      "where": "input/index/gutenberg/1322.txt",
+      "count": 27,
+      "index": 115018
+    }
+  ]
+}

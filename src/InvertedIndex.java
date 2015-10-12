@@ -3,6 +3,11 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -127,6 +132,54 @@ public class InvertedIndex {
 			writer.newLine();
 			writer.write("}");
 		}
+	}
+
+	public List<SearchResult> partialSearch(String[] queryWords) {
+		String location = "NULL"; /* where */
+		int frequency = 0; /* count */
+		int position = 0; /* index */
+		Map<String, SearchResult> result = new HashMap<>();/*
+															 * path is key
+															 */
+		for (String queryWord : queryWords) {
+			// System.out.println("\nquery word: [" + queryWord + "]");
+			for (String word : index.keySet()) {
+				if (word.startsWith(queryWord)) {
+					// System.out.println("find word: " + word + " in path: "
+					// + index.get(word).firstKey() + " position: "
+					// + index.get(word).firstEntry().getValue().first());
+					frequency++;
+					location = index.get(word).firstKey();
+					position = index.get(word).firstEntry().getValue().first();
+				}
+			}
+			// System.out
+			// .println("where: " + location + "\nquery word: " + queryWord
+			// + "\ncount: " + frequency + "\nindex: " + position);
+			SearchResult searchResult = new SearchResult(frequency, position,
+					location);
+
+			result.put(location, searchResult);
+		}
+		List<SearchResult> resultList = null;
+		try {
+			resultList = new ArrayList<SearchResult>(result.values());
+			Collections.sort(resultList);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// System.out.println("\nprint unsorted result list");
+			// System.out.println(resultList);
+			// Collections.sort(resultList);
+			// System.out.println("\nprint sorted result list");
+			// System.out.println(resultList);
+		}
+		return resultList;
+	}
+
+	@Override
+	public String toString() {
+		return "InvertedIndex [index=" + index + "]";
 	}
 
 }

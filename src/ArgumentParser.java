@@ -147,4 +147,9 @@ public class ArgumentParser {
 		return argumentMap.get(flag);
 	}
 
+	@Override
+	public String toString() {
+		return "ArgumentParser [argumentMap=" + argumentMap + "]";
+	}
+
 }

@@ -106,6 +106,8 @@ public class Driver {
 
 		InvertedIndex index = new InvertedIndex();
 
+		PartialSearchBuilder search = new PartialSearchBuilder();
+
 		try {
 			InvertedIndexBuilder.traverseDirectory(
 					Paths.get((parser.getValue(INPUT_FLAG))), index);
@@ -123,6 +125,27 @@ public class Driver {
 			}
 		} catch (IOException e) {
 			System.err.println("No file can be printed. Try it again");
+		}
+		// project 2 partial search
+		try {
+			if (parser.hasFlag(QUERIES_FLAG) && parser.hasValue(QUERIES_FLAG)) {
+				search.parseFile(Paths.get(parser.getValue(QUERIES_FLAG)),
+						index);
+			}
+		} catch (IOException e) {
+			System.err.println("No queries file found");
+		}
+		try {
+			if (parser.hasFlag(RESULTS_FLAG)) {
+				if (parser.hasValue(RESULTS_FLAG)) {
+					search.print(Paths.get(parser.getValue(RESULTS_FLAG)));
+				}
+				else {
+					search.print(Paths.get(RESULTS_DEFAULT));
+				}
+			}
+		} catch (IOException e) {
+			System.out.println("No output file for search");
 		}
 
 	}
