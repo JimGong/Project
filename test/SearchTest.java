@@ -13,154 +13,141 @@ import org.junit.runners.MethodSorters;
 @RunWith(Enclosed.class)
 public class SearchTest extends ProjectTest {
 
-    public static class ArgumentTest {
-        @Rule
-        public Timeout globalTimeout = Timeout.seconds(30);
+	public static class ArgumentTest {
 
-        @Test
-        public void testMissingQueryPath() {
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG
-            };
+		@Rule
+		public Timeout globalTimeout = Timeout.seconds(120);
 
-            checkExceptions("Missing Query Path", args);
-        }
+		@Test
+		public void testMissingQueryPath() {
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG };
 
-        @Test
-        public void testInvalidQueryPath() {
-            String name = Long.toHexString(Double.doubleToLongBits(Math.random()));
+			checkExceptions("Missing Query Path", args);
+		}
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, Paths.get(name).toString()
-            };
+		@Test
+		public void testInvalidQueryPath() {
+			String name = Long
+					.toHexString(Double.doubleToLongBits(Math.random()));
 
-            checkExceptions("Invalid Query Path", args);
-        }
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					Paths.get(name).toString() };
 
-        @Test
-        public void testDefaultOutput() throws Exception {
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString(),
-                    RESULTS_FLAG
-            };
+			checkExceptions("Invalid Query Path", args);
+		}
 
-            Files.deleteIfExists(Paths.get(RESULTS_DEFAULT));
-            checkExceptions("Default Search Output", args);
+		@Test
+		public void testDefaultOutput() throws Exception {
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("simple.txt").toString(), RESULTS_FLAG };
 
-            Assert.assertTrue(errorMessage("Default Search Output", args,
-                    "Check that you output to " + RESULTS_DEFAULT + " if " +
-                    "no output path is provided."),
-                    Files.isReadable(Paths.get(RESULTS_DEFAULT)));
-        }
+			Files.deleteIfExists(Paths.get(RESULTS_DEFAULT));
+			checkExceptions("Default Search Output", args);
 
-        @Test
-        public void testNoOutput() throws Exception {
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString()
-            };
+			Assert.assertTrue(
+					errorMessage("Default Search Output", args,
+							"Check that you output to " + RESULTS_DEFAULT
+									+ " if " + "no output path is provided."),
+					Files.isReadable(Paths.get(RESULTS_DEFAULT)));
+		}
 
-            checkExceptions("No Search Output", args);
-        }
-    }
+		@Test
+		public void testNoOutput() throws Exception {
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("simple.txt").toString() };
 
-    @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-    public static class OutputTest {
-        @Rule
-        public Timeout globalTimeout = Timeout.seconds(30);
+			checkExceptions("No Search Output", args);
+		}
+	}
 
-        @Test
-        public void test01SearchSimple() {
-            String name = "search-simple-simple.json";
+	@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+	public static class OutputTest {
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString(),
-                    RESULTS_FLAG, OUTPUT_DIR.resolve(name).toString()
-            };
+		@Rule
+		public Timeout globalTimeout = Timeout.seconds(30);
 
-            checkProjectOutput(name, args);
-        }
+		@Test
+		public void test01SearchSimple() {
+			String name = "search-simple-simple.json";
 
-        @Test
-        public void test02SearchReversed() {
-            String name = "search-simple-reversed.json";
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("simple.txt").toString(), RESULTS_FLAG,
+					OUTPUT_DIR.resolve(name).toString() };
 
-            String[] args = {
-                    RESULTS_FLAG, OUTPUT_DIR.resolve(name).toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString(),
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString()
-            };
+			checkProjectOutput(name, args);
+		}
 
-            checkProjectOutput(name, args);
-        }
+		@Test
+		public void test02SearchReversed() {
+			String name = "search-simple-reversed.json";
 
-        @Test
-        public void test03SearchSimpleAlphabet() {
-            String name = "search-simple-alphabet.json";
+			String[] args = { RESULTS_FLAG, OUTPUT_DIR.resolve(name).toString(),
+					QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString(),
+					INPUT_FLAG, INDEX_DIR.resolve("simple").toString() };
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("alphabet.txt").toString(),
-                    RESULTS_FLAG, OUTPUT_DIR.resolve(name).toString()
-            };
+			checkProjectOutput(name, args);
+		}
 
-            checkProjectOutput(name, args);
-        }
+		@Test
+		public void test03SearchSimpleAlphabet() {
+			String name = "search-simple-alphabet.json";
 
-        @Test
-        public void test04SearchSimpleComplex() {
-            String name = "search-simple-complex.json";
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("alphabet.txt").toString(), RESULTS_FLAG,
+					OUTPUT_DIR.resolve(name).toString() };
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("complex.txt").toString(),
-                    RESULTS_FLAG, OUTPUT_DIR.resolve(name).toString()
-            };
+			checkProjectOutput(name, args);
+		}
 
-            checkProjectOutput(name, args);
-        }
+		@Test
+		public void test04SearchSimpleComplex() {
+			String name = "search-simple-complex.json";
 
-        @Test
-        public void test05SearchIndexSimple() {
-            String name = "search-index-simple.json";
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("complex.txt").toString(), RESULTS_FLAG,
+					OUTPUT_DIR.resolve(name).toString() };
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString(),
-                    RESULTS_FLAG, OUTPUT_DIR.resolve(name).toString()
-            };
+			checkProjectOutput(name, args);
+		}
 
-            checkProjectOutput(name, args);
-        }
+		@Test
+		public void test05SearchIndexSimple() {
+			String name = "search-index-simple.json";
 
-        @Test
-        public void test06SearchIndexAlphabet() {
-            String name = "search-index-alpha.json";
+			String[] args = { INPUT_FLAG, INDEX_DIR.toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("simple.txt").toString(), RESULTS_FLAG,
+					OUTPUT_DIR.resolve(name).toString() };
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("alphabet.txt").toString(),
-                    RESULTS_FLAG, OUTPUT_DIR.resolve(name).toString()
-            };
+			checkProjectOutput(name, args);
+		}
 
-            checkProjectOutput(name, args);
-        }
+		@Test
+		public void test06SearchIndexAlphabet() {
+			String name = "search-index-alpha.json";
 
-        @Test
-        public void test07SearchIndexComplex() {
-            String name = "search-index-complex.json";
+			String[] args = { INPUT_FLAG, INDEX_DIR.toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("alphabet.txt").toString(), RESULTS_FLAG,
+					OUTPUT_DIR.resolve(name).toString() };
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("complex.txt").toString(),
-                    RESULTS_FLAG, OUTPUT_DIR.resolve(name).toString()
-            };
+			checkProjectOutput(name, args);
+		}
 
-            checkProjectOutput(name, args);
-        }
-    }
+		@Test
+		public void test07SearchIndexComplex() {
+			String name = "search-index-complex.json";
+
+			String[] args = { INPUT_FLAG, INDEX_DIR.toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("complex.txt").toString(), RESULTS_FLAG,
+					OUTPUT_DIR.resolve(name).toString() };
+
+			checkProjectOutput(name, args);
+		}
+	}
 }
