@@ -16,7 +16,7 @@ public class SearchTest extends ProjectTest {
 	public static class ArgumentTest {
 
 		@Rule
-		public Timeout globalTimeout = Timeout.seconds(120);
+		public Timeout globalTimeout = Timeout.seconds(30);
 
 		@Test
 		public void testMissingQueryPath() {
@@ -68,7 +68,7 @@ public class SearchTest extends ProjectTest {
 	public static class OutputTest {
 
 		@Rule
-		public Timeout globalTimeout = Timeout.seconds(30);
+		public Timeout globalTimeout = Timeout.seconds(120);
 
 		@Test
 		public void test01SearchSimple() {

@@ -1,10 +1,19 @@
-
+/**
+ * Search Result for partial search
+ */
 public class SearchResult implements Comparable<SearchResult> {
 
 	int frequency;
 	int position;
 	String location;
 
+	/**
+	 * Constructor
+	 *
+	 * @param frequency
+	 * @param position
+	 * @param location
+	 */
 	public SearchResult(int frequency, int position, String location) {
 		super();
 		this.frequency = frequency;
@@ -12,6 +21,9 @@ public class SearchResult implements Comparable<SearchResult> {
 		this.location = location;
 	}
 
+	/**
+	 * override compareTo method
+	 */
 	@Override
 	public int compareTo(SearchResult o) {
 

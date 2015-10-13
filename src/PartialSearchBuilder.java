@@ -9,14 +9,30 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Build Partial Search
+ */
 public class PartialSearchBuilder {
 
+	/**
+	 * Stores search result in a map, where the key is the path
+	 */
 	private final Map<String, List<SearchResult>> result;
 
+	/**
+	 * Initializes an empty result map.
+	 */
 	public PartialSearchBuilder() {
 		result = new LinkedHashMap<>();
 	}
 
+	/**
+	 * Parse file into partial search
+	 *
+	 * @param file
+	 * @param index
+	 * @throws IOException
+	 */
 	public void parseFile(Path file, InvertedIndex index) throws IOException {
 		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
@@ -33,6 +49,12 @@ public class PartialSearchBuilder {
 		}
 	}
 
+	/**
+	 * Print result map to file
+	 *
+	 * @param output
+	 * @throws IOException
+	 */
 	public void print(Path output) throws IOException {
 		// System.out.println("\nPrinting search result");
 		try (BufferedWriter writer = Files.newBufferedWriter(output,
@@ -59,6 +81,14 @@ public class PartialSearchBuilder {
 		}
 	}
 
+	/**
+	 * Print nested map
+	 *
+	 * @param key
+	 * @param resultList
+	 * @param writer
+	 * @throws IOException
+	 */
 	private void writeNestedMap(String key, List<SearchResult> resultList,
 			BufferedWriter writer) throws IOException {
 		writer.newLine();
@@ -72,6 +102,13 @@ public class PartialSearchBuilder {
 
 	}
 
+	/**
+	 * Print result list
+	 *
+	 * @param searchResult
+	 * @param writer
+	 * @throws IOException
+	 */
 	private void writeResultList(List<SearchResult> searchResult,
 			BufferedWriter writer) throws IOException {
 
@@ -88,6 +125,13 @@ public class PartialSearchBuilder {
 
 	}
 
+	/**
+	 * Print single result
+	 * 
+	 * @param searchResult
+	 * @param writer
+	 * @throws IOException
+	 */
 	private void writeSingleResult(SearchResult searchResult,
 			BufferedWriter writer) throws IOException {
 		if (searchResult.location != "NULL") {

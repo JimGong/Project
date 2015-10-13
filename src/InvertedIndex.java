@@ -134,6 +134,12 @@ public class InvertedIndex {
 		}
 	}
 
+	/**
+	 * Partial search query words
+	 * 
+	 * @param queryWords
+	 * @return
+	 */
 	public List<SearchResult> partialSearch(String[] queryWords) {
 		String location = "NULL"; /* where */
 		int frequency = 0; /* count */
