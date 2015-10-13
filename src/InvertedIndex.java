@@ -142,40 +142,25 @@ public class InvertedIndex {
 															 * path is key
 															 */
 		for (String queryWord : queryWords) {
-			// System.out.println("\nquery word: [" + queryWord + "]");
 			queryWord = InvertedIndexBuilder.clean(queryWord);
 			frequency = 0;
 			for (String word : index.keySet()) {
 
 				word = InvertedIndexBuilder.clean(word);
 				if (word.startsWith(queryWord)) {
-					// System.out.println("\nfind word: " + word);
 					TreeMap<String, TreeSet<Integer>> value = index.get(word);
 					for (String mylocation : value.keySet()) {
-						// System.out.println(mylocation + " "
-						// + value.get(mylocation).size());
+
 						location = mylocation;
 						frequency = value.get(mylocation).size();
-						// if (index.get(word).get(location).first() < position)
-						// {
-						// position = index.get(word).get(location).first();
-						// }
+
 						position = index.get(word).get(location).first();
 
-						// System.out.println("where: " + location
-						// + "\nquery word: " + queryWord + "\ncount: "
-						// + frequency + "\nindex: " + position);
-						// System.out.println(index.get(word).get(location));
-						// System.out.println("\nword: " + word + "\nwhere: "
-						// + location + "\ncount: " + frequency
-						// + "\nindex: " + position);
 						SearchResult searchResult = new SearchResult(frequency,
 								position, location);
 
 						if (result.containsKey(location)) {
-							// System.out.println("cotain path: " + location
-							// + ", update current frequency: "
-							// + searchResult.frequency);
+
 							searchResult.frequency += result
 									.get(location).frequency;
 
@@ -185,7 +170,6 @@ public class InvertedIndex {
 										.get(location).position;
 							}
 						}
-
 						result.put(location, searchResult);
 					}
 				}

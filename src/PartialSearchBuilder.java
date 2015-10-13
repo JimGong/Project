@@ -26,15 +26,6 @@ public class PartialSearchBuilder {
 
 				List<SearchResult> resultList = index.partialSearch(queryWords);
 
-				// System.out.println("\nqueeryWords: " + line);
-				for (SearchResult singleR : resultList) {
-					if (singleR.location != "NULL") {
-						// System.out.println("where:" + singleR.location
-						// + "\ncount: " + singleR.frequency + "\nindex: "
-						// + singleR.position);
-					}
-				}
-
 				result.put(line, resultList);
 			}
 		} catch (Exception e) {
@@ -52,14 +43,12 @@ public class PartialSearchBuilder {
 
 				if (keys.hasNext()) {
 					String key = keys.next();
-					// System.out.println("first entry: ");
-					// System.out.println(key + ", " + result.get(key));
+
 					writeNestedMap(key, result.get(key), writer);
 				}
 				while (keys.hasNext()) {
 
 					String key = keys.next();
-					// System.out.println(key + ", " + result.get(key));
 					writer.write(",");
 					writeNestedMap(key, result.get(key), writer);
 				}
