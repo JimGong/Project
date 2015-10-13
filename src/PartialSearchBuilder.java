@@ -4,16 +4,17 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map.Entry;
-import java.util.TreeMap;
+import java.util.Map;
 
 public class PartialSearchBuilder {
 
-	private final TreeMap<String, List<SearchResult>> result;
+	private final Map<String, List<SearchResult>> result;
 
 	public PartialSearchBuilder() {
-		result = new TreeMap<>();
+		result = new LinkedHashMap<>();
 	}
 
 	public void parseFile(Path file, InvertedIndex index) throws IOException {
@@ -25,12 +26,12 @@ public class PartialSearchBuilder {
 
 				List<SearchResult> resultList = index.partialSearch(queryWords);
 
-				System.out.println("\nqueeryWords: " + line);
+				// System.out.println("\nqueeryWords: " + line);
 				for (SearchResult singleR : resultList) {
 					if (singleR.location != "NULL") {
-						System.out.println("where:" + singleR.location
-								+ "\ncount: " + singleR.frequency + "\nindex: "
-								+ singleR.position);
+						// System.out.println("where:" + singleR.location
+						// + "\ncount: " + singleR.frequency + "\nindex: "
+						// + singleR.position);
 					}
 				}
 
@@ -47,13 +48,20 @@ public class PartialSearchBuilder {
 				Charset.forName("UTF-8"))) {
 			writer.write("{");
 			if (!result.isEmpty()) {
-				Entry<String, List<SearchResult>> first = result.firstEntry();
-				// System.out.println("print first");
-				writeResult(first, writer);
-				for (Entry<String, List<SearchResult>> entry : result
-						.tailMap(first.getKey(), false).entrySet()) {
+				Iterator<String> keys = result.keySet().iterator();
+
+				if (keys.hasNext()) {
+					String key = keys.next();
+					// System.out.println("first entry: ");
+					// System.out.println(key + ", " + result.get(key));
+					writeNestedMap(key, result.get(key), writer);
+				}
+				while (keys.hasNext()) {
+
+					String key = keys.next();
+					// System.out.println(key + ", " + result.get(key));
 					writer.write(",");
-					writeResult(entry, writer);
+					writeNestedMap(key, result.get(key), writer);
 				}
 
 			}
@@ -62,13 +70,13 @@ public class PartialSearchBuilder {
 		}
 	}
 
-	private void writeResult(Entry<String, List<SearchResult>> entry,
+	private void writeNestedMap(String key, List<SearchResult> resultList,
 			BufferedWriter writer) throws IOException {
 		writer.newLine();
-		writer.write(JSONWriter.indent(1) + JSONWriter.quote(entry.getKey()));
+		writer.write(JSONWriter.indent(1) + JSONWriter.quote(key));
 		writer.write(": [");
-		if (entry.getValue() != (new SearchResult(0, 0, ""))) {
-			writeResultList(entry.getValue(), writer);
+		if (!resultList.isEmpty()) {
+			writeResultList(resultList, writer);
 		}
 		writer.newLine();
 		writer.write(JSONWriter.indent(1) + "]");
@@ -77,19 +85,26 @@ public class PartialSearchBuilder {
 
 	private void writeResultList(List<SearchResult> searchResult,
 			BufferedWriter writer) throws IOException {
-		writer.newLine();
-		writer.write(JSONWriter.indent(2) + "{");
+
+		SearchResult first = searchResult.get(0);
+
+		writeSingleResult(first, writer);
 
 		for (SearchResult result : searchResult) {
-			writeSingleResult(result, writer);
+			if (result != first) {
+				writer.write(",");
+				writeSingleResult(result, writer);
+			}
 		}
-		writer.newLine();
-		writer.write(JSONWriter.indent(2) + "}");
+
 	}
 
 	private void writeSingleResult(SearchResult searchResult,
 			BufferedWriter writer) throws IOException {
 		if (searchResult.location != "NULL") {
+			writer.newLine();
+			writer.write(JSONWriter.indent(2) + "{");
+
 			writer.newLine();
 			writer.write(
 					JSONWriter.indent(3) + JSONWriter.quote("where") + ": ");
@@ -103,7 +118,9 @@ public class PartialSearchBuilder {
 			writer.newLine();
 			writer.write(JSONWriter.indent(3) + JSONWriter.quote("index") + ": "
 					+ searchResult.position);
-		}
 
+			writer.newLine();
+			writer.write(JSONWriter.indent(2) + "}");
+		}
 	}
 }

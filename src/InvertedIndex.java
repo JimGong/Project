@@ -137,29 +137,60 @@ public class InvertedIndex {
 	public List<SearchResult> partialSearch(String[] queryWords) {
 		String location = "NULL"; /* where */
 		int frequency = 0; /* count */
-		int position = 0; /* index */
+		int position = Integer.MAX_VALUE; /* index */
 		Map<String, SearchResult> result = new HashMap<>();/*
 															 * path is key
 															 */
 		for (String queryWord : queryWords) {
 			// System.out.println("\nquery word: [" + queryWord + "]");
+			queryWord = InvertedIndexBuilder.clean(queryWord);
+			frequency = 0;
 			for (String word : index.keySet()) {
+
+				word = InvertedIndexBuilder.clean(word);
 				if (word.startsWith(queryWord)) {
-					// System.out.println("find word: " + word + " in path: "
-					// + index.get(word).firstKey() + " position: "
-					// + index.get(word).firstEntry().getValue().first());
-					frequency++;
-					location = index.get(word).firstKey();
-					position = index.get(word).firstEntry().getValue().first();
+					// System.out.println("\nfind word: " + word);
+					TreeMap<String, TreeSet<Integer>> value = index.get(word);
+					for (String mylocation : value.keySet()) {
+						// System.out.println(mylocation + " "
+						// + value.get(mylocation).size());
+						location = mylocation;
+						frequency = value.get(mylocation).size();
+						// if (index.get(word).get(location).first() < position)
+						// {
+						// position = index.get(word).get(location).first();
+						// }
+						position = index.get(word).get(location).first();
+
+						// System.out.println("where: " + location
+						// + "\nquery word: " + queryWord + "\ncount: "
+						// + frequency + "\nindex: " + position);
+						// System.out.println(index.get(word).get(location));
+						// System.out.println("\nword: " + word + "\nwhere: "
+						// + location + "\ncount: " + frequency
+						// + "\nindex: " + position);
+						SearchResult searchResult = new SearchResult(frequency,
+								position, location);
+
+						if (result.containsKey(location)) {
+							// System.out.println("cotain path: " + location
+							// + ", update current frequency: "
+							// + searchResult.frequency);
+							searchResult.frequency += result
+									.get(location).frequency;
+
+							if (result.get(
+									location).position < searchResult.position) {
+								searchResult.position = result
+										.get(location).position;
+							}
+						}
+
+						result.put(location, searchResult);
+					}
 				}
 			}
-			// System.out
-			// .println("where: " + location + "\nquery word: " + queryWord
-			// + "\ncount: " + frequency + "\nindex: " + position);
-			SearchResult searchResult = new SearchResult(frequency, position,
-					location);
 
-			result.put(location, searchResult);
 		}
 		List<SearchResult> resultList = null;
 		try {
@@ -167,12 +198,6 @@ public class InvertedIndex {
 			Collections.sort(resultList);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			// System.out.println("\nprint unsorted result list");
-			// System.out.println(resultList);
-			// Collections.sort(resultList);
-			// System.out.println("\nprint sorted result list");
-			// System.out.println(resultList);
 		}
 		return resultList;
 	}

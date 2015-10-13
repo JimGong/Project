@@ -16,7 +16,7 @@ public class SearchResult implements Comparable<SearchResult> {
 	public int compareTo(SearchResult o) {
 
 		if (this.frequency != o.frequency) {
-			return Integer.compare(this.frequency, o.frequency);
+			return Integer.compare(o.frequency, this.frequency);
 		}
 		else {
 			if (this.position != o.position) {
