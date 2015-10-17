@@ -33,7 +33,7 @@ public class PartialSearchBuilder {
 	 * @param index
 	 * @throws IOException
 	 */
-	public void parseFile(Path file, InvertedIndex index) throws IOException {
+	public void parseFile(Path file, InvertedIndex index) throws IOException { // TODO Throw -or- Catch
 		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
 			String line = null;
@@ -81,6 +81,7 @@ public class PartialSearchBuilder {
 		}
 	}
 
+	// TODO This should probabally be in JSONWriter
 	/**
 	 * Print nested map
 	 *
@@ -99,7 +100,6 @@ public class PartialSearchBuilder {
 		}
 		writer.newLine();
 		writer.write(JSONWriter.indent(1) + "]");
-
 	}
 
 	/**
