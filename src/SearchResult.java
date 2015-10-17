@@ -1,11 +1,16 @@
+// TODO Don't get lazy with the comments.
+
 /**
  * Search Result for partial search
  */
 public class SearchResult implements Comparable<SearchResult> {
 
+	// TODO Private
+
 	int frequency;
 	int position;
-	String location;
+	
+	String location; // TODO final
 
 	/**
 	 * Constructor
@@ -20,6 +25,18 @@ public class SearchResult implements Comparable<SearchResult> {
 		this.position = position;
 		this.location = location;
 	}
+
+	/* TODO
+	public void updateFrequency(int frequency) {
+		// add this frequency to the old frequency
+	}
+	
+	public void updatePosition(int position) {
+		// only change if this is less than the old position
+	}
+	
+	Make this more generalized, add some getters.
+	*/
 
 	/**
 	 * override compareTo method
