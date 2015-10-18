@@ -33,7 +33,7 @@ public class PartialSearchBuilder {
 	 * @param index
 	 * @throws IOException
 	 */
-	public void parseFile(Path file, InvertedIndex index) throws IOException { // TODO Throw -or- Catch
+	public void parseFile(Path file, InvertedIndex index) throws IOException {
 		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
 			String line = null;
@@ -44,8 +44,6 @@ public class PartialSearchBuilder {
 
 				result.put(line, resultList);
 			}
-		} catch (Exception e) {
-			System.out.println(e.toString());
 		}
 	}
 
@@ -66,13 +64,13 @@ public class PartialSearchBuilder {
 				if (keys.hasNext()) {
 					String key = keys.next();
 
-					writeNestedMap(key, result.get(key), writer);
+					JSONWriter.writeNestedMap(key, result.get(key), writer);
 				}
 				while (keys.hasNext()) {
 
 					String key = keys.next();
 					writer.write(",");
-					writeNestedMap(key, result.get(key), writer);
+					JSONWriter.writeNestedMap(key, result.get(key), writer);
 				}
 
 			}
@@ -81,79 +79,4 @@ public class PartialSearchBuilder {
 		}
 	}
 
-	// TODO This should probabally be in JSONWriter
-	/**
-	 * Print nested map
-	 *
-	 * @param key
-	 * @param resultList
-	 * @param writer
-	 * @throws IOException
-	 */
-	private void writeNestedMap(String key, List<SearchResult> resultList,
-			BufferedWriter writer) throws IOException {
-		writer.newLine();
-		writer.write(JSONWriter.indent(1) + JSONWriter.quote(key));
-		writer.write(": [");
-		if (!resultList.isEmpty()) {
-			writeResultList(resultList, writer);
-		}
-		writer.newLine();
-		writer.write(JSONWriter.indent(1) + "]");
-	}
-
-	/**
-	 * Print result list
-	 *
-	 * @param searchResult
-	 * @param writer
-	 * @throws IOException
-	 */
-	private void writeResultList(List<SearchResult> searchResult,
-			BufferedWriter writer) throws IOException {
-
-		SearchResult first = searchResult.get(0);
-
-		writeSingleResult(first, writer);
-
-		for (SearchResult result : searchResult) {
-			if (result != first) {
-				writer.write(",");
-				writeSingleResult(result, writer);
-			}
-		}
-
-	}
-
-	/**
-	 * Print single result
-	 * 
-	 * @param searchResult
-	 * @param writer
-	 * @throws IOException
-	 */
-	private void writeSingleResult(SearchResult searchResult,
-			BufferedWriter writer) throws IOException {
-		if (searchResult.location != "NULL") {
-			writer.newLine();
-			writer.write(JSONWriter.indent(2) + "{");
-
-			writer.newLine();
-			writer.write(
-					JSONWriter.indent(3) + JSONWriter.quote("where") + ": ");
-			writer.write(JSONWriter.quote(searchResult.location) + ",");
-
-			writer.newLine();
-			writer.write(
-					JSONWriter.indent(3) + JSONWriter.quote("count") + ": ");
-			writer.write(searchResult.frequency + ",");
-
-			writer.newLine();
-			writer.write(JSONWriter.indent(3) + JSONWriter.quote("index") + ": "
-					+ searchResult.position);
-
-			writer.newLine();
-			writer.write(JSONWriter.indent(2) + "}");
-		}
-	}
 }

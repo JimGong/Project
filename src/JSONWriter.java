@@ -1,5 +1,6 @@
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -110,5 +111,80 @@ public class JSONWriter {
 	 */
 	public static String quote(String text) {
 		return "\"" + text + "\"";
+	}
+
+	/**
+	 * Print nested map
+	 *
+	 * @param key
+	 * @param resultList
+	 * @param writer
+	 * @throws IOException
+	 */
+	public static void writeNestedMap(String key, List<SearchResult> resultList,
+			BufferedWriter writer) throws IOException {
+		writer.newLine();
+		writer.write(JSONWriter.indent(1) + JSONWriter.quote(key));
+		writer.write(": [");
+		if (!resultList.isEmpty()) {
+			writeResultList(resultList, writer);
+		}
+		writer.newLine();
+		writer.write(JSONWriter.indent(1) + "]");
+	}
+
+	/**
+	 * Print result list
+	 *
+	 * @param searchResult
+	 * @param writer
+	 * @throws IOException
+	 */
+	public static void writeResultList(List<SearchResult> searchResult,
+			BufferedWriter writer) throws IOException {
+
+		SearchResult first = searchResult.get(0);
+
+		writeSingleResult(first, writer);
+
+		for (SearchResult result : searchResult) {
+			if (result != first) {
+				writer.write(",");
+				writeSingleResult(result, writer);
+			}
+		}
+
+	}
+
+	/**
+	 * Print single result
+	 *
+	 * @param searchResult
+	 * @param writer
+	 * @throws IOException
+	 */
+	public static void writeSingleResult(SearchResult searchResult,
+			BufferedWriter writer) throws IOException {
+		if (searchResult.location != "NULL") {
+			writer.newLine();
+			writer.write(JSONWriter.indent(2) + "{");
+
+			writer.newLine();
+			writer.write(
+					JSONWriter.indent(3) + JSONWriter.quote("where") + ": ");
+			writer.write(JSONWriter.quote(searchResult.location) + ",");
+
+			writer.newLine();
+			writer.write(
+					JSONWriter.indent(3) + JSONWriter.quote("count") + ": ");
+			writer.write(searchResult.frequency + ",");
+
+			writer.newLine();
+			writer.write(JSONWriter.indent(3) + JSONWriter.quote("index") + ": "
+					+ searchResult.position);
+
+			writer.newLine();
+			writer.write(JSONWriter.indent(2) + "}");
+		}
 	}
 }

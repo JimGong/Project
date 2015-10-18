@@ -64,19 +64,17 @@ public class InvertedIndex {
 			}
 			index.get(word).get(path).add(position);
 		}
-		
+
 		// new version: same logic, clearer code
 		/*
-		if (hasWord(word) == false) {
-			index.put(word, new TreeMap<String, TreeSet<Integer>());
-		}
-		
-		if (hasPath(word, path) == false) {
-			index.get(word).put(path, new TreeSet<Integer>());
-		}
-		
-		index.get(word).get(path).add(position);
-		*/
+		 * if (hasWord(word) == false) { index.put(word, new TreeMap<String,
+		 * TreeSet<Integer>()); }
+		 *
+		 * if (hasPath(word, path) == false) { index.get(word).put(path, new
+		 * TreeSet<Integer>()); }
+		 *
+		 * index.get(word).get(path).add(position);
+		 */
 	}
 
 	/**
@@ -148,11 +146,10 @@ public class InvertedIndex {
 	}
 
 	// TODO Take a quick look at comment/formatting here
-	
+
 	/**
-	 * Partial search query words
-	 * // TODO Maybe a little more descriptive
-	 * 
+	 * Partial search query words // TODO Maybe a little more descriptive
+	 *
 	 * @param queryWords
 	 * @return sorted list of search results
 	 */
@@ -160,31 +157,25 @@ public class InvertedIndex {
 		String location = "NULL"; /* where */
 		int frequency = 0; /* count */
 		int position = Integer.MAX_VALUE; /* index */
-		
-		Map<String, SearchResult> result = new HashMap<>();/*
-															 * path is key
-															 */
+
+		Map<String, SearchResult> result = new HashMap<>(); /* path is key */
 		for (String queryWord : queryWords) {
-			// TODO Clean should happen in another class. No string parsing in InvertedIndex
-			queryWord = InvertedIndexBuilder.clean(queryWord);
+
 			frequency = 0;
-			
-			// TODO https://github.com/cs212/lectures/blob/fall2015/Data%20Structures/src/FindDemo.java#L146
-			
-			for (String word : index.keySet()) { // TODO Efficiency issue
-				// TODO No clean here
-				word = InvertedIndexBuilder.clean(word);
-				
+
+			TreeSet<String> wordSet = new TreeSet<>(index.keySet());
+			for (String word : wordSet.tailSet(queryWord, true)) {
+
 				if (word.startsWith(queryWord)) {
 					TreeMap<String, TreeSet<Integer>> value = index.get(word);
 					for (String mylocation : value.keySet()) {
-						// TODO Why location = mylocation? Choose 1.
-						
+
 						location = mylocation;
-						frequency = value.get(mylocation).size();
+						frequency = value.get(location).size();
 						position = index.get(word).get(location).first();
 
-						// TODO Only create this if result.containsKey() is false.
+						// TODO Only create this if result.containsKey() is
+						// false.
 						SearchResult searchResult = new SearchResult(frequency,
 								position, location);
 
@@ -199,29 +190,21 @@ public class InvertedIndex {
 										.get(location).position;
 							}
 						}
-						
+
 						// TODO Put this in an else
 						result.put(location, searchResult);
 					}
 				}
+				else {
+					break;
+				}
 			}
 
 		}
-		
-		// TODO Fix this code...
-		/*
-		List<SearchResult> resultList = new ArrayList<>();
-		Collections.addAll(resultList, result.values());
-		*/
-		
-		List<SearchResult> resultList = null;
-		
-		try {
-			resultList = new ArrayList<SearchResult>(result.values());
-			Collections.sort(resultList);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+		List<SearchResult> resultList = new ArrayList<>(result.values());
+		Collections.sort(resultList);
+
 		return resultList;
 	}
 
