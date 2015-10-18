@@ -9,8 +9,8 @@ public class SearchResult implements Comparable<SearchResult> {
 
 	int frequency;
 	int position;
-	
-	String location; // TODO final
+
+	final String location; // TODO final
 
 	/**
 	 * Constructor
@@ -26,17 +26,34 @@ public class SearchResult implements Comparable<SearchResult> {
 		this.location = location;
 	}
 
-	/* TODO
+	/*
+	 * TODO public void updateFrequency(int frequency) { // add this frequency
+	 * to the old frequency }
+	 *
+	 * public void updatePosition(int position) { // only change if this is less
+	 * than the old position }
+	 *
+	 * Make this more generalized, add some getters.
+	 */
 	public void updateFrequency(int frequency) {
-		// add this frequency to the old frequency
+		this.frequency += frequency;
 	}
-	
+
 	public void updatePosition(int position) {
-		// only change if this is less than the old position
+		this.position = position;
 	}
-	
-	Make this more generalized, add some getters.
-	*/
+
+	public int getFrequency() {
+		return frequency;
+	}
+
+	public int getPosition() {
+		return position;
+	}
+
+	public String getLocation() {
+		return location;
+	}
 
 	/**
 	 * override compareTo method
