@@ -1,16 +1,17 @@
 // TODO Don't get lazy with the comments.
 
 /**
- * Search Result for partial search
+ * A custom class for storing basic search information. It will sort first
+ * according to its frequency, then position and location.
  */
 public class SearchResult implements Comparable<SearchResult> {
 
-	// TODO Private
-
-	int frequency;
-	int position;
-
-	final String location; // TODO final
+	/** count */
+	private int frequency;
+	/** index */
+	private int position;
+	/** where */
+	private final String location;
 
 	/**
 	 * Constructor
@@ -26,21 +27,14 @@ public class SearchResult implements Comparable<SearchResult> {
 		this.location = location;
 	}
 
-	/*
-	 * TODO public void updateFrequency(int frequency) { // add this frequency
-	 * to the old frequency }
-	 *
-	 * public void updatePosition(int position) { // only change if this is less
-	 * than the old position }
-	 *
-	 * Make this more generalized, add some getters.
-	 */
 	public void updateFrequency(int frequency) {
 		this.frequency += frequency;
 	}
 
 	public void updatePosition(int position) {
-		this.position = position;
+		if (this.position > position) {
+			this.position = position;
+		}
 	}
 
 	public int getFrequency() {

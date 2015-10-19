@@ -165,23 +165,23 @@ public class JSONWriter {
 	 */
 	public static void writeSingleResult(SearchResult searchResult,
 			BufferedWriter writer) throws IOException {
-		if (searchResult.location != "NULL") {
+		if (searchResult.getLocation() != "NULL") {
 			writer.newLine();
 			writer.write(JSONWriter.indent(2) + "{");
 
 			writer.newLine();
 			writer.write(
 					JSONWriter.indent(3) + JSONWriter.quote("where") + ": ");
-			writer.write(JSONWriter.quote(searchResult.location) + ",");
+			writer.write(JSONWriter.quote(searchResult.getLocation()) + ",");
 
 			writer.newLine();
 			writer.write(
 					JSONWriter.indent(3) + JSONWriter.quote("count") + ": ");
-			writer.write(searchResult.frequency + ",");
+			writer.write(searchResult.getFrequency() + ",");
 
 			writer.newLine();
 			writer.write(JSONWriter.indent(3) + JSONWriter.quote("index") + ": "
-					+ searchResult.position);
+					+ searchResult.getPosition());
 
 			writer.newLine();
 			writer.write(JSONWriter.indent(2) + "}");

@@ -145,10 +145,9 @@ public class InvertedIndex {
 		}
 	}
 
-	// TODO Take a quick look at comment/formatting here
-
 	/**
-	 * Partial search query words // TODO Maybe a little more descriptive
+	 * Partial search query words and return a sorted list of SearchResult. If
+	 * no word find then return (NULL, 0, Integer.MaxValue)
 	 *
 	 * @param queryWords
 	 * @return sorted list of search results
@@ -174,25 +173,17 @@ public class InvertedIndex {
 						frequency = value.get(location).size();
 						position = index.get(word).get(location).first();
 
-						// TODO Only create this if result.containsKey() is
-						// false.
-						SearchResult searchResult = new SearchResult(frequency,
-								position, location);
-
-						if (result.containsKey(location)) {
-							// TODO Use your update methods.
-							searchResult.frequency += result
-									.get(location).frequency;
-
-							if (result.get(
-									location).position < searchResult.position) {
-								searchResult.position = result
-										.get(location).position;
+						if (!result.containsKey(location)) {
+							result.put(location, new SearchResult(frequency,
+									position, location));
+						}
+						else {
+							result.get(location).updateFrequency(frequency);
+							if (result.get(location).getPosition() > position) {
+								result.get(location).updatePosition(position);
 							}
 						}
 
-						// TODO Put this in an else
-						result.put(location, searchResult);
 					}
 				}
 				else {
@@ -204,7 +195,6 @@ public class InvertedIndex {
 
 		List<SearchResult> resultList = new ArrayList<>(result.values());
 		Collections.sort(resultList);
-
 		return resultList;
 	}
 

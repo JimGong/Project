@@ -54,7 +54,6 @@ public class PartialSearchBuilder {
 	 * @throws IOException
 	 */
 	public void print(Path output) throws IOException {
-		// System.out.println("\nPrinting search result");
 		try (BufferedWriter writer = Files.newBufferedWriter(output,
 				Charset.forName("UTF-8"))) {
 			writer.write("{");
