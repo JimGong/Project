@@ -1,4 +1,3 @@
-// TODO Don't get lazy with the comments.
 
 /**
  * A custom class for storing basic search information. It will sort first
@@ -27,24 +26,50 @@ public class SearchResult implements Comparable<SearchResult> {
 		this.location = location;
 	}
 
+	/**
+	 * Update the frequency when new word found
+	 *
+	 * @param frequency
+	 */
 	public void updateFrequency(int frequency) {
 		this.frequency += frequency;
 	}
 
+	/**
+	 * Update the position when new first occurrence position is smaller than
+	 * the current one.
+	 *
+	 * @param position
+	 */
 	public void updatePosition(int position) {
 		if (this.position > position) {
 			this.position = position;
 		}
 	}
 
+	/**
+	 * Get the frequency of the current search result
+	 *
+	 * @return frequency
+	 */
 	public int getFrequency() {
 		return frequency;
 	}
 
+	/**
+	 * Get the position of the current search result
+	 *
+	 * @return
+	 */
 	public int getPosition() {
 		return position;
 	}
 
+	/**
+	 * Get the location of the current search result
+	 *
+	 * @return
+	 */
 	public String getLocation() {
 		return location;
 	}
