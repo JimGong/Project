@@ -147,12 +147,12 @@ public class JSONWriter {
 
 		writeSingleResult(first, writer);
 
-		// TODO Traditional for loop from i = 1, -or- use listIterator() -or- subList()
-		for (SearchResult result : searchResult) {
-			if (result != first) { // TODO Risky, because using == != instead of .equals()
-				writer.write(",");
-				writeSingleResult(result, writer);
-			}
+		for (SearchResult result : searchResult.subList(1,
+				searchResult.size())) {
+
+			writer.write(",");
+			writeSingleResult(result, writer);
+
 		}
 
 	}

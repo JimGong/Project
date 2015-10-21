@@ -13,11 +13,14 @@ public class SearchResult implements Comparable<SearchResult> {
 	private final String location;
 
 	/**
-	 * TODO: Initializes this search result.
+	 * Initializes this search result.
 	 *
-	 * @param frequency number of times a query was found
-	 * @param position earliest position a query was found
-	 * @param location location where a query was found
+	 * @param frequency
+	 *            number of times a query was found
+	 * @param position
+	 *            earliest position a query was found
+	 * @param location
+	 *            location where a query was found
 	 */
 	public SearchResult(int frequency, int position, String location) {
 		super();
@@ -30,6 +33,7 @@ public class SearchResult implements Comparable<SearchResult> {
 	 * Update the frequency when new word found
 	 *
 	 * @param frequency
+	 *            new frequency found in the file
 	 */
 	public void updateFrequency(int frequency) {
 		this.frequency += frequency;
@@ -40,6 +44,7 @@ public class SearchResult implements Comparable<SearchResult> {
 	 * the current one.
 	 *
 	 * @param position
+	 *            new position find in the file
 	 */
 	public void updatePosition(int position) {
 		if (this.position > position) {

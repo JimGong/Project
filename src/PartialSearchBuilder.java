@@ -38,16 +38,18 @@ public class PartialSearchBuilder {
 				Charset.forName("UTF-8"))) {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
-				String[] queryWords = InvertedIndexBuilder.splitLine(line);
-
-				List<SearchResult> resultList = index.partialSearch(queryWords);
-
-				result.put(line, resultList);
+				parseLine(line, index);
 			}
 		}
 	}
-	
-	// TODO parseLine(String line) that does lines 43 and 45 above.
+
+	public void parseLine(String line, InvertedIndex index) {
+		String[] queryWords = InvertedIndexBuilder.splitLine(line);
+
+		List<SearchResult> resultList = index.partialSearch(queryWords);
+
+		result.put(line, resultList);
+	}
 
 	/**
 	 * Print result map to file
@@ -80,5 +82,9 @@ public class PartialSearchBuilder {
 		}
 	}
 
-	// TODO Add a toString?
+	@Override
+	public String toString() {
+		return "PartialSearch [result=" + result + "]";
+	}
+
 }

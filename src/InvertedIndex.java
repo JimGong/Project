@@ -34,8 +34,6 @@ public class InvertedIndex {
 	public InvertedIndex() {
 		index = new TreeMap<>();
 	}
-	
-	// TODO Don't forget to update your add() method!
 
 	// You do usually describe the parameters too, but in this case they
 	// are self-explainatory.
@@ -52,31 +50,14 @@ public class InvertedIndex {
 	 */
 	public void add(String word, String path, int position) {
 		if (hasWord(word) == false) {
-			TreeSet<Integer> positions = new TreeSet<Integer>();
-			positions.add(position);
-
-			TreeMap<String, TreeSet<Integer>> fileMap = new TreeMap<String, TreeSet<Integer>>();
-			fileMap.put(path, positions);
-			index.put(word, fileMap);
-		}
-		else if (hasWord(word) == true) {
-
-			if (hasPath(word, path) == false) {
-				index.get(word).put(path, new TreeSet<Integer>());
-			}
-			index.get(word).get(path).add(position);
+			index.put(word, new TreeMap<String, TreeSet<Integer>>());
 		}
 
-		// new version: same logic, clearer code
-		/*
-		 * if (hasWord(word) == false) { index.put(word, new TreeMap<String,
-		 * TreeSet<Integer>()); }
-		 *
-		 * if (hasPath(word, path) == false) { index.get(word).put(path, new
-		 * TreeSet<Integer>()); }
-		 *
-		 * index.get(word).get(path).add(position);
-		 */
+		if (hasPath(word, path) == false) {
+			index.get(word).put(path, new TreeSet<Integer>());
+		}
+
+		index.get(word).get(path).add(position);
 	}
 
 	/**
@@ -160,20 +141,16 @@ public class InvertedIndex {
 		int position = Integer.MAX_VALUE; /* index */
 
 		Map<String, SearchResult> result = new HashMap<>(); /* path is key */
-		
+
 		for (String queryWord : queryWords) {
 
 			frequency = 0;
-			
-			// TODO You are making a copy?
-			TreeSet<String> wordSet = new TreeSet<>(index.keySet());
-			
-			// TODO Use tailMap() not tailSet(). 
-			for (String word : wordSet.tailSet(queryWord, true)) {
+
+			for (String word : index.tailMap(queryWord, true).keySet()) {
 
 				if (word.startsWith(queryWord)) {
 					TreeMap<String, TreeSet<Integer>> value = index.get(word);
-					
+
 					for (String mylocation : value.keySet()) {
 
 						location = mylocation;
@@ -186,20 +163,14 @@ public class InvertedIndex {
 						}
 						else {
 							result.get(location).updateFrequency(frequency);
-							
-							// TODO Do not need to check position, updatePosition() does it for you
-							if (result.get(location).getPosition() > position) {
-								result.get(location).updatePosition(position);
-							}
+							result.get(location).updatePosition(position);
 						}
-
 					}
 				}
 				else {
 					break;
 				}
 			}
-
 		}
 
 		List<SearchResult> resultList = new ArrayList<>(result.values());
