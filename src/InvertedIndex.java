@@ -34,6 +34,8 @@ public class InvertedIndex {
 	public InvertedIndex() {
 		index = new TreeMap<>();
 	}
+	
+	// TODO Don't forget to update your add() method!
 
 	// You do usually describe the parameters too, but in this case they
 	// are self-explainatory.
@@ -158,15 +160,20 @@ public class InvertedIndex {
 		int position = Integer.MAX_VALUE; /* index */
 
 		Map<String, SearchResult> result = new HashMap<>(); /* path is key */
+		
 		for (String queryWord : queryWords) {
 
 			frequency = 0;
-
+			
+			// TODO You are making a copy?
 			TreeSet<String> wordSet = new TreeSet<>(index.keySet());
+			
+			// TODO Use tailMap() not tailSet(). 
 			for (String word : wordSet.tailSet(queryWord, true)) {
 
 				if (word.startsWith(queryWord)) {
 					TreeMap<String, TreeSet<Integer>> value = index.get(word);
+					
 					for (String mylocation : value.keySet()) {
 
 						location = mylocation;
@@ -179,6 +186,8 @@ public class InvertedIndex {
 						}
 						else {
 							result.get(location).updateFrequency(frequency);
+							
+							// TODO Do not need to check position, updatePosition() does it for you
 							if (result.get(location).getPosition() > position) {
 								result.get(location).updatePosition(position);
 							}

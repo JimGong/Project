@@ -46,6 +46,8 @@ public class PartialSearchBuilder {
 			}
 		}
 	}
+	
+	// TODO parseLine(String line) that does lines 43 and 45 above.
 
 	/**
 	 * Print result map to file
@@ -78,4 +80,5 @@ public class PartialSearchBuilder {
 		}
 	}
 
+	// TODO Add a toString?
 }
