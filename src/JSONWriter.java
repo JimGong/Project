@@ -147,8 +147,9 @@ public class JSONWriter {
 
 		writeSingleResult(first, writer);
 
+		// TODO Traditional for loop from i = 1, -or- use listIterator() -or- subList()
 		for (SearchResult result : searchResult) {
-			if (result != first) {
+			if (result != first) { // TODO Risky, because using == != instead of .equals()
 				writer.write(",");
 				writeSingleResult(result, writer);
 			}
