@@ -13,11 +13,11 @@ public class SearchResult implements Comparable<SearchResult> {
 	private final String location;
 
 	/**
-	 * Constructor
+	 * TODO: Initializes this search result.
 	 *
-	 * @param frequency
-	 * @param position
-	 * @param location
+	 * @param frequency number of times a query was found
+	 * @param position earliest position a query was found
+	 * @param location location where a query was found
 	 */
 	public SearchResult(int frequency, int position, String location) {
 		super();
