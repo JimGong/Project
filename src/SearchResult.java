@@ -84,7 +84,6 @@ public class SearchResult implements Comparable<SearchResult> {
 	 */
 	@Override
 	public int compareTo(SearchResult o) {
-
 		if (this.frequency != o.frequency) {
 			return Integer.compare(o.frequency, this.frequency);
 		}

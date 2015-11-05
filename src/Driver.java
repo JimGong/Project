@@ -104,10 +104,9 @@ public class Driver {
 
 		ArgumentParser parser = new ArgumentParser(args);
 
-		ThreadSafeInvertedIndex index = new ThreadSafeInvertedIndex();
-		// InvertedIndex index = new InvertedIndex(); /* project 1*/
+		InvertedIndex index = new InvertedIndex();
 
-		PartialSearchBuilder search = new PartialSearchBuilder();/* project 3 */
+		PartialSearchBuilder search = new PartialSearchBuilder();
 
 		try {
 			InvertedIndexBuilder.traverseDirectory(
@@ -117,7 +116,7 @@ public class Driver {
 		}
 		try {
 			if (parser.hasFlag(Driver.INDEX_FLAG)) {
-				if (!parser.hasValue(INDEX_FLAG)) {
+				if (parser.getValue(Driver.INDEX_FLAG) == null) {
 					index.print(Paths.get(INDEX_DEFAULT));
 				}
 				else {

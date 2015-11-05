@@ -43,7 +43,6 @@ public class ReadWriteLock {
 	 * threads if necessary.
 	 */
 	public synchronized void unlockReadOnly() {
-
 		readers--;
 		notifyAll();
 	}
@@ -68,7 +67,6 @@ public class ReadWriteLock {
 	 * threads if necessary.
 	 */
 	public synchronized void unlockReadWrite() {
-
 		writers--;
 		notifyAll();
 	}

@@ -5,15 +5,10 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * Traverse the directory and build inverted index map
  */
 public class InvertedIndexBuilder {
-
-	private static final Logger logger = LogManager.getLogger();
 
 	/**
 	 * Traverse the directory to build inverted index map
@@ -32,15 +27,7 @@ public class InvertedIndexBuilder {
 				if (directory.getFileName().toString().toLowerCase()
 						.endsWith(".txt")) {
 
-					// parseFile(directory, index);
-					parseFileThread thread = new parseFileThread(directory,
-							index);
-					thread.start();
-					try {
-						thread.join();
-					} catch (InterruptedException e) {
-						logger.debug(e.getMessage(), e);
-					}
+					parseFile(directory, index);
 
 				}
 
@@ -71,15 +58,7 @@ public class InvertedIndexBuilder {
 				else {
 					if (file.getFileName().toString().toLowerCase()
 							.endsWith(".txt")) {
-						// parseFile(file, index);
-						parseFileThread thread = new parseFileThread(file,
-								index);
-						thread.start();
-						try {
-							thread.join();
-						} catch (InterruptedException e) {
-							logger.debug(e.getMessage(), e);
-						}
+						parseFile(file, index);
 					}
 				}
 			}
@@ -108,26 +87,6 @@ public class InvertedIndexBuilder {
 					position++;
 				}
 
-			}
-		}
-	}
-
-	private static class parseFileThread extends Thread {
-
-		private final Path file;
-		private final InvertedIndex index;
-
-		public parseFileThread(Path file, InvertedIndex index) {
-			this.file = file;
-			this.index = index;
-		}
-
-		@Override
-		public void run() {
-			try {
-				InvertedIndexBuilder.parseFile(file, index);
-			} catch (IOException e) {
-				logger.debug(e.getMessage(), e);
 			}
 		}
 	}

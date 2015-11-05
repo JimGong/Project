@@ -107,7 +107,6 @@ public class InvertedIndex {
 	 * @param output
 	 */
 	public void print(Path output) throws IOException {
-
 		try (BufferedWriter writer = Files.newBufferedWriter(output,
 				Charset.forName("UTF-8"))) {
 			writer.write("{");

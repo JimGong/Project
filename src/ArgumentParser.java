@@ -62,7 +62,6 @@ public class ArgumentParser {
 			}
 			else if (isFlag(curArg) && (isValue(nextArg) == false)) {
 				argumentMap.put(curArg, null);
-
 			}
 		}
 	}
