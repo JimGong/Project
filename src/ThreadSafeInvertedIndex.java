@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ThreadSafeInvertedIndex extends InvertedIndex {
 
-	private ReadWriteLock lock;
+	// private ReadWriteLock lock;
 
 	public ThreadSafeInvertedIndex() {
 		super();

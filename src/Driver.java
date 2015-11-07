@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.nio.file.Paths;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * This software driver class provides a consistent entry point for the search
  * engine. Based on the arguments provided to {@link #main(String[])}, it
@@ -102,20 +105,77 @@ public class Driver {
 	 */
 	public static void main(String[] args) {
 
+		// ArgumentParser parser = new ArgumentParser(args);
+		//
+		// InvertedIndex index = new InvertedIndex();
+		//
+		// PartialSearchBuilder search = new PartialSearchBuilder();
+		//
+		// try {
+		// InvertedIndexBuilder.traverseDirectory(
+		// Paths.get((parser.getValue(INPUT_FLAG))), index);
+		// } catch (Exception e) {
+		// System.err.println("No arguments");
+		// }
+		// try {
+		// if (parser.hasFlag(Driver.INDEX_FLAG)) {
+		// if (parser.getValue(Driver.INDEX_FLAG) == null) {
+		// index.print(Paths.get(INDEX_DEFAULT));
+		// }
+		// else {
+		// index.print(Paths.get(parser.getValue(INDEX_FLAG)));
+		// }
+		// }
+		// } catch (IOException e) {
+		// System.err.println("No file can be printed. Try it again");
+		// }
+		// // project 2 partial search
+		// try {
+		// if (parser.hasFlag(QUERIES_FLAG) && parser.hasValue(QUERIES_FLAG)) {
+		// search.parseFile(Paths.get(parser.getValue(QUERIES_FLAG)),
+		// index);
+		// }
+		// } catch (IOException e) {
+		// System.err.println("No queries file found");
+		// }
+		// try {
+		// if (parser.hasFlag(RESULTS_FLAG)) {
+		// if (parser.hasValue(RESULTS_FLAG)) {
+		// search.print(Paths.get(parser.getValue(RESULTS_FLAG)));
+		// }
+		// else {
+		// search.print(Paths.get(RESULTS_DEFAULT));
+		// }
+		// }
+		// } catch (IOException e) {
+		// System.out.println("No output file for search");
+		// }
+		/***************************
+		 * Project 3
+		 ****************************************/
+		Logger logger = LogManager.getLogger();
+
 		ArgumentParser parser = new ArgumentParser(args);
 
-		InvertedIndex index = new InvertedIndex();
+		ThreadSafeInvertedIndex index = new ThreadSafeInvertedIndex();
 
-		PartialSearchBuilder search = new PartialSearchBuilder();
+		ThreadSafePartialSearchBuilder search = new ThreadSafePartialSearchBuilder();
 
+		MultiThreadInvertedIndexBuilder invertedIndexBuilder = new MultiThreadInvertedIndexBuilder();
 		try {
-			InvertedIndexBuilder.traverseDirectory(
+			invertedIndexBuilder.traverseDirectory(
 					Paths.get((parser.getValue(INPUT_FLAG))), index);
+			invertedIndexBuilder
+					.finish(); /* wait until all file minions done */
+			logger.debug("Done with traverseDirectory");
 		} catch (Exception e) {
 			System.err.println("No arguments");
 		}
 		try {
+			invertedIndexBuilder
+					.finish(); /* wait until all file minions done */
 			if (parser.hasFlag(Driver.INDEX_FLAG)) {
+				logger.debug("try to print invertedindex");
 				if (parser.getValue(Driver.INDEX_FLAG) == null) {
 					index.print(Paths.get(INDEX_DEFAULT));
 				}
@@ -126,17 +186,20 @@ public class Driver {
 		} catch (IOException e) {
 			System.err.println("No file can be printed. Try it again");
 		}
-		// project 2 partial search
+		// partial search
 		try {
 			if (parser.hasFlag(QUERIES_FLAG) && parser.hasValue(QUERIES_FLAG)) {
 				search.parseFile(Paths.get(parser.getValue(QUERIES_FLAG)),
 						index);
 			}
+			logger.debug("Done with parsing queries");
 		} catch (IOException e) {
 			System.err.println("No queries file found");
 		}
 		try {
+			search.finish();
 			if (parser.hasFlag(RESULTS_FLAG)) {
+				logger.debug("try to print search result");
 				if (parser.hasValue(RESULTS_FLAG)) {
 					search.print(Paths.get(parser.getValue(RESULTS_FLAG)));
 				}
