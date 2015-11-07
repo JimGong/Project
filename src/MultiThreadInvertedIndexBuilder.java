@@ -15,8 +15,8 @@ public class MultiThreadInvertedIndexBuilder {
 	private final WorkQueue minions;
 	private int pending;
 
-	public MultiThreadInvertedIndexBuilder() {
-		minions = new WorkQueue();
+	public MultiThreadInvertedIndexBuilder(int numThreads) {
+		minions = new WorkQueue(numThreads);
 		pending = 0;
 	}
 

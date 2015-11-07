@@ -153,21 +153,39 @@ public class Driver {
 		/***************************
 		 * Project 3
 		 ****************************************/
+
 		Logger logger = LogManager.getLogger();
 
 		ArgumentParser parser = new ArgumentParser(args);
 
 		ThreadSafeInvertedIndex index = new ThreadSafeInvertedIndex();
+		int numThreads = THREAD_DEFAULT;;
 
-		ThreadSafePartialSearchBuilder search = new ThreadSafePartialSearchBuilder();
+		try {
+			if (parser.hasFlag(THREAD_FLAG)) {
+				numThreads = Integer.parseInt(parser.getValue(THREAD_FLAG));
+				if (numThreads == 0) {
+					numThreads = THREAD_DEFAULT;
+				}
+			}
+		} catch (NumberFormatException e) {
+			System.err.println("Wrong number of thread.");
+			// e.printStackTrace();
+		}
 
-		MultiThreadInvertedIndexBuilder invertedIndexBuilder = new MultiThreadInvertedIndexBuilder();
+		ThreadSafePartialSearchBuilder search = new ThreadSafePartialSearchBuilder(
+				numThreads);
+
+		MultiThreadInvertedIndexBuilder invertedIndexBuilder = new MultiThreadInvertedIndexBuilder(
+				numThreads);
+
 		try {
 			invertedIndexBuilder.traverseDirectory(
 					Paths.get((parser.getValue(INPUT_FLAG))), index);
 			invertedIndexBuilder
 					.finish(); /* wait until all file minions done */
 			logger.debug("Done with traverseDirectory");
+			invertedIndexBuilder.shutdown();
 		} catch (Exception e) {
 			System.err.println("No arguments");
 		}
@@ -193,6 +211,7 @@ public class Driver {
 						index);
 			}
 			logger.debug("Done with parsing queries");
+			search.shutdown();
 		} catch (IOException e) {
 			System.err.println("No queries file found");
 		}

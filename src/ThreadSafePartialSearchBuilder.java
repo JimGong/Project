@@ -21,9 +21,9 @@ public class ThreadSafePartialSearchBuilder {
 	private final WorkQueue minions;
 	private int pending;
 
-	public ThreadSafePartialSearchBuilder() {
+	public ThreadSafePartialSearchBuilder(int numThreads) {
 		result = Collections.synchronizedMap(new LinkedHashMap<>());
-		minions = new WorkQueue();
+		minions = new WorkQueue(numThreads);
 		pending = 0;
 	}
 
@@ -33,6 +33,7 @@ public class ThreadSafePartialSearchBuilder {
 				Charset.forName("UTF-8"))) {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
+				result.put(line, null);
 				minions.execute(new LineMinion(line, index));
 			}
 		}
