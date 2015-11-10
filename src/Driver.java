@@ -168,10 +168,12 @@ public class Driver {
 					numThreads = THREAD_DEFAULT;
 				}
 			}
+
 		} catch (NumberFormatException e) {
 			System.err.println("Wrong number of thread.");
 			// e.printStackTrace();
 		}
+		System.out.println("num thread: " + numThreads);
 
 		ThreadSafePartialSearchBuilder search = new ThreadSafePartialSearchBuilder(
 				numThreads);
@@ -180,27 +182,34 @@ public class Driver {
 				numThreads);
 
 		try {
+			System.out.println("traversing directory");
 			invertedIndexBuilder.traverseDirectory(
 					Paths.get((parser.getValue(INPUT_FLAG))), index);
 			invertedIndexBuilder
 					.finish(); /* wait until all file minions done */
 			logger.debug("Done with traverseDirectory");
-			invertedIndexBuilder.shutdown();
 		} catch (Exception e) {
 			System.err.println("No arguments");
 		}
 		try {
-			invertedIndexBuilder
-					.finish(); /* wait until all file minions done */
-			if (parser.hasFlag(Driver.INDEX_FLAG)) {
+
+			System.out.println("going to print index");
+			System.out.println(parser.hasFlag(INDEX_FLAG));
+			if (parser.hasFlag(INDEX_FLAG)) {
+				System.out.println("has index flag");
 				logger.debug("try to print invertedindex");
-				if (parser.getValue(Driver.INDEX_FLAG) == null) {
+				if (parser.getValue(INDEX_FLAG) == null) {
+					System.out.println("printing to default");
 					index.print(Paths.get(INDEX_DEFAULT));
+					System.out.println("done printing to default");
 				}
 				else {
+					System.out.println("printing to whatever");
 					index.print(Paths.get(parser.getValue(INDEX_FLAG)));
 				}
 			}
+			// invertedIndexBuilder.shutdown();
+			System.out.println("shut down index work queue");
 		} catch (IOException e) {
 			System.err.println("No file can be printed. Try it again");
 		}

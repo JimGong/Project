@@ -4,45 +4,82 @@ import java.util.List;
 
 public class ThreadSafeInvertedIndex extends InvertedIndex {
 
-	// private ReadWriteLock lock;
+	private ReadWriteLock lock;
 
 	public ThreadSafeInvertedIndex() {
 		super();
+		lock = new ReadWriteLock();
 	}
 
 	@Override
-	public synchronized void add(String word, String path, int position) {
-		super.add(word, path, position);
+	public void add(String word, String path, int position) {
+		lock.lockReadWrite();
+		try {
+			super.add(word, path, position);
+		} finally {
+			lock.unlockReadWrite();
+		}
 	}
 
 	@Override
-	public synchronized boolean hasWord(String word) {
-		return super.hasWord(word);
+	public boolean hasWord(String word) {
+		lock.lockReadOnly();
+		try {
+			return super.hasWord(word);
+		} finally {
+			lock.unlockReadOnly();
+		}
 	}
 
 	@Override
-	public synchronized boolean hasPath(String word, String path) {
-		return super.hasPath(word, path);
+	public boolean hasPath(String word, String path) {
+		lock.lockReadOnly();
+		try {
+			return super.hasPath(word, path);
+		} finally {
+			lock.unlockReadOnly();
+		}
 	}
 
 	@Override
-	public synchronized boolean hasPosition(String word, String path,
-			int position) {
-		return super.hasPosition(word, path, position);
+	public boolean hasPosition(String word, String path, int position) {
+		lock.lockReadOnly();
+		try {
+			return super.hasPosition(word, path, position);
+		} finally {
+			lock.unlockReadOnly();
+		}
 	}
 
 	@Override
-	public synchronized void print(Path output) throws IOException {
-		super.print(output);
+	public void print(Path output) throws IOException {
+		lock.lockReadOnly();
+		try {
+			super.print(output);
+		} finally {
+			lock.lockReadOnly();
+		}
+		// super.print(output);
+
 	}
 
 	@Override
-	public synchronized List<SearchResult> partialSearch(String[] queryWords) {
-		return super.partialSearch(queryWords);
+	public List<SearchResult> partialSearch(String[] queryWords) {
+		lock.lockReadOnly();
+		try {
+			return super.partialSearch(queryWords);
+		} finally {
+			lock.unlockReadOnly();
+		}
 	}
 
 	@Override
-	public synchronized String toString() {
-		return super.toString();
+	public String toString() {
+		lock.lockReadOnly();
+		try {
+			return super.toString();
+		} finally {
+			lock.unlockReadOnly();
+		}
 	}
 }

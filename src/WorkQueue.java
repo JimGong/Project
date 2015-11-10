@@ -1,15 +1,20 @@
 import java.util.LinkedList;
 
 /**
- * A simple work queue implementation based on the IBM developerWorks article
- * by Brian Goetz. It is up to the user of this class to keep track of whether
+ * A simple work queue implementation based on the IBM developerWorks article by
+ * Brian Goetz. It is up to the user of this class to keep track of whether
  * there is any pending work remaining.
  *
- * @see <a href="http://www.ibm.com/developerworks/library/j-jtp0730/index.html">Java Theory and Practice: Thread Pools and Work Queues</a>
+ * @see <a href=
+ *      "http://www.ibm.com/developerworks/library/j-jtp0730/index.html">Java
+ *      Theory and Practice: Thread Pools and Work Queues</a>
  */
 public class WorkQueue {
 
-	/** Pool of worker threads that will wait in the background until work is available. */
+	/**
+	 * Pool of worker threads that will wait in the background until work is
+	 * available.
+	 */
 	private final PoolWorker[] workers;
 
 	/** Queue of pending work requests. */
@@ -23,6 +28,7 @@ public class WorkQueue {
 
 	/**
 	 * Starts a work queue with the default number of threads.
+	 * 
 	 * @see #WorkQueue(int)
 	 */
 	public WorkQueue() {
@@ -32,10 +38,11 @@ public class WorkQueue {
 	/**
 	 * Starts a work queue with the specified number of threads.
 	 *
-	 * @param threads number of worker threads; should be greater than 1
+	 * @param threads
+	 *            number of worker threads; should be greater than 1
 	 */
 	public WorkQueue(int threads) {
-		this.queue   = new LinkedList<Runnable>();
+		this.queue = new LinkedList<Runnable>();
 		this.workers = new PoolWorker[threads];
 
 		shutdown = false;
@@ -48,10 +55,11 @@ public class WorkQueue {
 	}
 
 	/**
-	 * Adds a work request to the queue. A thread will process this request
-	 * when available.
+	 * Adds a work request to the queue. A thread will process this request when
+	 * available.
 	 *
-	 * @param r work request (in the form of a {@link Runnable} object)
+	 * @param r
+	 *            work request (in the form of a {@link Runnable} object)
 	 */
 	public void execute(Runnable r) {
 		synchronized (queue) {
@@ -65,7 +73,7 @@ public class WorkQueue {
 	 * but threads in-progress will not be interrupted.
 	 */
 	public void shutdown() {
-	    // safe to do unsynchronized due to volatile keyword
+		// safe to do unsynchronized due to volatile keyword
 		shutdown = true;
 
 		synchronized (queue) {
@@ -99,10 +107,10 @@ public class WorkQueue {
 					while (queue.isEmpty() && !shutdown) {
 						try {
 							queue.wait();
-						}
-						catch (InterruptedException ex) {
-							System.err.println("Warning: Work queue interrupted " +
-									"while waiting.");
+						} catch (InterruptedException ex) {
+							System.err
+									.println("Warning: Work queue interrupted "
+											+ "while waiting.");
 							Thread.currentThread().interrupt();
 						}
 					}
@@ -120,11 +128,11 @@ public class WorkQueue {
 
 				try {
 					r.run();
-				}
-				catch (RuntimeException ex) {
-				    // catch runtime exceptions to avoid leaking threads
-					System.err.println("Warning: Work queue encountered an " +
-							"exception while running.");
+				} catch (RuntimeException ex) {
+					// catch runtime exceptions to avoid leaking threads
+					ex.printStackTrace();
+					System.err.println("Warning: Work queue encountered an "
+							+ "exception while running.");
 				}
 			}
 		}

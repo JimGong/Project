@@ -13,134 +13,126 @@ import org.junit.runners.MethodSorters;
 @RunWith(Enclosed.class)
 public class IndexTest extends ProjectTest {
 
-    public static class EnvironmentTest {
-        @Test
-        public void testEnvironment() {
-            Assert.assertTrue(errorMessage("Environment Setup", null,
-                    "Check your environment setup for the correct" +
-                    "directory structure."),
-                    isEnvironmentSetup());
-        }
-    }
+	public static class EnvironmentTest {
 
-    public static class ArgumentTest {
-        @Rule
-        public Timeout globalTimeout = Timeout.seconds(30);
+		@Test
+		public void testEnvironment() {
+			Assert.assertTrue(
+					errorMessage("Environment Setup", null,
+							"Check your environment setup for the correct"
+									+ "directory structure."),
+					isEnvironmentSetup());
+		}
+	}
 
-        @Test
-        public void testNoArguments() {
-            checkExceptions("No Arguments", new String[] {});
-        }
+	public static class ArgumentTest {
 
-        @Test
-        public void testBadArguments() {
-            checkExceptions("Bad Arguments", new String[] {
-                    "hello", "world"
-            });
-        }
+		// @Rule
+		// public Timeout globalTimeout = Timeout.seconds(30);
 
-        @Test
-        public void testMissingDirectory() {
-            String[] args = {INPUT_FLAG};
-            checkExceptions("Missing Directory", args);
-        }
+		@Test
+		public void testNoArguments() {
+			checkExceptions("No Arguments", new String[] {});
+		}
 
-        @Test
-        public void testInvalidDirectory() {
-            String dir = Long.toHexString(Double.doubleToLongBits(Math.random()));
-            String[] args = {INPUT_FLAG, dir};
-            checkExceptions("Invalid Directory", args);
-        }
+		@Test
+		public void testBadArguments() {
+			checkExceptions("Bad Arguments", new String[] { "hello", "world" });
+		}
 
-        @Test
-        public void testDefaultOutput() throws Exception {
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    INDEX_FLAG
-            };
+		@Test
+		public void testMissingDirectory() {
+			String[] args = { INPUT_FLAG };
+			checkExceptions("Missing Directory", args);
+		}
 
-            Files.deleteIfExists(Paths.get(INDEX_DEFAULT));
-            checkExceptions("Default Index Output", args);
+		@Test
+		public void testInvalidDirectory() {
+			String dir = Long
+					.toHexString(Double.doubleToLongBits(Math.random()));
+			String[] args = { INPUT_FLAG, dir };
+			checkExceptions("Invalid Directory", args);
+		}
 
-            Assert.assertTrue(errorMessage("Default Index Output", args,
-                    "Check that you output to " + INDEX_DEFAULT + " if " +
-                    "no output path is provided."),
-                    Files.isReadable(Paths.get(INDEX_DEFAULT)));
-        }
+		@Test
+		public void testDefaultOutput() throws Exception {
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), INDEX_FLAG };
 
-        @Test
-        public void testNoOutput() {
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString()
-            };
+			Files.deleteIfExists(Paths.get(INDEX_DEFAULT));
+			checkExceptions("Default Index Output", args);
 
-            checkExceptions("No Index Output", args);
-        }
-    }
+			Assert.assertTrue(
+					errorMessage("Default Index Output", args,
+							"Check that you output to " + INDEX_DEFAULT + " if "
+									+ "no output path is provided."),
+					Files.isReadable(Paths.get(INDEX_DEFAULT)));
+		}
 
-    @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-    public static class OutputTest {
-        @Rule
-        public Timeout globalTimeout = Timeout.seconds(30);
+		@Test
+		public void testNoOutput() {
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString() };
 
-        @Test
-        public void test01IndexSimple() {
-            String name = "index-simple.json";
+			checkExceptions("No Index Output", args);
+		}
+	}
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    INDEX_FLAG, OUTPUT_DIR.resolve(name).toString()
-            };
+	@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+	public static class OutputTest {
 
-            checkProjectOutput(name, args);
-        }
+		@Rule
+		public Timeout globalTimeout = Timeout.seconds(30);
 
-        @Test
-        public void test02IndexSimpleReversed() {
-            String name = "index-simple-reversed.json";
+		@Test
+		public void test01IndexSimple() {
+			String name = "index-simple.json";
 
-            String[] args = {
-                    INDEX_FLAG, OUTPUT_DIR.resolve(name).toString(),
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-            };
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), INDEX_FLAG,
+					OUTPUT_DIR.resolve(name).toString() };
 
-            checkProjectOutput(name, args);
-        }
+			checkProjectOutput(name, args);
+		}
 
-        @Test
-        public void test03IndexRFCs() {
-            String name = "index-rfcs.json";
+		@Test
+		public void test02IndexSimpleReversed() {
+			String name = "index-simple-reversed.json";
 
-            String[] args = {
-                    INDEX_FLAG, OUTPUT_DIR.resolve(name).toString(),
-                    INPUT_FLAG, INDEX_DIR.resolve("rfcs").toString(),
-            };
+			String[] args = { INDEX_FLAG, OUTPUT_DIR.resolve(name).toString(),
+					INPUT_FLAG, INDEX_DIR.resolve("simple").toString(), };
 
-            checkProjectOutput(name, args);
-        }
+			checkProjectOutput(name, args);
+		}
 
-        @Test
-        public void test04IndexGutenberg() {
-            String name = "index-gutenberg.json";
+		@Test
+		public void test03IndexRFCs() {
+			String name = "index-rfcs.json";
 
-            String[] args = {
-                    INDEX_FLAG, OUTPUT_DIR.resolve(name).toString(),
-                    INPUT_FLAG, INDEX_DIR.resolve("gutenberg").toString(),
-            };
+			String[] args = { INDEX_FLAG, OUTPUT_DIR.resolve(name).toString(),
+					INPUT_FLAG, INDEX_DIR.resolve("rfcs").toString(), };
 
-            checkProjectOutput(name, args);
-        }
+			checkProjectOutput(name, args);
+		}
 
-        @Test
-        public void test05IndexAll() {
-            String name = "index-all.json";
+		@Test
+		public void test04IndexGutenberg() {
+			String name = "index-gutenberg.json";
 
-            String[] args = {
-                    INDEX_FLAG, OUTPUT_DIR.resolve(name).toString(),
-                    INPUT_FLAG, INDEX_DIR.toString(),
-            };
+			String[] args = { INDEX_FLAG, OUTPUT_DIR.resolve(name).toString(),
+					INPUT_FLAG, INDEX_DIR.resolve("gutenberg").toString(), };
 
-            checkProjectOutput(name, args);
-        }
-    }
+			checkProjectOutput(name, args);
+		}
+
+		@Test
+		public void test05IndexAll() {
+			String name = "index-all.json";
+
+			String[] args = { INDEX_FLAG, OUTPUT_DIR.resolve(name).toString(),
+					INPUT_FLAG, INDEX_DIR.toString(), };
+
+			checkProjectOutput(name, args);
+		}
+	}
 }
