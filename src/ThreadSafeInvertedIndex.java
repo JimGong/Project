@@ -57,10 +57,8 @@ public class ThreadSafeInvertedIndex extends InvertedIndex {
 		try {
 			super.print(output);
 		} finally {
-			lock.lockReadOnly();
+			lock.unlockReadOnly();
 		}
-		// super.print(output);
-
 	}
 
 	@Override

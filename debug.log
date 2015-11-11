@@ -1,24 +1,26 @@
-[14:04:38:200 debug] MultiThreadInvertedIndexBuilder.java@60 main: Minion created for input/index/simple/a/b/c/d/subdir.txt
-[14:04:38:201 debug] MultiThreadInvertedIndexBuilder.java@42 main: Pending is now 1
-[14:04:38:201 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-10: ---------- paring file for input/index/simple/a/b/c/d/subdir.txt
-[14:04:38:202 debug] MultiThreadInvertedIndexBuilder.java@60 main: Minion created for input/index/simple/capital_extension.TXT
-[14:04:38:202 debug] MultiThreadInvertedIndexBuilder.java@42 main: Pending is now 2
-[14:04:38:202 debug] MultiThreadInvertedIndexBuilder.java@60 main: Minion created for input/index/simple/capitals.txt
-[14:04:38:202 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-6: ---------- paring file for input/index/simple/capital_extension.TXT
-[14:04:38:202 debug] MultiThreadInvertedIndexBuilder.java@42 main: Pending is now 3
-[14:04:38:202 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-9: ---------- paring file for input/index/simple/capitals.txt
-[14:04:38:203 debug] MultiThreadInvertedIndexBuilder.java@60 main: Minion created for input/index/simple/digits.txt
-[14:04:38:203 debug] MultiThreadInvertedIndexBuilder.java@42 main: Pending is now 4
-[14:04:38:203 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-7: ---------- paring file for input/index/simple/digits.txt
-[14:04:38:203 debug] MultiThreadInvertedIndexBuilder.java@60 main: Minion created for input/index/simple/empty.txt
-[14:04:38:203 debug] MultiThreadInvertedIndexBuilder.java@42 main: Pending is now 5
-[14:04:38:203 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-8: ---------- paring file for input/index/simple/empty.txt
-[14:04:38:203 debug] MultiThreadInvertedIndexBuilder.java@60 main: Minion created for input/index/simple/position.txt
-[14:04:38:203 debug] MultiThreadInvertedIndexBuilder.java@42 main: Pending is now 6
-[14:04:38:204 debug] MultiThreadInvertedIndexBuilder.java@60 main: Minion created for input/index/simple/symbols.txt
-[14:04:38:204 debug] MultiThreadInvertedIndexBuilder.java@42 main: Pending is now 7
-[14:04:38:204 debug] MultiThreadInvertedIndexBuilder.java@26 main: Waiting until finished
-[14:04:38:209 debug] MultiThreadInvertedIndexBuilder.java@71 Thread-8: ********** done with parsing file input/index/simple/empty.txt
-[14:04:38:209 debug] MultiThreadInvertedIndexBuilder.java@47 Thread-8: Pending is now 6
-[14:04:38:209 debug] MultiThreadInvertedIndexBuilder.java@77 Thread-8: ######## Minion finished input/index/simple/empty.txt
-[14:04:38:209 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-8: ---------- paring file for input/index/simple/position.txt
+[16:18:54:581 debug] Driver.java@176 Time-limited test: num thread: 5
+[16:18:54:584 debug] Driver.java@185 Time-limited test: traversing directory
+[16:18:54:588 debug] MultiThreadInvertedIndexBuilder.java@60 Time-limited test: Minion created for input/index/simple/a/b/c/d/subdir.txt
+[16:18:54:588 debug] MultiThreadInvertedIndexBuilder.java@42 Time-limited test: Pending is now 1
+[16:18:54:589 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-10: ---------- paring file for input/index/simple/a/b/c/d/subdir.txt
+[16:18:54:589 debug] MultiThreadInvertedIndexBuilder.java@60 Time-limited test: Minion created for input/index/simple/capital_extension.TXT
+[16:18:54:589 debug] MultiThreadInvertedIndexBuilder.java@42 Time-limited test: Pending is now 2
+[16:18:54:589 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-6: ---------- paring file for input/index/simple/capital_extension.TXT
+[16:18:54:589 debug] MultiThreadInvertedIndexBuilder.java@60 Time-limited test: Minion created for input/index/simple/capitals.txt
+[16:18:54:590 debug] MultiThreadInvertedIndexBuilder.java@42 Time-limited test: Pending is now 3
+[16:18:54:590 debug] MultiThreadInvertedIndexBuilder.java@60 Time-limited test: Minion created for input/index/simple/digits.txt
+[16:18:54:590 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-9: ---------- paring file for input/index/simple/capitals.txt
+[16:18:54:590 debug] MultiThreadInvertedIndexBuilder.java@42 Time-limited test: Pending is now 4
+[16:18:54:590 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-7: ---------- paring file for input/index/simple/digits.txt
+[16:18:54:590 debug] MultiThreadInvertedIndexBuilder.java@60 Time-limited test: Minion created for input/index/simple/empty.txt
+[16:18:54:590 debug] MultiThreadInvertedIndexBuilder.java@42 Time-limited test: Pending is now 5
+[16:18:54:591 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-8: ---------- paring file for input/index/simple/empty.txt
+[16:18:54:591 debug] MultiThreadInvertedIndexBuilder.java@60 Time-limited test: Minion created for input/index/simple/position.txt
+[16:18:54:591 debug] MultiThreadInvertedIndexBuilder.java@42 Time-limited test: Pending is now 6
+[16:18:54:591 debug] MultiThreadInvertedIndexBuilder.java@60 Time-limited test: Minion created for input/index/simple/symbols.txt
+[16:18:54:591 debug] MultiThreadInvertedIndexBuilder.java@42 Time-limited test: Pending is now 7
+[16:18:54:591 debug] MultiThreadInvertedIndexBuilder.java@26 Time-limited test: Waiting until finished
+[16:18:54:595 debug] MultiThreadInvertedIndexBuilder.java@71 Thread-8: ********** done with parsing file input/index/simple/empty.txt
+[16:18:54:596 debug] MultiThreadInvertedIndexBuilder.java@47 Thread-8: Pending is now 6
+[16:18:54:596 debug] MultiThreadInvertedIndexBuilder.java@79 Thread-8: ######## Minion finished input/index/simple/empty.txt
+[16:18:54:596 debug] MultiThreadInvertedIndexBuilder.java@69 Thread-8: ---------- paring file for input/index/simple/position.txt

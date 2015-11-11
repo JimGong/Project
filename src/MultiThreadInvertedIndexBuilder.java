@@ -69,10 +69,12 @@ public class MultiThreadInvertedIndexBuilder {
 				logger.debug("---------- paring file for {}", file);
 				parseFile(file, index);
 				logger.debug("********** done with parsing file {}", file);
-				decrementPending();
+				// decrementPending();
 			} catch (IOException e) {
 				logger.warn("Unable to parse {}", file);
 				logger.catching(Level.DEBUG, e);
+			} finally {
+				decrementPending();
 			}
 			logger.debug("######## Minion finished {}", file);
 		}
@@ -107,7 +109,6 @@ public class MultiThreadInvertedIndexBuilder {
 				else {
 					if (file.getFileName().toString().toLowerCase()
 							.endsWith(".txt")) {
-
 						minions.execute(new FileMinion(file, index));
 					}
 				}

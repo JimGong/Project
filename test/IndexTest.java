@@ -27,8 +27,8 @@ public class IndexTest extends ProjectTest {
 
 	public static class ArgumentTest {
 
-		// @Rule
-		// public Timeout globalTimeout = Timeout.seconds(30);
+		@Rule
+		public Timeout globalTimeout = Timeout.seconds(30);
 
 		@Test
 		public void testNoArguments() {

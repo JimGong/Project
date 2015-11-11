@@ -173,7 +173,7 @@ public class Driver {
 			System.err.println("Wrong number of thread.");
 			// e.printStackTrace();
 		}
-		System.out.println("num thread: " + numThreads);
+		logger.debug("num thread: " + numThreads);
 
 		ThreadSafePartialSearchBuilder search = new ThreadSafePartialSearchBuilder(
 				numThreads);
@@ -182,7 +182,7 @@ public class Driver {
 				numThreads);
 
 		try {
-			System.out.println("traversing directory");
+			logger.debug("traversing directory");
 			invertedIndexBuilder.traverseDirectory(
 					Paths.get((parser.getValue(INPUT_FLAG))), index);
 			invertedIndexBuilder

@@ -28,7 +28,7 @@ public class WorkQueue {
 
 	/**
 	 * Starts a work queue with the default number of threads.
-	 * 
+	 *
 	 * @see #WorkQueue(int)
 	 */
 	public WorkQueue() {
@@ -42,6 +42,7 @@ public class WorkQueue {
 	 *            number of worker threads; should be greater than 1
 	 */
 	public WorkQueue(int threads) {
+		System.out.println("in work queue, init thread: " + threads);
 		this.queue = new LinkedList<Runnable>();
 		this.workers = new PoolWorker[threads];
 
