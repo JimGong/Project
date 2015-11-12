@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class ThreadSafeInvertedIndex extends InvertedIndex {
 
@@ -78,6 +80,17 @@ public class ThreadSafeInvertedIndex extends InvertedIndex {
 			return super.toString();
 		} finally {
 			lock.unlockReadOnly();
+		}
+	}
+
+	@Override
+	public void merge(
+			TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex) {
+		lock.lockReadWrite();
+		try {
+			super.merge(localIndex);
+		} finally {
+			lock.unlockReadWrite();
 		}
 	}
 }

@@ -186,4 +186,9 @@ public class InvertedIndex {
 		return "InvertedIndex [index=" + index + "]";
 	}
 
+	public void merge(
+			TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex) {
+		index.putAll(localIndex);
+	}
+
 }

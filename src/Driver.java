@@ -172,6 +172,8 @@ public class Driver {
 				}
 			} catch (NumberFormatException e) {
 				System.err.println("Wrong number of thread.");
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 			logger.debug("num thread: " + numThreads);
@@ -197,14 +199,10 @@ public class Driver {
 				logger.debug("going to print index");
 				if (parser.hasFlag(INDEX_FLAG)) {
 					logger.debug("has index flag");
-					logger.debug("try to print invertedindex");
 					if (!parser.hasValue(INDEX_FLAG)) {
-						System.out.println("printing to default");
 						index.print(Paths.get(INDEX_DEFAULT));
-						System.out.println("done printing to default");
 					}
 					else {
-						System.out.println("printing to whatever");
 						index.print(Paths.get(parser.getValue(INDEX_FLAG)));
 					}
 				}

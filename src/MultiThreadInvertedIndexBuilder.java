@@ -4,6 +4,8 @@ import java.nio.charset.Charset;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -118,16 +120,32 @@ public class MultiThreadInvertedIndexBuilder {
 			ThreadSafeInvertedIndex index) throws IOException {
 		int position = 1;
 
+		TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex = new TreeMap<>();
+
 		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
 				String[] words = InvertedIndexBuilder.splitLine(line);
 				for (String word : words) {
+					// add(word, file.toFile().getPath(), position, localIndex);
 					index.add(word, file.toFile().getPath(), position);
 					position++;
 				}
 			}
 		}
+		index.merge(localIndex);
+	}
+
+	private void add(String word, String path, int position,
+			TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex) {
+		if (localIndex.containsKey(word) == false) {
+			localIndex.put(word, new TreeMap<String, TreeSet<Integer>>());
+		}
+
+		if (localIndex.get(word).containsKey(path) == false) {
+			localIndex.get(word).put(path, new TreeSet<Integer>());
+		}
+		localIndex.get(word).get(path).add(position);
 	}
 }
