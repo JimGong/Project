@@ -14,132 +14,123 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Enclosed.class)
 public class ThreadTest extends ProjectTest {
 
-    public static class ArgumentTest {
-        @Rule
-        public Timeout globalTimeout = Timeout.seconds(30);
+	public static class ArgumentTest {
 
-        private static String[] getArguments(String threads) {
-            return new String[] {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString(),
-                    THREAD_FLAG, threads
-            };
-        }
+		@Rule
+		public Timeout globalTimeout = Timeout.seconds(30);
 
-        @Test
-        public void testNegativeThreads() {
-            checkExceptions("Threads: -1", getArguments("-1"));
-        }
+		private static String[] getArguments(String threads) {
+			return new String[] { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("simple.txt").toString(), THREAD_FLAG,
+					threads };
+		}
 
-        @Test
-        public void testZeroThreads() {
-            checkExceptions("Threads: 0", getArguments("0"));
-        }
+		@Test
+		public void testNegativeThreads() {
+			checkExceptions("Threads: -1", getArguments("-1"));
+		}
 
-        @Test
-        public void testFractionThreads() {
-            checkExceptions("Threads: 3.14", getArguments("3.14"));
-        }
+		@Test
+		public void testZeroThreads() {
+			checkExceptions("Threads: 0", getArguments("0"));
+		}
 
-        @Test
-        public void testWordThreads() {
-            checkExceptions("Threads: fox", getArguments("fox"));
-        }
+		@Test
+		public void testFractionThreads() {
+			checkExceptions("Threads: 3.14", getArguments("3.14"));
+		}
 
-        @Test
-        public void testOneThread() {
-            checkExceptions("Threads: 1", getArguments("1"));
-        }
-    }
+		@Test
+		public void testWordThreads() {
+			checkExceptions("Threads: fox", getArguments("fox"));
+		}
 
-    @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-    @RunWith(Parameterized.class)
-    public static class OutputTest {
-        @Rule
-        public Timeout globalTimeout = Timeout.seconds(60);
+		@Test
+		public void testOneThread() {
+			checkExceptions("Threads: 1", getArguments("1"));
+		}
+	}
 
-        @Parameters(name = "{0} Threads")
-        public static Iterable<Object[]> data() {
-                return Arrays.asList(new Object[][]{
-                        {"02"},  // test output with 2  worker threads
-                        {"03"},  // test output with 3  worker threads
-                        {"05"},  // test output with 5  worker threads
-                        {"10"}   // test output with 10 worker threads
-                });
-        }
+	@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+	@RunWith(Parameterized.class)
+	public static class OutputTest {
 
-        private String numThreads;
+		@Rule
+		public Timeout globalTimeout = Timeout.seconds(60);
 
-        public OutputTest(String numThreads) {
-            this.numThreads = numThreads;
-        }
+		@Parameters(name = "{0} Threads")
+		public static Iterable<Object[]> data() {
+			return Arrays.asList(new Object[][] { { "02" }, // test output with
+															// 2 worker threads
+					{ "03" }, // test output with 3 worker threads
+					{ "05" }, // test output with 5 worker threads
+					{ "10" } // test output with 10 worker threads
+			});
+		}
 
-        @Test
-        public void test01IndexSimple() {
-            String name = "index-simple-" + this.numThreads + ".json";
+		private String numThreads;
 
-            Path expect = EXPECTED_DIR.resolve("index-simple.json");
-            Path actual = OUTPUT_DIR.resolve(name);
+		public OutputTest(String numThreads) {
+			this.numThreads = numThreads;
+		}
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString(),
-                    INDEX_FLAG, actual.toString(),
-                    THREAD_FLAG, this.numThreads
-            };
+		@Test
+		public void test01IndexSimple() {
+			String name = "index-simple-" + this.numThreads + ".json";
 
-            checkProjectOutput(name, expect, actual, args);
-        }
+			Path expect = EXPECTED_DIR.resolve("index-simple.json");
+			Path actual = OUTPUT_DIR.resolve(name);
 
-        @Test
-        public void test02IndexComplex() {
-            String name = "index-all-" + this.numThreads + ".json";
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("simple.txt").toString(), INDEX_FLAG,
+					actual.toString(), THREAD_FLAG, this.numThreads };
 
-            Path expect = EXPECTED_DIR.resolve("index-all.json");
-            Path actual = OUTPUT_DIR.resolve(name);
+			checkProjectOutput(name, expect, actual, args);
+		}
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("complex.txt").toString(),
-                    INDEX_FLAG, actual.toString(),
-                    THREAD_FLAG, this.numThreads
-            };
+		@Test
+		public void test02IndexComplex() {
+			String name = "index-all-" + this.numThreads + ".json";
 
-            checkProjectOutput(name, expect, actual, args);
-        }
+			Path expect = EXPECTED_DIR.resolve("index-all.json");
+			Path actual = OUTPUT_DIR.resolve(name);
 
-        @Test
-        public void test03SearchSimple() {
-            String name = "search-simple-" + this.numThreads + ".json";
+			String[] args = { INPUT_FLAG, INDEX_DIR.toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("complex.txt").toString(), INDEX_FLAG,
+					actual.toString(), THREAD_FLAG, this.numThreads };
 
-            Path expect = EXPECTED_DIR.resolve("search-simple-simple.json");
-            Path actual = OUTPUT_DIR.resolve(name);
+			checkProjectOutput(name, expect, actual, args);
+		}
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.resolve("simple").toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("simple.txt").toString(),
-                    RESULTS_FLAG, actual.toString(),
-                    THREAD_FLAG, this.numThreads
-            };
+		@Test
+		public void test03SearchSimple() {
+			String name = "search-simple-" + this.numThreads + ".json";
 
-            checkProjectOutput(name, expect, actual, args);
-        }
+			Path expect = EXPECTED_DIR.resolve("search-simple-simple.json");
+			Path actual = OUTPUT_DIR.resolve(name);
 
-        @Test
-        public void test04SearchComplex() {
-            String name = "search-complex-" + this.numThreads + ".json";
+			String[] args = { INPUT_FLAG,
+					INDEX_DIR.resolve("simple").toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("simple.txt").toString(), RESULTS_FLAG,
+					actual.toString(), THREAD_FLAG, this.numThreads };
 
-            Path expect = EXPECTED_DIR.resolve("search-index-complex.json");
-            Path actual = OUTPUT_DIR.resolve(name);
+			checkProjectOutput(name, expect, actual, args);
+		}
 
-            String[] args = {
-                    INPUT_FLAG, INDEX_DIR.toString(),
-                    QUERY_FLAG, QUERY_DIR.resolve("complex.txt").toString(),
-                    RESULTS_FLAG, actual.toString(),
-                    THREAD_FLAG, this.numThreads
-            };
+		@Test
+		public void test04SearchComplex() {
+			String name = "search-complex-" + this.numThreads + ".json";
 
-            checkProjectOutput(name, expect, actual, args);
-        }
-    }
+			Path expect = EXPECTED_DIR.resolve("search-index-complex.json");
+			Path actual = OUTPUT_DIR.resolve(name);
+
+			String[] args = { INPUT_FLAG, INDEX_DIR.toString(), QUERY_FLAG,
+					QUERY_DIR.resolve("complex.txt").toString(), RESULTS_FLAG,
+					actual.toString(), THREAD_FLAG, this.numThreads };
+
+			checkProjectOutput(name, expect, actual, args);
+		}
+	}
 }

@@ -66,9 +66,7 @@ public class MultiThreadInvertedIndexBuilder {
 		@Override
 		public void run() {
 			try {
-				logger.debug("---------- paring file for {}", file);
 				parseFile(file, index);
-				logger.debug("********** done with parsing file {}", file);
 				// decrementPending();
 			} catch (IOException e) {
 				logger.warn("Unable to parse {}", file);
@@ -80,7 +78,7 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
-	public void traverseDirectory(Path directory,
+	public synchronized void traverseDirectory(Path directory,
 			ThreadSafeInvertedIndex index) {
 		try {
 			if (Files.isDirectory(directory)) {
@@ -97,7 +95,7 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
-	private void traverse(Path path, ThreadSafeInvertedIndex index)
+	private synchronized void traverse(Path path, ThreadSafeInvertedIndex index)
 			throws IOException {
 		try (DirectoryStream<Path> listing = Files.newDirectoryStream(path)) {
 
@@ -116,8 +114,8 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
-	private void parseFile(Path file, ThreadSafeInvertedIndex index)
-			throws IOException {
+	private synchronized void parseFile(Path file,
+			ThreadSafeInvertedIndex index) throws IOException {
 		int position = 1;
 
 		try (BufferedReader reader = Files.newBufferedReader(file,

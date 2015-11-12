@@ -49,14 +49,15 @@ public class InvertedIndex {
 	 * @param position
 	 */
 	public void add(String word, String path, int position) {
-		if (hasWord(word) == false) {
+		// if(hasWord(word)){
+		if (index.containsKey(word) == false) {
 			index.put(word, new TreeMap<String, TreeSet<Integer>>());
 		}
 
-		if (hasPath(word, path) == false) {
+		// if (hasPath(word, path) == false) {
+		if (index.get(word).containsKey(path) == false) {
 			index.get(word).put(path, new TreeSet<Integer>());
 		}
-
 		index.get(word).get(path).add(position);
 	}
 
@@ -81,7 +82,10 @@ public class InvertedIndex {
 		if (hasWord(word)) {
 			return index.get(word).containsKey(path);
 		}
-		return false;
+		else {
+			return false;
+
+		}
 	}
 
 	/**
