@@ -44,6 +44,8 @@ public class ReadWriteLock {
 	 */
 	public synchronized void unlockReadOnly() {
 		readers--;
+		
+		// TODO Only notify when you need to wake up the writer.
 		notifyAll();
 	}
 
