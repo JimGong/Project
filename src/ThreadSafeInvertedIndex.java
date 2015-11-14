@@ -4,10 +4,17 @@ import java.util.List;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+// TODO A little bit of Javadoc, you do not need to javadoc the overridden methods.
+
+/**
+ * TODO
+ */
 public class ThreadSafeInvertedIndex extends InvertedIndex {
 
+	/** TODO */
 	private ReadWriteLock lock;
 
+	/** TODO */
 	public ThreadSafeInvertedIndex() {
 		super();
 		lock = new ReadWriteLock();
