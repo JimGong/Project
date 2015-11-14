@@ -14,6 +14,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // TODO Javadoc
+// TODO Might make sense to have an interface or abstract class that is used by both your thread-safe and single-threaded search builders because they have the same methods.
 
 public class ThreadSafePartialSearchBuilder {
 
