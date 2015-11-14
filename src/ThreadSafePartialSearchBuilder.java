@@ -13,6 +13,9 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+// TODO Javadoc
+// TODO Might make sense to have an interface or abstract class that is used by both your thread-safe and single-threaded search builders because they have the same methods.
+
 public class ThreadSafePartialSearchBuilder {
 
 	private final Map<String, List<SearchResult>> result;
@@ -22,6 +25,7 @@ public class ThreadSafePartialSearchBuilder {
 	private int pending;
 
 	public ThreadSafePartialSearchBuilder(int numThreads) {
+		// TODO Can't use any synchronized maps. YOU must synchronize!!
 		result = Collections.synchronizedMap(new LinkedHashMap<>());
 		minions = new WorkQueue(numThreads);
 		pending = 0;
@@ -40,10 +44,11 @@ public class ThreadSafePartialSearchBuilder {
 	}
 
 	public synchronized void parseLine(String line, InvertedIndex index) {
+		// TODO These two lines do NOT need to be synchronized
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
-
 		List<SearchResult> resultList = index.partialSearch(queryWords);
 
+		// TODO Only this needs to be synchonrized
 		result.put(line, resultList);
 	}
 

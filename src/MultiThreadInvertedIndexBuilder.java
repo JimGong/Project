@@ -11,9 +11,13 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+// TODO Only use synchronized to protect the pending variable.
+
 public class MultiThreadInvertedIndexBuilder {
 
 	private static final Logger logger = LogManager.getLogger();
+
+	// TODO Could modify WorkQueue to track pending instead...
 	private final WorkQueue minions;
 	private int pending;
 
@@ -68,6 +72,13 @@ public class MultiThreadInvertedIndexBuilder {
 		@Override
 		public void run() {
 			try {
+				// TODO This will improve efficiency, do not over synchronize!
+				// InvertedIndex local = new InvertedIndex();
+				// InvertedIndexBuilder.parseFile(file, local);
+				// index.addAll(local);
+				
+				
+				
 				parseFile(file, index);
 				// decrementPending();
 			} catch (IOException e) {
@@ -80,6 +91,7 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
+	// TODO Does not need to be synchronized
 	public synchronized void traverseDirectory(Path directory,
 			ThreadSafeInvertedIndex index) {
 		try {
@@ -97,6 +109,7 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
+	// TODO Does not need to be synchronized
 	private synchronized void traverse(Path path, ThreadSafeInvertedIndex index)
 			throws IOException {
 		try (DirectoryStream<Path> listing = Files.newDirectoryStream(path)) {
@@ -116,6 +129,7 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
+	// TODO REMOVEEEEEEEEEEE!
 	private synchronized void parseFile(Path file,
 			ThreadSafeInvertedIndex index) throws IOException {
 		int position = 1;
@@ -137,6 +151,7 @@ public class MultiThreadInvertedIndexBuilder {
 		index.merge(localIndex);
 	}
 
+	// TODO REMOOOOOOOVE
 	private void add(String word, String path, int position,
 			TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex) {
 		if (localIndex.containsKey(word) == false) {
