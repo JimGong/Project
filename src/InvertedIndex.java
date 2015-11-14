@@ -186,9 +186,21 @@ public class InvertedIndex {
 		return "InvertedIndex [index=" + index + "]";
 	}
 
+	// TODO This overwrites, better to have an addAll method.
 	public void merge(
 			TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex) {
 		index.putAll(localIndex);
 	}
 
+	/* TODO
+	public void addAll(InvertedIndex local) {
+		for (String key : local.index.keySet()) {
+			if key is not in this.index...
+				get the ENTIRE map from local and put it in this index
+			else
+				more logic to test when you can put, and when you must addAll()
+		}
+		
+	}
+	*/
 }
