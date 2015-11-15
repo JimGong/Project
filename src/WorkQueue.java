@@ -1,5 +1,8 @@
 import java.util.LinkedList;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * A simple work queue implementation based on the IBM developerWorks article by
  * Brian Goetz. It is up to the user of this class to keep track of whether
@@ -26,6 +29,10 @@ public class WorkQueue {
 	/** The default number of threads to use when not specified. */
 	public static final int DEFAULT = 5;
 
+	private int pending;
+
+	private static final Logger logger = LogManager.getLogger();
+
 	/**
 	 * Starts a work queue with the default number of threads.
 	 *
@@ -44,13 +51,37 @@ public class WorkQueue {
 	public WorkQueue(int threads) {
 		this.queue = new LinkedList<Runnable>();
 		this.workers = new PoolWorker[threads];
-
+		pending = 0;
 		shutdown = false;
 
 		// start the threads so they are waiting in the background
 		for (int i = 0; i < threads; i++) {
 			workers[i] = new PoolWorker();
 			workers[i].start();
+		}
+	}
+
+	public void increasementPending() {
+		synchronized (queue) {
+			pending++;
+			logger.debug("Pending is now {}", pending);
+		}
+	}
+
+	public void decreasementPending() {
+		synchronized (queue) {
+			pending--;
+			logger.debug("Pending is now {}", pending);
+
+			if (pending <= 0) {
+				queue.notifyAll();
+			}
+		}
+	}
+
+	public int getPending() {
+		synchronized (queue) {
+			return pending;
 		}
 	}
 
@@ -79,6 +110,7 @@ public class WorkQueue {
 		synchronized (queue) {
 			queue.notifyAll();
 		}
+		logger.debug("queue shutted down.");
 	}
 
 	/**

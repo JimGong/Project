@@ -1,60 +1,37 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.TreeMap;
-import java.util.TreeSet;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// TODO Only use synchronized to protect the pending variable.
-
 public class MultiThreadInvertedIndexBuilder {
 
 	private static final Logger logger = LogManager.getLogger();
 
-	// TODO Could modify WorkQueue to track pending instead...
 	private final WorkQueue minions;
-	private int pending;
 
 	public MultiThreadInvertedIndexBuilder(int numThreads) {
 		minions = new WorkQueue(numThreads);
-		pending = 0;
 	}
 
-	public synchronized void finish() {
+	public void finish() {
 		try {
-			while (pending > 0) {
+			while (minions.getPending() > 0) {
 				logger.debug("Waiting until finished");
-				this.wait();
+				minions.wait();
 			}
 		} catch (InterruptedException e) {
 			logger.debug("Finish interrupted", e);
 		}
 	}
 
-	public synchronized void shutdown() {
-		logger.debug("Shutting down");
+	public void shutdown() {
 		finish();
+		logger.debug("Shutting down");
 		minions.shutdown();
-	}
-
-	private synchronized void incrementPending() {
-		pending++;
-		logger.debug("Pending is now {}", pending);
-	}
-
-	private synchronized void decrementPending() {
-		pending--;
-		logger.debug("Pending is now {}", pending);
-
-		if (pending <= 0) {
-			this.notifyAll();
-		}
 	}
 
 	private class FileMinion implements Runnable {
@@ -66,33 +43,27 @@ public class MultiThreadInvertedIndexBuilder {
 			logger.debug("Minion created for {}", file);
 			this.file = file;
 			this.index = index;
-			incrementPending();
+			minions.increasementPending();
 		}
 
 		@Override
 		public void run() {
 			try {
 				// TODO This will improve efficiency, do not over synchronize!
-				// InvertedIndex local = new InvertedIndex();
-				// InvertedIndexBuilder.parseFile(file, local);
-				// index.addAll(local);
-				
-				
-				
-				parseFile(file, index);
-				// decrementPending();
+				InvertedIndex local = new InvertedIndex();
+				InvertedIndexBuilder.parseFile(file, local);
+				index.addAll(local);
 			} catch (IOException e) {
 				logger.warn("Unable to parse {}", file);
 				logger.catching(Level.DEBUG, e);
 			} finally {
-				decrementPending();
+				minions.decreasementPending();
 			}
 			logger.debug("######## Minion finished {}", file);
 		}
 	}
 
-	// TODO Does not need to be synchronized
-	public synchronized void traverseDirectory(Path directory,
+	public void traverseDirectory(Path directory,
 			ThreadSafeInvertedIndex index) {
 		try {
 			if (Files.isDirectory(directory)) {
@@ -109,8 +80,7 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
-	// TODO Does not need to be synchronized
-	private synchronized void traverse(Path path, ThreadSafeInvertedIndex index)
+	private void traverse(Path path, ThreadSafeInvertedIndex index)
 			throws IOException {
 		try (DirectoryStream<Path> listing = Files.newDirectoryStream(path)) {
 
@@ -127,40 +97,5 @@ public class MultiThreadInvertedIndexBuilder {
 				}
 			}
 		}
-	}
-
-	// TODO REMOVEEEEEEEEEEE!
-	private synchronized void parseFile(Path file,
-			ThreadSafeInvertedIndex index) throws IOException {
-		int position = 1;
-
-		TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex = new TreeMap<>();
-
-		try (BufferedReader reader = Files.newBufferedReader(file,
-				Charset.forName("UTF-8"))) {
-			String line = null;
-			while ((line = reader.readLine()) != null) {
-				String[] words = InvertedIndexBuilder.splitLine(line);
-				for (String word : words) {
-					// add(word, file.toFile().getPath(), position, localIndex);
-					index.add(word, file.toFile().getPath(), position);
-					position++;
-				}
-			}
-		}
-		index.merge(localIndex);
-	}
-
-	// TODO REMOOOOOOOVE
-	private void add(String word, String path, int position,
-			TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex) {
-		if (localIndex.containsKey(word) == false) {
-			localIndex.put(word, new TreeMap<String, TreeSet<Integer>>());
-		}
-
-		if (localIndex.get(word).containsKey(path) == false) {
-			localIndex.get(word).put(path, new TreeSet<Integer>());
-		}
-		localIndex.get(word).get(path).add(position);
 	}
 }

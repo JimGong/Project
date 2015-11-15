@@ -166,12 +166,13 @@ public class Driver {
 			try {
 				if (parser.hasFlag(THREAD_FLAG)) {
 					numThreads = Integer.parseInt(parser.getValue(THREAD_FLAG));
-					if (numThreads == 0) {
+					if (numThreads <= 0) {
 						numThreads = THREAD_DEFAULT;
 					}
 				}
 			} catch (NumberFormatException e) {
 				System.err.println("Wrong number of thread.");
+				e.printStackTrace();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -194,6 +195,7 @@ public class Driver {
 				logger.debug("Done with traverseDirectory");
 			} catch (Exception e) {
 				System.err.println("No arguments");
+				e.printStackTrace();
 			} /* build inverted index */
 			try {
 				logger.debug("going to print index");

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -13,24 +12,35 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// TODO Javadoc
 // TODO Might make sense to have an interface or abstract class that is used by both your thread-safe and single-threaded search builders because they have the same methods.
-
+/**
+ * Thread safe version of partial search builder.
+ */
 public class ThreadSafePartialSearchBuilder {
 
 	private final Map<String, List<SearchResult>> result;
 
+	/*
+	 * Create a logger for debug
+	 */
 	private static final Logger logger = LogManager.getLogger();
+	/*
+	 * Create a work queue for mutlithread
+	 */
 	private final WorkQueue minions;
-	private int pending;
 
 	public ThreadSafePartialSearchBuilder(int numThreads) {
-		// TODO Can't use any synchronized maps. YOU must synchronize!!
-		result = Collections.synchronizedMap(new LinkedHashMap<>());
+		result = new LinkedHashMap<>();
 		minions = new WorkQueue(numThreads);
-		pending = 0;
 	}
 
+	/**
+	 * Parse file into partial search
+	 *
+	 * @param file
+	 * @param index
+	 * @throws IOException
+	 */
 	public synchronized void parseFile(Path file, ThreadSafeInvertedIndex index)
 			throws IOException {
 		try (BufferedReader reader = Files.newBufferedReader(file,
@@ -43,15 +53,27 @@ public class ThreadSafePartialSearchBuilder {
 		}
 	}
 
-	public synchronized void parseLine(String line, InvertedIndex index) {
-		// TODO These two lines do NOT need to be synchronized
+	/**
+	 * Parse query and put into result map.
+	 *
+	 * @param line
+	 * @param index
+	 */
+	public void parseLine(String line, InvertedIndex index) {
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
 		List<SearchResult> resultList = index.partialSearch(queryWords);
 
-		// TODO Only this needs to be synchonrized
-		result.put(line, resultList);
+		synchronized (this) {
+			result.put(line, resultList);
+		}
 	}
 
+	/**
+	 * Print result map to file
+	 *
+	 * @param output
+	 * @throws IOException
+	 */
 	public synchronized void print(Path output) throws IOException {
 
 		finish();
@@ -79,35 +101,31 @@ public class ThreadSafePartialSearchBuilder {
 		}
 	}
 
+	/**
+	 * Helper method, that helps a thread wait until all of the current work is
+	 * done. This is useful for resetting the counters or shutting down the work
+	 * queue.
+	 */
 	public synchronized void finish() {
 		try {
-			while (pending > 0) {
+			while (minions.getPending() > 0) {
 				logger.debug("Waiting until finished");
-				this.wait();
+				minions.wait();
 			}
 		} catch (InterruptedException e) {
 			logger.debug("Finish interrupted", e);
 		}
 	}
 
+	/**
+	 * Will shutdown the work queue after all the current pending work is
+	 * finished. Necessary to prevent our code from running forever in the
+	 * background.
+	 */
 	public synchronized void shutdown() {
 		logger.debug("Shutting down");
 		finish();
 		minions.shutdown();
-	}
-
-	private synchronized void incrementPending() {
-		pending++;
-		logger.debug("Pending is now {}", pending);
-	}
-
-	private synchronized void decrementPending() {
-		pending--;
-		logger.debug("Pending is now {}", pending);
-
-		if (pending <= 0) {
-			this.notifyAll();
-		}
 	}
 
 	private class LineMinion implements Runnable {
@@ -119,13 +137,13 @@ public class ThreadSafePartialSearchBuilder {
 			logger.debug("Minion created for {}", line);
 			this.line = line;
 			this.index = index;
-			incrementPending();
+			minions.increasementPending();
 		}
 
 		@Override
 		public void run() {
 			parseLine(line, index);
-			decrementPending();
+			minions.decreasementPending();
 		}
 
 	}

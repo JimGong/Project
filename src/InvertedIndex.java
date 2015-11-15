@@ -148,7 +148,6 @@ public class InvertedIndex {
 		for (String queryWord : queryWords) {
 
 			frequency = 0;
-
 			for (String word : index.tailMap(queryWord, true).keySet()) {
 
 				if (word.startsWith(queryWord)) {
@@ -186,21 +185,24 @@ public class InvertedIndex {
 		return "InvertedIndex [index=" + index + "]";
 	}
 
-	// TODO This overwrites, better to have an addAll method.
-	public void merge(
-			TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex) {
-		index.putAll(localIndex);
+	/* TODO addAll */
+	public void addAll(InvertedIndex local) {
+		// for (String key : local.index.keySet()) {
+		// if key is not in this.index...
+		// get the ENTIRE map from local and put it in this index
+		// else
+		// more logic to test when you can put, and when you must addAll()
+		// }
+
+		for (String key : local.index.keySet()) {
+			if (this.index.containsKey(key)) {
+				this.index.putAll(local.index);
+			}
+			else {
+				this.index.put(key, local.index.get(key));
+			}
+		}
+		// this.index.putAll(local.index);
 	}
 
-	/* TODO
-	public void addAll(InvertedIndex local) {
-		for (String key : local.index.keySet()) {
-			if key is not in this.index...
-				get the ENTIRE map from local and put it in this index
-			else
-				more logic to test when you can put, and when you must addAll()
-		}
-		
-	}
-	*/
 }

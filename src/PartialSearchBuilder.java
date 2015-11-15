@@ -43,6 +43,12 @@ public class PartialSearchBuilder {
 		}
 	}
 
+	/**
+	 * Parse query and put into result map.
+	 *
+	 * @param line
+	 * @param index
+	 */
 	public void parseLine(String line, InvertedIndex index) {
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
 

@@ -1,20 +1,21 @@
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
-import java.util.TreeMap;
-import java.util.TreeSet;
-
-// TODO A little bit of Javadoc, you do not need to javadoc the overridden methods.
 
 /**
- * TODO
+ * Create a thread-safe version of inverted index to store word, path and
+ * position
  */
 public class ThreadSafeInvertedIndex extends InvertedIndex {
 
-	/** TODO */
+	/**
+	 * Create a custom read write lock
+	 */
 	private ReadWriteLock lock;
 
-	/** TODO */
+	/**
+	 * Constructor and initialize the custom read write lock
+	 */
 	public ThreadSafeInvertedIndex() {
 		super();
 		lock = new ReadWriteLock();
@@ -90,14 +91,4 @@ public class ThreadSafeInvertedIndex extends InvertedIndex {
 		}
 	}
 
-	@Override
-	public void merge(
-			TreeMap<String, TreeMap<String, TreeSet<Integer>>> localIndex) {
-		lock.lockReadWrite();
-		try {
-			super.merge(localIndex);
-		} finally {
-			lock.unlockReadWrite();
-		}
-	}
 }
