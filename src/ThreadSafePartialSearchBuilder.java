@@ -139,19 +139,11 @@ public class ThreadSafePartialSearchBuilder {
 			logger.debug("******** Minion created for {}", line);
 			this.line = line;
 			this.index = index;
-			minions.increasementPending();
 		}
 
 		@Override
 		public void run() {
-			try {
-				parseLine(line, index);
-			} finally {
-				minions.decreasementPending();
-				synchronized (minions) {
-					minions.notifyAll();
-				}
-			}
+			parseLine(line, index);
 			logger.debug("######## Minion finished {}", line);
 		}
 

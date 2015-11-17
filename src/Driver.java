@@ -172,9 +172,7 @@ public class Driver {
 				}
 			} catch (NumberFormatException e) {
 				System.err.println("Wrong number of thread.");
-				e.printStackTrace();
-			} catch (Exception e) {
-				e.printStackTrace();
+				// e.printStackTrace();
 			}
 
 			logger.debug("num thread: " + numThreads);

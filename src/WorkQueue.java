@@ -61,14 +61,14 @@ public class WorkQueue {
 		}
 	}
 
-	public void increasementPending() {
+	private void increasementPending() {
 		synchronized (queue) {
 			pending++;
 			logger.debug("Pending is now {}", pending);
 		}
 	}
 
-	public void decreasementPending() {
+	private void decreasementPending() {
 		synchronized (queue) {
 			pending--;
 			logger.debug("Pending is now {}", pending);
@@ -95,18 +95,19 @@ public class WorkQueue {
 	public void execute(Runnable r) {
 		synchronized (queue) {
 			queue.addLast(r);
+			increasementPending();
 			queue.notifyAll();
 		}
 	}
 
 	public void finish() {
 		try {
-			while (pending > 0) {
-				logger.debug("Waiting until finished");
-				synchronized (queue) {
+			synchronized (queue) {
+				while (pending > 0) {
+					logger.debug("Waiting until finished");
 					queue.wait();
+					logger.debug("waiting");
 				}
-				logger.debug("waiting");
 			}
 		} catch (InterruptedException e) {
 			logger.debug("Finish interrupted", e);
@@ -179,13 +180,10 @@ public class WorkQueue {
 					ex.printStackTrace();
 					System.err.println("Warning: Work queue encountered an "
 							+ "exception while running.");
+					// }
+				} finally {
+					decreasementPending();
 				}
-				// } finally {
-				// decreasementPending();
-				// synchronized (queue) {
-				// queue.notifyAll();
-				// }
-				// }
 			}
 		}
 	}
