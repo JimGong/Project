@@ -110,7 +110,9 @@ public class ThreadSafePartialSearchBuilder {
 		try {
 			while (minions.getPending() > 0) {
 				logger.debug("Waiting until finished");
-				minions.wait();
+				synchronized (minions) {
+					minions.wait();
+				}
 			}
 		} catch (InterruptedException e) {
 			logger.debug("Finish interrupted", e);
@@ -123,8 +125,8 @@ public class ThreadSafePartialSearchBuilder {
 	 * background.
 	 */
 	public synchronized void shutdown() {
-		logger.debug("Shutting down");
 		finish();
+		logger.debug("Shutting down");
 		minions.shutdown();
 	}
 
@@ -134,7 +136,7 @@ public class ThreadSafePartialSearchBuilder {
 		private ThreadSafeInvertedIndex index;
 
 		public LineMinion(String line, ThreadSafeInvertedIndex index) {
-			logger.debug("Minion created for {}", line);
+			logger.debug("******** Minion created for {}", line);
 			this.line = line;
 			this.index = index;
 			minions.increasementPending();
@@ -142,8 +144,15 @@ public class ThreadSafePartialSearchBuilder {
 
 		@Override
 		public void run() {
-			parseLine(line, index);
-			minions.decreasementPending();
+			try {
+				parseLine(line, index);
+			} finally {
+				minions.decreasementPending();
+				synchronized (minions) {
+					minions.notifyAll();
+				}
+			}
+			logger.debug("######## Minion finished {}", line);
 		}
 
 	}

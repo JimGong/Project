@@ -190,6 +190,7 @@ public class Driver {
 				invertedIndexBuilder.traverseDirectory(
 						Paths.get((parser.getValue(INPUT_FLAG))), index);
 
+				logger.debug("calling shut down");
 				invertedIndexBuilder.shutdown();
 				logger.debug("index work queue shutted down");
 				logger.debug("Done with traverseDirectory");

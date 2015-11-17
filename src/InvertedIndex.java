@@ -202,7 +202,6 @@ public class InvertedIndex {
 				this.index.put(key, local.index.get(key));
 			}
 		}
-		// this.index.putAll(local.index);
 	}
 
 }

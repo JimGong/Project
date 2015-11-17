@@ -99,6 +99,20 @@ public class WorkQueue {
 		}
 	}
 
+	public void finish() {
+		try {
+			while (pending > 0) {
+				logger.debug("Waiting until finished");
+				synchronized (queue) {
+					queue.wait();
+				}
+				logger.debug("waiting");
+			}
+		} catch (InterruptedException e) {
+			logger.debug("Finish interrupted", e);
+		}
+	}
+
 	/**
 	 * Asks the queue to shutdown. Any unprocessed work will not be finished,
 	 * but threads in-progress will not be interrupted.
@@ -166,6 +180,12 @@ public class WorkQueue {
 					System.err.println("Warning: Work queue encountered an "
 							+ "exception while running.");
 				}
+				// } finally {
+				// decreasementPending();
+				// synchronized (queue) {
+				// queue.notifyAll();
+				// }
+				// }
 			}
 		}
 	}

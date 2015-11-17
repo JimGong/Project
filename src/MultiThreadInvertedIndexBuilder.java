@@ -21,7 +21,10 @@ public class MultiThreadInvertedIndexBuilder {
 		try {
 			while (minions.getPending() > 0) {
 				logger.debug("Waiting until finished");
-				minions.wait();
+				synchronized (minions) {
+					minions.wait();
+				}
+				logger.debug("waiting");
 			}
 		} catch (InterruptedException e) {
 			logger.debug("Finish interrupted", e);
@@ -40,7 +43,7 @@ public class MultiThreadInvertedIndexBuilder {
 		private ThreadSafeInvertedIndex index;
 
 		public FileMinion(Path file, ThreadSafeInvertedIndex index) {
-			logger.debug("Minion created for {}", file);
+			logger.debug("******** Minion created for {}", file);
 			this.file = file;
 			this.index = index;
 			minions.increasementPending();
@@ -58,6 +61,11 @@ public class MultiThreadInvertedIndexBuilder {
 				logger.catching(Level.DEBUG, e);
 			} finally {
 				minions.decreasementPending();
+				synchronized (minions) {
+					if (minions.getPending() <= 0) {
+						minions.notifyAll();
+					}
+				}
 			}
 			logger.debug("######## Minion finished {}", file);
 		}
