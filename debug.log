@@ -30,3 +30,28 @@
 [15:12:48:353 debug] WorkQueue.java@74 Thread-2: Pending is now 1
 [15:12:48:354 debug] MultiThreadInvertedIndexBuilder.java@61 Thread-2: ######## Minion finished input/index/simple/symbols.txt
 [15:12:48:354 debug] WorkQueue.java@74 Thread-2: Pending is now 0
+[15:13:18:059 debug] MultiThreadInvertedIndexBuilder.java@29 Time-limited test: Finish interrupted
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method) ~[?:1.8.0_40-ea]
+	at java.lang.Object.wait(Object.java:502) ~[?:1.8.0_40-ea]
+	at MultiThreadInvertedIndexBuilder.finish(MultiThreadInvertedIndexBuilder.java:25) [bin/:?]
+	at MultiThreadInvertedIndexBuilder.shutdown(MultiThreadInvertedIndexBuilder.java:34) [bin/:?]
+	at Driver.main(Driver.java:192) [bin/:?]
+	at ProjectTest.checkExceptions(ProjectTest.java:160) [bin/:?]
+	at ThreadTest$ArgumentTest.testOneThread(ThreadTest.java:51) [bin/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[?:1.8.0_40-ea]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit.jar:4.12]
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298) [junit.jar:4.12]
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292) [junit.jar:4.12]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_40-ea]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_40-ea]
+[15:13:18:065 debug] MultiThreadInvertedIndexBuilder.java@35 Time-limited test: Shutting down
+[15:13:18:065 debug] WorkQueue.java@128 Time-limited test: queue shutted down.
+[15:13:18:065 debug] Driver.java@193 Time-limited test: index work queue shutted down
+[15:13:18:065 debug] Driver.java@194 Time-limited test: Done with traverseDirectory
