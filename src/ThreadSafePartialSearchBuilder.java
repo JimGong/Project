@@ -60,11 +60,14 @@ public class ThreadSafePartialSearchBuilder {
 	 * @param index
 	 */
 	public void parseLine(String line, InvertedIndex index) {
+		logger.debug("in parseline for {}", line);
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
+		logger.debug("succeed in splitline");
 		List<SearchResult> resultList = index.partialSearch(queryWords);
-
+		logger.debug("done with partial search");
 		synchronized (this) {
 			result.put(line, resultList);
+			logger.debug("done with putting into map");
 		}
 	}
 
@@ -107,16 +110,7 @@ public class ThreadSafePartialSearchBuilder {
 	 * queue.
 	 */
 	public synchronized void finish() {
-		try {
-			while (minions.getPending() > 0) {
-				logger.debug("Waiting until finished");
-				synchronized (minions) {
-					minions.wait();
-				}
-			}
-		} catch (InterruptedException e) {
-			logger.debug("Finish interrupted", e);
-		}
+		minions.finish();
 	}
 
 	/**
@@ -143,6 +137,7 @@ public class ThreadSafePartialSearchBuilder {
 
 		@Override
 		public void run() {
+			logger.debug("--------- Minion going to run for {}", line);
 			parseLine(line, index);
 			logger.debug("######## Minion finished {}", line);
 		}

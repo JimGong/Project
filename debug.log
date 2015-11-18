@@ -1,42 +1,66 @@
-[15:12:48:336 debug] Driver.java@178 Time-limited test: num thread: 1
-[15:12:48:338 debug] Driver.java@187 Time-limited test: traversing directory
-[15:12:48:343 debug] MultiThreadInvertedIndexBuilder.java@45 Time-limited test: ******** Minion created for input/index/simple/a/b/c/d/subdir.txt
-[15:12:48:343 debug] WorkQueue.java@67 Time-limited test: Pending is now 1
-[15:12:48:344 debug] MultiThreadInvertedIndexBuilder.java@45 Time-limited test: ******** Minion created for input/index/simple/capital_extension.TXT
-[15:12:48:344 debug] WorkQueue.java@67 Time-limited test: Pending is now 2
-[15:12:48:344 debug] MultiThreadInvertedIndexBuilder.java@45 Time-limited test: ******** Minion created for input/index/simple/capitals.txt
-[15:12:48:345 debug] WorkQueue.java@67 Time-limited test: Pending is now 3
-[15:12:48:345 debug] MultiThreadInvertedIndexBuilder.java@45 Time-limited test: ******** Minion created for input/index/simple/digits.txt
-[15:12:48:345 debug] WorkQueue.java@67 Time-limited test: Pending is now 4
-[15:12:48:345 debug] MultiThreadInvertedIndexBuilder.java@45 Time-limited test: ******** Minion created for input/index/simple/empty.txt
-[15:12:48:345 debug] WorkQueue.java@67 Time-limited test: Pending is now 5
-[15:12:48:345 debug] MultiThreadInvertedIndexBuilder.java@45 Time-limited test: ******** Minion created for input/index/simple/position.txt
-[15:12:48:345 debug] WorkQueue.java@67 Time-limited test: Pending is now 6
-[15:12:48:346 debug] MultiThreadInvertedIndexBuilder.java@45 Time-limited test: ******** Minion created for input/index/simple/symbols.txt
-[15:12:48:346 debug] WorkQueue.java@67 Time-limited test: Pending is now 7
-[15:12:48:346 debug] Driver.java@191 Time-limited test: calling shut down
-[15:12:48:346 debug] MultiThreadInvertedIndexBuilder.java@23 Time-limited test: Waiting until finished
-[15:12:48:350 debug] MultiThreadInvertedIndexBuilder.java@61 Thread-2: ######## Minion finished input/index/simple/a/b/c/d/subdir.txt
-[15:12:48:350 debug] WorkQueue.java@74 Thread-2: Pending is now 6
-[15:12:48:350 debug] MultiThreadInvertedIndexBuilder.java@61 Thread-2: ######## Minion finished input/index/simple/capital_extension.TXT
-[15:12:48:350 debug] WorkQueue.java@74 Thread-2: Pending is now 5
-[15:12:48:351 debug] MultiThreadInvertedIndexBuilder.java@61 Thread-2: ######## Minion finished input/index/simple/capitals.txt
-[15:12:48:351 debug] WorkQueue.java@74 Thread-2: Pending is now 4
-[15:12:48:351 debug] MultiThreadInvertedIndexBuilder.java@61 Thread-2: ######## Minion finished input/index/simple/digits.txt
-[15:12:48:352 debug] WorkQueue.java@74 Thread-2: Pending is now 3
-[15:12:48:352 debug] MultiThreadInvertedIndexBuilder.java@61 Thread-2: ######## Minion finished input/index/simple/empty.txt
-[15:12:48:352 debug] WorkQueue.java@74 Thread-2: Pending is now 2
-[15:12:48:353 debug] MultiThreadInvertedIndexBuilder.java@61 Thread-2: ######## Minion finished input/index/simple/position.txt
-[15:12:48:353 debug] WorkQueue.java@74 Thread-2: Pending is now 1
-[15:12:48:354 debug] MultiThreadInvertedIndexBuilder.java@61 Thread-2: ######## Minion finished input/index/simple/symbols.txt
-[15:12:48:354 debug] WorkQueue.java@74 Thread-2: Pending is now 0
-[15:13:18:059 debug] MultiThreadInvertedIndexBuilder.java@29 Time-limited test: Finish interrupted
+[18:55:53:159 debug] Driver.java@178 Time-limited test: num thread: 1
+[18:55:53:161 debug] Driver.java@187 Time-limited test: traversing directory
+[18:55:53:166 debug] MultiThreadInvertedIndexBuilder.java@36 Time-limited test: ******** Minion created for input/index/simple/a/b/c/d/subdir.txt
+[18:55:53:166 debug] WorkQueue.java@67 Time-limited test: Pending is now 1
+[18:55:53:167 debug] MultiThreadInvertedIndexBuilder.java@36 Time-limited test: ******** Minion created for input/index/simple/capital_extension.TXT
+[18:55:53:167 debug] WorkQueue.java@67 Time-limited test: Pending is now 2
+[18:55:53:167 debug] MultiThreadInvertedIndexBuilder.java@36 Time-limited test: ******** Minion created for input/index/simple/capitals.txt
+[18:55:53:167 debug] WorkQueue.java@67 Time-limited test: Pending is now 3
+[18:55:53:167 debug] MultiThreadInvertedIndexBuilder.java@36 Time-limited test: ******** Minion created for input/index/simple/digits.txt
+[18:55:53:167 debug] WorkQueue.java@67 Time-limited test: Pending is now 4
+[18:55:53:167 debug] MultiThreadInvertedIndexBuilder.java@36 Time-limited test: ******** Minion created for input/index/simple/empty.txt
+[18:55:53:168 debug] WorkQueue.java@67 Time-limited test: Pending is now 5
+[18:55:53:168 debug] MultiThreadInvertedIndexBuilder.java@36 Time-limited test: ******** Minion created for input/index/simple/position.txt
+[18:55:53:168 debug] WorkQueue.java@67 Time-limited test: Pending is now 6
+[18:55:53:168 debug] MultiThreadInvertedIndexBuilder.java@36 Time-limited test: ******** Minion created for input/index/simple/symbols.txt
+[18:55:53:168 debug] WorkQueue.java@67 Time-limited test: Pending is now 7
+[18:55:53:168 debug] Driver.java@191 Time-limited test: calling shut down
+[18:55:53:169 debug] WorkQueue.java@107 Time-limited test: Waiting until finished
+[18:55:53:172 debug] MultiThreadInvertedIndexBuilder.java@52 Thread-2: ######## Minion finished input/index/simple/a/b/c/d/subdir.txt
+[18:55:53:172 debug] WorkQueue.java@74 Thread-2: Pending is now 6
+[18:55:53:172 debug] MultiThreadInvertedIndexBuilder.java@52 Thread-2: ######## Minion finished input/index/simple/capital_extension.TXT
+[18:55:53:172 debug] WorkQueue.java@74 Thread-2: Pending is now 5
+[18:55:53:173 debug] MultiThreadInvertedIndexBuilder.java@52 Thread-2: ######## Minion finished input/index/simple/capitals.txt
+[18:55:53:173 debug] WorkQueue.java@74 Thread-2: Pending is now 4
+[18:55:53:174 debug] MultiThreadInvertedIndexBuilder.java@52 Thread-2: ######## Minion finished input/index/simple/digits.txt
+[18:55:53:174 debug] WorkQueue.java@74 Thread-2: Pending is now 3
+[18:55:53:174 debug] MultiThreadInvertedIndexBuilder.java@52 Thread-2: ######## Minion finished input/index/simple/empty.txt
+[18:55:53:174 debug] WorkQueue.java@74 Thread-2: Pending is now 2
+[18:55:53:175 debug] MultiThreadInvertedIndexBuilder.java@52 Thread-2: ######## Minion finished input/index/simple/position.txt
+[18:55:53:175 debug] WorkQueue.java@74 Thread-2: Pending is now 1
+[18:55:53:176 debug] MultiThreadInvertedIndexBuilder.java@52 Thread-2: ######## Minion finished input/index/simple/symbols.txt
+[18:55:53:176 debug] WorkQueue.java@74 Thread-2: Pending is now 0
+[18:55:53:176 debug] WorkQueue.java@109 Time-limited test: waiting
+[18:55:53:176 debug] MultiThreadInvertedIndexBuilder.java@26 Time-limited test: Shutting down
+[18:55:53:177 debug] WorkQueue.java@128 Time-limited test: queue shutted down.
+[18:55:53:177 debug] Driver.java@193 Time-limited test: index work queue shutted down
+[18:55:53:177 debug] Driver.java@194 Time-limited test: Done with traverseDirectory
+[18:55:53:177 debug] Driver.java@200 Time-limited test: going to print index
+[18:55:53:177 debug] Driver.java@211 Time-limited test: doesnt has index flag
+[18:55:53:178 debug] ThreadSafePartialSearchBuilder.java@134 Time-limited test: ******** Minion created for two
+[18:55:53:178 debug] WorkQueue.java@67 Time-limited test: Pending is now 1
+[18:55:53:178 debug] ThreadSafePartialSearchBuilder.java@134 Time-limited test: ******** Minion created for chicka-dee
+[18:55:53:178 debug] WorkQueue.java@67 Time-limited test: Pending is now 2
+[18:55:53:178 debug] ThreadSafePartialSearchBuilder.java@141 Thread-1: --------- Minion going to run for two
+[18:55:53:178 debug] ThreadSafePartialSearchBuilder.java@134 Time-limited test: ******** Minion created for aa
+[18:55:53:178 debug] ThreadSafePartialSearchBuilder.java@63 Thread-1: in parseline for two
+[18:55:53:178 debug] WorkQueue.java@67 Time-limited test: Pending is now 3
+[18:55:53:178 debug] ThreadSafePartialSearchBuilder.java@65 Thread-1: succeed in splitline
+[18:55:53:178 debug] ThreadSafePartialSearchBuilder.java@134 Time-limited test: ******** Minion created for t
+[18:55:53:178 debug] WorkQueue.java@67 Time-limited test: Pending is now 4
+[18:55:53:179 debug] ThreadSafePartialSearchBuilder.java@134 Time-limited test: ******** Minion created for elephANT & ANTelope
+[18:55:53:179 debug] WorkQueue.java@67 Time-limited test: Pending is now 5
+[18:55:53:179 debug] Driver.java@224 Time-limited test: Done with parsing queries
+[18:55:53:179 debug] WorkQueue.java@107 Time-limited test: Waiting until finished
+[18:55:53:179 debug] ThreadSafePartialSearchBuilder.java@67 Thread-1: done with partial search
+[18:56:22:884 debug] WorkQueue.java@113 Time-limited test: Finish interrupted
 java.lang.InterruptedException
 	at java.lang.Object.wait(Native Method) ~[?:1.8.0_40-ea]
 	at java.lang.Object.wait(Object.java:502) ~[?:1.8.0_40-ea]
-	at MultiThreadInvertedIndexBuilder.finish(MultiThreadInvertedIndexBuilder.java:25) [bin/:?]
-	at MultiThreadInvertedIndexBuilder.shutdown(MultiThreadInvertedIndexBuilder.java:34) [bin/:?]
-	at Driver.main(Driver.java:192) [bin/:?]
+	at WorkQueue.finish(WorkQueue.java:108) [bin/:?]
+	at ThreadSafePartialSearchBuilder.finish(ThreadSafePartialSearchBuilder.java:114) [bin/:?]
+	at ThreadSafePartialSearchBuilder.shutdown(ThreadSafePartialSearchBuilder.java:123) [bin/:?]
+	at Driver.main(Driver.java:225) [bin/:?]
 	at ProjectTest.checkExceptions(ProjectTest.java:160) [bin/:?]
 	at ThreadTest$ArgumentTest.testOneThread(ThreadTest.java:51) [bin/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_40-ea]
@@ -51,7 +75,3 @@ java.lang.InterruptedException
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292) [junit.jar:4.12]
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_40-ea]
 	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_40-ea]
-[15:13:18:065 debug] MultiThreadInvertedIndexBuilder.java@35 Time-limited test: Shutting down
-[15:13:18:065 debug] WorkQueue.java@128 Time-limited test: queue shutted down.
-[15:13:18:065 debug] Driver.java@193 Time-limited test: index work queue shutted down
-[15:13:18:065 debug] Driver.java@194 Time-limited test: Done with traverseDirectory

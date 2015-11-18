@@ -18,16 +18,7 @@ public class MultiThreadInvertedIndexBuilder {
 	}
 
 	public void finish() {
-		try {
-			while (minions.getPending() > 0) {
-				logger.debug("Waiting until finished");
-				synchronized (minions) {
-					minions.wait();
-				}
-			}
-		} catch (InterruptedException e) {
-			logger.debug("Finish interrupted", e);
-		}
+		minions.finish();
 	}
 
 	public void shutdown() {
