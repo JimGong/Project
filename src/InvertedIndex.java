@@ -185,23 +185,23 @@ public class InvertedIndex {
 		return "InvertedIndex [index=" + index + "]";
 	}
 
-	/* TODO addAll */
 	public void addAll(InvertedIndex local) {
-		// for (String key : local.index.keySet()) {
-		// if key is not in this.index...
-		// get the ENTIRE map from local and put it in this index
-		// else
-		// more logic to test when you can put, and when you must addAll()
-		// }
-
-		for (String key : local.index.keySet()) {
-			if (this.index.containsKey(key)) {
-				this.index.putAll(local.index);
+		for (String word : local.index.keySet()) {
+			if (!this.index.containsKey(word)) {
+				this.index.put(word, local.index.get(word));
 			}
 			else {
-				this.index.put(key, local.index.get(key));
+				for (String path : local.index.get(word).keySet()) {
+					if (!hasPath(word, path)) {
+						this.index.get(word).put(path,
+								local.index.get(word).get(path));
+					}
+					else {
+						this.index.get(word).get(path)
+								.addAll(local.index.get(word).get(path));
+					}
+				}
 			}
 		}
 	}
-
 }

@@ -41,7 +41,6 @@ public class MultiThreadInvertedIndexBuilder {
 		@Override
 		public void run() {
 			try {
-				// TODO This will improve efficiency, do not over synchronize!
 				InvertedIndex local = new InvertedIndex();
 				InvertedIndexBuilder.parseFile(file, local);
 				index.addAll(local);

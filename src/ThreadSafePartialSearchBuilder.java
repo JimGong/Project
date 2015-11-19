@@ -60,14 +60,10 @@ public class ThreadSafePartialSearchBuilder {
 	 * @param index
 	 */
 	public void parseLine(String line, InvertedIndex index) {
-		logger.debug("in parseline for {}", line);
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
-		logger.debug("succeed in splitline");
 		List<SearchResult> resultList = index.partialSearch(queryWords);
-		logger.debug("done with partial search");
-		synchronized (this) {
+		synchronized (result) {
 			result.put(line, resultList);
-			logger.debug("done with putting into map");
 		}
 	}
 
