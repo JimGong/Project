@@ -2,6 +2,9 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Create a thread-safe version of inverted index to store word, path and
  * position
@@ -12,6 +15,7 @@ public class ThreadSafeInvertedIndex extends InvertedIndex {
 	 * Create a custom read write lock
 	 */
 	private ReadWriteLock lock;
+	private static final Logger logger = LogManager.getLogger();
 
 	/**
 	 * Constructor and initialize the custom read write lock
@@ -88,6 +92,20 @@ public class ThreadSafeInvertedIndex extends InvertedIndex {
 			return super.toString();
 		} finally {
 			lock.unlockReadOnly();
+		}
+	}
+
+	@Override
+	public void addAll(InvertedIndex local) {
+		logger.debug("going lock");
+		lock.lockReadWrite();
+		logger.debug("locked");
+		try {
+			super.addAll(local);
+
+		} finally {
+			logger.debug("going to unlock");
+			lock.unlockReadWrite();
 		}
 	}
 

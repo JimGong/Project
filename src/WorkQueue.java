@@ -64,14 +64,14 @@ public class WorkQueue {
 	private void increasementPending() {
 		synchronized (queue) {
 			pending++;
-			logger.debug("Pending is now {}", pending);
+			logger.debug("increaing, Pending is now {}", pending);
 		}
 	}
 
 	private void decreasementPending() {
 		synchronized (queue) {
 			pending--;
-			logger.debug("Pending is now {}", pending);
+			logger.debug("decreasing, Pending is now {}", pending);
 
 			if (pending <= 0) {
 				queue.notifyAll();

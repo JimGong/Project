@@ -43,7 +43,9 @@ public class MultiThreadInvertedIndexBuilder {
 			try {
 				InvertedIndex local = new InvertedIndex();
 				InvertedIndexBuilder.parseFile(file, local);
+				logger.debug("going to addAll {}", file);
 				index.addAll(local);
+				logger.debug("done with addAll {}", file);
 			} catch (IOException e) {
 				logger.warn("Unable to parse {}", file);
 				logger.catching(Level.DEBUG, e);

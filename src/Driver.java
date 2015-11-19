@@ -194,7 +194,7 @@ public class Driver {
 				logger.debug("Done with traverseDirectory");
 			} catch (Exception e) {
 				System.err.println("No arguments");
-				e.printStackTrace();
+				// e.printStackTrace();
 			} /* build inverted index */
 			try {
 				logger.debug("going to print index");
