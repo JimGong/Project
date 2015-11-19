@@ -16,7 +16,8 @@ import org.apache.logging.log4j.Logger;
 /**
  * Thread safe version of partial search builder.
  */
-public class ThreadSafePartialSearchBuilder {
+public class ThreadSafePartialSearchBuilder
+		implements PartialSearchBuilderInterface {
 
 	private final Map<String, List<SearchResult>> result;
 
@@ -41,7 +42,8 @@ public class ThreadSafePartialSearchBuilder {
 	 * @param index
 	 * @throws IOException
 	 */
-	public synchronized void parseFile(Path file, ThreadSafeInvertedIndex index)
+	@Override
+	public synchronized void parseFile(Path file, InvertedIndex index)
 			throws IOException {
 		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
@@ -59,6 +61,7 @@ public class ThreadSafePartialSearchBuilder {
 	 * @param line
 	 * @param index
 	 */
+	@Override
 	public void parseLine(String line, InvertedIndex index) {
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
 		List<SearchResult> resultList = index.partialSearch(queryWords);
@@ -73,6 +76,7 @@ public class ThreadSafePartialSearchBuilder {
 	 * @param output
 	 * @throws IOException
 	 */
+	@Override
 	public synchronized void print(Path output) throws IOException {
 
 		finish();
@@ -125,10 +129,10 @@ public class ThreadSafePartialSearchBuilder {
 		private String line;
 		private ThreadSafeInvertedIndex index;
 
-		public LineMinion(String line, ThreadSafeInvertedIndex index) {
+		public LineMinion(String line, InvertedIndex index) {
 			logger.debug("******** Minion created for {}", line);
 			this.line = line;
-			this.index = index;
+			this.index = (ThreadSafeInvertedIndex) index;
 		}
 
 		@Override

@@ -1,13 +1,12 @@
+import java.io.IOException;
+import java.nio.file.Path;
 
-public abstract class PartialSearchBuilderInterface {
+public interface PartialSearchBuilderInterface {
 
-	public abstract void add(String word, String path, int position);
+	public void parseFile(Path file, InvertedIndex index) throws IOException;
 
-	public boolean hasWord(String word) {
-		return false;
+	public void parseLine(String line, InvertedIndex index);
 
-	}
-
-	// public boolean hasPath(String word, String path);
+	public void print(Path output) throws IOException;
 
 }

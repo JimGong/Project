@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Build Partial Search
  */
-public class PartialSearchBuilder {
+public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 
 	/**
 	 * Stores search result in a map, where the key is the path
@@ -33,6 +33,7 @@ public class PartialSearchBuilder {
 	 * @param index
 	 * @throws IOException
 	 */
+	@Override
 	public void parseFile(Path file, InvertedIndex index) throws IOException {
 		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
@@ -49,6 +50,7 @@ public class PartialSearchBuilder {
 	 * @param line
 	 * @param index
 	 */
+	@Override
 	public void parseLine(String line, InvertedIndex index) {
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
 
@@ -63,6 +65,7 @@ public class PartialSearchBuilder {
 	 * @param output
 	 * @throws IOException
 	 */
+	@Override
 	public void print(Path output) throws IOException {
 		try (BufferedWriter writer = Files.newBufferedWriter(output,
 				Charset.forName("UTF-8"))) {
