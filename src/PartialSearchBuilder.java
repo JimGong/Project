@@ -18,11 +18,13 @@ public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 	 * Stores search result in a map, where the key is the path
 	 */
 	private final Map<String, List<SearchResult>> result;
+	
+	// TODO Add the inverted index as a member
 
 	/**
 	 * Initializes an empty result map.
 	 */
-	public PartialSearchBuilder() {
+	public PartialSearchBuilder() { // TODO Set the inverted index in the constructor
 		result = new LinkedHashMap<>();
 	}
 

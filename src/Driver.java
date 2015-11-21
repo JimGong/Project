@@ -104,7 +104,33 @@ public class Driver {
 	 *            set of flag and value pairs
 	 */
 	public static void main(String[] args) {
-
+		
+		/*
+		InvertedIndex index = null;
+		PartialSearchBuilderInterface builder = null;
+		
+		if (multithreading) {
+			ThreadSafeInvertedIndex threadSafe = new ThreadSafeInvertedIndex();
+			index = threadSafe;
+			
+			builder = new MultiThreaded....
+			
+			make sure things get shutdown
+		}
+		else {
+			index = new InvertedIndex();
+			etc.
+		}
+		
+		if (print index) {
+			index.print();
+		}
+		
+		if (print search) {
+			search.print();
+		}
+		*/
+		
 		ArgumentParser parser = new ArgumentParser(args);
 		if (!parser.hasFlag(THREAD_FLAG)) {
 

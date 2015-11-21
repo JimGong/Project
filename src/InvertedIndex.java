@@ -185,6 +185,7 @@ public class InvertedIndex {
 		return "InvertedIndex [index=" + index + "]";
 	}
 
+	// TODO Javadoc
 	public void addAll(InvertedIndex local) {
 		for (String word : local.index.keySet()) {
 			if (!this.index.containsKey(word)) {
