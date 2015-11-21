@@ -3,6 +3,8 @@ import java.util.LinkedList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+// TODO Javadoc
+
 /**
  * A simple work queue implementation based on the IBM developerWorks article by
  * Brian Goetz. It is up to the user of this class to keep track of whether
@@ -61,14 +63,14 @@ public class WorkQueue {
 		}
 	}
 
-	private void increasementPending() {
+	private void increasementPending() { // TODO increasePending or incrementPending
 		synchronized (queue) {
 			pending++;
 			logger.debug("increaing, Pending is now {}", pending);
 		}
 	}
 
-	private void decreasementPending() {
+	private void decreasementPending() { // TODO decreasePending or decrementPending
 		synchronized (queue) {
 			pending--;
 			logger.debug("decreasing, Pending is now {}", pending);
@@ -79,6 +81,7 @@ public class WorkQueue {
 		}
 	}
 
+	// TODO Shouldn't need this....
 	public int getPending() {
 		synchronized (queue) {
 			return pending;
