@@ -3,8 +3,6 @@ import java.util.LinkedList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// TODO Javadoc
-
 /**
  * A simple work queue implementation based on the IBM developerWorks article by
  * Brian Goetz. It is up to the user of this class to keep track of whether
@@ -63,14 +61,21 @@ public class WorkQueue {
 		}
 	}
 
-	private void increasementPending() { // TODO increasePending or incrementPending
+	/**
+	 * Indicates that we now have additional "pending" work to wait for.
+	 */
+	private void increasePending() {
 		synchronized (queue) {
 			pending++;
 			logger.debug("increaing, Pending is now {}", pending);
 		}
 	}
 
-	private void decreasementPending() { // TODO decreasePending or decrementPending
+	/**
+	 * Indicates that we now have one less "pending" work, and will notify any
+	 * waiting threads if we no longer have any more pending work left.
+	 */
+	private void decreasePending() {
 		synchronized (queue) {
 			pending--;
 			logger.debug("decreasing, Pending is now {}", pending);
@@ -78,13 +83,6 @@ public class WorkQueue {
 			if (pending <= 0) {
 				queue.notifyAll();
 			}
-		}
-	}
-
-	// TODO Shouldn't need this....
-	public int getPending() {
-		synchronized (queue) {
-			return pending;
 		}
 	}
 
@@ -98,11 +96,15 @@ public class WorkQueue {
 	public void execute(Runnable r) {
 		synchronized (queue) {
 			queue.addLast(r);
-			increasementPending();
+			increasePending();
 			queue.notifyAll();
 		}
 	}
 
+	/**
+	 * Helper method, that helps a thread wait until all of the current work is
+	 * done. This is useful for shutting down the work queue.
+	 */
 	public void finish() {
 		try {
 			synchronized (queue) {
@@ -185,7 +187,7 @@ public class WorkQueue {
 							+ "exception while running.");
 					// }
 				} finally {
-					decreasementPending();
+					decreasePending();
 				}
 			}
 		}

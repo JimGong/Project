@@ -18,14 +18,14 @@ public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 	 * Stores search result in a map, where the key is the path
 	 */
 	private final Map<String, List<SearchResult>> result;
-	
-	// TODO Add the inverted index as a member
+	private final InvertedIndex index;
 
 	/**
 	 * Initializes an empty result map.
 	 */
-	public PartialSearchBuilder() { // TODO Set the inverted index in the constructor
+	public PartialSearchBuilder(InvertedIndex index) {
 		result = new LinkedHashMap<>();
+		this.index = index;
 	}
 
 	/**
@@ -36,7 +36,7 @@ public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 	 * @throws IOException
 	 */
 	@Override
-	public void parseFile(Path file, InvertedIndex index) throws IOException {
+	public void parseFile(Path file) throws IOException {
 		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
 			String line = null;

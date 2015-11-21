@@ -7,28 +7,48 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// TODO Javadoc
-
 public class MultiThreadInvertedIndexBuilder {
 
 	private static final Logger logger = LogManager.getLogger();
 
+	/**
+	 * Create a WorkQueue
+	 */
 	private final WorkQueue minions;
 
+	/**
+	 * Initiate the WorkQueue and set the numThread
+	 *
+	 * @param numThreads
+	 */
 	public MultiThreadInvertedIndexBuilder(int numThreads) {
 		minions = new WorkQueue(numThreads);
 	}
 
+	/**
+	 * Helper method, that helps a thread wait until all of the current work is
+	 * done. This is useful for resetting the counters or shutting down the work
+	 * queue.
+	 */
 	public void finish() {
 		minions.finish();
 	}
 
+	/**
+	 * Will shutdown the work queue after all the current pending work is
+	 * finished. Necessary to prevent our code from running forever in the
+	 * background.
+	 */
 	public void shutdown() {
 		finish();
 		logger.debug("Shutting down");
 		minions.shutdown();
 	}
 
+	/**
+	 * Handles per-text file parsing. If a txt file is encountered, a new
+	 * {@link FileMinion} is created to handle that txt file.
+	 */
 	private class FileMinion implements Runnable {
 
 		private Path file;
@@ -55,22 +75,30 @@ public class MultiThreadInvertedIndexBuilder {
 			logger.debug("######## Minion finished {}", file);
 		}
 	}
-	
-	// TODO public void parseFile() that creates a minion and then call this in traverse
-	// TODO it does minions.execute(new FileMinion(directory, index));
 
+	/**
+	 * Traverse the directory to build inverted index map
+	 *
+	 * @param directory
+	 * @param index
+	 */
 	public void traverseDirectory(Path directory,
 			ThreadSafeInvertedIndex index) {
 		try {
 			if (Files.isDirectory(directory)) {
-				// TODO Call traverseDirectory(...)
-				traverse(directory, index);
-			}
-			else {
-				if (directory.getFileName().toString().toLowerCase()
-						.endsWith(".txt")) {
-							// TODO Call parseFile()
-					minions.execute(new FileMinion(directory, index));
+				try (DirectoryStream<Path> listing = Files
+						.newDirectoryStream(directory)) {
+					for (Path file : listing) {
+						if (Files.isDirectory(file)) {
+							traverseDirectory(file, index);
+						}
+						else {
+							if (file.getFileName().toString().toLowerCase()
+									.endsWith(".txt")) {
+								minions.execute(new FileMinion(file, index));
+							}
+						}
+					}
 				}
 			}
 		} catch (IOException e) {
@@ -78,23 +106,14 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
-	// TODO Remove
-	private void traverse(Path path, ThreadSafeInvertedIndex index)
-			throws IOException {
-		try (DirectoryStream<Path> listing = Files.newDirectoryStream(path)) {
-
-			for (Path file : listing) {
-
-				if (Files.isDirectory(file)) {
-					traverseDirectory(file, index);
-				}
-				else {
-					if (file.getFileName().toString().toLowerCase()
-							.endsWith(".txt")) {
-						minions.execute(new FileMinion(file, index));
-					}
-				}
-			}
-		}
+	/**
+	 * Execute the minion for the file passed in
+	 *
+	 * @param file
+	 * @param index
+	 */
+	public void parseFile(Path file, ThreadSafeInvertedIndex index) {
+		minions.execute(new FileMinion(file, index));
 	}
+
 }

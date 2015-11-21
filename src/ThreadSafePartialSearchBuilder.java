@@ -12,7 +12,6 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// TODO Might make sense to have an interface or abstract class that is used by both your thread-safe and single-threaded search builders because they have the same methods.
 /**
  * Thread safe version of partial search builder.
  */
@@ -20,19 +19,27 @@ public class ThreadSafePartialSearchBuilder
 		implements PartialSearchBuilderInterface {
 
 	private final Map<String, List<SearchResult>> result;
+	private final InvertedIndex index;
 
-	/*
+	/**
 	 * Create a logger for debug
 	 */
 	private static final Logger logger = LogManager.getLogger();
-	/*
+	/**
 	 * Create a work queue for mutlithread
 	 */
 	private final WorkQueue minions;
 
-	public ThreadSafePartialSearchBuilder(int numThreads) {
+	/**
+	 * Initiate result map, work queue and inverted index
+	 * 
+	 * @param numThreads
+	 * @param index
+	 */
+	public ThreadSafePartialSearchBuilder(int numThreads, InvertedIndex index) {
 		result = new LinkedHashMap<>();
 		minions = new WorkQueue(numThreads);
+		this.index = index;
 	}
 
 	/**
@@ -43,15 +50,12 @@ public class ThreadSafePartialSearchBuilder
 	 * @throws IOException
 	 */
 	@Override
-	public synchronized void parseFile(Path file, InvertedIndex index)
-			throws IOException {
+	public synchronized void parseFile(Path file) throws IOException {
 		try (BufferedReader reader = Files.newBufferedReader(file,
 				Charset.forName("UTF-8"))) {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
-				// TODO Should still call parseLine();
-				result.put(line, null);
-				minions.execute(new LineMinion(line, index));
+				parseLine(line, index);
 			}
 		}
 	}
@@ -64,18 +68,8 @@ public class ThreadSafePartialSearchBuilder
 	 */
 	@Override
 	public void parseLine(String line, InvertedIndex index) {
-		// TODO This should do:
-		/*
-		   result.put(line, null);
-		   minions.execute(new LineMinion(...));
-		*/
-		
-		// TODO Move this stuff to the worker/minion
-		String[] queryWords = InvertedIndexBuilder.splitLine(line);
-		List<SearchResult> resultList = index.partialSearch(queryWords);
-		synchronized (result) {
-			result.put(line, resultList);
-		}
+		result.put(line, null);
+		minions.execute(new LineMinion(line, index));
 	}
 
 	/**
@@ -132,6 +126,10 @@ public class ThreadSafePartialSearchBuilder
 		minions.shutdown();
 	}
 
+	/**
+	 * Handles per-line parsing. If a line of queries is encountered, a new
+	 * {@link LineMinion} is created to handle that line of queries.
+	 */
 	private class LineMinion implements Runnable {
 
 		private String line;
@@ -146,7 +144,11 @@ public class ThreadSafePartialSearchBuilder
 		@Override
 		public void run() {
 			logger.debug("--------- Minion going to run for {}", line);
-			parseLine(line, index);
+			String[] queryWords = InvertedIndexBuilder.splitLine(line);
+			List<SearchResult> resultList = index.partialSearch(queryWords);
+			synchronized (result) {
+				result.put(line, resultList);
+			}
 			logger.debug("######## Minion finished {}", line);
 		}
 
