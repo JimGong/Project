@@ -7,6 +7,8 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+// TODO Javadoc
+
 public class MultiThreadInvertedIndexBuilder {
 
 	private static final Logger logger = LogManager.getLogger();
@@ -53,16 +55,21 @@ public class MultiThreadInvertedIndexBuilder {
 			logger.debug("######## Minion finished {}", file);
 		}
 	}
+	
+	// TODO public void parseFile() that creates a minion and then call this in traverse
+	// TODO it does minions.execute(new FileMinion(directory, index));
 
 	public void traverseDirectory(Path directory,
 			ThreadSafeInvertedIndex index) {
 		try {
 			if (Files.isDirectory(directory)) {
+				// TODO Call traverseDirectory(...)
 				traverse(directory, index);
 			}
 			else {
 				if (directory.getFileName().toString().toLowerCase()
 						.endsWith(".txt")) {
+							// TODO Call parseFile()
 					minions.execute(new FileMinion(directory, index));
 				}
 			}
@@ -71,6 +78,7 @@ public class MultiThreadInvertedIndexBuilder {
 		}
 	}
 
+	// TODO Remove
 	private void traverse(Path path, ThreadSafeInvertedIndex index)
 			throws IOException {
 		try (DirectoryStream<Path> listing = Files.newDirectoryStream(path)) {
