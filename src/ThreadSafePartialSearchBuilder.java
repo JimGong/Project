@@ -49,6 +49,7 @@ public class ThreadSafePartialSearchBuilder
 				Charset.forName("UTF-8"))) {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
+				// TODO Should still call parseLine();
 				result.put(line, null);
 				minions.execute(new LineMinion(line, index));
 			}
@@ -63,6 +64,13 @@ public class ThreadSafePartialSearchBuilder
 	 */
 	@Override
 	public void parseLine(String line, InvertedIndex index) {
+		// TODO This should do:
+		/*
+		   result.put(line, null);
+		   minions.execute(new LineMinion(...));
+		*/
+		
+		// TODO Move this stuff to the worker/minion
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
 		List<SearchResult> resultList = index.partialSearch(queryWords);
 		synchronized (result) {
