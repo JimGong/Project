@@ -32,7 +32,7 @@ public class ThreadSafePartialSearchBuilder
 
 	/**
 	 * Initiate result map, work queue and inverted index
-	 * 
+	 *
 	 * @param numThreads
 	 * @param index
 	 */
@@ -69,8 +69,10 @@ public class ThreadSafePartialSearchBuilder
 	 */
 	@Override
 	public void parseLine(String line, InvertedIndex index) {
-		result.put(line, null); // TODO Synchronize this put
-		minions.execute(new LineMinion(line, index));
+		synchronized (result) {
+			result.put(line, null);
+		}
+		minions.execute(new LineMinion(line, this.index));
 	}
 
 	/**

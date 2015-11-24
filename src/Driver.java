@@ -124,52 +124,20 @@ public class Driver {
 
 		Logger logger = LogManager.getLogger();
 		ArgumentParser parser = new ArgumentParser(args);
-		/**
-		 * start of new version
-		 */
 
 		InvertedIndex index = null;
 		PartialSearchBuilderInterface search = null;
-		
-		// TODO Move this into else since only need it there.
-		MultiThreadInvertedIndexBuilder multiThreadInvertedIndexBuilder = null;
-		
-		// TODO Move the shutdown closer to where you create the class with a work queue.
-		/*
-		if (thread flag) {
-			if (build index) {
-				multithreaded build
-				shutdown
-			}
-			
-			if (search index) {
-				multithreaded search
-				shutdown
-			}
-		}
-		else {
-			if (build index) {
-				single threaded build
-			}
-			
-			if (search index) {
-				single threaded search
-			}
-		}
-		
-		if (print index) {
-			stuff
-		}
-		
-		if (print search) {
-			stuff
-		}
-		*/
-		
+
 		if (!parser.hasFlag(THREAD_FLAG)) {
 			index = new InvertedIndex();
 			search = new PartialSearchBuilder(index);
-		} /* single thread version */
+			try {
+				InvertedIndexBuilder.traverseDirectory(
+						Paths.get((parser.getValue(INPUT_FLAG))), index);
+			} catch (Exception e) {
+				System.err.println("No arguments");
+			}
+		} /* single thread version build inverted index */
 		else {
 			ThreadSafeInvertedIndex threadSafeIndex = new ThreadSafeInvertedIndex();
 			index = threadSafeIndex;
@@ -185,32 +153,39 @@ public class Driver {
 			} catch (NumberFormatException e) {
 				System.err.println("Wrong number of thread.");
 			}
-			multiThreadInvertedIndexBuilder = new MultiThreadInvertedIndexBuilder(
+			MultiThreadInvertedIndexBuilder multiThreadInvertedIndexBuilder = new MultiThreadInvertedIndexBuilder(
 					numThreads);
-			search = new ThreadSafePartialSearchBuilder(numThreads, index);
-		} /* multi thread version */
-
-		/* build inverted index single thread version */
-		try {
 			logger.debug("traversing directory");
-			if (!parser.hasFlag(THREAD_FLAG)) {
-				InvertedIndexBuilder.traverseDirectory(
-						Paths.get((parser.getValue(INPUT_FLAG))), index);
-			}
-			else {
+			try {
 				multiThreadInvertedIndexBuilder.traverseDirectory(
 						Paths.get((parser.getValue(INPUT_FLAG))),
 						(ThreadSafeInvertedIndex) index);
-				logger.debug("calling shut down");
-				logger.debug("index work queue shutted down");
-				multiThreadInvertedIndexBuilder.shutdown();
+			} catch (Exception e) {
+				System.err.println("No arguements");
 			}
+			logger.debug("calling shut down");
+			logger.debug("index work queue shutted down");
+			multiThreadInvertedIndexBuilder.shutdown();
 			logger.debug("Done with traverseDirectory");
-		} catch (Exception e) {
-			System.err.println("No arguments");
-			// e.printStackTrace();
-		} /* build inverted index */
+			search = new ThreadSafePartialSearchBuilder(numThreads, index);
 
+		} /* multi thread version */
+
+		/* partial search */
+		try {
+			if (parser.hasFlag(QUERIES_FLAG) && parser.hasValue(QUERIES_FLAG)) {
+				search.parseFile(Paths.get(parser.getValue(QUERIES_FLAG)));
+			}
+			logger.debug("Done with parsing queries");
+
+			if (parser.hasFlag(THREAD_FLAG)) {
+				((ThreadSafePartialSearchBuilder) search).shutdown();
+			} /* shut down for multithread version */
+		} catch (IOException e) {
+			System.err.println("No queries file found");
+		} /* partial search */
+
+		/* print inverted index */
 		try {
 			logger.debug("going to print index");
 			if (parser.hasFlag(INDEX_FLAG)) {
@@ -229,20 +204,7 @@ public class Driver {
 			System.err.println("No file can be printed. Try it again");
 		} /* print inverted index */
 
-		/* partial search */
-		try {
-			if (parser.hasFlag(QUERIES_FLAG) && parser.hasValue(QUERIES_FLAG)) {
-				search.parseFile(Paths.get(parser.getValue(QUERIES_FLAG)));
-			}
-			logger.debug("Done with parsing queries");
-
-			if (parser.hasFlag(THREAD_FLAG)) {
-				((ThreadSafePartialSearchBuilder) search).shutdown();
-			} /* shut down */
-		} catch (IOException e) {
-			System.err.println("No queries file found");
-		} /* partial search */
-
+		/* print partial search */
 		try {
 			if (parser.hasFlag(RESULTS_FLAG)) {
 				logger.debug("try to print search result");
@@ -256,152 +218,5 @@ public class Driver {
 		} catch (IOException e) {
 			System.out.println("No output file for search");
 		} /* print partial search */
-		
-		// TODO Remove old code. Tag it if you really want to track it.
-		/**
-		 * end of new version
-		 */
-
-		// /**
-		// * start of old version
-		// */
-		// if (!parser.hasFlag(THREAD_FLAG)) {
-		//
-		// InvertedIndex index = new InvertedIndex();
-		//
-		// PartialSearchBuilder search = new PartialSearchBuilder(index);
-		//
-		// try {
-		// InvertedIndexBuilder.traverseDirectory(
-		// Paths.get((parser.getValue(INPUT_FLAG))), index);
-		// } catch (Exception e) {
-		// System.err.println("No arguments");
-		// }
-		// try {
-		// if (parser.hasFlag(Driver.INDEX_FLAG)) {
-		// if (parser.getValue(Driver.INDEX_FLAG) == null) {
-		// index.print(Paths.get(INDEX_DEFAULT));
-		// }
-		// else {
-		// index.print(Paths.get(parser.getValue(INDEX_FLAG)));
-		// }
-		// }
-		// } catch (IOException e) {
-		// System.err.println("No file can be printed. Try it again");
-		// }
-		// // project 2 partial search
-		// try {
-		// if (parser.hasFlag(QUERIES_FLAG)
-		// && parser.hasValue(QUERIES_FLAG)) {
-		// search.parseFile(Paths.get(parser.getValue(QUERIES_FLAG)));
-		// }
-		// } catch (IOException e) {
-		// System.err.println("No queries file found");
-		// }
-		// try {
-		// if (parser.hasFlag(RESULTS_FLAG)) {
-		// if (parser.hasValue(RESULTS_FLAG)) {
-		// search.print(Paths.get(parser.getValue(RESULTS_FLAG)));
-		// }
-		// else {
-		// search.print(Paths.get(RESULTS_DEFAULT));
-		// }
-		// }
-		// } catch (IOException e) {
-		// System.out.println("No output file for search");
-		// }
-		// }
-		// else {
-		// /***************************
-		// * Project 3
-		// ****************************************/
-		//
-		// // Logger logger = LogManager.getLogger();
-		//
-		// ThreadSafeInvertedIndex index = new ThreadSafeInvertedIndex();
-		// int numThreads = THREAD_DEFAULT;;
-		//
-		// try {
-		// if (parser.hasFlag(THREAD_FLAG)) {
-		// numThreads = Integer.parseInt(parser.getValue(THREAD_FLAG));
-		// if (numThreads <= 0) {
-		// numThreads = THREAD_DEFAULT;
-		// }
-		// }
-		// } catch (NumberFormatException e) {
-		// System.err.println("Wrong number of thread.");
-		// // e.printStackTrace();
-		// }
-		//
-		// logger.debug("num thread: " + numThreads);
-		//
-		// ThreadSafePartialSearchBuilder search = new
-		// ThreadSafePartialSearchBuilder(
-		// numThreads, index);
-		//
-		// MultiThreadInvertedIndexBuilder invertedIndexBuilder = new
-		// MultiThreadInvertedIndexBuilder(
-		// numThreads);
-		//
-		// try {
-		// logger.debug("traversing directory");
-		// invertedIndexBuilder.traverseDirectory(
-		// Paths.get((parser.getValue(INPUT_FLAG))), index);
-		//
-		// logger.debug("calling shut down");
-		// invertedIndexBuilder.shutdown();
-		// logger.debug("index work queue shutted down");
-		// logger.debug("Done with traverseDirectory");
-		// } catch (Exception e) {
-		// System.err.println("No arguments");
-		// // e.printStackTrace();
-		// } /* build inverted index */
-		// try {
-		// logger.debug("going to print index");
-		// if (parser.hasFlag(INDEX_FLAG)) {
-		// logger.debug("has index flag");
-		// if (!parser.hasValue(INDEX_FLAG)) {
-		// index.print(Paths.get(INDEX_DEFAULT));
-		// }
-		// else {
-		// index.print(Paths.get(parser.getValue(INDEX_FLAG)));
-		// }
-		// }
-		// else {
-		// logger.debug("doesnt has index flag");
-		// }
-		//
-		// } catch (IOException e) {
-		// System.err.println("No file can be printed. Try it again");
-		// } /* print inverted index */
-		//
-		// try {
-		// if (parser.hasFlag(QUERIES_FLAG)
-		// && parser.hasValue(QUERIES_FLAG)) {
-		// search.parseFile(Paths.get(parser.getValue(QUERIES_FLAG)));
-		// }
-		// logger.debug("Done with parsing queries");
-		// search.shutdown();
-		// } catch (IOException e) {
-		// System.err.println("No queries file found");
-		// } /* partial search */
-		//
-		// try {
-		// if (parser.hasFlag(RESULTS_FLAG)) {
-		// logger.debug("try to print search result");
-		// if (parser.hasValue(RESULTS_FLAG)) {
-		// search.print(Paths.get(parser.getValue(RESULTS_FLAG)));
-		// }
-		// else {
-		// search.print(Paths.get(RESULTS_DEFAULT));
-		// }
-		// }
-		// } catch (IOException e) {
-		// System.out.println("No output file for search");
-		// } /* print partial search */
-		// /**
-		// * end of old version
-		// */
-		// }
 	}
 }
