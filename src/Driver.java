@@ -130,7 +130,42 @@ public class Driver {
 
 		InvertedIndex index = null;
 		PartialSearchBuilderInterface search = null;
+		
+		// TODO Move this into else since only need it there.
 		MultiThreadInvertedIndexBuilder multiThreadInvertedIndexBuilder = null;
+		
+		// TODO Move the shutdown closer to where you create the class with a work queue.
+		/*
+		if (thread flag) {
+			if (build index) {
+				multithreaded build
+				shutdown
+			}
+			
+			if (search index) {
+				multithreaded search
+				shutdown
+			}
+		}
+		else {
+			if (build index) {
+				single threaded build
+			}
+			
+			if (search index) {
+				single threaded search
+			}
+		}
+		
+		if (print index) {
+			stuff
+		}
+		
+		if (print search) {
+			stuff
+		}
+		*/
+		
 		if (!parser.hasFlag(THREAD_FLAG)) {
 			index = new InvertedIndex();
 			search = new PartialSearchBuilder(index);
@@ -221,6 +256,8 @@ public class Driver {
 		} catch (IOException e) {
 			System.out.println("No output file for search");
 		} /* print partial search */
+		
+		// TODO Remove old code. Tag it if you really want to track it.
 		/**
 		 * end of new version
 		 */
