@@ -55,12 +55,11 @@ public class ThreadSafePartialSearchBuilder
 				Charset.forName("UTF-8"))) {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
-				parseLine(line, index);
+				parseLine(line);
 			}
 		}
 	}
 
-	// TODO Remove index
 	/**
 	 * Parse query and put into result map.
 	 *
@@ -68,7 +67,7 @@ public class ThreadSafePartialSearchBuilder
 	 * @param index
 	 */
 	@Override
-	public void parseLine(String line, InvertedIndex index) {
+	public void parseLine(String line) {
 		synchronized (result) {
 			result.put(line, null);
 		}

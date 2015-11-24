@@ -41,12 +41,11 @@ public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 				Charset.forName("UTF-8"))) {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
-				parseLine(line, index);
+				parseLine(line);
 			}
 		}
 	}
 
-	// TODO Remove index parameter
 	/**
 	 * Parse query and put into result map.
 	 *
@@ -54,7 +53,7 @@ public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 	 * @param index
 	 */
 	@Override
-	public void parseLine(String line, InvertedIndex index) {
+	public void parseLine(String line) {
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
 
 		List<SearchResult> resultList = index.partialSearch(queryWords);
