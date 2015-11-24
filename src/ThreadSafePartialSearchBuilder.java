@@ -60,6 +60,7 @@ public class ThreadSafePartialSearchBuilder
 		}
 	}
 
+	// TODO Remove index
 	/**
 	 * Parse query and put into result map.
 	 *
@@ -68,7 +69,7 @@ public class ThreadSafePartialSearchBuilder
 	 */
 	@Override
 	public void parseLine(String line, InvertedIndex index) {
-		result.put(line, null);
+		result.put(line, null); // TODO Synchronize this put
 		minions.execute(new LineMinion(line, index));
 	}
 

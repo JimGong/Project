@@ -46,6 +46,7 @@ public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 		}
 	}
 
+	// TODO Remove index parameter
 	/**
 	 * Parse query and put into result map.
 	 *
