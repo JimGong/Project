@@ -105,23 +105,6 @@ public class Driver {
 	 */
 	public static void main(String[] args) {
 
-		/*
-		 * InvertedIndex index = null; PartialSearchBuilderInterface builder =
-		 * null;
-		 *
-		 * if (multithreading) { ThreadSafeInvertedIndex threadSafe = new
-		 * ThreadSafeInvertedIndex(); index = threadSafe;
-		 *
-		 * builder = new MultiThreaded....
-		 *
-		 * make sure things get shutdown } else { index = new InvertedIndex();
-		 * etc. }
-		 *
-		 * if (print index) { index.print(); }
-		 *
-		 * if (print search) { search.print(); }
-		 */
-
 		Logger logger = LogManager.getLogger();
 		ArgumentParser parser = new ArgumentParser(args);
 
@@ -131,12 +114,14 @@ public class Driver {
 		if (!parser.hasFlag(THREAD_FLAG)) {
 			index = new InvertedIndex();
 			search = new PartialSearchBuilder(index);
+
 			try {
 				InvertedIndexBuilder.traverseDirectory(
 						Paths.get((parser.getValue(INPUT_FLAG))), index);
 			} catch (Exception e) {
 				System.err.println("No arguments");
 			}
+
 		} /* single thread version build inverted index */
 		else {
 			ThreadSafeInvertedIndex threadSafeIndex = new ThreadSafeInvertedIndex();
@@ -155,13 +140,26 @@ public class Driver {
 			}
 			MultiThreadInvertedIndexBuilder multiThreadInvertedIndexBuilder = new MultiThreadInvertedIndexBuilder(
 					numThreads);
-			logger.debug("traversing directory");
-			try {
-				multiThreadInvertedIndexBuilder.traverseDirectory(
-						Paths.get((parser.getValue(INPUT_FLAG))),
-						(ThreadSafeInvertedIndex) index);
-			} catch (Exception e) {
-				System.err.println("No arguements");
+			if (!parser.hasFlag(SEED_FLAG)) {
+				try {
+					logger.debug("traversing directory");
+					multiThreadInvertedIndexBuilder.traverseDirectory(
+							Paths.get((parser.getValue(INPUT_FLAG))),
+							(ThreadSafeInvertedIndex) index);
+				} catch (Exception e) {
+					System.err.println("No arguements");
+				} /* File */
+			}
+			else {
+				try {
+					logger.debug("\ntraversing URL");
+					multiThreadInvertedIndexBuilder.traverseURL(
+							parser.getValue(SEED_FLAG),
+							(ThreadSafeInvertedIndex) index);
+					logger.debug("done with traversing URL");
+				} catch (IOException e) {
+					System.err.println("Invalid link");
+				} /* URL */
 			}
 			logger.debug("calling shut down");
 			logger.debug("index work queue shutted down");
