@@ -111,7 +111,7 @@ public class Driver {
 		InvertedIndex index = null;
 		PartialSearchBuilderInterface search = null;
 
-		if (!parser.hasFlag(THREAD_FLAG)) {
+		if ((!parser.hasFlag(THREAD_FLAG)) && (!parser.hasFlag(SEED_FLAG))) {
 			index = new InvertedIndex();
 			search = new PartialSearchBuilder(index);
 
@@ -152,17 +152,16 @@ public class Driver {
 			}
 			else {
 				try {
-					logger.debug("\ntraversing URL");
+					logger.debug("$$$$$$$$$$$$$$$$$$ traversing URL");
 					multiThreadInvertedIndexBuilder.traverseURL(
 							parser.getValue(SEED_FLAG),
 							(ThreadSafeInvertedIndex) index);
-					logger.debug("done with traversing URL");
+					logger.debug("$$$$$$$$$$$$$$$$$$ done with traversing URL");
 				} catch (IOException e) {
 					System.err.println("Invalid link");
 				} /* URL */
 			}
 			logger.debug("calling shut down");
-			logger.debug("index work queue shutted down");
 			multiThreadInvertedIndexBuilder.shutdown();
 			logger.debug("Done with traverseDirectory");
 			search = new ThreadSafePartialSearchBuilder(numThreads, index);
@@ -187,7 +186,6 @@ public class Driver {
 		try {
 			logger.debug("going to print index");
 			if (parser.hasFlag(INDEX_FLAG)) {
-				logger.debug("has index flag");
 				if (!parser.hasValue(INDEX_FLAG)) {
 					index.print(Paths.get(INDEX_DEFAULT));
 				}
@@ -198,6 +196,7 @@ public class Driver {
 			else {
 				logger.debug("doesnt has index flag");
 			}
+			logger.debug("done with print index");
 		} catch (IOException e) {
 			System.err.println("No file can be printed. Try it again");
 		} /* print inverted index */

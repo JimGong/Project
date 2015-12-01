@@ -7,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -133,41 +132,52 @@ public class MultiThreadInvertedIndexBuilder {
 	 */
 	public void traverseURL(String link, ThreadSafeInvertedIndex index)
 			throws UnknownHostException, MalformedURLException, IOException {
-
+		logger.debug("link passed in {}", link);
 		LinkedHashMap<String, String> links = new LinkedHashMap<String, String>();
-		/* key is URL, value is the clean HTML page */
+		/* key is URL, value is the HTML page */
+		try {
+			traverse(link, links, index);
 
-		traverse(link, link, links, index);
+		} finally {
+			finish();
+			addToIndex(links, index);
+		}
 
-		addToIndex(links, index);
 	}
 
-	public void traverse(String absolute, String root,
-			LinkedHashMap<String, String> links, ThreadSafeInvertedIndex index)
-					throws UnknownHostException, MalformedURLException,
-					IOException {
+	public void traverse(String link, LinkedHashMap<String, String> links,
+			ThreadSafeInvertedIndex index) throws UnknownHostException,
+					MalformedURLException, IOException {
 		/* recursive call itself until the map hit the capacity of 50 */
 		if (links.size() < 50) {
-			addToMap(absolute, links);
-			logger.debug("finding innerUrl in {}", absolute);
-			ArrayList<String> innerURLs = LinkParser
-					.listLinks(links.get(absolute));
+			/* should be multithread */
+
+			// String html = HTTPFetcher.fetchHTML(link);
+			// logger.debug("URL {} added to the map", link);
+			// links.put(link, html);
+
+			links.put(link, "");
+			minions.execute(new CrawlMinion(link, links));
+			/* end of multithread */
+			finish();
+			logger.debug("finding innerUrl in link {}, html is empty {}", link,
+					links.get(link).isEmpty());
+
+			ArrayList<String> innerURLs = LinkParser.listLinks(links.get(link));
 			logger.debug("inner url size {}", innerURLs.size());
 			if (!innerURLs.isEmpty()) {
 				for (int i = 0; i < innerURLs.size(); i++) {
 					String innerLink = innerURLs.get(i);
-					URL base = new URL(absolute);
+					URL base = new URL(link);
 					URL absoluteURL = new URL(base, innerLink);
 					String absoluteLink = absoluteURL.toString();
-					if (absoluteLink.contains("#")) {
-						logger.debug("inner link found {}", absoluteLink);
-					}
+
 					if ((!links.containsKey(absoluteLink))
 							&& (!absoluteLink.contains("#"))) {
-						logger.debug("keep traversing for {}", absoluteLink);
-						traverse(absoluteLink, root, links, index);
+						traverse(absoluteLink, links, index);
+						// minions.execute(
+						// new URLMinion(absoluteLink, links, index));
 					}
-					logger.debug("map already containKey {}", absoluteLink);
 				}
 			}
 		}
@@ -175,10 +185,12 @@ public class MultiThreadInvertedIndexBuilder {
 
 	public void addToIndex(LinkedHashMap<String, String> links,
 			ThreadSafeInvertedIndex index) {
+		logger.debug("adding result to index");
+		finish();
 		int count = 0;
 		for (String url : links.keySet()) {
 			if (count < 50) {
-				logger.debug("add url {} into index", url);
+				logger.debug("count {} add url {} into index", count, url);
 				String html = links.get(url);
 				String cleanHtml = HTMLCleaner.cleanHTML(html);
 				String[] words = InvertedIndexBuilder.splitLine(cleanHtml);
@@ -190,31 +202,35 @@ public class MultiThreadInvertedIndexBuilder {
 				count++;
 			}
 		}
+		logger.debug("done with adding");
+
 	}
 
-	public void addToMap(String link, Map<String, String> links)
-			throws UnknownHostException, MalformedURLException, IOException {
-		String html = HTTPFetcher.fetchHTML(link);
-		logger.debug("URL {} added to the map", link);
-		links.put(link, html);
-	}
-
-	private class URLMinion implements Runnable
-
-	{
+	private class CrawlMinion implements Runnable {
 
 		private String link;
-		private ThreadSafeInvertedIndex index;
+		private LinkedHashMap<String, String> links;
 
-		public URLMinion(String link, ThreadSafeInvertedIndex index) {
+		public CrawlMinion(String link, LinkedHashMap<String, String> links) {
 			logger.debug("******** Minion created for {}", link);
 			this.link = link;
-			this.index = index;
+			this.links = links;
+			// logger.debug("put link {} into linkedHashMap", link);
+			// links.put(link, null);
 		}
 
 		@Override
 		public void run() {
-
+			try {
+				// logger.debug("getting html for {}", link);
+				String html = HTTPFetcher.fetchHTML(link);
+				logger.debug("the html is empty {}", html.isEmpty());
+				// logger.debug("URL {} added to the map", link);
+				links.put(link, html);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			logger.debug("######## Minion finished {}", link);
 		}
 	}
 

@@ -67,7 +67,7 @@ public class WorkQueue {
 	private void increasePending() {
 		synchronized (queue) {
 			pending++;
-			logger.debug("increaing, Pending is now {}", pending);
+			logger.debug("increasing, Pending is now {}", pending);
 		}
 	}
 
@@ -79,7 +79,6 @@ public class WorkQueue {
 		synchronized (queue) {
 			pending--;
 			logger.debug("decreasing, Pending is now {}", pending);
-
 			if (pending <= 0) {
 				queue.notifyAll();
 			}
@@ -109,9 +108,9 @@ public class WorkQueue {
 		try {
 			synchronized (queue) {
 				while (pending > 0) {
-					logger.debug("Waiting until finished");
+					// logger.debug("Waiting until finished");
 					queue.wait();
-					logger.debug("waiting");
+					// logger.debug("waiting");
 				}
 			}
 		} catch (InterruptedException e) {
@@ -130,7 +129,7 @@ public class WorkQueue {
 		synchronized (queue) {
 			queue.notifyAll();
 		}
-		logger.debug("queue shutted down.");
+		logger.debug("work queue been shut down.");
 	}
 
 	/**
