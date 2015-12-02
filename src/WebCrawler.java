@@ -2,14 +2,14 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class WebCrawler {
 
-	private LinkedHashMap<String, String> links;
+	// private LinkedHashSet<String> links;
+	private ArrayList<String> links;
 	private ThreadSafeInvertedIndex index;
 	private final WorkQueue minions;
 	private static final Logger logger = LogManager.getLogger();
@@ -18,63 +18,32 @@ public class WebCrawler {
 
 	public WebCrawler(int numThreads, ThreadSafeInvertedIndex index) {
 
-		links = new LinkedHashMap<String, String>();
-		/* key is URL, value is the HTML page */
+		links = new ArrayList<>();
 		lock = new ReadWriteLock();
 		minions = new WorkQueue(numThreads);
 		this.index = index;
 	}
 
 	public void traverse(String url) throws MalformedURLException {
-		System.out.println("----------" + links.size() + " " + url);
-		lock.lockReadOnly();
-		int size = links.size();
-		lock.unlockReadOnly();
-		if ((size < MAX_CAPACITY)) {
-			System.out.println(links.size() + " " + url);
-			links.put(url, "");
+		logger.debug("adding {} into links", url);
+		links.add(url);
 
-			minions.execute(new CrawlMinion(url, links));
+		for (int i = 0; (i < MAX_CAPACITY) && (i < links.size()); i++) {
+			String link = links.get(i);
+
+			logger.debug("going to execute for link {}", link);
+			minions.execute(new CrawlMinion(link, links));
 			finish();
-
-			logger.debug("finding innerUrl in link {}, html is empty {}", url,
-					links.get(url).isEmpty());
-
-			ArrayList<String> innerURLs = LinkParser.listLinks(links.get(url));
-			logger.debug("inner url size {}", innerURLs.size());
-			if (!innerURLs.isEmpty()) {
-
-				for (int i = 0; (i < innerURLs.size())
-						&& (links.size() < MAX_CAPACITY); i++) {
-					String innerLink = innerURLs.get(i);
-					URL base = new URL(url);
-					URL absoluteURL = new URL(base, innerLink);
-					String absoluteLink = absoluteURL.toString();
-
-					if ((!links.containsKey(absoluteLink))
-							&& (!absoluteLink.contains("#"))) {
-						lock.lockReadOnly();
-						size = links.size();
-						lock.unlockReadOnly();
-						if (size < MAX_CAPACITY) {
-							traverse(absoluteLink);
-						}
-						else {
-							System.out.println("hit the max capacity, Done");
-							return;
-						}
-					}
-				}
-			}
 		}
+		logger.debug("Done, links size: {}", links.size());
 	}
 
 	private class CrawlMinion implements Runnable {
 
 		private String link;
-		private LinkedHashMap<String, String> links;
+		private ArrayList<String> links;
 
-		public CrawlMinion(String link, LinkedHashMap<String, String> links) {
+		public CrawlMinion(String link, ArrayList<String> links) {
 			logger.debug("******** Minion created for {}", link);
 			this.link = link;
 			this.links = links;
@@ -83,13 +52,43 @@ public class WebCrawler {
 		@Override
 		public void run() {
 			try {
-				// logger.debug("getting html for {}", link);
+				/* get html all the time */
 				String html = HTTPFetcher.fetchHTML(link);
-				logger.debug("the html is empty {}", html.isEmpty());
-				// logger.debug("URL {} added to the map", link);
-				lock.lockReadWrite();
-				links.put(link, html);
-				lock.unlockReadWrite();
+				/*
+				 * find all inner url, and convert to absolute url, add to the
+				 * ArrayList if links size smaller than 50
+				 */
+				ArrayList<String> innerURLs = LinkParser.listLinks(html);
+				// logger.debug("find {} innerURL in link {}", innerURLs.size(),
+				// link);
+				for (int i = 0; (i < innerURLs.size())
+						&& (links.size() < MAX_CAPACITY); i++) {
+					String innerURL = innerURLs.get(i);
+					URL base = new URL(link);
+					URL absolute = new URL(base, innerURL);
+					logger.debug("link{}", absolute.toString());
+					if ((!links.contains(absolute.toString()))
+							&& (!absolute.toString().contains("#"))) {
+						links.add(absolute.toString());
+						logger.debug("added, {} ", absolute.toString());
+					}
+				}
+
+				/* get clean html */
+				// logger.debug("clean html");
+				html = HTMLCleaner.cleanHTML(html);
+				String[] words = InvertedIndexBuilder
+						.splitLine(html); /* split html into words */
+				// logger.debug("html splitted into words");
+				int position = 1;
+
+				/* parse words into inverted index one at a time */
+				for (String word : words) {
+					index.add(word, link, position);
+					position++;
+				}
+				logger.debug("passed all words for this {} into index", link);
+
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -107,24 +106,4 @@ public class WebCrawler {
 		minions.shutdown();
 	}
 
-	public void addToIndex() {
-		logger.debug("adding result to index");
-		finish();
-		int count = 0;
-		for (String url : links.keySet()) {
-			if (count < MAX_CAPACITY) {
-				logger.debug("count {} add url {} into index", count, url);
-				String html = links.get(url);
-				String cleanHtml = HTMLCleaner.cleanHTML(html);
-				String[] words = InvertedIndexBuilder.splitLine(cleanHtml);
-				int position = 1;
-				for (String word : words) {
-					index.add(word, url, position);
-					position++;
-				}
-				count++;
-			}
-		}
-		logger.debug("done with adding");
-	}
 }

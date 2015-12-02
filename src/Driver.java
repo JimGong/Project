@@ -164,9 +164,8 @@ public class Driver {
 			}
 			logger.debug("calling shut down");
 			multiThreadInvertedIndexBuilder.shutdown();
-			logger.debug("Done with traverseDirectory");
+			logger.debug("Done with InvertedIndex");
 			search = new ThreadSafePartialSearchBuilder(numThreads, index);
-
 		} /* multi thread version */
 
 		/* partial search */

@@ -130,13 +130,8 @@ public class MultiThreadInvertedIndexBuilder {
 	public void traverseURL(String link, ThreadSafeInvertedIndex index)
 			throws UnknownHostException, MalformedURLException, IOException {
 		WebCrawler webCrawler = new WebCrawler(minions.size(), index);
-		/* key is URL, value is the HTML page */
-		try {
-			webCrawler.traverse(link);
 
-		} finally {
-			webCrawler.addToIndex();
-		}
+		webCrawler.traverse(link);
 
 	}
 }
