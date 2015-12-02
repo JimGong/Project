@@ -8,7 +8,7 @@
     {
       "where": "http://people.apache.org/list_D.html",
       "count": 9,
-      "index": 57
+      "index": 165
     },
     {
       "where": "http://people.apache.org/list_G.html",
@@ -84,7 +84,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 798,
+      "count": 799,
       "index": 4
     },
     {
@@ -109,12 +109,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 376,
+      "count": 377,
       "index": 16
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 373,
+      "count": 375,
       "index": 3
     },
     {
@@ -129,12 +129,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 220,
+      "count": 248,
       "index": 1
     },
     {
       "where": "http://www.apache.org/",
-      "count": 220,
+      "count": 248,
       "index": 1
     },
     {
@@ -184,7 +184,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 73,
+      "count": 74,
       "index": 14
     },
     {
@@ -213,13 +213,13 @@
       "index": 16
     },
     {
-      "where": "http://people.apache.org/list_K.html",
-      "count": 61,
+      "where": "http://people.apache.org/list_D.html",
+      "count": 62,
       "index": 16
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 59,
+      "where": "http://people.apache.org/list_K.html",
+      "count": 61,
       "index": 16
     },
     {
@@ -385,19 +385,19 @@
       "index": 4
     },
     {
-      "where": "http://people.apache.org/foaf/index.html",
-      "count": 13,
-      "index": 7
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 12,
+      "count": 15,
       "index": 9
     },
     {
       "where": "http://www.apache.org/",
-      "count": 12,
+      "count": 15,
       "index": 9
+    },
+    {
+      "where": "http://people.apache.org/foaf/index.html",
+      "count": 13,
+      "index": 7
     },
     {
       "where": "http://people.apache.org/gallery.html",
@@ -641,7 +641,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 4,
-      "index": 708
+      "index": 713
     },
     {
       "where": "http://people.apache.org/list_H.html",
@@ -651,17 +651,17 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 2,
-      "index": 187
+      "index": 192
     },
     {
       "where": "http://www.apache.org",
       "count": 2,
-      "index": 846
+      "index": 855
     },
     {
       "where": "http://www.apache.org/",
       "count": 2,
-      "index": 846
+      "index": 855
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -671,7 +671,7 @@
     {
       "where": "http://people.apache.org/blogs.html",
       "count": 2,
-      "index": 1427
+      "index": 1437
     },
     {
       "where": "http://people.apache.org/list_J.html",
@@ -711,16 +711,6 @@
       "index": 139
     },
     {
-      "where": "http://www.apache.org",
-      "count": 3,
-      "index": 315
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 3,
-      "index": 315
-    },
-    {
       "where": "http://people.apache.org/blogs.html",
       "count": 3,
       "index": 342
@@ -743,7 +733,17 @@
     {
       "where": "http://people.apache.org/list_D.html",
       "count": 2,
-      "index": 428
+      "index": 453
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 2,
+      "index": 780
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 2,
+      "index": 780
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -758,7 +758,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 1,
-      "index": 252
+      "index": 257
     },
     {
       "where": "http://people.apache.org/list_K.html",
@@ -779,7 +779,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1426,
+      "count": 1429,
       "index": 1
     },
     {
@@ -799,12 +799,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 532,
+      "count": 535,
       "index": 3
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 516,
+      "count": 522,
       "index": 1
     },
     {
@@ -838,23 +838,23 @@
       "index": 5
     },
     {
-      "where": "http://www.apache.org",
-      "count": 295,
-      "index": 4
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 295,
-      "index": 4
-    },
-    {
       "where": "http://people.apache.org/list_G.html",
       "count": 291,
       "index": 1
     },
     {
+      "where": "http://www.apache.org",
+      "count": 283,
+      "index": 4
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 283,
+      "index": 4
+    },
+    {
       "where": "http://people.apache.org/list_D.html",
-      "count": 254,
+      "count": 260,
       "index": 1
     },
     {
@@ -909,7 +909,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 126,
+      "count": 129,
       "index": 1
     },
     {
@@ -1101,23 +1101,23 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 87,
+      "count": 83,
       "index": 13
     },
     {
       "where": "http://www.apache.org/",
-      "count": 87,
+      "count": 83,
       "index": 13
+    },
+    {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 82,
+      "index": 12
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 81,
       "index": 7
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 80,
-      "index": 12
     },
     {
       "where": "http://people.apache.org/list_K.html",
@@ -1263,7 +1263,7 @@
   "2 3": [
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 124,
+      "count": 123,
       "index": 130
     },
     {
@@ -1283,7 +1283,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 39,
+      "count": 44,
       "index": 105
     },
     {
@@ -1323,12 +1323,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 16,
+      "count": 15,
       "index": 132
     },
     {
       "where": "http://www.apache.org/",
-      "count": 16,
+      "count": 15,
       "index": 132
     },
     {
@@ -1409,7 +1409,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 2,
-      "index": 400
+      "index": 405
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -1419,7 +1419,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 2,
-      "index": 1936
+      "index": 1941
     },
     {
       "where": "http://www.apache.org/foundation/members.html",
@@ -1446,7 +1446,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 12,
-      "index": 532
+      "index": 537
     },
     {
       "where": "http://www.apache.org/foundation/members.html",
@@ -1491,12 +1491,12 @@
     {
       "where": "http://www.apache.org",
       "count": 1,
-      "index": 854
+      "index": 863
     },
     {
       "where": "http://www.apache.org/",
       "count": 1,
-      "index": 854
+      "index": 863
     }
   ],
   "z": [
@@ -1718,19 +1718,19 @@
       "index": 1
     },
     {
+      "where": "http://people.apache.org/list_G.html",
+      "count": 177,
+      "index": 1
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 186,
+      "count": 177,
       "index": 4
     },
     {
       "where": "http://www.apache.org/",
-      "count": 186,
-      "index": 4
-    },
-    {
-      "where": "http://people.apache.org/list_G.html",
       "count": 177,
-      "index": 1
+      "index": 4
     },
     {
       "where": "http://people.apache.org/list_H.html",
@@ -1744,7 +1744,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 116,
+      "count": 117,
       "index": 1
     },
     {
@@ -1971,7 +1971,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 71,
+      "count": 73,
       "index": 12
     },
     {
@@ -1990,19 +1990,19 @@
       "index": 12
     },
     {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
-      "count": 50,
-      "index": 8
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 49,
+      "count": 54,
       "index": 13
     },
     {
       "where": "http://www.apache.org/",
-      "count": 49,
+      "count": 54,
       "index": 13
+    },
+    {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
+      "count": 50,
+      "index": 8
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -2183,12 +2183,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 41,
+      "count": 49,
       "index": 11
     },
     {
       "where": "http://www.apache.org/",
-      "count": 41,
+      "count": 49,
       "index": 11
     },
     {
@@ -2334,7 +2334,7 @@
     {
       "where": "http://people.apache.org/list_D.html",
       "count": 3,
-      "index": 648
+      "index": 673
     },
     {
       "where": "http://people.apache.org/calendar.html",
@@ -2371,12 +2371,12 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 2,
-      "index": 708
+      "index": 713
     },
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 1,
-      "index": 234
+      "index": 239
     },
     {
       "where": "http://people.apache.org/list_H.html",
@@ -2442,12 +2442,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 8,
+      "count": 9,
       "index": 150
     },
     {
       "where": "http://www.apache.org/",
-      "count": 8,
+      "count": 9,
       "index": 150
     },
     {
@@ -2653,19 +2653,19 @@
       "index": 18
     },
     {
+      "where": "http://www.apache.org/foundation/",
+      "count": 34,
+      "index": 19
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 38,
+      "count": 29,
       "index": 23
     },
     {
       "where": "http://www.apache.org/",
-      "count": 38,
+      "count": 29,
       "index": 23
-    },
-    {
-      "where": "http://www.apache.org/foundation/",
-      "count": 34,
-      "index": 19
     },
     {
       "where": "http://people.apache.org/gallery.html",
@@ -2967,19 +2967,19 @@
       "index": 35
     },
     {
-      "where": "http://www.apache.org/foundation/members.html",
-      "count": 70,
-      "index": 34
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 69,
+      "count": 71,
       "index": 3
     },
     {
       "where": "http://www.apache.org/",
-      "count": 69,
+      "count": 71,
       "index": 3
+    },
+    {
+      "where": "http://www.apache.org/foundation/members.html",
+      "count": 70,
+      "index": 34
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
@@ -3205,12 +3205,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 30,
+      "count": 22,
       "index": 23
     },
     {
       "where": "http://www.apache.org/",
-      "count": 30,
+      "count": 22,
       "index": 23
     },
     {
@@ -3446,6 +3446,16 @@
       "index": 7
     },
     {
+      "where": "http://www.apache.org",
+      "count": 111,
+      "index": 6
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 111,
+      "index": 6
+    },
+    {
       "where": "http://people.apache.org/foaf/index.html",
       "count": 110,
       "index": 7
@@ -3456,29 +3466,19 @@
       "index": 4
     },
     {
-      "where": "http://www.apache.org",
-      "count": 107,
-      "index": 6
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 107,
-      "index": 6
-    },
-    {
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 98,
       "index": 4
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 95,
+      "index": 7
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
       "count": 91,
       "index": 2
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 90,
-      "index": 7
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -3713,16 +3713,6 @@
       "index": 86
     },
     {
-      "where": "http://www.apache.org",
-      "count": 7,
-      "index": 104
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 7,
-      "index": 104
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
       "count": 6,
       "index": 18
@@ -3753,9 +3743,19 @@
       "index": 20
     },
     {
+      "where": "http://www.apache.org",
+      "count": 3,
+      "index": 104
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 3,
+      "index": 104
+    },
+    {
       "where": "http://people.apache.org/gallery.html",
       "count": 3,
-      "index": 159
+      "index": 164
     },
     {
       "where": "http://people.apache.org/list_D.html",
@@ -3876,7 +3876,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 407,
+      "count": 408,
       "index": 10
     },
     {
@@ -3890,19 +3890,19 @@
       "index": 2
     },
     {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
-      "count": 263,
-      "index": 7
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 262,
+      "count": 276,
       "index": 2
     },
     {
       "where": "http://www.apache.org/",
-      "count": 262,
+      "count": 276,
       "index": 2
+    },
+    {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
+      "count": 263,
+      "index": 7
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -3916,7 +3916,7 @@
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 180,
+      "count": 179,
       "index": 12
     },
     {
@@ -3926,12 +3926,12 @@
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 178,
+      "count": 177,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 170,
+      "count": 169,
       "index": 12
     },
     {
@@ -3941,7 +3941,7 @@
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 145,
+      "count": 144,
       "index": 12
     },
     {
@@ -3950,22 +3950,22 @@
       "index": 7
     },
     {
-      "where": "http://people.apache.org/list_H.html",
-      "count": 136,
-      "index": 12
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
       "count": 135,
       "index": 8
     },
     {
-      "where": "http://people.apache.org/list_K.html",
-      "count": 108,
+      "where": "http://people.apache.org/list_H.html",
+      "count": 135,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_D.html",
+      "count": 110,
+      "index": 12
+    },
+    {
+      "where": "http://people.apache.org/list_K.html",
       "count": 107,
       "index": 12
     },
@@ -3976,7 +3976,7 @@
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 96,
+      "count": 95,
       "index": 12
     },
     {
@@ -3991,12 +3991,12 @@
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 71,
+      "count": 70,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 64,
+      "count": 63,
       "index": 12
     },
     {
@@ -4006,18 +4006,8 @@
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 57,
+      "count": 56,
       "index": 12
-    },
-    {
-      "where": "http://people.apache.org/",
-      "count": 56,
-      "index": 9
-    },
-    {
-      "where": "http://people.apache.org/index.html",
-      "count": 56,
-      "index": 9
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -4025,8 +4015,18 @@
       "index": 3
     },
     {
+      "where": "http://people.apache.org/",
+      "count": 55,
+      "index": 9
+    },
+    {
+      "where": "http://people.apache.org/index.html",
+      "count": 55,
+      "index": 9
+    },
+    {
       "where": "http://people.apache.org/resources.html",
-      "count": 51,
+      "count": 50,
       "index": 1
     },
     {
@@ -4036,18 +4036,13 @@
     },
     {
       "where": "http://people.apache.org/list_I.html",
-      "count": 25,
+      "count": 24,
       "index": 12
     },
     {
       "where": "http://people.apache.org/map.html",
-      "count": 17,
+      "count": 16,
       "index": 13
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 12,
-      "index": 8
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-tree.html",
@@ -4066,6 +4061,11 @@
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-tree.html",
+      "count": 11,
+      "index": 8
+    },
+    {
+      "where": "http://people.apache.org/calendar.html",
       "count": 11,
       "index": 8
     },
@@ -4103,7 +4103,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 82,
+      "count": 83,
       "index": 4
     },
     {
@@ -4118,12 +4118,12 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 60,
+      "count": 61,
       "index": 3
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 42,
+      "count": 43,
       "index": 16
     },
     {
@@ -4138,7 +4138,7 @@
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 32,
+      "count": 33,
       "index": 16
     },
     {
@@ -4148,12 +4148,17 @@
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 28,
+      "count": 29,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 27,
+      "count": 28,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 26,
       "index": 16
     },
     {
@@ -4162,28 +4167,23 @@
       "index": 38
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 24,
-      "index": 16
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 21,
+      "count": 22,
       "index": 1
     },
     {
       "where": "http://www.apache.org/",
-      "count": 21,
+      "count": 22,
       "index": 1
     },
     {
       "where": "http://people.apache.org/",
-      "count": 19,
+      "count": 20,
       "index": 13
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 19,
+      "count": 20,
       "index": 13
     },
     {
@@ -4193,27 +4193,27 @@
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 16,
+      "count": 17,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 16,
+      "count": 17,
       "index": 16
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 13,
+      "count": 14,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 13,
+      "count": 14,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 12,
+      "count": 13,
       "index": 16
     },
     {
@@ -4228,23 +4228,33 @@
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 7,
+      "count": 8,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 7,
+      "count": 8,
       "index": 16
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 6,
+      "count": 7,
       "index": 14
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
       "count": 6,
       "index": 195
+    },
+    {
+      "where": "http://people.apache.org/map.html",
+      "count": 5,
+      "index": 4
+    },
+    {
+      "where": "http://people.apache.org/list_I.html",
+      "count": 5,
+      "index": 16
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
@@ -4262,19 +4272,14 @@
       "index": 160
     },
     {
-      "where": "http://people.apache.org/map.html",
-      "count": 4,
-      "index": 4
-    },
-    {
-      "where": "http://people.apache.org/list_I.html",
-      "count": 4,
-      "index": 16
-    },
-    {
       "where": "http://people.apache.org/resources.html",
-      "count": 3,
+      "count": 4,
       "index": 13
+    },
+    {
+      "where": "http://people.apache.org/calendar.html",
+      "count": 2,
+      "index": 12
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -4290,11 +4295,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
       "count": 2,
       "index": 129
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 1,
-      "index": 12
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index.html?constant-values.html",
@@ -4364,14 +4364,14 @@
       "index": 32
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 20,
+      "index": 32
+    },
+    {
       "where": "http://www.apache.org/foundation/",
       "count": 20,
       "index": 134
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 19,
-      "index": 32
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index-all.html",
@@ -4411,12 +4411,12 @@
     {
       "where": "http://www.apache.org",
       "count": 6,
-      "index": 324
+      "index": 333
     },
     {
       "where": "http://www.apache.org/",
       "count": 6,
-      "index": 324
+      "index": 333
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
@@ -4533,7 +4533,7 @@
     {
       "where": "http://people.apache.org/blogs.html",
       "count": 2,
-      "index": 937
+      "index": 947
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
@@ -4573,12 +4573,12 @@
     {
       "where": "http://www.apache.org",
       "count": 1,
-      "index": 837
+      "index": 846
     },
     {
       "where": "http://www.apache.org/",
       "count": 1,
-      "index": 837
+      "index": 846
     },
     {
       "where": "http://people.apache.org/list_G.html",
@@ -4609,7 +4609,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 77,
+      "count": 78,
       "index": 104
     },
     {
@@ -4688,16 +4688,6 @@
       "index": 127
     },
     {
-      "where": "http://www.apache.org",
-      "count": 1,
-      "index": 316
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 1,
-      "index": 316
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index-all.html",
       "count": 1,
       "index": 4255
@@ -4761,12 +4751,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 6,
+      "count": 7,
       "index": 150
     },
     {
       "where": "http://www.apache.org/",
-      "count": 6,
+      "count": 7,
       "index": 150
     },
     {
@@ -4957,6 +4947,11 @@
       "index": 82
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 19,
+      "index": 100
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index-all.html",
       "count": 19,
       "index": 6133
@@ -4965,11 +4960,6 @@
       "where": "http://people.apache.org/blogs.html",
       "count": 18,
       "index": 93
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 18,
-      "index": 100
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -5009,12 +4999,12 @@
     {
       "where": "http://www.apache.org",
       "count": 3,
-      "index": 324
+      "index": 333
     },
     {
       "where": "http://www.apache.org/",
       "count": 3,
-      "index": 324
+      "index": 333
     },
     {
       "where": "http://people.apache.org/list_I.html",
@@ -5065,7 +5055,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 87,
+      "count": 86,
       "index": 147
     },
     {
@@ -5080,7 +5070,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 37,
+      "count": 36,
       "index": 163
     },
     {
@@ -5095,18 +5085,8 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 28,
+      "count": 27,
       "index": 59
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 26,
-      "index": 2
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 26,
-      "index": 2
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -5119,8 +5099,18 @@
       "index": 10
     },
     {
+      "where": "http://www.apache.org",
+      "count": 25,
+      "index": 2
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 25,
+      "index": 2
+    },
+    {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 22,
+      "count": 21,
       "index": 91
     },
     {
@@ -5129,14 +5119,14 @@
       "index": 11
     },
     {
-      "where": "http://people.apache.org/list_C.html",
-      "count": 16,
-      "index": 119
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
       "count": 15,
       "index": 13
+    },
+    {
+      "where": "http://people.apache.org/list_C.html",
+      "count": 15,
+      "index": 119
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-summary.html",
@@ -5155,18 +5145,8 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 9,
+      "count": 8,
       "index": 56
-    },
-    {
-      "where": "http://people.apache.org/list_G.html",
-      "count": 8,
-      "index": 69
-    },
-    {
-      "where": "http://people.apache.org/list_H.html",
-      "count": 8,
-      "index": 114
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
@@ -5174,19 +5154,19 @@
       "index": 11
     },
     {
+      "where": "http://people.apache.org/list_G.html",
+      "count": 7,
+      "index": 69
+    },
+    {
+      "where": "http://people.apache.org/list_H.html",
+      "count": 7,
+      "index": 114
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
       "count": 6,
       "index": 10
-    },
-    {
-      "where": "http://people.apache.org/list_F.html",
-      "count": 6,
-      "index": 123
-    },
-    {
-      "where": "http://people.apache.org/list_K.html",
-      "count": 6,
-      "index": 197
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
@@ -5199,19 +5179,9 @@
       "index": 57
     },
     {
-      "where": "http://people.apache.org/list_B.html",
+      "where": "http://people.apache.org/list_F.html",
       "count": 5,
-      "index": 85
-    },
-    {
-      "where": "http://people.apache.org/",
-      "count": 5,
-      "index": 109
-    },
-    {
-      "where": "http://people.apache.org/index.html",
-      "count": 5,
-      "index": 109
+      "index": 123
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/allclasses-noframe.html",
@@ -5219,29 +5189,34 @@
       "index": 197
     },
     {
-      "where": "http://people.apache.org/list_J.html",
+      "where": "http://people.apache.org/list_K.html",
+      "count": 5,
+      "index": 197
+    },
+    {
+      "where": "http://people.apache.org/list_B.html",
       "count": 4,
+      "index": 85
+    },
+    {
+      "where": "http://people.apache.org/",
+      "count": 4,
+      "index": 109
+    },
+    {
+      "where": "http://people.apache.org/index.html",
+      "count": 4,
+      "index": 109
+    },
+    {
+      "where": "http://people.apache.org/list_J.html",
+      "count": 3,
       "index": 74
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 4,
+      "count": 3,
       "index": 130
-    },
-    {
-      "where": "http://people.apache.org/resources.html",
-      "count": 3,
-      "index": 58
-    },
-    {
-      "where": "http://people.apache.org/list_E.html",
-      "count": 3,
-      "index": 101
-    },
-    {
-      "where": "http://people.apache.org/list_A.html",
-      "count": 3,
-      "index": 263
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index.html?constant-values.html",
@@ -5279,19 +5254,19 @@
       "index": 13
     },
     {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 1,
-      "index": 66
+      "where": "http://people.apache.org/resources.html",
+      "count": 2,
+      "index": 58
     },
     {
-      "where": "http://people.apache.org/map.html",
-      "count": 1,
-      "index": 80
+      "where": "http://people.apache.org/list_E.html",
+      "count": 2,
+      "index": 101
     },
     {
-      "where": "http://people.apache.org/list_I.html",
-      "count": 1,
-      "index": 155
+      "where": "http://people.apache.org/list_A.html",
+      "count": 2,
+      "index": 263
     }
   ],
   "0 1 2 3 4 5 6 7 8 9": [
@@ -5322,7 +5297,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 159,
+      "count": 167,
       "index": 57
     },
     {
@@ -5367,12 +5342,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 26,
+      "count": 19,
       "index": 132
     },
     {
       "where": "http://www.apache.org/",
-      "count": 26,
+      "count": 19,
       "index": 132
     },
     {
@@ -5473,12 +5448,12 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 4,
-      "index": 400
+      "index": 405
     },
     {
       "where": "http://people.apache.org/committers.html",
       "count": 4,
-      "index": 1936
+      "index": 1941
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
@@ -5619,12 +5594,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 34,
+      "count": 33,
       "index": 84
     },
     {
       "where": "http://www.apache.org/",
-      "count": 34,
+      "count": 33,
       "index": 84
     },
     {
@@ -5846,7 +5821,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 47,
+      "count": 48,
       "index": 14
     },
     {
@@ -5865,6 +5840,16 @@
       "index": 8
     },
     {
+      "where": "http://www.apache.org",
+      "count": 37,
+      "index": 13
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 37,
+      "index": 13
+    },
+    {
       "where": "http://www.apache.org/foundation/preFAQ.html",
       "count": 36,
       "index": 9
@@ -5873,16 +5858,6 @@
       "where": "http://people.apache.org/list_F.html",
       "count": 33,
       "index": 14
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 32,
-      "index": 13
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 32,
-      "index": 13
     },
     {
       "where": "http://people.apache.org/list_A.html",
@@ -6053,7 +6028,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 82,
+      "count": 89,
       "index": 57
     },
     {
@@ -6092,19 +6067,19 @@
       "index": 57
     },
     {
+      "where": "http://people.apache.org/list_E.html",
+      "count": 23,
+      "index": 57
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 25,
+      "count": 19,
       "index": 132
     },
     {
       "where": "http://www.apache.org/",
-      "count": 25,
+      "count": 19,
       "index": 132
-    },
-    {
-      "where": "http://people.apache.org/list_E.html",
-      "count": 23,
-      "index": 57
     },
     {
       "where": "http://www.apache.org/foundation/glossary.html",
@@ -6204,12 +6179,12 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 4,
-      "index": 400
+      "index": 405
     },
     {
       "where": "http://people.apache.org/committers.html",
       "count": 4,
-      "index": 1936
+      "index": 1941
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
@@ -6310,18 +6285,8 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 15,
+      "count": 18,
       "index": 165
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 15,
-      "index": 351
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 15,
-      "index": 351
     },
     {
       "where": "http://people.apache.org/list_K.html",
@@ -6332,6 +6297,16 @@
       "where": "http://people.apache.org/list_F.html",
       "count": 14,
       "index": 137
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 14,
+      "index": 394
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 14,
+      "index": 394
     },
     {
       "where": "http://people.apache.org/list_A.html",
@@ -6411,7 +6386,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 2,
-      "index": 400
+      "index": 405
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
@@ -6431,7 +6406,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 2,
-      "index": 1936
+      "index": 1941
     },
     {
       "where": "http://www.apache.org/foundation/members.html",
@@ -6461,19 +6436,19 @@
       "index": 1277
     },
     {
-      "where": "http://www.apache.org",
+      "where": "http://www.apache.org/foundation/contact.html",
       "count": 7,
+      "index": 134
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 6,
       "index": 91
     },
     {
       "where": "http://www.apache.org/",
-      "count": 7,
+      "count": 6,
       "index": 91
-    },
-    {
-      "where": "http://www.apache.org/foundation/contact.html",
-      "count": 7,
-      "index": 134
     },
     {
       "where": "http://people.apache.org/blogs.html",
@@ -6498,7 +6473,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 4,
-      "index": 1406
+      "index": 1411
     },
     {
       "where": "http://www.apache.org/foundation/sponsorship.html",
@@ -6549,7 +6524,7 @@
   "3": [
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 39,
+      "count": 38,
       "index": 259
     },
     {
@@ -6558,14 +6533,14 @@
       "index": 104
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 26,
+      "index": 105
+    },
+    {
       "where": "http://people.apache.org/list_H.html",
       "count": 25,
       "index": 69
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 24,
-      "index": 105
     },
     {
       "where": "http://people.apache.org/list_F.html",
@@ -6720,6 +6695,16 @@
       "index": 7
     },
     {
+      "where": "http://www.apache.org",
+      "count": 67,
+      "index": 11
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 67,
+      "index": 11
+    },
+    {
       "where": "http://www.apache.org/foundation/",
       "count": 66,
       "index": 7
@@ -6728,16 +6713,6 @@
       "where": "http://www.apache.org/foundation/members.html",
       "count": 58,
       "index": 6
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 57,
-      "index": 11
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 57,
-      "index": 11
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -6954,22 +6929,12 @@
     {
       "where": "http://people.apache.org/list_D.html",
       "count": 16,
-      "index": 462
+      "index": 487
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
       "count": 8,
       "index": 25
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 8,
-      "index": 32
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 8,
-      "index": 32
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -6985,6 +6950,16 @@
       "where": "http://people.apache.org/foaf/index.html",
       "count": 6,
       "index": 344
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 5,
+      "index": 32
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 5,
+      "index": 32
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
@@ -7100,12 +7075,12 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 109,
+      "count": 110,
       "index": 4
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 79,
+      "count": 80,
       "index": 3
     },
     {
@@ -7125,7 +7100,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 51,
+      "count": 52,
       "index": 16
     },
     {
@@ -7135,7 +7110,7 @@
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 35,
+      "count": 36,
       "index": 16
     },
     {
@@ -7145,8 +7120,18 @@
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 30,
+      "count": 31,
       "index": 16
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 30,
+      "index": 1
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 30,
+      "index": 1
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -7155,42 +7140,32 @@
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 28,
+      "count": 29,
       "index": 16
     },
     {
-      "where": "http://www.apache.org",
-      "count": 25,
-      "index": 1
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 25,
-      "index": 1
-    },
-    {
       "where": "http://people.apache.org/list_D.html",
-      "count": 25,
+      "count": 27,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 22,
+      "count": 23,
       "index": 16
     },
     {
       "where": "http://people.apache.org/",
-      "count": 21,
+      "count": 22,
       "index": 13
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 21,
+      "count": 22,
       "index": 13
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 21,
+      "count": 22,
       "index": 16
     },
     {
@@ -7200,17 +7175,17 @@
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 15,
+      "count": 16,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 15,
+      "count": 16,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 13,
+      "count": 14,
       "index": 16
     },
     {
@@ -7230,13 +7205,18 @@
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 9,
+      "count": 10,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 8,
+      "count": 9,
       "index": 16
+    },
+    {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 8,
+      "index": 14
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
@@ -7244,14 +7224,19 @@
       "index": 135
     },
     {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 7,
-      "index": 14
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-summary.html",
       "count": 7,
       "index": 155
+    },
+    {
+      "where": "http://people.apache.org/map.html",
+      "count": 6,
+      "index": 4
+    },
+    {
+      "where": "http://people.apache.org/list_I.html",
+      "count": 6,
+      "index": 16
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
@@ -7259,19 +7244,14 @@
       "index": 135
     },
     {
-      "where": "http://people.apache.org/map.html",
-      "count": 5,
-      "index": 4
-    },
-    {
-      "where": "http://people.apache.org/list_I.html",
-      "count": 5,
-      "index": 16
-    },
-    {
       "where": "http://people.apache.org/resources.html",
-      "count": 4,
+      "count": 5,
       "index": 13
+    },
+    {
+      "where": "http://people.apache.org/calendar.html",
+      "count": 3,
+      "index": 12
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -7282,11 +7262,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
       "count": 3,
       "index": 129
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 2,
-      "index": 12
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
@@ -7338,12 +7313,12 @@
     {
       "where": "http://www.apache.org",
       "count": 5,
-      "index": 655
+      "index": 664
     },
     {
       "where": "http://www.apache.org/",
       "count": 5,
-      "index": 655
+      "index": 664
     },
     {
       "where": "http://people.apache.org/list_H.html",
@@ -7363,7 +7338,7 @@
     {
       "where": "http://people.apache.org/blogs.html",
       "count": 3,
-      "index": 1426
+      "index": 1436
     },
     {
       "where": "http://people.apache.org/list_A.html",
@@ -7383,7 +7358,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 2,
-      "index": 737
+      "index": 742
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -7403,7 +7378,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 1,
-      "index": 187
+      "index": 192
     },
     {
       "where": "http://people.apache.org/list_J.html",
@@ -7499,12 +7474,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 40,
+      "count": 39,
       "index": 84
     },
     {
       "where": "http://www.apache.org/",
-      "count": 40,
+      "count": 39,
       "index": 84
     },
     {
@@ -7538,14 +7513,14 @@
       "index": 32
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 25,
+      "index": 32
+    },
+    {
       "where": "http://people.apache.org/gallery.html",
       "count": 24,
       "index": 30
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 24,
-      "index": 32
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -7716,12 +7691,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 16,
+      "count": 19,
       "index": 37
     },
     {
       "where": "http://www.apache.org/",
-      "count": 16,
+      "count": 19,
       "index": 37
     },
     {
@@ -7887,14 +7862,14 @@
       "index": 43
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 7,
+      "index": 57
+    },
+    {
       "where": "http://people.apache.org/list_G.html",
       "count": 7,
       "index": 476
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 6,
-      "index": 113
     },
     {
       "where": "http://www.apache.org/foundation/sponsorship.html",
@@ -8030,12 +8005,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 258,
+      "count": 243,
       "index": 4
     },
     {
       "where": "http://www.apache.org/",
-      "count": 258,
+      "count": 243,
       "index": 4
     },
     {
@@ -8065,7 +8040,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 153,
+      "count": 154,
       "index": 1
     },
     {
@@ -8222,7 +8197,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 518,
+      "count": 521,
       "index": 2
     },
     {
@@ -8242,12 +8217,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 238,
+      "count": 241,
       "index": 4
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 212,
+      "count": 218,
       "index": 2
     },
     {
@@ -8262,23 +8237,13 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 114,
+      "count": 117,
       "index": 2
     },
     {
       "where": "http://www.apache.org/foundation/preFAQ.html",
       "count": 99,
       "index": 1
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 99,
-      "index": 17
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 99,
-      "index": 17
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -8289,6 +8254,16 @@
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 95,
       "index": 12
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 95,
+      "index": 17
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 95,
+      "index": 17
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -8326,14 +8301,14 @@
       "index": 8
     },
     {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 61,
+      "index": 1
+    },
+    {
       "where": "http://people.apache.org/list_K.html",
       "count": 61,
       "index": 2
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 58,
-      "index": 1
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
@@ -8504,12 +8479,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 128,
+      "count": 120,
       "index": 4
     },
     {
       "where": "http://www.apache.org/",
-      "count": 128,
+      "count": 120,
       "index": 4
     },
     {
@@ -8564,7 +8539,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 63,
+      "count": 64,
       "index": 1
     },
     {
@@ -8721,7 +8696,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 2019,
+      "count": 2022,
       "index": 1
     },
     {
@@ -8741,12 +8716,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 822,
+      "count": 825,
       "index": 3
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 734,
+      "count": 740,
       "index": 1
     },
     {
@@ -8785,29 +8760,29 @@
       "index": 4
     },
     {
+      "where": "http://people.apache.org/list_H.html",
+      "count": 431,
+      "index": 1
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 434,
+      "count": 422,
       "index": 4
     },
     {
       "where": "http://www.apache.org/",
-      "count": 434,
+      "count": 422,
       "index": 4
     },
     {
-      "where": "http://people.apache.org/list_H.html",
-      "count": 431,
+      "where": "http://people.apache.org/list_D.html",
+      "count": 368,
       "index": 1
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
       "count": 366,
       "index": 5
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 358,
-      "index": 1
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -8856,7 +8831,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 188,
+      "count": 191,
       "index": 1
     },
     {
@@ -9028,12 +9003,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 14,
+      "count": 13,
       "index": 26
     },
     {
       "where": "http://www.apache.org/",
-      "count": 14,
+      "count": 13,
       "index": 26
     },
     {
@@ -9175,7 +9150,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 201,
+      "count": 204,
       "index": 5
     },
     {
@@ -9189,23 +9164,23 @@
       "index": 28
     },
     {
+      "where": "http://people.apache.org/committers.html",
+      "count": 111,
+      "index": 19
+    },
+    {
       "where": "http://www.apache.org/foundation/glossary.html",
       "count": 110,
       "index": 28
     },
     {
-      "where": "http://people.apache.org/committers.html",
-      "count": 108,
-      "index": 19
-    },
-    {
       "where": "http://people.apache.org/blogs.html",
-      "count": 90,
+      "count": 96,
       "index": 17
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 77,
+      "count": 80,
       "index": 4
     },
     {
@@ -9254,6 +9229,16 @@
       "index": 11
     },
     {
+      "where": "http://www.apache.org",
+      "count": 29,
+      "index": 30
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 29,
+      "index": 30
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
       "count": 27,
       "index": 1
@@ -9264,19 +9249,14 @@
       "index": 19
     },
     {
-      "where": "http://www.apache.org",
-      "count": 27,
-      "index": 30
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 27,
-      "index": 30
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 26,
       "index": 11
+    },
+    {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 24,
+      "index": 17
     },
     {
       "where": "http://people.apache.org/list_J.html",
@@ -9292,11 +9272,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
       "count": 21,
       "index": 13
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 21,
-      "index": 17
     },
     {
       "where": "http://people.apache.org/list_F.html",
@@ -9432,12 +9407,12 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 132,
+      "count": 133,
       "index": 4
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 83,
+      "count": 84,
       "index": 3
     },
     {
@@ -9457,12 +9432,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 57,
+      "count": 58,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 44,
+      "count": 45,
       "index": 16
     },
     {
@@ -9471,8 +9446,18 @@
       "index": 37
     },
     {
+      "where": "http://www.apache.org",
+      "count": 36,
+      "index": 1
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 36,
+      "index": 1
+    },
+    {
       "where": "http://people.apache.org/list_C.html",
-      "count": 35,
+      "count": 36,
       "index": 16
     },
     {
@@ -9486,43 +9471,33 @@
       "index": 51
     },
     {
-      "where": "http://www.apache.org",
-      "count": 31,
-      "index": 1
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 31,
-      "index": 1
-    },
-    {
       "where": "http://people.apache.org/list_B.html",
-      "count": 31,
+      "count": 32,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 28,
+      "count": 29,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 26,
+      "count": 28,
       "index": 16
     },
     {
       "where": "http://people.apache.org/",
-      "count": 22,
+      "count": 23,
       "index": 13
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 22,
+      "count": 23,
       "index": 13
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 22,
+      "count": 23,
       "index": 16
     },
     {
@@ -9532,28 +9507,28 @@
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 17,
+      "count": 18,
       "index": 16
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 16,
+      "count": 17,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 14,
+      "count": 15,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/list_A.html",
+      "count": 13,
       "index": 16
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
       "count": 13,
       "index": 116
-    },
-    {
-      "where": "http://people.apache.org/list_A.html",
-      "count": 12,
-      "index": 16
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -9567,12 +9542,12 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 10,
+      "count": 11,
       "index": 14
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 9,
+      "count": 10,
       "index": 16
     },
     {
@@ -9587,13 +9562,18 @@
     },
     {
       "where": "http://people.apache.org/map.html",
-      "count": 6,
+      "count": 7,
       "index": 4
     },
     {
       "where": "http://people.apache.org/list_I.html",
-      "count": 6,
+      "count": 7,
       "index": 16
+    },
+    {
+      "where": "http://people.apache.org/resources.html",
+      "count": 6,
+      "index": 13
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
@@ -9601,24 +9581,19 @@
       "index": 135
     },
     {
-      "where": "http://people.apache.org/resources.html",
-      "count": 5,
-      "index": 13
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
       "count": 5,
       "index": 59
     },
     {
+      "where": "http://people.apache.org/calendar.html",
+      "count": 4,
+      "index": 12
+    },
+    {
       "where": "http://people.apache.org/events.html",
       "count": 4,
       "index": 15
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 3,
-      "index": 12
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
@@ -9738,6 +9713,16 @@
       "index": 23
     },
     {
+      "where": "http://www.apache.org",
+      "count": 29,
+      "index": 37
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 29,
+      "index": 37
+    },
+    {
       "where": "http://people.apache.org/gallery.html",
       "count": 25,
       "index": 21
@@ -9746,16 +9731,6 @@
       "where": "http://people.apache.org/foaf/index.html",
       "count": 24,
       "index": 23
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 24,
-      "index": 37
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 24,
-      "index": 37
     },
     {
       "where": "http://people.apache.org/list_F.html",
@@ -9926,12 +9901,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 14,
+      "count": 15,
       "index": 148
     },
     {
       "where": "http://www.apache.org/",
-      "count": 14,
+      "count": 15,
       "index": 148
     },
     {
@@ -10162,6 +10137,16 @@
       "index": 82
     },
     {
+      "where": "http://www.apache.org",
+      "count": 19,
+      "index": 120
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 19,
+      "index": 120
+    },
+    {
       "where": "http://people.apache.org/foaf/index.html",
       "count": 18,
       "index": 42
@@ -10185,16 +10170,6 @@
       "where": "http://people.apache.org/gallery.html",
       "count": 14,
       "index": 40
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 14,
-      "index": 120
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 14,
-      "index": 120
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -10380,7 +10355,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 30,
+      "count": 32,
       "index": 102
     },
     {
@@ -10429,16 +10404,6 @@
       "index": 76
     },
     {
-      "where": "http://www.apache.org",
-      "count": 7,
-      "index": 370
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 7,
-      "index": 370
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
       "count": 6,
       "index": 4
@@ -10457,6 +10422,16 @@
       "where": "http://people.apache.org/list_I.html",
       "count": 4,
       "index": 82
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 4,
+      "index": 413
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 4,
+      "index": 413
     },
     {
       "where": "http://www.apache.org/foundation/preFAQ.html",
@@ -10546,7 +10521,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 2,
-      "index": 406
+      "index": 411
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -10561,7 +10536,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 2,
-      "index": 1942
+      "index": 1947
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index.html?constant-values.html",
@@ -10671,6 +10646,16 @@
       "index": 11
     },
     {
+      "where": "http://www.apache.org",
+      "count": 8,
+      "index": 156
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 8,
+      "index": 156
+    },
+    {
       "where": "http://people.apache.org/gallery.html",
       "count": 7,
       "index": 9
@@ -10684,16 +10669,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-summary.html",
       "count": 7,
       "index": 78
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 7,
-      "index": 156
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 7,
-      "index": 156
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -10799,7 +10774,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1507,
+      "count": 1508,
       "index": 3
     },
     {
@@ -10819,12 +10794,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 701,
+      "count": 702,
       "index": 1
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 535,
+      "count": 537,
       "index": 7
     },
     {
@@ -10854,12 +10829,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 244,
+      "count": 243,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 244,
+      "count": 243,
       "index": 8
     },
     {
@@ -10908,14 +10883,14 @@
       "index": 4
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 150,
+      "index": 9
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
       "count": 146,
       "index": 1
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 146,
-      "index": 9
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -10924,7 +10899,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 134,
+      "count": 135,
       "index": 3
     },
     {
@@ -11128,16 +11103,6 @@
       "where": "http://www.apache.org/foundation/how-it-works.html",
       "count": 1,
       "index": 196
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 1,
-      "index": 316
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 1,
-      "index": 316
     }
   ],
   "na nb nc nd ne nf ng nh ni nj nk nl nm": [
@@ -11364,16 +11329,6 @@
       "index": 2
     },
     {
-      "where": "http://www.apache.org",
-      "count": 53,
-      "index": 17
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 53,
-      "index": 17
-    },
-    {
       "where": "http://www.apache.org/foundation/",
       "count": 50,
       "index": 13
@@ -11387,6 +11342,16 @@
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 43,
       "index": 12
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 43,
+      "index": 17
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 43,
+      "index": 17
     },
     {
       "where": "http://www.apache.org/foundation/preFAQ.html",
@@ -11602,7 +11567,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 474,
+      "count": 475,
       "index": 10
     },
     {
@@ -11622,12 +11587,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 325,
+      "count": 349,
       "index": 2
     },
     {
       "where": "http://www.apache.org/",
-      "count": 325,
+      "count": 349,
       "index": 2
     },
     {
@@ -11652,12 +11617,12 @@
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 211,
+      "count": 210,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 198,
+      "count": 197,
       "index": 12
     },
     {
@@ -11672,7 +11637,7 @@
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 186,
+      "count": 185,
       "index": 12
     },
     {
@@ -11682,22 +11647,22 @@
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 161,
+      "count": 160,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 153,
+      "count": 152,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 119,
+      "count": 122,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 119,
+      "count": 118,
       "index": 12
     },
     {
@@ -11712,7 +11677,7 @@
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 103,
+      "count": 102,
       "index": 12
     },
     {
@@ -11727,22 +11692,22 @@
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 80,
+      "count": 79,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 69,
+      "count": 68,
       "index": 12
     },
     {
       "where": "http://people.apache.org/",
-      "count": 66,
+      "count": 65,
       "index": 9
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 66,
+      "count": 65,
       "index": 9
     },
     {
@@ -11757,12 +11722,12 @@
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 63,
+      "count": 62,
       "index": 12
     },
     {
       "where": "http://people.apache.org/resources.html",
-      "count": 61,
+      "count": 60,
       "index": 1
     },
     {
@@ -11772,7 +11737,7 @@
     },
     {
       "where": "http://people.apache.org/list_I.html",
-      "count": 30,
+      "count": 29,
       "index": 12
     },
     {
@@ -11781,18 +11746,18 @@
       "index": 1
     },
     {
-      "where": "http://people.apache.org/map.html",
-      "count": 20,
-      "index": 13
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-tree.html",
       "count": 19,
       "index": 1
     },
     {
+      "where": "http://people.apache.org/map.html",
+      "count": 19,
+      "index": 13
+    },
+    {
       "where": "http://people.apache.org/calendar.html",
-      "count": 17,
+      "count": 16,
       "index": 8
     },
     {
@@ -11824,7 +11789,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1759,
+      "count": 1762,
       "index": 1
     },
     {
@@ -11844,12 +11809,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 706,
+      "count": 709,
       "index": 3
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 635,
+      "count": 641,
       "index": 1
     },
     {
@@ -11883,19 +11848,19 @@
       "index": 1
     },
     {
+      "where": "http://www.apache.org/foundation/sponsorship.html",
+      "count": 366,
+      "index": 5
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 369,
+      "count": 355,
       "index": 4
     },
     {
       "where": "http://www.apache.org/",
-      "count": 369,
+      "count": 355,
       "index": 4
-    },
-    {
-      "where": "http://www.apache.org/foundation/sponsorship.html",
-      "count": 366,
-      "index": 5
     },
     {
       "where": "http://people.apache.org/list_H.html",
@@ -11904,7 +11869,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 310,
+      "count": 318,
       "index": 1
     },
     {
@@ -11943,13 +11908,13 @@
       "index": 1
     },
     {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
-      "count": 166,
+      "where": "http://people.apache.org/gallery.html",
+      "count": 168,
       "index": 1
     },
     {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 165,
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
+      "count": 166,
       "index": 1
     },
     {
@@ -12125,6 +12090,11 @@
       "index": 11
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 26,
+      "index": 11
+    },
+    {
       "where": "http://www.apache.org/foundation/",
       "count": 26,
       "index": 109
@@ -12133,11 +12103,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 25,
       "index": 47
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 24,
-      "index": 11
     },
     {
       "where": "http://people.apache.org/list_K.html",
@@ -12195,6 +12160,16 @@
       "index": 9
     },
     {
+      "where": "http://www.apache.org",
+      "count": 11,
+      "index": 156
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 11,
+      "index": 156
+    },
+    {
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 11,
       "index": 467
@@ -12203,16 +12178,6 @@
       "where": "http://people.apache.org/events.html",
       "count": 10,
       "index": 2
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 10,
-      "index": 156
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 10,
-      "index": 156
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-summary.html",
@@ -12283,7 +12248,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 372,
+      "count": 373,
       "index": 41
     },
     {
@@ -12298,7 +12263,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 187,
+      "count": 188,
       "index": 40
     },
     {
@@ -12313,7 +12278,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 135,
+      "count": 137,
       "index": 38
     },
     {
@@ -12322,19 +12287,19 @@
       "index": 1
     },
     {
-      "where": "http://www.apache.org/foundation/",
-      "count": 93,
-      "index": 10
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 79,
+      "count": 96,
       "index": 5
     },
     {
       "where": "http://www.apache.org/",
-      "count": 79,
+      "count": 96,
       "index": 5
+    },
+    {
+      "where": "http://www.apache.org/foundation/",
+      "count": 93,
+      "index": 10
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -12373,7 +12338,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 33,
+      "count": 34,
       "index": 38
     },
     {
@@ -12412,6 +12377,11 @@
       "index": 37
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 17,
+      "index": 40
+    },
+    {
       "where": "http://people.apache.org/list_F.html",
       "count": 16,
       "index": 40
@@ -12419,11 +12389,6 @@
     {
       "where": "http://people.apache.org/list_K.html",
       "count": 16,
-      "index": 40
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 15,
       "index": 40
     },
     {
@@ -12605,12 +12570,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 84,
+      "count": 85,
       "index": 9
     },
     {
       "where": "http://www.apache.org/",
-      "count": 84,
+      "count": 85,
       "index": 9
     },
     {
@@ -12634,14 +12599,14 @@
       "index": 3
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 59,
+      "index": 3
+    },
+    {
       "where": "http://www.apache.org/foundation/contact.html",
       "count": 57,
       "index": 2
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 57,
-      "index": 3
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
@@ -12826,19 +12791,19 @@
       "index": 11
     },
     {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
+      "count": 66,
+      "index": 8
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 72,
+      "count": 66,
       "index": 17
     },
     {
       "where": "http://www.apache.org/",
-      "count": 72,
-      "index": 17
-    },
-    {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 66,
-      "index": 8
+      "index": 17
     },
     {
       "where": "http://www.apache.org/foundation/preFAQ.html",
@@ -13073,14 +13038,14 @@
       "index": 409
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 12,
+      "index": 118
+    },
+    {
       "where": "http://people.apache.org/list_A.html",
       "count": 11,
       "index": 83
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 10,
-      "index": 118
     },
     {
       "where": "http://people.apache.org/list_K.html",
@@ -13113,6 +13078,16 @@
       "index": 116
     },
     {
+      "where": "http://www.apache.org",
+      "count": 4,
+      "index": 413
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 4,
+      "index": 413
+    },
+    {
       "where": "http://www.apache.org/foundation/preFAQ.html",
       "count": 4,
       "index": 668
@@ -13131,16 +13106,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
       "count": 3,
       "index": 4
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 3,
-      "index": 370
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 3,
-      "index": 370
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -13220,7 +13185,7 @@
     {
       "where": "http://people.apache.org/blogs.html",
       "count": 1,
-      "index": 1066
+      "index": 1076
     }
   ],
   "q r s t": [
@@ -13261,7 +13226,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 329,
+      "count": 330,
       "index": 13
     },
     {
@@ -13281,12 +13246,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 213,
+      "count": 222,
       "index": 2
     },
     {
       "where": "http://www.apache.org/",
-      "count": 213,
+      "count": 222,
       "index": 2
     },
     {
@@ -13301,7 +13266,7 @@
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 140,
+      "count": 139,
       "index": 15
     },
     {
@@ -13326,12 +13291,12 @@
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 79,
+      "count": 78,
       "index": 15
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 74,
+      "count": 73,
       "index": 15
     },
     {
@@ -13346,22 +13311,22 @@
     },
     {
       "where": "http://people.apache.org/",
-      "count": 48,
+      "count": 47,
       "index": 12
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 48,
+      "count": 47,
       "index": 12
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 46,
+      "count": 45,
       "index": 15
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 45,
+      "count": 44,
       "index": 15
     },
     {
@@ -13371,7 +13336,7 @@
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 43,
+      "count": 42,
       "index": 15
     },
     {
@@ -13381,22 +13346,22 @@
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 40,
+      "count": 39,
+      "index": 15
+    },
+    {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 37,
       "index": 15
     },
     {
       "where": "http://people.apache.org/resources.html",
-      "count": 37,
+      "count": 36,
       "index": 1
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 36,
-      "index": 15
-    },
-    {
       "where": "http://people.apache.org/list_J.html",
-      "count": 36,
+      "count": 35,
       "index": 15
     },
     {
@@ -13411,27 +13376,27 @@
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 26,
-      "index": 15
-    },
-    {
-      "where": "http://people.apache.org/list_A.html",
       "count": 25,
       "index": 15
     },
     {
+      "where": "http://people.apache.org/list_A.html",
+      "count": 24,
+      "index": 15
+    },
+    {
       "where": "http://people.apache.org/map.html",
-      "count": 13,
+      "count": 12,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_I.html",
-      "count": 12,
+      "count": 11,
       "index": 15
     },
     {
       "where": "http://people.apache.org/calendar.html",
-      "count": 9,
+      "count": 8,
       "index": 11
     },
     {
@@ -13509,12 +13474,12 @@
     {
       "where": "http://www.apache.org",
       "count": 6,
-      "index": 655
+      "index": 664
     },
     {
       "where": "http://www.apache.org/",
       "count": 6,
-      "index": 655
+      "index": 664
     },
     {
       "where": "http://people.apache.org/list_C.html",
@@ -13676,7 +13641,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 4,
-      "index": 502
+      "index": 507
     },
     {
       "where": "http://people.apache.org/list_J.html",
@@ -13691,7 +13656,7 @@
     {
       "where": "http://people.apache.org/blogs.html",
       "count": 3,
-      "index": 836
+      "index": 846
     },
     {
       "where": "http://people.apache.org/list_K.html",
@@ -13729,16 +13694,6 @@
       "index": 45
     },
     {
-      "where": "http://www.apache.org",
-      "count": 1,
-      "index": 315
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 1,
-      "index": 315
-    },
-    {
       "where": "http://people.apache.org/foaf/index.html",
       "count": 1,
       "index": 453
@@ -13751,7 +13706,17 @@
     {
       "where": "http://people.apache.org/list_D.html",
       "count": 1,
-      "index": 486
+      "index": 511
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 1,
+      "index": 523
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 1,
+      "index": 523
     },
     {
       "where": "http://people.apache.org/list_B.html",
@@ -13787,7 +13752,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 12,
+      "count": 13,
       "index": 104
     },
     {
@@ -13849,7 +13814,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 432,
+      "count": 435,
       "index": 5
     },
     {
@@ -13869,12 +13834,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 229,
+      "count": 232,
       "index": 11
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 170,
+      "count": 176,
       "index": 9
     },
     {
@@ -13884,7 +13849,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 148,
+      "count": 155,
       "index": 4
     },
     {
@@ -13939,12 +13904,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 92,
+      "count": 94,
       "index": 6
     },
     {
       "where": "http://www.apache.org/",
-      "count": 92,
+      "count": 94,
       "index": 6
     },
     {
@@ -13993,14 +13958,14 @@
       "index": 11
     },
     {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 48,
+      "index": 9
+    },
+    {
       "where": "http://people.apache.org/list_A.html",
       "count": 47,
       "index": 11
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 45,
-      "index": 9
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
@@ -14145,6 +14110,16 @@
       "index": 1630
     },
     {
+      "where": "http://www.apache.org",
+      "count": 4,
+      "index": 378
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 4,
+      "index": 378
+    },
+    {
       "where": "http://people.apache.org/list_A.html",
       "count": 3,
       "index": 131
@@ -14173,16 +14148,6 @@
       "where": "http://people.apache.org/list_G.html",
       "count": 2,
       "index": 102
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 2,
-      "index": 739
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 2,
-      "index": 739
     },
     {
       "where": "http://people.apache.org/list_C.html",
@@ -14247,6 +14212,16 @@
       "index": 7
     },
     {
+      "where": "http://www.apache.org",
+      "count": 12,
+      "index": 9
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 12,
+      "index": 9
+    },
+    {
       "where": "http://www.apache.org/foundation/preFAQ.html",
       "count": 11,
       "index": 5
@@ -14262,18 +14237,13 @@
       "index": 7
     },
     {
-      "where": "http://www.apache.org",
-      "count": 10,
-      "index": 9
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 10,
-      "index": 9
-    },
-    {
       "where": "http://people.apache.org/list_G.html",
       "count": 8,
+      "index": 7
+    },
+    {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 6,
       "index": 7
     },
     {
@@ -14288,11 +14258,6 @@
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 5,
-      "index": 7
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
       "count": 5,
       "index": 7
     },
@@ -14396,7 +14361,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 12,
-      "index": 1441
+      "index": 1446
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index-all.html",
@@ -14472,7 +14437,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 105,
+      "count": 104,
       "index": 137
     },
     {
@@ -14482,7 +14447,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 59,
+      "count": 58,
       "index": 59
     },
     {
@@ -14497,7 +14462,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 47,
+      "count": 46,
       "index": 163
     },
     {
@@ -14512,12 +14477,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 27,
+      "count": 32,
       "index": 2
     },
     {
       "where": "http://www.apache.org/",
-      "count": 27,
+      "count": 32,
       "index": 2
     },
     {
@@ -14526,18 +14491,18 @@
       "index": 3
     },
     {
-      "where": "http://people.apache.org/foaf/index.html",
-      "count": 22,
-      "index": 91
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 21,
       "index": 56
     },
     {
+      "where": "http://people.apache.org/foaf/index.html",
+      "count": 21,
+      "index": 91
+    },
+    {
       "where": "http://people.apache.org/list_C.html",
-      "count": 19,
+      "count": 18,
       "index": 235
     },
     {
@@ -14572,7 +14537,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 10,
+      "count": 9,
       "index": 56
     },
     {
@@ -14582,68 +14547,63 @@
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 9,
+      "count": 8,
       "index": 74
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 9,
+      "count": 8,
       "index": 88
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 8,
+      "count": 7,
       "index": 68
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 8,
+      "count": 7,
       "index": 130
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 7,
+      "count": 6,
       "index": 85
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 7,
+      "count": 6,
       "index": 112
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 6,
+      "count": 5,
       "index": 101
     },
     {
       "where": "http://people.apache.org/",
-      "count": 6,
+      "count": 5,
       "index": 109
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 6,
+      "count": 5,
       "index": 109
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 6,
+      "count": 5,
       "index": 135
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 6,
+      "count": 5,
       "index": 175
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
       "count": 4,
       "index": 72
-    },
-    {
-      "where": "http://people.apache.org/resources.html",
-      "count": 3,
-      "index": 58
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index.html?constant-values.html",
@@ -14661,9 +14621,9 @@
       "index": 11
     },
     {
-      "where": "http://people.apache.org/calendar.html",
+      "where": "http://people.apache.org/resources.html",
       "count": 2,
-      "index": 53
+      "index": 58
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
@@ -14671,14 +14631,9 @@
       "index": 65
     },
     {
-      "where": "http://people.apache.org/map.html",
+      "where": "http://people.apache.org/calendar.html",
       "count": 1,
-      "index": 80
-    },
-    {
-      "where": "http://people.apache.org/list_I.html",
-      "count": 1,
-      "index": 155
+      "index": 53
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/allclasses-noframe.html",
@@ -14704,7 +14659,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 17,
+      "count": 18,
       "index": 198
     },
     {
@@ -14756,16 +14711,6 @@
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 2,
       "index": 226
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 2,
-      "index": 422
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 2,
-      "index": 422
     },
     {
       "where": "http://www.apache.org/foundation/members.html",
@@ -14841,12 +14786,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 12,
+      "count": 15,
       "index": 90
     },
     {
       "where": "http://www.apache.org/",
-      "count": 12,
+      "count": 15,
       "index": 90
     },
     {
@@ -15102,16 +15047,6 @@
       "index": 21
     },
     {
-      "where": "http://www.apache.org",
-      "count": 58,
-      "index": 27
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 58,
-      "index": 27
-    },
-    {
       "where": "http://people.apache.org/list_G.html",
       "count": 56,
       "index": 3
@@ -15132,8 +15067,18 @@
       "index": 13
     },
     {
+      "where": "http://www.apache.org",
+      "count": 50,
+      "index": 27
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 50,
+      "index": 27
+    },
+    {
       "where": "http://people.apache.org/list_D.html",
-      "count": 47,
+      "count": 48,
       "index": 3
     },
     {
@@ -15270,7 +15215,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1921,
+      "count": 1924,
       "index": 1
     },
     {
@@ -15290,12 +15235,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 789,
+      "count": 792,
       "index": 3
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 688,
+      "count": 694,
       "index": 1
     },
     {
@@ -15324,16 +15269,6 @@
       "index": 1
     },
     {
-      "where": "http://www.apache.org",
-      "count": 392,
-      "index": 4
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 392,
-      "index": 4
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 390,
       "index": 1
@@ -15344,13 +15279,23 @@
       "index": 1
     },
     {
+      "where": "http://www.apache.org",
+      "count": 383,
+      "index": 4
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 383,
+      "index": 4
+    },
+    {
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 383,
       "index": 4
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 320,
+      "count": 329,
       "index": 1
     },
     {
@@ -15390,7 +15335,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 182,
+      "count": 185,
       "index": 1
     },
     {
@@ -15576,6 +15521,16 @@
       "index": 10
     },
     {
+      "where": "http://www.apache.org",
+      "count": 121,
+      "index": 11
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 121,
+      "index": 11
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
       "count": 120,
       "index": 7
@@ -15594,16 +15549,6 @@
       "where": "http://people.apache.org/list_G.html",
       "count": 108,
       "index": 12
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 106,
-      "index": 11
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 106,
-      "index": 11
     },
     {
       "where": "http://people.apache.org/list_H.html",
@@ -15627,7 +15572,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 79,
+      "count": 81,
       "index": 12
     },
     {
@@ -15785,7 +15730,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 5,
-      "index": 209
+      "index": 214
     },
     {
       "where": "http://www.apache.org/foundation/how-it-works.html",
@@ -15810,12 +15755,12 @@
     {
       "where": "http://www.apache.org",
       "count": 2,
-      "index": 455
+      "index": 480
     },
     {
       "where": "http://www.apache.org/",
       "count": 2,
-      "index": 455
+      "index": 480
     },
     {
       "where": "http://www.apache.org/foundation/glossary.html",
@@ -15910,16 +15855,6 @@
       "index": 31
     },
     {
-      "where": "http://www.apache.org",
-      "count": 56,
-      "index": 84
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 56,
-      "index": 84
-    },
-    {
       "where": "http://people.apache.org/list_C.html",
       "count": 55,
       "index": 31
@@ -15928,6 +15863,16 @@
       "where": "http://people.apache.org/list_H.html",
       "count": 55,
       "index": 31
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 50,
+      "index": 84
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 50,
+      "index": 84
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/allclasses-noframe.html",
@@ -15976,7 +15921,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 33,
+      "count": 34,
       "index": 31
     },
     {
@@ -16192,6 +16137,16 @@
       "index": 77
     },
     {
+      "where": "http://www.apache.org",
+      "count": 9,
+      "index": 78
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 9,
+      "index": 78
+    },
+    {
       "where": "http://people.apache.org/list_J.html",
       "count": 9,
       "index": 144
@@ -16205,16 +16160,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
       "count": 8,
       "index": 117
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 7,
-      "index": 78
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 7,
-      "index": 78
     },
     {
       "where": "http://people.apache.org/list_A.html",
@@ -16300,7 +16245,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1781,
+      "count": 1782,
       "index": 3
     },
     {
@@ -16315,7 +16260,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 849,
+      "count": 850,
       "index": 1
     },
     {
@@ -16325,7 +16270,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 704,
+      "count": 707,
       "index": 7
     },
     {
@@ -16339,18 +16284,18 @@
       "index": 2
     },
     {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
-      "count": 424,
-      "index": 2
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 403,
+      "count": 425,
       "index": 2
     },
     {
       "where": "http://www.apache.org/",
-      "count": 403,
+      "count": 425,
+      "index": 2
+    },
+    {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
+      "count": 424,
       "index": 2
     },
     {
@@ -16370,7 +16315,7 @@
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 270,
+      "count": 269,
       "index": 9
     },
     {
@@ -16390,27 +16335,27 @@
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 241,
+      "count": 240,
       "index": 9
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 237,
+      "count": 236,
       "index": 1
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 232,
+      "count": 231,
       "index": 9
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 216,
+      "count": 215,
       "index": 9
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 204,
+      "count": 203,
       "index": 4
     },
     {
@@ -16420,17 +16365,17 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 164,
+      "count": 169,
       "index": 9
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 161,
+      "count": 162,
       "index": 3
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 151,
+      "count": 150,
       "index": 9
     },
     {
@@ -16455,32 +16400,32 @@
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 105,
+      "count": 104,
       "index": 9
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 96,
+      "count": 95,
       "index": 9
     },
     {
       "where": "http://people.apache.org/",
-      "count": 80,
+      "count": 79,
       "index": 6
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 80,
+      "count": 79,
       "index": 6
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 77,
+      "count": 76,
       "index": 9
     },
     {
       "where": "http://people.apache.org/resources.html",
-      "count": 73,
+      "count": 72,
       "index": 1
     },
     {
@@ -16495,12 +16440,12 @@
     },
     {
       "where": "http://people.apache.org/list_I.html",
-      "count": 45,
+      "count": 44,
       "index": 9
     },
     {
       "where": "http://people.apache.org/map.html",
-      "count": 30,
+      "count": 29,
       "index": 3
     },
     {
@@ -16515,7 +16460,7 @@
     },
     {
       "where": "http://people.apache.org/calendar.html",
-      "count": 21,
+      "count": 20,
       "index": 5
     },
     {
@@ -16547,7 +16492,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 2313,
+      "count": 2316,
       "index": 1
     },
     {
@@ -16567,12 +16512,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 945,
+      "count": 948,
       "index": 3
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 815,
+      "count": 821,
       "index": 1
     },
     {
@@ -16606,16 +16551,6 @@
       "index": 1
     },
     {
-      "where": "http://www.apache.org",
-      "count": 450,
-      "index": 4
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 450,
-      "index": 4
-    },
-    {
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 446,
       "index": 4
@@ -16626,14 +16561,24 @@
       "index": 1
     },
     {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
-      "count": 368,
-      "index": 5
+      "where": "http://www.apache.org",
+      "count": 433,
+      "index": 4
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 433,
+      "index": 4
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 367,
+      "count": 377,
       "index": 1
+    },
+    {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
+      "count": 368,
+      "index": 5
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -16682,7 +16627,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 210,
+      "count": 213,
       "index": 1
     },
     {
@@ -16833,16 +16778,6 @@
       "index": 2
     },
     {
-      "where": "http://www.apache.org",
-      "count": 57,
-      "index": 17
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 57,
-      "index": 17
-    },
-    {
       "where": "http://www.apache.org/foundation/",
       "count": 53,
       "index": 13
@@ -16856,6 +16791,16 @@
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 50,
       "index": 12
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 46,
+      "index": 17
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 46,
+      "index": 17
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
@@ -17046,7 +16991,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 30,
+      "count": 31,
       "index": 104
     },
     {
@@ -17198,7 +17143,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 71,
+      "count": 75,
       "index": 11
     },
     {
@@ -17424,16 +17369,6 @@
       "index": 229
     },
     {
-      "where": "http://www.apache.org",
-      "count": 4,
-      "index": 584
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 4,
-      "index": 584
-    },
-    {
       "where": "http://people.apache.org/blogs.html",
       "count": 3,
       "index": 74
@@ -17476,7 +17411,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 2,
-      "index": 406
+      "index": 411
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
@@ -17486,12 +17421,12 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 2,
-      "index": 1942
+      "index": 1947
     },
     {
       "where": "http://people.apache.org/projects.html",
       "count": 2,
-      "index": 4975
+      "index": 4980
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
@@ -17556,6 +17491,16 @@
       "index": 144
     },
     {
+      "where": "http://www.apache.org",
+      "count": 13,
+      "index": 364
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 13,
+      "index": 364
+    },
+    {
       "where": "http://www.apache.org/foundation/preFAQ.html",
       "count": 11,
       "index": 124
@@ -17574,16 +17519,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
       "count": 8,
       "index": 118
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 8,
-      "index": 416
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 8,
-      "index": 416
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
@@ -17911,7 +17846,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 155,
+      "count": 156,
       "index": 89
     },
     {
@@ -17936,13 +17871,23 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 77,
+      "count": 78,
       "index": 81
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 65,
+      "count": 67,
       "index": 68
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 59,
+      "index": 5
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 59,
+      "index": 5
     },
     {
       "where": "http://www.apache.org/foundation/sponsorship.html",
@@ -17953,16 +17898,6 @@
       "where": "http://www.apache.org/foundation/",
       "count": 51,
       "index": 29
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 49,
-      "index": 5
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 49,
-      "index": 5
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -18005,14 +17940,14 @@
       "index": 37
     },
     {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 16,
+      "index": 63
+    },
+    {
       "where": "http://people.apache.org/foaf/index.html",
       "count": 15,
       "index": 61
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 15,
-      "index": 63
     },
     {
       "where": "http://people.apache.org/list_H.html",
@@ -18035,6 +17970,11 @@
       "index": 86
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 10,
+      "index": 95
+    },
+    {
       "where": "http://people.apache.org/list_F.html",
       "count": 10,
       "index": 104
@@ -18053,11 +17993,6 @@
       "where": "http://people.apache.org/list_J.html",
       "count": 9,
       "index": 63
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 9,
-      "index": 95
     },
     {
       "where": "http://people.apache.org/list_K.html",
@@ -18219,12 +18154,12 @@
     {
       "where": "http://www.apache.org",
       "count": 1,
-      "index": 832
+      "index": 841
     },
     {
       "where": "http://www.apache.org/",
       "count": 1,
-      "index": 832
+      "index": 841
     }
   ],
   "q r s t u v w x": [
@@ -18240,7 +18175,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1014,
+      "count": 1015,
       "index": 4
     },
     {
@@ -18260,7 +18195,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 485,
+      "count": 486,
       "index": 15
     },
     {
@@ -18270,7 +18205,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 452,
+      "count": 454,
       "index": 3
     },
     {
@@ -18285,12 +18220,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 258,
+      "count": 277,
       "index": 1
     },
     {
       "where": "http://www.apache.org/",
-      "count": 258,
+      "count": 277,
       "index": 1
     },
     {
@@ -18340,7 +18275,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 95,
+      "count": 96,
       "index": 13
     },
     {
@@ -18375,7 +18310,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 68,
+      "count": 71,
       "index": 15
     },
     {
@@ -18522,7 +18457,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 250,
+      "count": 251,
       "index": 38
     },
     {
@@ -18531,19 +18466,19 @@
       "index": 3
     },
     {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
-      "count": 182,
-      "index": 10
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 175,
+      "count": 193,
       "index": 2
     },
     {
       "where": "http://www.apache.org/",
-      "count": 175,
+      "count": 193,
       "index": 2
+    },
+    {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
+      "count": 182,
+      "index": 10
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -18557,7 +18492,7 @@
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 124,
+      "count": 123,
       "index": 40
     },
     {
@@ -18582,7 +18517,7 @@
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 67,
+      "count": 66,
       "index": 40
     },
     {
@@ -18592,7 +18527,7 @@
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 55,
+      "count": 54,
       "index": 40
     },
     {
@@ -18602,22 +18537,22 @@
     },
     {
       "where": "http://people.apache.org/",
-      "count": 44,
+      "count": 43,
       "index": 37
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 44,
+      "count": 43,
       "index": 37
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 39,
+      "count": 38,
       "index": 40
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 34,
+      "count": 33,
       "index": 40
     },
     {
@@ -18627,11 +18562,6 @@
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 31,
-      "index": 40
-    },
-    {
-      "where": "http://people.apache.org/list_K.html",
       "count": 30,
       "index": 40
     },
@@ -18641,23 +18571,28 @@
       "index": 39
     },
     {
+      "where": "http://people.apache.org/list_K.html",
+      "count": 29,
+      "index": 40
+    },
+    {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 28,
+      "index": 40
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/allclasses-noframe.html",
       "count": 28,
       "index": 174
     },
     {
       "where": "http://people.apache.org/resources.html",
-      "count": 27,
+      "count": 26,
       "index": 37
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 27,
-      "index": 40
-    },
-    {
       "where": "http://people.apache.org/list_J.html",
-      "count": 27,
+      "count": 26,
       "index": 40
     },
     {
@@ -18667,22 +18602,22 @@
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 21,
+      "count": 20,
       "index": 40
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 19,
+      "count": 18,
       "index": 40
     },
     {
       "where": "http://people.apache.org/map.html",
-      "count": 10,
+      "count": 9,
       "index": 41
     },
     {
       "where": "http://people.apache.org/list_I.html",
-      "count": 8,
+      "count": 7,
       "index": 40
     },
     {
@@ -18702,7 +18637,7 @@
     },
     {
       "where": "http://people.apache.org/calendar.html",
-      "count": 6,
+      "count": 5,
       "index": 36
     },
     {
@@ -18788,19 +18723,19 @@
       "index": 5
     },
     {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 43,
-      "index": 2
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 42,
+      "count": 46,
       "index": 9
     },
     {
       "where": "http://www.apache.org/",
-      "count": 42,
+      "count": 46,
       "index": 9
+    },
+    {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 43,
+      "index": 2
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -18839,7 +18774,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 19,
+      "count": 20,
       "index": 7
     },
     {
@@ -19045,19 +18980,19 @@
       "index": 8
     },
     {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 19,
-      "index": 8
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 18,
+      "count": 22,
       "index": 164
     },
     {
       "where": "http://www.apache.org/",
-      "count": 18,
+      "count": 22,
       "index": 164
+    },
+    {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 19,
+      "index": 8
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
@@ -19268,12 +19203,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 23,
+      "count": 28,
       "index": 9
     },
     {
       "where": "http://www.apache.org/",
-      "count": 23,
+      "count": 28,
       "index": 9
     },
     {
@@ -19307,13 +19242,13 @@
       "index": 7
     },
     {
-      "where": "http://people.apache.org/list_G.html",
+      "where": "http://people.apache.org/list_D.html",
       "count": 11,
       "index": 7
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 10,
+      "where": "http://people.apache.org/list_G.html",
+      "count": 11,
       "index": 7
     },
     {
@@ -19520,12 +19455,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 10,
+      "count": 9,
       "index": 15
     },
     {
       "where": "http://www.apache.org/",
-      "count": 10,
+      "count": 9,
       "index": 15
     },
     {
@@ -19663,7 +19598,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 5,
-      "index": 1441
+      "index": 1446
     },
     {
       "where": "http://www.apache.org/foundation/members.html",
@@ -19693,7 +19628,7 @@
     {
       "where": "http://people.apache.org/blogs.html",
       "count": 2,
-      "index": 1442
+      "index": 1452
     },
     {
       "where": "http://people.apache.org/list_D.html",
@@ -19758,16 +19693,6 @@
       "index": 18
     },
     {
-      "where": "http://www.apache.org",
-      "count": 8,
-      "index": 23
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 8,
-      "index": 23
-    },
-    {
       "where": "http://people.apache.org/gallery.html",
       "count": 6,
       "index": 116
@@ -19796,6 +19721,16 @@
       "where": "http://people.apache.org/list_K.html",
       "count": 4,
       "index": 219
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 3,
+      "index": 23
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 3,
+      "index": 23
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
@@ -19960,19 +19895,19 @@
       "index": 50
     },
     {
-      "where": "http://www.apache.org/foundation/how-it-works.html",
-      "count": 7,
-      "index": 388
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 6,
+      "count": 7,
       "index": 152
     },
     {
       "where": "http://www.apache.org/",
-      "count": 6,
+      "count": 7,
       "index": 152
+    },
+    {
+      "where": "http://www.apache.org/foundation/how-it-works.html",
+      "count": 7,
+      "index": 388
     },
     {
       "where": "http://people.apache.org/gallery.html",
@@ -20157,16 +20092,6 @@
       "index": 129
     },
     {
-      "where": "http://www.apache.org",
-      "count": 2,
-      "index": 493
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 2,
-      "index": 493
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
       "count": 1,
       "index": 295
@@ -20175,6 +20100,16 @@
       "where": "http://people.apache.org/list_J.html",
       "count": 1,
       "index": 376
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 1,
+      "index": 597
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 1,
+      "index": 597
     },
     {
       "where": "http://people.apache.org/projects.html",
@@ -20240,12 +20175,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 27,
+      "count": 21,
       "index": 23
     },
     {
       "where": "http://www.apache.org/",
-      "count": 27,
+      "count": 21,
       "index": 23
     },
     {
@@ -20427,12 +20362,12 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 88,
+      "count": 89,
       "index": 6
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 69,
+      "count": 70,
       "index": 3
     },
     {
@@ -20447,7 +20382,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 44,
+      "count": 45,
       "index": 16
     },
     {
@@ -20462,36 +20397,41 @@
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 33,
+      "count": 34,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 28,
-      "index": 16
-    },
-    {
-      "where": "http://people.apache.org/list_B.html",
-      "count": 24,
+      "count": 29,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 24,
+      "count": 26,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/list_B.html",
+      "count": 25,
       "index": 16
     },
     {
       "where": "http://www.apache.org",
-      "count": 21,
+      "count": 24,
       "index": 1
     },
     {
       "where": "http://www.apache.org/",
-      "count": 21,
+      "count": 24,
       "index": 1
     },
     {
       "where": "http://people.apache.org/list_K.html",
+      "count": 21,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/list_H.html",
       "count": 20,
       "index": 16
     },
@@ -20499,11 +20439,6 @@
       "where": "http://www.apache.org/foundation/",
       "count": 20,
       "index": 38
-    },
-    {
-      "where": "http://people.apache.org/list_H.html",
-      "count": 19,
-      "index": 16
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -20517,27 +20452,27 @@
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 14,
+      "count": 15,
       "index": 16
     },
     {
       "where": "http://people.apache.org/",
-      "count": 13,
+      "count": 14,
       "index": 13
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 13,
+      "count": 14,
       "index": 13
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 13,
+      "count": 14,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 12,
+      "count": 13,
       "index": 16
     },
     {
@@ -20546,24 +20481,29 @@
       "index": 38
     },
     {
+      "where": "http://people.apache.org/list_A.html",
+      "count": 8,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/list_E.html",
+      "count": 8,
+      "index": 16
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
       "count": 8,
       "index": 66
     },
     {
-      "where": "http://people.apache.org/list_A.html",
-      "count": 7,
-      "index": 16
-    },
-    {
-      "where": "http://people.apache.org/list_E.html",
-      "count": 7,
-      "index": 16
-    },
-    {
       "where": "http://people.apache.org/gallery.html",
-      "count": 5,
+      "count": 6,
       "index": 14
+    },
+    {
+      "where": "http://people.apache.org/list_I.html",
+      "count": 5,
+      "index": 16
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
@@ -20576,18 +20516,13 @@
       "index": 195
     },
     {
-      "where": "http://people.apache.org/list_I.html",
-      "count": 4,
-      "index": 16
-    },
-    {
       "where": "http://people.apache.org/map.html",
-      "count": 3,
+      "count": 4,
       "index": 6
     },
     {
       "where": "http://people.apache.org/resources.html",
-      "count": 3,
+      "count": 4,
       "index": 13
     },
     {
@@ -20601,6 +20536,11 @@
       "index": 155
     },
     {
+      "where": "http://people.apache.org/calendar.html",
+      "count": 2,
+      "index": 12
+    },
+    {
       "where": "http://people.apache.org/events.html",
       "count": 2,
       "index": 15
@@ -20609,11 +20549,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
       "count": 2,
       "index": 129
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 1,
-      "index": 12
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index.html?constant-values.html",
@@ -20670,12 +20605,12 @@
     {
       "where": "http://www.apache.org",
       "count": 1,
-      "index": 832
+      "index": 841
     },
     {
       "where": "http://www.apache.org/",
       "count": 1,
-      "index": 832
+      "index": 841
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -20685,7 +20620,7 @@
     {
       "where": "http://people.apache.org/projects.html",
       "count": 1,
-      "index": 3374
+      "index": 3379
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index-all.html",
@@ -20863,7 +20798,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1320,
+      "count": 1323,
       "index": 1
     },
     {
@@ -20883,7 +20818,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 485,
+      "count": 491,
       "index": 1
     },
     {
@@ -20893,7 +20828,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 475,
+      "count": 478,
       "index": 3
     },
     {
@@ -20917,19 +20852,19 @@
       "index": 1
     },
     {
-      "where": "http://www.apache.org",
+      "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 285,
+      "index": 5
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 272,
       "index": 4
     },
     {
       "where": "http://www.apache.org/",
-      "count": 285,
+      "count": 272,
       "index": 4
-    },
-    {
-      "where": "http://www.apache.org/foundation/sponsorship.html",
-      "count": 285,
-      "index": 5
     },
     {
       "where": "http://people.apache.org/list_G.html",
@@ -20938,7 +20873,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 230,
+      "count": 234,
       "index": 1
     },
     {
@@ -20993,7 +20928,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 115,
+      "count": 118,
       "index": 1
     },
     {
@@ -21184,16 +21119,6 @@
       "index": 7
     },
     {
-      "where": "http://www.apache.org",
-      "count": 21,
-      "index": 19
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 21,
-      "index": 19
-    },
-    {
       "where": "http://people.apache.org/events.html",
       "count": 20,
       "index": 3
@@ -21207,6 +21132,16 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
       "count": 19,
       "index": 7
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 19,
+      "index": 19
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 19,
+      "index": 19
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
@@ -21422,12 +21357,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 55,
+      "count": 54,
       "index": 6
     },
     {
       "where": "http://www.apache.org/",
-      "count": 55,
+      "count": 54,
       "index": 6
     },
     {
@@ -21442,7 +21377,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 47,
+      "count": 49,
       "index": 27
     },
     {
@@ -21649,12 +21584,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 19,
+      "count": 18,
       "index": 15
     },
     {
       "where": "http://www.apache.org/",
-      "count": 19,
+      "count": 18,
       "index": 15
     },
     {
@@ -21805,6 +21740,11 @@
       "index": 209
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 11,
+      "index": 105
+    },
+    {
       "where": "http://people.apache.org/list_H.html",
       "count": 11,
       "index": 151
@@ -21817,17 +21757,12 @@
     {
       "where": "http://www.apache.org",
       "count": 11,
-      "index": 390
+      "index": 433
     },
     {
       "where": "http://www.apache.org/",
       "count": 11,
-      "index": 390
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 10,
-      "index": 105
+      "index": 433
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -21942,7 +21877,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 2,
-      "index": 400
+      "index": 405
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -21967,7 +21902,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 2,
-      "index": 1936
+      "index": 1941
     },
     {
       "where": "http://www.apache.org/foundation/members.html",
@@ -22059,12 +21994,12 @@
     {
       "where": "http://www.apache.org",
       "count": 7,
-      "index": 389
+      "index": 432
     },
     {
       "where": "http://www.apache.org/",
       "count": 7,
-      "index": 389
+      "index": 432
     },
     {
       "where": "http://people.apache.org/list_D.html",
@@ -22274,19 +22209,19 @@
       "index": 5
     },
     {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
+      "count": 32,
+      "index": 2
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 33,
+      "count": 32,
       "index": 84
     },
     {
       "where": "http://www.apache.org/",
-      "count": 33,
-      "index": 84
-    },
-    {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
       "count": 32,
-      "index": 2
+      "index": 84
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -22457,7 +22392,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 536,
+      "count": 537,
       "index": 10
     },
     {
@@ -22477,12 +22412,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 251,
+      "count": 252,
       "index": 2
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 199,
+      "count": 201,
       "index": 7
     },
     {
@@ -22517,12 +22452,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 101,
+      "count": 110,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 101,
+      "count": 110,
       "index": 8
     },
     {
@@ -22556,6 +22491,11 @@
       "index": 1
     },
     {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 46,
+      "index": 7
+    },
+    {
       "where": "http://people.apache.org/list_C.html",
       "count": 46,
       "index": 9
@@ -22564,11 +22504,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
       "count": 45,
       "index": 1
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 45,
-      "index": 7
     },
     {
       "where": "http://people.apache.org/list_B.html",
@@ -22587,7 +22522,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 33,
+      "count": 34,
       "index": 9
     },
     {
@@ -22709,12 +22644,12 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 287,
+      "count": 288,
       "index": 10
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 155,
+      "count": 156,
       "index": 9
     },
     {
@@ -22734,7 +22669,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 91,
+      "count": 93,
       "index": 7
     },
     {
@@ -22753,14 +22688,14 @@
       "index": 7
     },
     {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 26,
+      "index": 7
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
       "count": 26,
       "index": 30
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 25,
-      "index": 7
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -22774,12 +22709,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 20,
+      "count": 23,
       "index": 12
     },
     {
       "where": "http://www.apache.org/",
-      "count": 20,
+      "count": 23,
       "index": 12
     },
     {
@@ -22799,7 +22734,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 15,
+      "count": 16,
       "index": 9
     },
     {
@@ -22993,12 +22928,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 10,
+      "count": 11,
       "index": 150
     },
     {
       "where": "http://www.apache.org/",
-      "count": 10,
+      "count": 11,
       "index": 150
     },
     {
@@ -23160,7 +23095,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 230,
+      "count": 231,
       "index": 4
     },
     {
@@ -23180,7 +23115,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 123,
+      "count": 124,
       "index": 3
     },
     {
@@ -23190,7 +23125,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 105,
+      "count": 106,
       "index": 16
     },
     {
@@ -23209,8 +23144,18 @@
       "index": 37
     },
     {
+      "where": "http://www.apache.org",
+      "count": 55,
+      "index": 1
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 55,
+      "index": 1
+    },
+    {
       "where": "http://people.apache.org/list_G.html",
-      "count": 53,
+      "count": 54,
       "index": 16
     },
     {
@@ -23219,43 +23164,33 @@
       "index": 1
     },
     {
-      "where": "http://www.apache.org",
-      "count": 45,
-      "index": 1
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 45,
-      "index": 1
-    },
-    {
       "where": "http://people.apache.org/list_C.html",
-      "count": 42,
+      "count": 43,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 36,
+      "count": 37,
       "index": 16
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
+      "count": 35,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/list_D.html",
       "count": 34,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 33,
-      "index": 16
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 32,
+      "count": 34,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 31,
+      "count": 32,
       "index": 16
     },
     {
@@ -23265,13 +23200,18 @@
     },
     {
       "where": "http://people.apache.org/",
-      "count": 26,
+      "count": 27,
       "index": 13
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 26,
+      "count": 27,
       "index": 13
+    },
+    {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 25,
+      "index": 14
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
@@ -23279,14 +23219,14 @@
       "index": 9
     },
     {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 24,
-      "index": 14
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
       "count": 22,
       "index": 9
+    },
+    {
+      "where": "http://people.apache.org/list_J.html",
+      "count": 22,
+      "index": 16
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -23294,8 +23234,8 @@
       "index": 38
     },
     {
-      "where": "http://people.apache.org/list_J.html",
-      "count": 21,
+      "where": "http://people.apache.org/list_F.html",
+      "count": 18,
       "index": 16
     },
     {
@@ -23304,18 +23244,13 @@
       "index": 9
     },
     {
-      "where": "http://people.apache.org/list_F.html",
+      "where": "http://people.apache.org/list_A.html",
       "count": 17,
       "index": 16
     },
     {
-      "where": "http://people.apache.org/list_A.html",
-      "count": 16,
-      "index": 16
-    },
-    {
       "where": "http://people.apache.org/list_E.html",
-      "count": 13,
+      "count": 14,
       "index": 16
     },
     {
@@ -23324,34 +23259,34 @@
       "index": 3
     },
     {
+      "where": "http://people.apache.org/map.html",
+      "count": 10,
+      "index": 4
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
       "count": 10,
       "index": 9
     },
     {
-      "where": "http://people.apache.org/map.html",
+      "where": "http://people.apache.org/resources.html",
       "count": 9,
-      "index": 4
+      "index": 13
     },
     {
-      "where": "http://people.apache.org/resources.html",
+      "where": "http://people.apache.org/list_I.html",
+      "count": 9,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/calendar.html",
       "count": 8,
-      "index": 13
+      "index": 12
     },
     {
       "where": "http://people.apache.org/events.html",
       "count": 8,
       "index": 15
-    },
-    {
-      "where": "http://people.apache.org/list_I.html",
-      "count": 8,
-      "index": 16
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 7,
-      "index": 12
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-use.html",
@@ -23471,14 +23406,14 @@
       "index": 139
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 7,
+      "index": 213
+    },
+    {
       "where": "http://people.apache.org/list_J.html",
       "count": 6,
       "index": 104
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 6,
-      "index": 213
     },
     {
       "where": "http://people.apache.org/list_B.html",
@@ -23511,19 +23446,19 @@
       "index": 146
     },
     {
+      "where": "http://people.apache.org/foaf/index.html",
+      "count": 2,
+      "index": 337
+    },
+    {
       "where": "http://www.apache.org",
       "count": 2,
-      "index": 315
+      "index": 523
     },
     {
       "where": "http://www.apache.org/",
       "count": 2,
-      "index": 315
-    },
-    {
-      "where": "http://people.apache.org/foaf/index.html",
-      "count": 2,
-      "index": 337
+      "index": 523
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -23554,7 +23489,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 432,
+      "count": 433,
       "index": 10
     },
     {
@@ -23569,7 +23504,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 225,
+      "count": 226,
       "index": 9
     },
     {
@@ -23579,7 +23514,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 147,
+      "count": 149,
       "index": 7
     },
     {
@@ -23609,17 +23544,17 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 44,
+      "count": 43,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 44,
+      "count": 43,
       "index": 8
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 39,
+      "count": 40,
       "index": 7
     },
     {
@@ -23644,7 +23579,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 25,
+      "count": 26,
       "index": 9
     },
     {
@@ -23807,7 +23742,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 10,
-      "index": 867
+      "index": 872
     },
     {
       "where": "http://www.apache.org/foundation/how-it-works.html",
@@ -23827,12 +23762,12 @@
     {
       "where": "http://www.apache.org",
       "count": 3,
-      "index": 404
+      "index": 447
     },
     {
       "where": "http://www.apache.org/",
       "count": 3,
-      "index": 404
+      "index": 447
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -23932,6 +23867,16 @@
       "index": 118
     },
     {
+      "where": "http://www.apache.org",
+      "count": 8,
+      "index": 382
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 8,
+      "index": 382
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
       "count": 7,
       "index": 62
@@ -23945,16 +23890,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 6,
       "index": 324
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 6,
-      "index": 416
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 6,
-      "index": 416
     },
     {
       "where": "http://people.apache.org/list_K.html",
@@ -24064,7 +23999,7 @@
     {
       "where": "http://people.apache.org/list_D.html",
       "count": 1,
-      "index": 417
+      "index": 442
     }
   ],
   "oa ob oc od oe of og oh oi oj ok ol om": [
@@ -24124,6 +24059,16 @@
       "index": 55
     },
     {
+      "where": "http://www.apache.org",
+      "count": 17,
+      "index": 57
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 17,
+      "index": 57
+    },
+    {
       "where": "http://www.apache.org/foundation/contact.html",
       "count": 17,
       "index": 63
@@ -24132,16 +24077,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
       "count": 15,
       "index": 50
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 15,
-      "index": 57
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 15,
-      "index": 57
     },
     {
       "where": "http://people.apache.org/committers.html",
@@ -24326,14 +24261,14 @@
       "index": 82
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 19,
+      "index": 100
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index-all.html",
       "count": 19,
       "index": 6133
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 18,
-      "index": 100
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -24358,7 +24293,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 7,
-      "index": 196
+      "index": 201
     },
     {
       "where": "http://www.apache.org/foundation/glossary.html",
@@ -24373,12 +24308,12 @@
     {
       "where": "http://www.apache.org",
       "count": 3,
-      "index": 324
+      "index": 333
     },
     {
       "where": "http://www.apache.org/",
       "count": 3,
-      "index": 324
+      "index": 333
     },
     {
       "where": "http://people.apache.org/list_I.html",
@@ -24486,7 +24421,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1551,
+      "count": 1554,
       "index": 1
     },
     {
@@ -24506,12 +24441,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 596,
+      "count": 599,
       "index": 3
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 565,
+      "count": 571,
       "index": 1
     },
     {
@@ -24551,22 +24486,22 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 350,
+      "count": 337,
       "index": 4
     },
     {
       "where": "http://www.apache.org/",
-      "count": 350,
+      "count": 337,
       "index": 4
+    },
+    {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 309,
+      "index": 1
     },
     {
       "where": "http://people.apache.org/list_H.html",
       "count": 307,
-      "index": 1
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 301,
       "index": 1
     },
     {
@@ -24621,7 +24556,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 139,
+      "count": 142,
       "index": 1
     },
     {
@@ -24802,6 +24737,16 @@
       "index": 62
     },
     {
+      "where": "http://www.apache.org",
+      "count": 7,
+      "index": 382
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 7,
+      "index": 382
+    },
+    {
       "where": "http://people.apache.org/list_K.html",
       "count": 5,
       "index": 190
@@ -24810,16 +24755,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
       "count": 5,
       "index": 385
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 5,
-      "index": 416
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 5,
-      "index": 416
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -24919,7 +24854,7 @@
     {
       "where": "http://people.apache.org/list_D.html",
       "count": 1,
-      "index": 417
+      "index": 442
     }
   ],
   "fa fe fi fo fu": [
@@ -24979,6 +24914,16 @@
       "index": 60
     },
     {
+      "where": "http://www.apache.org",
+      "count": 46,
+      "index": 6
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 46,
+      "index": 6
+    },
+    {
       "where": "http://people.apache.org/list_B.html",
       "count": 45,
       "index": 78
@@ -24999,16 +24944,6 @@
       "index": 1
     },
     {
-      "where": "http://www.apache.org",
-      "count": 40,
-      "index": 6
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 40,
-      "index": 6
-    },
-    {
       "where": "http://people.apache.org/list_H.html",
       "count": 38,
       "index": 68
@@ -25020,7 +24955,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 31,
+      "count": 33,
       "index": 103
     },
     {
@@ -25177,7 +25112,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 265,
+      "count": 266,
       "index": 4
     },
     {
@@ -25207,12 +25142,12 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 134,
+      "count": 135,
       "index": 3
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 127,
+      "count": 128,
       "index": 16
     },
     {
@@ -25231,47 +25166,52 @@
       "index": 9
     },
     {
+      "where": "http://www.apache.org",
+      "count": 66,
+      "index": 1
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 66,
+      "index": 1
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
       "count": 63,
       "index": 1
     },
     {
-      "where": "http://www.apache.org",
-      "count": 55,
-      "index": 1
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 55,
-      "index": 1
-    },
-    {
       "where": "http://people.apache.org/list_G.html",
-      "count": 55,
+      "count": 56,
       "index": 16
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 49,
+      "count": 50,
       "index": 2
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 45,
+      "count": 46,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 40,
+      "count": 41,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 35,
+      "count": 37,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_H.html",
+      "count": 36,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/list_K.html",
       "count": 35,
       "index": 16
     },
@@ -25281,28 +25221,23 @@
       "index": 38
     },
     {
-      "where": "http://people.apache.org/list_K.html",
-      "count": 34,
-      "index": 16
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
       "count": 31,
       "index": 10
     },
     {
       "where": "http://people.apache.org/",
-      "count": 29,
+      "count": 30,
       "index": 13
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 29,
+      "count": 30,
       "index": 13
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 28,
+      "count": 29,
       "index": 14
     },
     {
@@ -25312,7 +25247,7 @@
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 25,
+      "count": 26,
       "index": 16
     },
     {
@@ -25327,18 +25262,23 @@
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 19,
+      "count": 20,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 18,
+      "count": 19,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 15,
+      "count": 16,
       "index": 16
+    },
+    {
+      "where": "http://people.apache.org/map.html",
+      "count": 12,
+      "index": 4
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -25351,28 +25291,23 @@
       "index": 3
     },
     {
-      "where": "http://people.apache.org/map.html",
-      "count": 11,
-      "index": 4
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
       "count": 11,
       "index": 9
     },
     {
       "where": "http://people.apache.org/resources.html",
-      "count": 10,
+      "count": 11,
       "index": 13
     },
     {
       "where": "http://people.apache.org/list_I.html",
-      "count": 10,
+      "count": 11,
       "index": 16
     },
     {
       "where": "http://people.apache.org/calendar.html",
-      "count": 9,
+      "count": 10,
       "index": 12
     },
     {
@@ -25488,16 +25423,6 @@
       "index": 12
     },
     {
-      "where": "http://www.apache.org",
-      "count": 155,
-      "index": 6
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 155,
-      "index": 6
-    },
-    {
       "where": "http://people.apache.org/foaf/index.html",
       "count": 155,
       "index": 7
@@ -25511,6 +25436,16 @@
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 150,
       "index": 4
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 150,
+      "index": 6
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 150,
+      "index": 6
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -25534,7 +25469,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 113,
+      "count": 117,
       "index": 3
     },
     {
@@ -25676,12 +25611,12 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 259,
+      "count": 260,
       "index": 10
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 144,
+      "count": 145,
       "index": 9
     },
     {
@@ -25701,7 +25636,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 82,
+      "count": 84,
       "index": 7
     },
     {
@@ -25725,14 +25660,14 @@
       "index": 30
     },
     {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 23,
+      "index": 7
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 23,
       "index": 142
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 22,
-      "index": 7
     },
     {
       "where": "http://people.apache.org/list_C.html",
@@ -25745,9 +25680,24 @@
       "index": 9
     },
     {
+      "where": "http://www.apache.org",
+      "count": 16,
+      "index": 12
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 16,
+      "index": 12
+    },
+    {
       "where": "http://www.apache.org/foundation/contact.html",
       "count": 14,
       "index": 8
+    },
+    {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 14,
+      "index": 9
     },
     {
       "where": "http://people.apache.org/list_F.html",
@@ -25755,24 +25705,9 @@
       "index": 9
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 13,
-      "index": 9
-    },
-    {
       "where": "http://people.apache.org/list_K.html",
       "count": 13,
       "index": 9
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 13,
-      "index": 12
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 13,
-      "index": 12
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
@@ -25947,16 +25882,6 @@
       "index": 74
     },
     {
-      "where": "http://www.apache.org",
-      "count": 21,
-      "index": 114
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 21,
-      "index": 114
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
       "count": 18,
       "index": 74
@@ -25965,6 +25890,16 @@
       "where": "http://www.apache.org/foundation/",
       "count": 18,
       "index": 97
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 18,
+      "index": 114
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 18,
+      "index": 114
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
@@ -26251,16 +26186,6 @@
       "index": 31
     },
     {
-      "where": "http://www.apache.org",
-      "count": 16,
-      "index": 181
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 16,
-      "index": 181
-    },
-    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-tree.html",
       "count": 14,
       "index": 32
@@ -26279,6 +26204,16 @@
       "where": "http://people.apache.org/list_H.html",
       "count": 11,
       "index": 31
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 11,
+      "index": 378
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 11,
+      "index": 378
     },
     {
       "where": "http://people.apache.org/list_A.html",
@@ -26513,19 +26448,19 @@
       "index": 3
     },
     {
+      "where": "http://people.apache.org/list_H.html",
+      "count": 97,
+      "index": 3
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 98,
+      "count": 89,
       "index": 27
     },
     {
       "where": "http://www.apache.org/",
-      "count": 98,
+      "count": 89,
       "index": 27
-    },
-    {
-      "where": "http://people.apache.org/list_H.html",
-      "count": 97,
-      "index": 3
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
@@ -26533,14 +26468,14 @@
       "index": 3
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 73,
+      "index": 3
+    },
+    {
       "where": "http://people.apache.org/foaf/index.html",
       "count": 72,
       "index": 21
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 71,
-      "index": 3
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -26676,7 +26611,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 178,
+      "count": 181,
       "index": 5
     },
     {
@@ -26696,17 +26631,17 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 99,
+      "count": 102,
       "index": 19
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 83,
+      "count": 89,
       "index": 17
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 53,
+      "count": 56,
       "index": 19
     },
     {
@@ -26745,6 +26680,21 @@
       "index": 11
     },
     {
+      "where": "http://www.apache.org",
+      "count": 26,
+      "index": 30
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 26,
+      "index": 30
+    },
+    {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 23,
+      "index": 17
+    },
+    {
       "where": "http://people.apache.org/list_C.html",
       "count": 23,
       "index": 19
@@ -26758,21 +26708,6 @@
       "where": "http://people.apache.org/foaf/index.html",
       "count": 20,
       "index": 3
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 20,
-      "index": 17
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 20,
-      "index": 30
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 20,
-      "index": 30
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -27049,16 +26984,6 @@
       "index": 4
     },
     {
-      "where": "http://www.apache.org",
-      "count": 20,
-      "index": 8
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 20,
-      "index": 8
-    },
-    {
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 18,
       "index": 3
@@ -27067,6 +26992,16 @@
       "where": "http://www.apache.org/foundation/",
       "count": 17,
       "index": 4
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 16,
+      "index": 8
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 16,
+      "index": 8
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -27297,12 +27232,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 27,
+      "count": 32,
       "index": 6
     },
     {
       "where": "http://www.apache.org/",
-      "count": 27,
+      "count": 32,
       "index": 6
     },
     {
@@ -27443,7 +27378,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 3,
-      "index": 274
+      "index": 279
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index.html?constant-values.html",
@@ -27499,7 +27434,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 205,
+      "count": 206,
       "index": 131
     },
     {
@@ -27509,7 +27444,7 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 105,
+      "count": 106,
       "index": 89
     },
     {
@@ -27524,7 +27459,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 66,
+      "count": 68,
       "index": 68
     },
     {
@@ -27548,19 +27483,19 @@
       "index": 128
     },
     {
-      "where": "http://people.apache.org/list_G.html",
-      "count": 26,
-      "index": 66
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 25,
+      "count": 29,
       "index": 105
     },
     {
       "where": "http://www.apache.org/",
-      "count": 25,
+      "count": 29,
       "index": 105
+    },
+    {
+      "where": "http://people.apache.org/list_G.html",
+      "count": 26,
+      "index": 66
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -27569,7 +27504,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 18,
+      "count": 19,
       "index": 99
     },
     {
@@ -27634,7 +27569,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 7,
+      "count": 8,
       "index": 95
     },
     {
@@ -27832,12 +27767,12 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 3,
-      "index": 137
+      "index": 142
     },
     {
       "where": "http://people.apache.org/committers.html",
       "count": 3,
-      "index": 668
+      "index": 673
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-tree.html",
@@ -27892,7 +27827,7 @@
     {
       "where": "http://people.apache.org/list_D.html",
       "count": 2,
-      "index": 498
+      "index": 523
     },
     {
       "where": "http://people.apache.org/list_G.html",
@@ -27967,16 +27902,6 @@
       "index": 32
     },
     {
-      "where": "http://www.apache.org",
-      "count": 12,
-      "index": 181
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 12,
-      "index": 181
-    },
-    {
       "where": "http://people.apache.org/list_C.html",
       "count": 9,
       "index": 174
@@ -28020,6 +27945,16 @@
       "where": "http://www.apache.org/foundation/glossary.html",
       "count": 7,
       "index": 360
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 7,
+      "index": 378
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 7,
+      "index": 378
     },
     {
       "where": "http://www.apache.org/foundation/how-it-works.html",
@@ -28095,7 +28030,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1279,
+      "count": 1280,
       "index": 8
     },
     {
@@ -28110,12 +28045,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 604,
+      "count": 605,
       "index": 1
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 425,
+      "count": 427,
       "index": 5
     },
     {
@@ -28165,12 +28100,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 165,
+      "count": 160,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 165,
+      "count": 160,
       "index": 8
     },
     {
@@ -28204,17 +28139,17 @@
       "index": 2
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 110,
+      "index": 3
+    },
+    {
       "where": "http://people.apache.org/gallery.html",
-      "count": 108,
+      "count": 109,
       "index": 5
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
-      "count": 106,
-      "index": 3
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
       "count": 106,
       "index": 3
     },
@@ -28386,16 +28321,6 @@
       "index": 269
     },
     {
-      "where": "http://www.apache.org",
-      "count": 4,
-      "index": 351
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 4,
-      "index": 351
-    },
-    {
       "where": "http://people.apache.org/list_E.html",
       "count": 3,
       "index": 137
@@ -28414,6 +28339,16 @@
       "where": "http://people.apache.org/list_A.html",
       "count": 2,
       "index": 125
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 2,
+      "index": 394
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 2,
+      "index": 394
     },
     {
       "where": "http://www.apache.org/foundation/preFAQ.html",
@@ -28626,7 +28561,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 23,
+      "count": 24,
       "index": 12
     },
     {
@@ -28813,13 +28748,23 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 265,
+      "count": 266,
       "index": 38
     },
     {
       "where": "http://www.apache.org/foundation/",
       "count": 215,
       "index": 3
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 199,
+      "index": 2
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 199,
+      "index": 2
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -28832,18 +28777,8 @@
       "index": 9
     },
     {
-      "where": "http://www.apache.org",
-      "count": 181,
-      "index": 2
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 181,
-      "index": 2
-    },
-    {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 138,
+      "count": 137,
       "index": 40
     },
     {
@@ -28873,7 +28808,7 @@
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 70,
+      "count": 69,
       "index": 40
     },
     {
@@ -28883,7 +28818,7 @@
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 59,
+      "count": 58,
       "index": 40
     },
     {
@@ -28893,22 +28828,17 @@
     },
     {
       "where": "http://people.apache.org/",
-      "count": 45,
+      "count": 44,
       "index": 37
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 45,
+      "count": 44,
       "index": 37
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 41,
-      "index": 40
-    },
-    {
-      "where": "http://people.apache.org/list_B.html",
-      "count": 36,
+      "count": 40,
       "index": 40
     },
     {
@@ -28917,8 +28847,8 @@
       "index": 11
     },
     {
-      "where": "http://people.apache.org/list_K.html",
-      "count": 33,
+      "where": "http://people.apache.org/list_B.html",
+      "count": 35,
       "index": 40
     },
     {
@@ -28927,18 +28857,18 @@
       "index": 39
     },
     {
-      "where": "http://people.apache.org/list_F.html",
+      "where": "http://people.apache.org/list_D.html",
       "count": 32,
       "index": 40
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 31,
+      "where": "http://people.apache.org/list_K.html",
+      "count": 32,
       "index": 40
     },
     {
-      "where": "http://people.apache.org/list_J.html",
-      "count": 30,
+      "where": "http://people.apache.org/list_F.html",
+      "count": 31,
       "index": 40
     },
     {
@@ -28947,39 +28877,34 @@
       "index": 174
     },
     {
+      "where": "http://people.apache.org/list_J.html",
+      "count": 29,
+      "index": 40
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
       "count": 28,
       "index": 9
     },
     {
       "where": "http://people.apache.org/resources.html",
-      "count": 28,
+      "count": 27,
       "index": 37
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 22,
+      "count": 21,
       "index": 40
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 22,
+      "count": 21,
       "index": 40
     },
     {
       "where": "http://people.apache.org/map.html",
-      "count": 11,
+      "count": 10,
       "index": 41
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 9,
-      "index": 36
-    },
-    {
-      "where": "http://people.apache.org/list_I.html",
-      "count": 9,
-      "index": 40
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-use.html",
@@ -29000,6 +28925,16 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/chainsaw/package-use.html",
       "count": 8,
       "index": 7
+    },
+    {
+      "where": "http://people.apache.org/calendar.html",
+      "count": 8,
+      "index": 36
+    },
+    {
+      "where": "http://people.apache.org/list_I.html",
+      "count": 8,
+      "index": 40
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-tree.html",
@@ -29065,7 +29000,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 23,
+      "count": 24,
       "index": 51
     },
     {
@@ -29154,6 +29089,16 @@
       "index": 51
     },
     {
+      "where": "http://www.apache.org",
+      "count": 5,
+      "index": 149
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 5,
+      "index": 149
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-tree.html",
       "count": 4,
       "index": 34
@@ -29167,16 +29112,6 @@
       "where": "http://people.apache.org/gallery.html",
       "count": 4,
       "index": 49
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 4,
-      "index": 149
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 4,
-      "index": 149
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -29329,7 +29264,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 146,
+      "count": 149,
       "index": 20
     },
     {
@@ -29349,17 +29284,17 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 75,
+      "count": 78,
       "index": 19
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 68,
+      "count": 74,
       "index": 17
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 43,
+      "count": 46,
       "index": 19
     },
     {
@@ -29388,6 +29323,16 @@
       "index": 11
     },
     {
+      "where": "http://www.apache.org",
+      "count": 23,
+      "index": 30
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 23,
+      "index": 30
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
       "count": 22,
       "index": 1
@@ -29396,6 +29341,11 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
       "count": 21,
       "index": 13
+    },
+    {
+      "where": "http://people.apache.org/gallery.html",
+      "count": 21,
+      "index": 17
     },
     {
       "where": "http://www.apache.org/foundation/preFAQ.html",
@@ -29416,21 +29366,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
       "count": 18,
       "index": 11
-    },
-    {
-      "where": "http://people.apache.org/gallery.html",
-      "count": 18,
-      "index": 17
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 18,
-      "index": 30
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 18,
-      "index": 30
     },
     {
       "where": "http://people.apache.org/list_B.html",
@@ -29646,12 +29581,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 18,
+      "count": 17,
       "index": 10
     },
     {
       "where": "http://www.apache.org/",
-      "count": 18,
+      "count": 17,
       "index": 10
     },
     {
@@ -29712,7 +29647,7 @@
     {
       "where": "http://people.apache.org/gallery.html",
       "count": 7,
-      "index": 191
+      "index": 196
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/allclasses-noframe.html",
@@ -29818,7 +29753,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 920,
+      "count": 921,
       "index": 3
     },
     {
@@ -29838,12 +29773,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 438,
+      "count": 439,
       "index": 2
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 356,
+      "count": 358,
       "index": 7
     },
     {
@@ -29868,12 +29803,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 188,
+      "count": 193,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 188,
+      "count": 193,
       "index": 8
     },
     {
@@ -29928,7 +29863,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 113,
+      "count": 116,
       "index": 9
     },
     {
@@ -29953,7 +29888,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 88,
+      "count": 89,
       "index": 3
     },
     {
@@ -30075,7 +30010,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 207,
+      "count": 208,
       "index": 4
     },
     {
@@ -30095,12 +30030,12 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 108,
+      "count": 109,
       "index": 3
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 95,
+      "count": 96,
       "index": 16
     },
     {
@@ -30120,42 +30055,42 @@
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 49,
+      "count": 50,
       "index": 16
     },
     {
       "where": "http://www.apache.org",
-      "count": 39,
+      "count": 49,
       "index": 1
     },
     {
       "where": "http://www.apache.org/",
-      "count": 39,
+      "count": 49,
       "index": 1
     },
     {
       "where": "http://people.apache.org/list_C.html",
-      "count": 39,
+      "count": 40,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 34,
+      "count": 35,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 31,
+      "count": 32,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 28,
+      "count": 30,
       "index": 16
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 28,
+      "count": 29,
       "index": 16
     },
     {
@@ -30165,27 +30100,32 @@
     },
     {
       "where": "http://people.apache.org/",
-      "count": 25,
+      "count": 26,
       "index": 13
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 25,
+      "count": 26,
       "index": 13
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 20,
+      "count": 21,
       "index": 16
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 19,
+      "count": 20,
       "index": 14
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 18,
+      "count": 19,
+      "index": 16
+    },
+    {
+      "where": "http://people.apache.org/list_F.html",
+      "count": 17,
       "index": 16
     },
     {
@@ -30194,7 +30134,7 @@
       "index": 66
     },
     {
-      "where": "http://people.apache.org/list_F.html",
+      "where": "http://people.apache.org/list_A.html",
       "count": 16,
       "index": 16
     },
@@ -30202,11 +30142,6 @@
       "where": "http://www.apache.org/foundation/contact.html",
       "count": 16,
       "index": 38
-    },
-    {
-      "where": "http://people.apache.org/list_A.html",
-      "count": 15,
-      "index": 16
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -30220,7 +30155,7 @@
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 10,
+      "count": 11,
       "index": 16
     },
     {
@@ -30229,14 +30164,24 @@
       "index": 30
     },
     {
+      "where": "http://people.apache.org/map.html",
+      "count": 9,
+      "index": 4
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
       "count": 9,
       "index": 132
     },
     {
-      "where": "http://people.apache.org/map.html",
+      "where": "http://people.apache.org/resources.html",
       "count": 8,
-      "index": 4
+      "index": 13
+    },
+    {
+      "where": "http://people.apache.org/list_I.html",
+      "count": 8,
+      "index": 16
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/constant-values.html",
@@ -30244,14 +30189,9 @@
       "index": 3
     },
     {
-      "where": "http://people.apache.org/resources.html",
-      "count": 7,
-      "index": 13
-    },
-    {
-      "where": "http://people.apache.org/list_I.html",
-      "count": 7,
-      "index": 16
+      "where": "http://people.apache.org/calendar.html",
+      "count": 5,
+      "index": 12
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -30262,11 +30202,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
       "count": 5,
       "index": 37
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
-      "count": 4,
-      "index": 12
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/index.html?constant-values.html",
@@ -30347,12 +30282,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 27,
+      "count": 25,
       "index": 84
     },
     {
       "where": "http://www.apache.org/",
-      "count": 27,
+      "count": 25,
       "index": 84
     },
     {
@@ -30504,18 +30439,18 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 322,
+      "count": 323,
       "index": 10
+    },
+    {
+      "where": "http://people.apache.org/committers.html",
+      "count": 174,
+      "index": 9
     },
     {
       "where": "http://www.apache.org/foundation/members.html",
       "count": 173,
       "index": 1
-    },
-    {
-      "where": "http://people.apache.org/committers.html",
-      "count": 173,
-      "index": 9
     },
     {
       "where": "http://www.apache.org/foundation/how-it-works.html",
@@ -30529,7 +30464,7 @@
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 104,
+      "count": 106,
       "index": 7
     },
     {
@@ -30549,13 +30484,23 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 29,
+      "count": 30,
       "index": 7
     },
     {
       "where": "http://people.apache.org/list_C.html",
       "count": 27,
       "index": 9
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 27,
+      "index": 12
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 27,
+      "index": 12
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/deprecated-list.html",
@@ -30566,16 +30511,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 25,
       "index": 74
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 24,
-      "index": 12
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 24,
-      "index": 12
     },
     {
       "where": "http://people.apache.org/list_B.html",
@@ -30593,13 +30528,13 @@
       "index": 8
     },
     {
-      "where": "http://people.apache.org/list_K.html",
+      "where": "http://people.apache.org/list_D.html",
       "count": 17,
       "index": 9
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 16,
+      "where": "http://people.apache.org/list_K.html",
+      "count": 17,
       "index": 9
     },
     {
@@ -30780,16 +30715,6 @@
       "index": 137
     },
     {
-      "where": "http://www.apache.org",
-      "count": 13,
-      "index": 181
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 13,
-      "index": 181
-    },
-    {
       "where": "http://people.apache.org/gallery.html",
       "count": 11,
       "index": 104
@@ -30828,6 +30753,16 @@
       "where": "http://people.apache.org/list_F.html",
       "count": 6,
       "index": 90
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 6,
+      "index": 651
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 6,
+      "index": 651
     },
     {
       "where": "http://people.apache.org/list_A.html",
@@ -30967,19 +30902,19 @@
       "index": 23
     },
     {
+      "where": "http://www.apache.org/foundation/contact.html",
+      "count": 36,
+      "index": 2
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 37,
+      "count": 33,
       "index": 27
     },
     {
       "where": "http://www.apache.org/",
-      "count": 37,
+      "count": 33,
       "index": 27
-    },
-    {
-      "where": "http://www.apache.org/foundation/contact.html",
-      "count": 36,
-      "index": 2
     },
     {
       "where": "http://people.apache.org/blogs.html",
@@ -31184,9 +31119,19 @@
       "index": 242
     },
     {
+      "where": "http://www.apache.org",
+      "count": 7,
+      "index": 196
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 7,
+      "index": 196
+    },
+    {
       "where": "http://people.apache.org/committers.html",
       "count": 7,
-      "index": 729
+      "index": 734
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
@@ -31212,16 +31157,6 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
       "count": 3,
       "index": 427
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 3,
-      "index": 460
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 3,
-      "index": 460
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-summary.html",
@@ -31341,19 +31276,19 @@
       "index": 3
     },
     {
+      "where": "http://www.apache.org/foundation/",
+      "count": 17,
+      "index": 4
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 18,
+      "count": 15,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 18,
+      "count": 15,
       "index": 8
-    },
-    {
-      "where": "http://www.apache.org/foundation/",
-      "count": 17,
-      "index": 4
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
@@ -31543,19 +31478,19 @@
       "index": 81
     },
     {
-      "where": "http://people.apache.org/blogs.html",
-      "count": 66,
-      "index": 138
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 53,
+      "count": 66,
       "index": 5
     },
     {
       "where": "http://www.apache.org/",
-      "count": 53,
+      "count": 66,
       "index": 5
+    },
+    {
+      "where": "http://people.apache.org/blogs.html",
+      "count": 66,
+      "index": 138
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -31654,7 +31589,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 6,
+      "count": 7,
       "index": 84
     },
     {
@@ -31756,12 +31691,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 6,
+      "count": 5,
       "index": 91
     },
     {
       "where": "http://www.apache.org/",
-      "count": 6,
+      "count": 5,
       "index": 91
     },
     {
@@ -31782,7 +31717,7 @@
     {
       "where": "http://people.apache.org/committers.html",
       "count": 4,
-      "index": 1406
+      "index": 1411
     },
     {
       "where": "http://www.apache.org/foundation/sponsorship.html",
@@ -31887,19 +31822,19 @@
       "index": 4
     },
     {
+      "where": "http://people.apache.org/list_C.html",
+      "count": 137,
+      "index": 3
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 140,
+      "count": 135,
       "index": 9
     },
     {
       "where": "http://www.apache.org/",
-      "count": 140,
+      "count": 135,
       "index": 9
-    },
-    {
-      "where": "http://people.apache.org/list_C.html",
-      "count": 137,
-      "index": 3
     },
     {
       "where": "http://people.apache.org/list_B.html",
@@ -31933,7 +31868,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 90,
+      "count": 93,
       "index": 3
     },
     {
@@ -32070,7 +32005,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 829,
+      "count": 830,
       "index": 10
     },
     {
@@ -32090,12 +32025,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 391,
+      "count": 392,
       "index": 1
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 297,
+      "count": 299,
       "index": 7
     },
     {
@@ -32130,12 +32065,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 141,
+      "count": 149,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 141,
+      "count": 149,
       "index": 8
     },
     {
@@ -32190,7 +32125,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 69,
+      "count": 70,
       "index": 7
     },
     {
@@ -32204,14 +32139,14 @@
       "index": 1
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 59,
+      "index": 9
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-summary.html",
       "count": 57,
       "index": 1
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 57,
-      "index": 9
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-summary.html",
@@ -32367,18 +32302,8 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 33,
+      "count": 35,
       "index": 103
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 27,
-      "index": 16
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 27,
-      "index": 16
     },
     {
       "where": "http://people.apache.org/blogs.html",
@@ -32394,6 +32319,16 @@
       "where": "http://www.apache.org/foundation/glossary.html",
       "count": 21,
       "index": 14
+    },
+    {
+      "where": "http://www.apache.org",
+      "count": 21,
+      "index": 16
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 21,
+      "index": 16
     },
     {
       "where": "http://www.apache.org/foundation/preFAQ.html",
@@ -32543,14 +32478,14 @@
       "index": 98
     },
     {
+      "where": "http://people.apache.org/list_D.html",
+      "count": 7,
+      "index": 181
+    },
+    {
       "where": "http://people.apache.org/list_K.html",
       "count": 5,
       "index": 162
-    },
-    {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 5,
-      "index": 181
     },
     {
       "where": "http://people.apache.org/list_H.html",
@@ -32595,12 +32530,12 @@
     {
       "where": "http://www.apache.org",
       "count": 2,
-      "index": 370
+      "index": 413
     },
     {
       "where": "http://www.apache.org/",
       "count": 2,
-      "index": 370
+      "index": 413
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-use.html",
@@ -32706,7 +32641,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 196,
+      "count": 195,
       "index": 42
     },
     {
@@ -32720,11 +32655,6 @@
       "index": 2
     },
     {
-      "where": "http://people.apache.org/blogs.html",
-      "count": 115,
-      "index": 39
-    },
-    {
       "where": "http://www.apache.org/foundation/",
       "count": 114,
       "index": 3
@@ -32735,34 +32665,39 @@
       "index": 13
     },
     {
+      "where": "http://people.apache.org/blogs.html",
+      "count": 114,
+      "index": 39
+    },
+    {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
       "count": 107,
       "index": 10
     },
     {
       "where": "http://www.apache.org",
-      "count": 96,
+      "count": 97,
       "index": 2
     },
     {
       "where": "http://www.apache.org/",
-      "count": 96,
+      "count": 97,
       "index": 2
     },
     {
       "where": "http://people.apache.org/foaf/index.html",
-      "count": 91,
-      "index": 41
-    },
-    {
-      "where": "http://people.apache.org/committers.html",
-      "count": 84,
+      "count": 90,
       "index": 41
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/help-doc.html",
       "count": 83,
       "index": 11
+    },
+    {
+      "where": "http://people.apache.org/committers.html",
+      "count": 83,
+      "index": 41
     },
     {
       "where": "http://www.apache.org/foundation/contact.html",
@@ -32786,23 +32721,23 @@
     },
     {
       "where": "http://people.apache.org/",
-      "count": 33,
+      "count": 32,
       "index": 38
     },
     {
       "where": "http://people.apache.org/index.html",
-      "count": 33,
+      "count": 32,
       "index": 38
-    },
-    {
-      "where": "http://people.apache.org/list_C.html",
-      "count": 27,
-      "index": 41
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/helpers/AbsoluteTimeDateFormat.html",
       "count": 26,
       "index": 10
+    },
+    {
+      "where": "http://people.apache.org/list_C.html",
+      "count": 26,
+      "index": 41
     },
     {
       "where": "http://people.apache.org/events.html",
@@ -32811,12 +32746,12 @@
     },
     {
       "where": "http://people.apache.org/resources.html",
-      "count": 19,
+      "count": 18,
       "index": 38
     },
     {
       "where": "http://people.apache.org/list_G.html",
-      "count": 19,
+      "count": 18,
       "index": 41
     },
     {
@@ -32826,17 +32761,17 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 16,
+      "count": 15,
       "index": 39
     },
     {
       "where": "http://people.apache.org/list_F.html",
-      "count": 15,
+      "count": 14,
       "index": 41
     },
     {
       "where": "http://people.apache.org/list_K.html",
-      "count": 14,
+      "count": 13,
       "index": 41
     },
     {
@@ -32851,37 +32786,37 @@
     },
     {
       "where": "http://people.apache.org/list_B.html",
-      "count": 12,
+      "count": 11,
       "index": 41
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 12,
+      "count": 11,
       "index": 41
     },
     {
       "where": "http://people.apache.org/list_H.html",
-      "count": 12,
+      "count": 11,
       "index": 41
     },
     {
       "where": "http://people.apache.org/list_J.html",
-      "count": 12,
+      "count": 11,
       "index": 41
     },
     {
       "where": "http://people.apache.org/list_A.html",
-      "count": 9,
+      "count": 8,
       "index": 41
     },
     {
       "where": "http://people.apache.org/list_E.html",
-      "count": 7,
+      "count": 6,
       "index": 41
     },
     {
       "where": "http://people.apache.org/map.html",
-      "count": 7,
+      "count": 6,
       "index": 42
     },
     {
@@ -32901,13 +32836,8 @@
     },
     {
       "where": "http://people.apache.org/list_I.html",
-      "count": 4,
-      "index": 41
-    },
-    {
-      "where": "http://people.apache.org/calendar.html",
       "count": 3,
-      "index": 37
+      "index": 41
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/overview-tree.html",
@@ -32928,6 +32858,11 @@
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/chainsaw/package-use.html",
       "count": 2,
       "index": 13
+    },
+    {
+      "where": "http://people.apache.org/calendar.html",
+      "count": 2,
+      "index": 37
     },
     {
       "where": "http://www.apache.org/foundation",
@@ -32953,12 +32888,12 @@
     },
     {
       "where": "http://www.apache.org",
-      "count": 8,
+      "count": 7,
       "index": 91
     },
     {
       "where": "http://www.apache.org/",
-      "count": 8,
+      "count": 7,
       "index": 91
     },
     {
@@ -33120,7 +33055,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 704,
+      "count": 705,
       "index": 3
     },
     {
@@ -33135,12 +33070,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 329,
+      "count": 330,
       "index": 2
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 277,
+      "count": 279,
       "index": 7
     },
     {
@@ -33174,19 +33109,19 @@
       "index": 7
     },
     {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
-      "count": 158,
-      "index": 2
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 150,
+      "count": 164,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 150,
+      "count": 164,
       "index": 8
+    },
+    {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-use.html",
+      "count": 158,
+      "index": 2
     },
     {
       "where": "http://people.apache.org/list_C.html",
@@ -33225,7 +33160,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 104,
+      "count": 107,
       "index": 9
     },
     {
@@ -33250,7 +33185,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 66,
+      "count": 67,
       "index": 3
     },
     {
@@ -33377,7 +33312,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 35,
+      "count": 36,
       "index": 198
     },
     {
@@ -33429,16 +33364,6 @@
       "where": "http://www.apache.org/foundation/sponsorship.html",
       "count": 5,
       "index": 226
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 3,
-      "index": 316
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 3,
-      "index": 316
     },
     {
       "where": "http://www.apache.org/foundation/",
@@ -33508,19 +33433,19 @@
       "index": 5
     },
     {
+      "where": "http://www.apache.org/foundation/sponsorship.html",
+      "count": 156,
+      "index": 5
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 162,
+      "count": 148,
       "index": 4
     },
     {
       "where": "http://www.apache.org/",
-      "count": 162,
+      "count": 148,
       "index": 4
-    },
-    {
-      "where": "http://www.apache.org/foundation/sponsorship.html",
-      "count": 156,
-      "index": 5
     },
     {
       "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/AsyncAppender.html",
@@ -33574,7 +33499,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 84,
+      "count": 85,
       "index": 1
     },
     {
@@ -33726,7 +33651,7 @@
     },
     {
       "where": "http://people.apache.org/projects.html",
-      "count": 1389,
+      "count": 1390,
       "index": 3
     },
     {
@@ -33746,12 +33671,12 @@
     },
     {
       "where": "http://people.apache.org/committers.html",
-      "count": 625,
+      "count": 626,
       "index": 1
     },
     {
       "where": "http://people.apache.org/blogs.html",
-      "count": 502,
+      "count": 504,
       "index": 7
     },
     {
@@ -33790,19 +33715,19 @@
       "index": 3
     },
     {
-      "where": "http://people.apache.org/list_C.html",
-      "count": 251,
-      "index": 3
-    },
-    {
       "where": "http://www.apache.org",
-      "count": 248,
+      "count": 253,
       "index": 8
     },
     {
       "where": "http://www.apache.org/",
-      "count": 248,
+      "count": 253,
       "index": 8
+    },
+    {
+      "where": "http://people.apache.org/list_C.html",
+      "count": 251,
+      "index": 3
     },
     {
       "where": "http://people.apache.org/list_B.html",
@@ -33841,7 +33766,7 @@
     },
     {
       "where": "http://people.apache.org/list_D.html",
-      "count": 175,
+      "count": 180,
       "index": 3
     },
     {
@@ -33866,7 +33791,7 @@
     },
     {
       "where": "http://people.apache.org/gallery.html",
-      "count": 118,
+      "count": 119,
       "index": 3
     },
     {
@@ -34032,6 +33957,16 @@
       "index": 33
     },
     {
+      "where": "http://www.apache.org",
+      "count": 17,
+      "index": 37
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 17,
+      "index": 37
+    },
+    {
       "where": "http://people.apache.org/foaf/index.html",
       "count": 16,
       "index": 128
@@ -34055,16 +33990,6 @@
       "where": "http://people.apache.org/list_H.html",
       "count": 13,
       "index": 94
-    },
-    {
-      "where": "http://www.apache.org",
-      "count": 12,
-      "index": 37
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 12,
-      "index": 37
     },
     {
       "where": "http://people.apache.org/list_C.html",
@@ -34543,19 +34468,19 @@
       "index": 105
     },
     {
+      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
+      "count": 3,
+      "index": 42
+    },
+    {
       "where": "http://www.apache.org",
-      "count": 4,
+      "count": 3,
       "index": 103
     },
     {
       "where": "http://www.apache.org/",
-      "count": 4,
-      "index": 103
-    },
-    {
-      "where": "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/package-summary.html",
       "count": 3,
-      "index": 42
+      "index": 103
     },
     {
       "where": "http://www.apache.org/foundation/members.html",
@@ -34585,7 +34510,7 @@
     {
       "where": "http://people.apache.org/blogs.html",
       "count": 1,
-      "index": 913
+      "index": 923
     }
   ],
   "i": [
@@ -34685,14 +34610,9 @@
       "index": 23
     },
     {
-      "where": "http://www.apache.org",
-      "count": 42,
-      "index": 27
-    },
-    {
-      "where": "http://www.apache.org/",
-      "count": 42,
-      "index": 27
+      "where": "http://people.apache.org/list_D.html",
+      "count": 39,
+      "index": 3
     },
     {
       "where": "http://people.apache.org/list_G.html",
@@ -34700,9 +34620,14 @@
       "index": 3
     },
     {
-      "where": "http://people.apache.org/list_D.html",
-      "count": 38,
-      "index": 3
+      "where": "http://www.apache.org",
+      "count": 39,
+      "index": 27
+    },
+    {
+      "where": "http://www.apache.org/",
+      "count": 39,
+      "index": 27
     },
     {
       "where": "http://people.apache.org/committers.html",

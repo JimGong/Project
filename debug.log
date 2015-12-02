@@ -1,411 +1,413 @@
-[21:23:54:164 debug] Driver.java@155 Time-limited test: $$$$$$$$$$$$$$$$$$ traversing URL
-[21:23:54:166 debug] MultiThreadInvertedIndexBuilder.java@135 Time-limited test: link passed in http://htmlhelp.com/reference/html40/olist.html
-[21:23:54:166 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/olist.html
-[21:23:54:166 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:03:437 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:03:437 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished http://htmlhelp.com/reference/html40/olist.html
-[21:24:03:437 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:03:438 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/olist.html, html is empty false
-[21:24:03:442 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 103
-[21:24:03:442 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/alist.html
-[21:24:03:442 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:21:344 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:21:345 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished http://htmlhelp.com/reference/html40/alist.html
-[21:24:21:345 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:21:345 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/alist.html, html is empty false
-[21:24:21:347 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 98
-[21:24:21:347 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/special/a.html
-[21:24:21:347 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:21:900 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:21:900 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished http://htmlhelp.com/reference/html40/special/a.html
-[21:24:21:900 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:21:901 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/special/a.html, html is empty false
-[21:24:21:902 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 43
-[21:24:21:902 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/attrs.html
-[21:24:21:902 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:22:456 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:22:456 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished http://htmlhelp.com/reference/html40/attrs.html
-[21:24:22:456 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:22:456 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/attrs.html, html is empty false
-[21:24:22:457 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 34
-[21:24:22:457 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/css/
-[21:24:22:457 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:22:782 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:22:783 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished http://htmlhelp.com/reference/css/
-[21:24:22:783 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:22:783 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/css/, html is empty false
-[21:24:22:784 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 27
-[21:24:22:784 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/
-[21:24:22:784 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:23:119 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:23:120 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished http://htmlhelp.com/
-[21:24:23:120 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:23:120 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/, html is empty false
-[21:24:23:121 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 42
-[21:24:23:122 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/about/
-[21:24:23:122 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:23:463 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:23:464 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished http://htmlhelp.com/about/
-[21:24:23:464 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:23:464 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/about/, html is empty false
-[21:24:23:465 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 16
-[21:24:23:465 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://forums.htmlhelp.com
-[21:24:23:465 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:24:468 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:24:468 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished http://forums.htmlhelp.com
-[21:24:24:469 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:24:469 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://forums.htmlhelp.com, html is empty false
-[21:24:24:471 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 114
-[21:24:24:471 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com
-[21:24:24:471 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:24:817 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:24:817 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished http://htmlhelp.com
-[21:24:24:817 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:24:818 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com, html is empty false
-[21:24:24:818 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 42
-[21:24:24:819 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/
-[21:24:24:819 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:25:150 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:25:150 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished http://htmlhelp.com/reference/
-[21:24:25:150 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:25:150 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/, html is empty false
-[21:24:25:151 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 24
-[21:24:25:151 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/
-[21:24:25:151 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:25:483 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:25:483 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished http://htmlhelp.com/reference/html40/
-[21:24:25:483 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:25:483 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/, html is empty false
-[21:24:25:484 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 20
-[21:24:25:484 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://htmlhelp.com/de/reference/html40/
-[21:24:25:484 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:25:819 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:25:822 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished http://htmlhelp.com/de/reference/html40/
-[21:24:25:822 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:25:822 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://htmlhelp.com/de/reference/html40/, html is empty false
-[21:24:25:823 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 17
-[21:24:25:823 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/
-[21:24:25:823 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:26:217 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:26:218 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished http://www.matheboard.de/
-[21:24:26:218 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:26:218 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/, html is empty false
-[21:24:26:219 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 65
-[21:24:26:219 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/index.php
-[21:24:26:220 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:26:892 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:26:893 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished http://www.matheboard.de/index.php
-[21:24:26:893 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:26:893 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/index.php, html is empty false
-[21:24:26:895 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 137
-[21:24:26:895 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/stellenanzeigen/2014-04-22-HA_Implementierungsberatung.pdf
-[21:24:26:895 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:27:036 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:27:036 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/stellenanzeigen/2014-04-22-HA_Implementierungsberatung.pdf, html is empty true
-[21:24:27:037 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 0
-[21:24:27:037 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/fragen.php
-[21:24:27:037 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:27:242 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:27:242 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished http://www.matheboard.de/fragen.php
-[21:24:27:243 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:27:243 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/fragen.php, html is empty false
-[21:24:27:244 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 23
-[21:24:27:244 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/search.php
-[21:24:27:244 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:27:780 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:27:780 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished http://www.matheboard.de/search.php
-[21:24:27:781 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:27:781 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/search.php, html is empty false
-[21:24:27:782 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 35
-[21:24:27:782 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/materialien.php
-[21:24:27:782 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:28:151 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:28:151 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished http://www.matheboard.de/materialien.php
-[21:24:28:151 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:28:152 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/materialien.php, html is empty false
-[21:24:28:152 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 27
-[21:24:28:152 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/tools.php
-[21:24:28:152 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:28:511 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:28:511 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished http://www.matheboard.de/tools.php
-[21:24:28:511 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:28:511 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/tools.php, html is empty false
-[21:24:28:512 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 27
-[21:24:28:512 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/ueberuns.php
-[21:24:28:513 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:28:716 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:28:716 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished http://www.matheboard.de/ueberuns.php
-[21:24:28:716 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:28:717 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/ueberuns.php, html is empty false
-[21:24:28:717 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 21
-[21:24:28:718 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/thread.php?threadid=879
-[21:24:28:718 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:29:190 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:29:191 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished http://www.matheboard.de/thread.php?threadid=879
-[21:24:29:191 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:29:191 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/thread.php?threadid=879, html is empty false
-[21:24:29:193 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 98
-[21:24:29:193 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/index.php?sid=c2e3871c25214b6b029d5bb15abd1ab4
-[21:24:29:193 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:29:696 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:29:696 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished http://www.matheboard.de/index.php?sid=c2e3871c25214b6b029d5bb15abd1ab4
-[21:24:29:696 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:29:697 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/index.php?sid=c2e3871c25214b6b029d5bb15abd1ab4, html is empty false
-[21:24:29:698 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 137
-[21:24:29:698 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/register.php
-[21:24:29:699 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:29:998 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:29:998 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished http://www.matheboard.de/register.php
-[21:24:29:998 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:29:998 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/register.php, html is empty false
-[21:24:29:999 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 33
-[21:24:29:999 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.matheboard.de/nutzungsbedingungen.php
-[21:24:30:000 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:30:271 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:30:271 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished http://www.matheboard.de/nutzungsbedingungen.php
-[21:24:30:271 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:30:271 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.matheboard.de/nutzungsbedingungen.php, html is empty false
-[21:24:30:272 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 23
-[21:24:30:273 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.eu
-[21:24:30:273 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:30:669 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:30:669 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished http://www.youronlinechoices.eu
-[21:24:30:669 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:30:670 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.eu, html is empty false
-[21:24:30:670 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 41
-[21:24:30:671 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/goodpractice
-[21:24:30:671 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:31:198 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:31:198 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished http://www.youronlinechoices.com/goodpractice
-[21:24:31:198 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:31:198 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/goodpractice, html is empty false
-[21:24:31:199 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 3
-[21:24:31:199 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/
-[21:24:31:199 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:31:512 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:31:512 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished http://www.youronlinechoices.com/
-[21:24:31:513 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:31:513 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/, html is empty false
-[21:24:31:513 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 41
-[21:24:31:514 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/how_does_this_website_work.html
-[21:24:31:514 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:31:821 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:31:822 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished http://www.youronlinechoices.com/how_does_this_website_work.html
-[21:24:31:822 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:31:822 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/how_does_this_website_work.html, html is empty false
-[21:24:31:822 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 4
-[21:24:31:823 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/about-behavioural-advertising
-[21:24:31:823 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:32:390 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:32:390 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished http://www.youronlinechoices.com/uk/about-behavioural-advertising
-[21:24:32:390 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:32:390 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/about-behavioural-advertising, html is empty false
-[21:24:32:391 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 30
-[21:24:32:391 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk
-[21:24:32:392 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:32:719 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:32:719 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished http://www.youronlinechoices.com/uk
-[21:24:32:719 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:32:719 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk, html is empty false
-[21:24:32:720 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 1
-[21:24:32:720 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/
-[21:24:32:720 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:33:291 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:33:291 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished http://www.youronlinechoices.com/uk/
-[21:24:33:291 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:33:292 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/, html is empty false
-[21:24:33:292 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 37
-[21:24:33:293 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/protecting-your-privacy
-[21:24:33:293 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:33:906 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:33:907 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished http://www.youronlinechoices.com/uk/protecting-your-privacy
-[21:24:33:907 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:33:907 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/protecting-your-privacy, html is empty false
-[21:24:33:908 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 22
-[21:24:33:909 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/
-[21:24:33:909 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:34:521 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:34:522 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished https://www.youronlinechoices.com/uk/
-[21:24:34:522 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:34:522 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/, html is empty false
-[21:24:34:523 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 37
-[21:24:34:523 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/protecting-your-privacy
-[21:24:34:523 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:35:106 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:35:106 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished https://www.youronlinechoices.com/uk/protecting-your-privacy
-[21:24:35:107 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:35:107 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/protecting-your-privacy, html is empty false
-[21:24:35:108 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 22
-[21:24:35:108 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/about-behavioural-advertising
-[21:24:35:108 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:35:684 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:35:685 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished https://www.youronlinechoices.com/uk/about-behavioural-advertising
-[21:24:35:685 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:35:685 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/about-behavioural-advertising, html is empty false
-[21:24:35:686 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 30
-[21:24:35:686 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/your-ad-choices
-[21:24:35:686 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:36:259 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:36:259 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished https://www.youronlinechoices.com/uk/your-ad-choices
-[21:24:36:259 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:36:259 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/your-ad-choices, html is empty false
-[21:24:36:260 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 19
-[21:24:36:260 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/five-top-tips
-[21:24:36:261 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:36:852 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:36:853 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished https://www.youronlinechoices.com/uk/five-top-tips
-[21:24:36:853 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:36:853 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/five-top-tips, html is empty false
-[21:24:36:854 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 19
-[21:24:36:854 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/faqs
-[21:24:36:855 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:37:443 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:37:443 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished https://www.youronlinechoices.com/uk/faqs
-[21:24:37:444 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:37:444 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/faqs, html is empty false
-[21:24:37:445 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 71
-[21:24:37:445 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/download-guide
-[21:24:37:445 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:38:018 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:38:018 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished https://www.youronlinechoices.com/uk/download-guide
-[21:24:38:018 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:38:018 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/download-guide, html is empty false
-[21:24:38:019 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 18
-[21:24:38:019 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/helpful-videos
-[21:24:38:019 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:38:608 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:38:608 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished https://www.youronlinechoices.com/uk/helpful-videos
-[21:24:38:608 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:38:608 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/helpful-videos, html is empty false
-[21:24:38:609 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 27
-[21:24:38:610 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/jargon-buster
-[21:24:38:610 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:39:215 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:39:215 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished https://www.youronlinechoices.com/uk/jargon-buster
-[21:24:39:216 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:39:216 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/jargon-buster, html is empty false
-[21:24:39:217 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 17
-[21:24:39:217 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/make-a-complaint
-[21:24:39:217 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:39:792 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:39:792 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished https://www.youronlinechoices.com/uk/make-a-complaint
-[21:24:39:792 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:39:792 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/make-a-complaint, html is empty false
-[21:24:39:793 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 25
-[21:24:39:793 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/opt-out-help
-[21:24:39:794 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:40:362 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:40:363 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished https://www.youronlinechoices.com/uk/opt-out-help
-[21:24:40:363 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:40:363 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/opt-out-help, html is empty false
-[21:24:40:364 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 31
-[21:24:40:364 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/browser-extension
-[21:24:40:364 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:40:932 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:40:933 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished https://www.youronlinechoices.com/uk/browser-extension
-[21:24:40:933 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:40:933 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/browser-extension, html is empty false
-[21:24:40:934 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 24
-[21:24:40:934 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/your-ad-choices
-[21:24:40:935 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:41:541 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:41:541 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished http://www.youronlinechoices.com/uk/your-ad-choices
-[21:24:41:541 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:41:542 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/your-ad-choices, html is empty false
-[21:24:41:542 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 19
-[21:24:41:543 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/opt-out-help
-[21:24:41:543 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:42:126 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-5: the html is empty false
-[21:24:42:127 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-5: ######## Minion finished http://www.youronlinechoices.com/uk/opt-out-help
-[21:24:42:127 debug] WorkQueue.java@81 Thread-5: decreasing, Pending is now 0
-[21:24:42:127 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/opt-out-help, html is empty false
-[21:24:42:128 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 31
-[21:24:42:128 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/jargon-buster
-[21:24:42:128 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:42:719 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-4: the html is empty false
-[21:24:42:719 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-4: ######## Minion finished http://www.youronlinechoices.com/uk/jargon-buster
-[21:24:42:719 debug] WorkQueue.java@81 Thread-4: decreasing, Pending is now 0
-[21:24:42:719 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/jargon-buster, html is empty false
-[21:24:42:720 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 17
-[21:24:42:721 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/terms-conditions
-[21:24:42:721 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:43:336 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-3: the html is empty false
-[21:24:43:336 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-3: ######## Minion finished https://www.youronlinechoices.com/uk/terms-conditions
-[21:24:43:337 debug] WorkQueue.java@81 Thread-3: decreasing, Pending is now 0
-[21:24:43:337 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/terms-conditions, html is empty false
-[21:24:43:338 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 25
-[21:24:43:338 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.eu/
-[21:24:43:338 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:43:701 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-2: the html is empty false
-[21:24:43:701 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-2: ######## Minion finished http://www.youronlinechoices.eu/
-[21:24:43:701 debug] WorkQueue.java@81 Thread-2: decreasing, Pending is now 0
-[21:24:43:702 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.eu/, html is empty false
-[21:24:43:702 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 41
-[21:24:43:703 debug] MultiThreadInvertedIndexBuilder.java@215 Time-limited test: ******** Minion created for http://www.youronlinechoices.eu/how_does_this_website_work.html
-[21:24:43:703 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
-[21:24:44:016 debug] MultiThreadInvertedIndexBuilder.java@227 Thread-1: the html is empty false
-[21:24:44:016 debug] MultiThreadInvertedIndexBuilder.java@233 Thread-1: ######## Minion finished http://www.youronlinechoices.eu/how_does_this_website_work.html
-[21:24:44:016 debug] WorkQueue.java@81 Thread-1: decreasing, Pending is now 0
-[21:24:44:016 debug] MultiThreadInvertedIndexBuilder.java@163 Time-limited test: finding innerUrl in link http://www.youronlinechoices.eu/how_does_this_website_work.html, html is empty false
-[21:24:44:017 debug] MultiThreadInvertedIndexBuilder.java@167 Time-limited test: inner url size 4
-[21:24:44:021 debug] MultiThreadInvertedIndexBuilder.java@188 Time-limited test: adding result to index
-[21:24:44:021 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 0 add url http://htmlhelp.com/reference/html40/olist.html into index
-[21:24:44:035 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 1 add url http://htmlhelp.com/reference/html40/alist.html into index
-[21:24:44:039 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 2 add url http://htmlhelp.com/reference/html40/special/a.html into index
-[21:24:44:046 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 3 add url http://htmlhelp.com/reference/html40/attrs.html into index
-[21:24:44:050 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 4 add url http://htmlhelp.com/reference/css/ into index
-[21:24:44:051 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 5 add url http://htmlhelp.com/ into index
-[21:24:44:052 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 6 add url http://htmlhelp.com/about/ into index
-[21:24:44:053 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 7 add url http://forums.htmlhelp.com into index
-[21:24:44:057 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 8 add url http://htmlhelp.com into index
-[21:24:44:058 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 9 add url http://htmlhelp.com/reference/ into index
-[21:24:44:059 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 10 add url http://htmlhelp.com/reference/html40/ into index
-[21:24:44:060 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 11 add url http://htmlhelp.com/de/reference/html40/ into index
-[21:24:44:061 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 12 add url http://www.matheboard.de/ into index
-[21:24:44:063 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 13 add url http://www.matheboard.de/index.php into index
-[21:24:44:067 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 14 add url http://www.matheboard.de/stellenanzeigen/2014-04-22-HA_Implementierungsberatung.pdf into index
-[21:24:44:068 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 15 add url http://www.matheboard.de/fragen.php into index
-[21:24:44:069 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 16 add url http://www.matheboard.de/search.php into index
-[21:24:44:071 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 17 add url http://www.matheboard.de/materialien.php into index
-[21:24:44:071 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 18 add url http://www.matheboard.de/tools.php into index
-[21:24:44:072 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 19 add url http://www.matheboard.de/ueberuns.php into index
-[21:24:44:073 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 20 add url http://www.matheboard.de/thread.php?threadid=879 into index
-[21:24:44:079 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 21 add url http://www.matheboard.de/index.php?sid=c2e3871c25214b6b029d5bb15abd1ab4 into index
-[21:24:44:083 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 22 add url http://www.matheboard.de/register.php into index
-[21:24:44:084 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 23 add url http://www.matheboard.de/nutzungsbedingungen.php into index
-[21:24:44:090 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 24 add url http://www.youronlinechoices.eu into index
-[21:24:44:091 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 25 add url http://www.youronlinechoices.com/goodpractice into index
-[21:24:44:092 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 26 add url http://www.youronlinechoices.com/ into index
-[21:24:44:093 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 27 add url http://www.youronlinechoices.com/how_does_this_website_work.html into index
-[21:24:44:093 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 28 add url http://www.youronlinechoices.com/uk/about-behavioural-advertising into index
-[21:24:44:096 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 29 add url http://www.youronlinechoices.com/uk into index
-[21:24:44:096 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 30 add url http://www.youronlinechoices.com/uk/ into index
-[21:24:44:097 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 31 add url http://www.youronlinechoices.com/uk/protecting-your-privacy into index
-[21:24:44:100 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 32 add url https://www.youronlinechoices.com/uk/ into index
-[21:24:44:101 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 33 add url https://www.youronlinechoices.com/uk/protecting-your-privacy into index
-[21:24:44:104 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 34 add url https://www.youronlinechoices.com/uk/about-behavioural-advertising into index
-[21:24:44:106 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 35 add url https://www.youronlinechoices.com/uk/your-ad-choices into index
-[21:24:44:107 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 36 add url https://www.youronlinechoices.com/uk/five-top-tips into index
-[21:24:44:109 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 37 add url https://www.youronlinechoices.com/uk/faqs into index
-[21:24:44:114 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 38 add url https://www.youronlinechoices.com/uk/download-guide into index
-[21:24:44:115 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 39 add url https://www.youronlinechoices.com/uk/helpful-videos into index
-[21:24:44:117 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 40 add url https://www.youronlinechoices.com/uk/jargon-buster into index
-[21:24:44:119 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 41 add url https://www.youronlinechoices.com/uk/make-a-complaint into index
-[21:24:44:120 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 42 add url https://www.youronlinechoices.com/uk/opt-out-help into index
-[21:24:44:122 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 43 add url https://www.youronlinechoices.com/uk/browser-extension into index
-[21:24:44:123 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 44 add url http://www.youronlinechoices.com/uk/your-ad-choices into index
-[21:24:44:125 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 45 add url http://www.youronlinechoices.com/uk/opt-out-help into index
-[21:24:44:136 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 46 add url http://www.youronlinechoices.com/uk/jargon-buster into index
-[21:24:44:139 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 47 add url https://www.youronlinechoices.com/uk/terms-conditions into index
-[21:24:44:143 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 48 add url http://www.youronlinechoices.eu/ into index
-[21:24:44:144 debug] MultiThreadInvertedIndexBuilder.java@193 Time-limited test: count 49 add url http://www.youronlinechoices.eu/how_does_this_website_work.html into index
-[21:24:44:144 debug] MultiThreadInvertedIndexBuilder.java@205 Time-limited test: done with adding
-[21:24:44:144 debug] Driver.java@164 Time-limited test: calling shut down
-[21:24:44:145 debug] MultiThreadInvertedIndexBuilder.java@49 Time-limited test: Shutting down
-[21:24:44:145 debug] WorkQueue.java@132 Time-limited test: work queue been shut down.
-[21:24:44:145 debug] Driver.java@166 Time-limited test: Done with traverseDirectory
-[21:24:44:146 debug] Driver.java@176 Time-limited test: Done with parsing queries
-[21:24:44:146 debug] ThreadSafePartialSearchBuilder.java@127 Time-limited test: Shutting down
-[21:24:44:146 debug] WorkQueue.java@132 Time-limited test: work queue been shut down.
-[21:24:44:146 debug] Driver.java@187 Time-limited test: going to print index
-[21:24:44:265 debug] Driver.java@199 Time-limited test: done with print index
+[19:17:17:358 debug] Driver.java@155 Time-limited test: $$$$$$$$$$$$$$$$$$ traversing URL
+[19:17:17:361 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/olist.html
+[19:17:17:361 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:17:829 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:17:829 debug] WebCrawler.java@96 Thread-10: ######## Minion finished http://htmlhelp.com/reference/html40/olist.html
+[19:17:17:829 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:17:829 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/olist.html, html is empty false
+[19:17:17:834 debug] WebCrawler.java@44 Time-limited test: inner url size 103
+[19:17:17:834 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/alist.html
+[19:17:17:834 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:18:251 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:18:252 debug] WebCrawler.java@96 Thread-9: ######## Minion finished http://htmlhelp.com/reference/html40/alist.html
+[19:17:18:252 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:18:252 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/alist.html, html is empty false
+[19:17:18:254 debug] WebCrawler.java@44 Time-limited test: inner url size 98
+[19:17:18:254 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/special/a.html
+[19:17:18:255 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:18:778 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:18:778 debug] WebCrawler.java@96 Thread-8: ######## Minion finished http://htmlhelp.com/reference/html40/special/a.html
+[19:17:18:778 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:18:779 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/special/a.html, html is empty false
+[19:17:18:780 debug] WebCrawler.java@44 Time-limited test: inner url size 43
+[19:17:18:780 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/attrs.html
+[19:17:18:780 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:19:295 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:19:295 debug] WebCrawler.java@96 Thread-7: ######## Minion finished http://htmlhelp.com/reference/html40/attrs.html
+[19:17:19:296 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:19:296 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/attrs.html, html is empty false
+[19:17:19:297 debug] WebCrawler.java@44 Time-limited test: inner url size 34
+[19:17:19:297 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/css/
+[19:17:19:297 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:19:609 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:19:609 debug] WebCrawler.java@96 Thread-6: ######## Minion finished http://htmlhelp.com/reference/css/
+[19:17:19:610 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:19:610 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/css/, html is empty false
+[19:17:19:611 debug] WebCrawler.java@44 Time-limited test: inner url size 27
+[19:17:19:611 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/
+[19:17:19:611 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:19:924 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:19:925 debug] WebCrawler.java@96 Thread-10: ######## Minion finished http://htmlhelp.com/
+[19:17:19:925 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:19:925 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/, html is empty false
+[19:17:19:925 debug] WebCrawler.java@44 Time-limited test: inner url size 42
+[19:17:19:926 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/about/
+[19:17:19:926 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:20:227 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:20:227 debug] WebCrawler.java@96 Thread-9: ######## Minion finished http://htmlhelp.com/about/
+[19:17:20:227 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:20:227 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/about/, html is empty false
+[19:17:20:228 debug] WebCrawler.java@44 Time-limited test: inner url size 16
+[19:17:20:228 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://forums.htmlhelp.com
+[19:17:20:228 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:21:318 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:21:319 debug] WebCrawler.java@96 Thread-8: ######## Minion finished http://forums.htmlhelp.com
+[19:17:21:319 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:21:319 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://forums.htmlhelp.com, html is empty false
+[19:17:21:321 debug] WebCrawler.java@44 Time-limited test: inner url size 125
+[19:17:21:322 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com
+[19:17:21:322 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:21:631 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:21:632 debug] WebCrawler.java@96 Thread-7: ######## Minion finished http://htmlhelp.com
+[19:17:21:632 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:21:632 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com, html is empty false
+[19:17:21:633 debug] WebCrawler.java@44 Time-limited test: inner url size 42
+[19:17:21:633 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/
+[19:17:21:633 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:21:944 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:21:944 debug] WebCrawler.java@96 Thread-6: ######## Minion finished http://htmlhelp.com/reference/
+[19:17:21:944 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:21:944 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/, html is empty false
+[19:17:21:945 debug] WebCrawler.java@44 Time-limited test: inner url size 24
+[19:17:21:945 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/reference/html40/
+[19:17:21:946 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:22:255 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:22:256 debug] WebCrawler.java@96 Thread-10: ######## Minion finished http://htmlhelp.com/reference/html40/
+[19:17:22:256 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:22:256 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/reference/html40/, html is empty false
+[19:17:22:257 debug] WebCrawler.java@44 Time-limited test: inner url size 20
+[19:17:22:257 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://htmlhelp.com/de/reference/html40/
+[19:17:22:257 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:22:577 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:22:577 debug] WebCrawler.java@96 Thread-9: ######## Minion finished http://htmlhelp.com/de/reference/html40/
+[19:17:22:579 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:22:580 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://htmlhelp.com/de/reference/html40/, html is empty false
+[19:17:22:580 debug] WebCrawler.java@44 Time-limited test: inner url size 17
+[19:17:22:581 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/
+[19:17:22:581 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:23:014 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:23:014 debug] WebCrawler.java@96 Thread-8: ######## Minion finished http://www.matheboard.de/
+[19:17:23:014 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:23:014 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/, html is empty false
+[19:17:23:015 debug] WebCrawler.java@44 Time-limited test: inner url size 65
+[19:17:23:016 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/index.php
+[19:17:23:016 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:23:660 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:23:661 debug] WebCrawler.java@96 Thread-7: ######## Minion finished http://www.matheboard.de/index.php
+[19:17:23:661 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:23:661 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/index.php, html is empty false
+[19:17:23:662 debug] WebCrawler.java@44 Time-limited test: inner url size 139
+[19:17:23:663 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/stellenanzeigen/2014-04-22-HA_Implementierungsberatung.pdf
+[19:17:23:663 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:23:790 debug] WebCrawler.java@88 Thread-6: the html is empty true
+[19:17:23:790 debug] WebCrawler.java@96 Thread-6: ######## Minion finished http://www.matheboard.de/stellenanzeigen/2014-04-22-HA_Implementierungsberatung.pdf
+[19:17:23:790 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:23:790 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/stellenanzeigen/2014-04-22-HA_Implementierungsberatung.pdf, html is empty true
+[19:17:23:791 debug] WebCrawler.java@44 Time-limited test: inner url size 0
+[19:17:23:791 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/fragen.php
+[19:17:23:791 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:24:234 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:24:235 debug] WebCrawler.java@96 Thread-10: ######## Minion finished http://www.matheboard.de/fragen.php
+[19:17:24:235 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:24:235 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/fragen.php, html is empty false
+[19:17:24:236 debug] WebCrawler.java@44 Time-limited test: inner url size 23
+[19:17:24:236 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/search.php
+[19:17:24:237 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:24:774 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:24:775 debug] WebCrawler.java@96 Thread-9: ######## Minion finished http://www.matheboard.de/search.php
+[19:17:24:775 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:24:775 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/search.php, html is empty false
+[19:17:24:776 debug] WebCrawler.java@44 Time-limited test: inner url size 35
+[19:17:24:777 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/materialien.php
+[19:17:24:777 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:24:976 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:24:976 debug] WebCrawler.java@96 Thread-8: ######## Minion finished http://www.matheboard.de/materialien.php
+[19:17:24:977 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:24:977 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/materialien.php, html is empty false
+[19:17:24:978 debug] WebCrawler.java@44 Time-limited test: inner url size 27
+[19:17:24:978 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/tools.php
+[19:17:24:979 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:25:343 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:25:343 debug] WebCrawler.java@96 Thread-7: ######## Minion finished http://www.matheboard.de/tools.php
+[19:17:25:343 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:25:343 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/tools.php, html is empty false
+[19:17:25:344 debug] WebCrawler.java@44 Time-limited test: inner url size 27
+[19:17:25:344 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/ueberuns.php
+[19:17:25:345 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:25:539 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:25:539 debug] WebCrawler.java@96 Thread-6: ######## Minion finished http://www.matheboard.de/ueberuns.php
+[19:17:25:539 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:25:540 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/ueberuns.php, html is empty false
+[19:17:25:540 debug] WebCrawler.java@44 Time-limited test: inner url size 21
+[19:17:25:541 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/thread.php?threadid=879
+[19:17:25:541 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:26:100 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:26:100 debug] WebCrawler.java@96 Thread-10: ######## Minion finished http://www.matheboard.de/thread.php?threadid=879
+[19:17:26:100 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:26:101 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/thread.php?threadid=879, html is empty false
+[19:17:26:102 debug] WebCrawler.java@44 Time-limited test: inner url size 98
+[19:17:26:102 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/index.php?sid=771f26a52e209e51bee2d51d4f9c692a
+[19:17:26:102 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:26:731 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:26:731 debug] WebCrawler.java@96 Thread-9: ######## Minion finished http://www.matheboard.de/index.php?sid=771f26a52e209e51bee2d51d4f9c692a
+[19:17:26:731 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:26:731 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/index.php?sid=771f26a52e209e51bee2d51d4f9c692a, html is empty false
+[19:17:26:733 debug] WebCrawler.java@44 Time-limited test: inner url size 139
+[19:17:26:734 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/register.php
+[19:17:26:734 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:27:163 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:27:163 debug] WebCrawler.java@96 Thread-8: ######## Minion finished http://www.matheboard.de/register.php
+[19:17:27:163 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:27:163 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/register.php, html is empty false
+[19:17:27:164 debug] WebCrawler.java@44 Time-limited test: inner url size 33
+[19:17:27:164 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.matheboard.de/nutzungsbedingungen.php
+[19:17:27:165 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:27:524 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:27:524 debug] WebCrawler.java@96 Thread-7: ######## Minion finished http://www.matheboard.de/nutzungsbedingungen.php
+[19:17:27:524 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:27:524 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.matheboard.de/nutzungsbedingungen.php, html is empty false
+[19:17:27:525 debug] WebCrawler.java@44 Time-limited test: inner url size 23
+[19:17:27:526 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.eu
+[19:17:27:526 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:28:406 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:28:406 debug] WebCrawler.java@96 Thread-6: ######## Minion finished http://www.youronlinechoices.eu
+[19:17:28:406 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:28:406 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.eu, html is empty false
+[19:17:28:407 debug] WebCrawler.java@44 Time-limited test: inner url size 41
+[19:17:28:407 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/goodpractice
+[19:17:28:408 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:29:348 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:29:348 debug] WebCrawler.java@96 Thread-10: ######## Minion finished http://www.youronlinechoices.com/goodpractice
+[19:17:29:349 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:29:349 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/goodpractice, html is empty false
+[19:17:29:349 debug] WebCrawler.java@44 Time-limited test: inner url size 3
+[19:17:29:349 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/
+[19:17:29:350 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:29:657 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:29:657 debug] WebCrawler.java@96 Thread-9: ######## Minion finished http://www.youronlinechoices.com/
+[19:17:29:657 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:29:658 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/, html is empty false
+[19:17:29:658 debug] WebCrawler.java@44 Time-limited test: inner url size 41
+[19:17:29:659 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/how_does_this_website_work.html
+[19:17:29:659 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:29:971 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:29:971 debug] WebCrawler.java@96 Thread-8: ######## Minion finished http://www.youronlinechoices.com/how_does_this_website_work.html
+[19:17:29:971 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:29:971 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/how_does_this_website_work.html, html is empty false
+[19:17:29:972 debug] WebCrawler.java@44 Time-limited test: inner url size 4
+[19:17:29:972 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/about-behavioural-advertising
+[19:17:29:972 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:30:595 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:30:595 debug] WebCrawler.java@96 Thread-7: ######## Minion finished http://www.youronlinechoices.com/uk/about-behavioural-advertising
+[19:17:30:595 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:30:596 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/about-behavioural-advertising, html is empty false
+[19:17:30:596 debug] WebCrawler.java@44 Time-limited test: inner url size 30
+[19:17:30:597 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk
+[19:17:30:597 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:30:915 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:30:915 debug] WebCrawler.java@96 Thread-6: ######## Minion finished http://www.youronlinechoices.com/uk
+[19:17:30:915 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:30:916 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk, html is empty false
+[19:17:30:916 debug] WebCrawler.java@44 Time-limited test: inner url size 1
+[19:17:30:916 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/
+[19:17:30:916 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:31:497 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:31:497 debug] WebCrawler.java@96 Thread-10: ######## Minion finished http://www.youronlinechoices.com/uk/
+[19:17:31:497 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:31:497 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/, html is empty false
+[19:17:31:498 debug] WebCrawler.java@44 Time-limited test: inner url size 37
+[19:17:31:499 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/protecting-your-privacy
+[19:17:31:499 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:32:136 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:32:137 debug] WebCrawler.java@96 Thread-9: ######## Minion finished http://www.youronlinechoices.com/uk/protecting-your-privacy
+[19:17:32:137 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:32:137 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/protecting-your-privacy, html is empty false
+[19:17:32:138 debug] WebCrawler.java@44 Time-limited test: inner url size 22
+[19:17:32:139 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/
+[19:17:32:139 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:32:751 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:32:752 debug] WebCrawler.java@96 Thread-8: ######## Minion finished https://www.youronlinechoices.com/uk/
+[19:17:32:752 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:32:752 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/, html is empty false
+[19:17:32:753 debug] WebCrawler.java@44 Time-limited test: inner url size 37
+[19:17:32:753 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/protecting-your-privacy
+[19:17:32:753 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:33:408 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:33:408 debug] WebCrawler.java@96 Thread-7: ######## Minion finished https://www.youronlinechoices.com/uk/protecting-your-privacy
+[19:17:33:408 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:33:409 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/protecting-your-privacy, html is empty false
+[19:17:33:409 debug] WebCrawler.java@44 Time-limited test: inner url size 22
+[19:17:33:410 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/about-behavioural-advertising
+[19:17:33:410 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:34:049 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:34:049 debug] WebCrawler.java@96 Thread-6: ######## Minion finished https://www.youronlinechoices.com/uk/about-behavioural-advertising
+[19:17:34:049 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:34:049 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/about-behavioural-advertising, html is empty false
+[19:17:34:050 debug] WebCrawler.java@44 Time-limited test: inner url size 30
+[19:17:34:050 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/your-ad-choices
+[19:17:34:051 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:34:612 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:34:612 debug] WebCrawler.java@96 Thread-10: ######## Minion finished https://www.youronlinechoices.com/uk/your-ad-choices
+[19:17:34:612 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:34:613 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/your-ad-choices, html is empty false
+[19:17:34:613 debug] WebCrawler.java@44 Time-limited test: inner url size 19
+[19:17:34:614 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/five-top-tips
+[19:17:34:614 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:35:197 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:35:198 debug] WebCrawler.java@96 Thread-9: ######## Minion finished https://www.youronlinechoices.com/uk/five-top-tips
+[19:17:35:198 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:35:198 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/five-top-tips, html is empty false
+[19:17:35:199 debug] WebCrawler.java@44 Time-limited test: inner url size 19
+[19:17:35:199 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/faqs
+[19:17:35:200 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:35:794 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:35:794 debug] WebCrawler.java@96 Thread-8: ######## Minion finished https://www.youronlinechoices.com/uk/faqs
+[19:17:35:794 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:35:794 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/faqs, html is empty false
+[19:17:35:795 debug] WebCrawler.java@44 Time-limited test: inner url size 71
+[19:17:35:796 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/download-guide
+[19:17:35:796 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:36:387 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:36:388 debug] WebCrawler.java@96 Thread-7: ######## Minion finished https://www.youronlinechoices.com/uk/download-guide
+[19:17:36:388 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:36:388 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/download-guide, html is empty false
+[19:17:36:389 debug] WebCrawler.java@44 Time-limited test: inner url size 18
+[19:17:36:389 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/helpful-videos
+[19:17:36:389 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:36:997 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:36:997 debug] WebCrawler.java@96 Thread-6: ######## Minion finished https://www.youronlinechoices.com/uk/helpful-videos
+[19:17:36:997 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:36:997 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/helpful-videos, html is empty false
+[19:17:36:997 debug] WebCrawler.java@44 Time-limited test: inner url size 27
+[19:17:36:998 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/jargon-buster
+[19:17:36:998 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:37:657 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:37:658 debug] WebCrawler.java@96 Thread-10: ######## Minion finished https://www.youronlinechoices.com/uk/jargon-buster
+[19:17:37:658 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:37:658 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/jargon-buster, html is empty false
+[19:17:37:659 debug] WebCrawler.java@44 Time-limited test: inner url size 17
+[19:17:37:659 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/make-a-complaint
+[19:17:37:659 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:38:254 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:38:254 debug] WebCrawler.java@96 Thread-9: ######## Minion finished https://www.youronlinechoices.com/uk/make-a-complaint
+[19:17:38:254 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:38:254 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/make-a-complaint, html is empty false
+[19:17:38:254 debug] WebCrawler.java@44 Time-limited test: inner url size 25
+[19:17:38:254 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/opt-out-help
+[19:17:38:255 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:38:810 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:38:811 debug] WebCrawler.java@96 Thread-8: ######## Minion finished https://www.youronlinechoices.com/uk/opt-out-help
+[19:17:38:811 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:38:811 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/opt-out-help, html is empty false
+[19:17:38:812 debug] WebCrawler.java@44 Time-limited test: inner url size 31
+[19:17:38:812 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/browser-extension
+[19:17:38:812 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:39:389 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:39:389 debug] WebCrawler.java@96 Thread-7: ######## Minion finished https://www.youronlinechoices.com/uk/browser-extension
+[19:17:39:390 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:39:390 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/browser-extension, html is empty false
+[19:17:39:390 debug] WebCrawler.java@44 Time-limited test: inner url size 24
+[19:17:39:390 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/your-ad-choices
+[19:17:39:391 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:39:970 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:39:970 debug] WebCrawler.java@96 Thread-6: ######## Minion finished http://www.youronlinechoices.com/uk/your-ad-choices
+[19:17:39:970 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:39:970 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/your-ad-choices, html is empty false
+[19:17:39:971 debug] WebCrawler.java@44 Time-limited test: inner url size 19
+[19:17:39:971 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/opt-out-help
+[19:17:39:972 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:40:567 debug] WebCrawler.java@88 Thread-10: the html is empty false
+[19:17:40:567 debug] WebCrawler.java@96 Thread-10: ######## Minion finished http://www.youronlinechoices.com/uk/opt-out-help
+[19:17:40:567 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 0
+[19:17:40:567 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/opt-out-help, html is empty false
+[19:17:40:568 debug] WebCrawler.java@44 Time-limited test: inner url size 31
+[19:17:40:568 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.com/uk/jargon-buster
+[19:17:40:569 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:41:164 debug] WebCrawler.java@88 Thread-9: the html is empty false
+[19:17:41:165 debug] WebCrawler.java@96 Thread-9: ######## Minion finished http://www.youronlinechoices.com/uk/jargon-buster
+[19:17:41:165 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 0
+[19:17:41:165 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.com/uk/jargon-buster, html is empty false
+[19:17:41:166 debug] WebCrawler.java@44 Time-limited test: inner url size 17
+[19:17:41:166 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for https://www.youronlinechoices.com/uk/terms-conditions
+[19:17:41:166 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:41:960 debug] WebCrawler.java@88 Thread-8: the html is empty false
+[19:17:41:960 debug] WebCrawler.java@96 Thread-8: ######## Minion finished https://www.youronlinechoices.com/uk/terms-conditions
+[19:17:41:960 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[19:17:41:961 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link https://www.youronlinechoices.com/uk/terms-conditions, html is empty false
+[19:17:41:961 debug] WebCrawler.java@44 Time-limited test: inner url size 25
+[19:17:41:962 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.eu/
+[19:17:41:962 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:42:330 debug] WebCrawler.java@88 Thread-7: the html is empty false
+[19:17:42:330 debug] WebCrawler.java@96 Thread-7: ######## Minion finished http://www.youronlinechoices.eu/
+[19:17:42:330 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[19:17:42:330 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.eu/, html is empty false
+[19:17:42:331 debug] WebCrawler.java@44 Time-limited test: inner url size 41
+[19:17:42:331 debug] WebCrawler.java@78 Time-limited test: ******** Minion created for http://www.youronlinechoices.eu/how_does_this_website_work.html
+[19:17:42:332 debug] WorkQueue.java@70 Time-limited test: increasing, Pending is now 1
+[19:17:42:672 debug] WebCrawler.java@88 Thread-6: the html is empty false
+[19:17:42:672 debug] WebCrawler.java@96 Thread-6: ######## Minion finished http://www.youronlinechoices.eu/how_does_this_website_work.html
+[19:17:42:673 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
+[19:17:42:673 debug] WebCrawler.java@40 Time-limited test: finding innerUrl in link http://www.youronlinechoices.eu/how_does_this_website_work.html, html is empty false
+[19:17:42:673 debug] WebCrawler.java@44 Time-limited test: inner url size 4
+[19:17:42:673 debug] WebCrawler.java@111 Time-limited test: adding result to index
+[19:17:42:674 debug] WebCrawler.java@116 Time-limited test: count 0 add url http://htmlhelp.com/reference/html40/olist.html into index
+[19:17:42:687 debug] WebCrawler.java@116 Time-limited test: count 1 add url http://htmlhelp.com/reference/html40/alist.html into index
+[19:17:42:692 debug] WebCrawler.java@116 Time-limited test: count 2 add url http://htmlhelp.com/reference/html40/special/a.html into index
+[19:17:42:698 debug] WebCrawler.java@116 Time-limited test: count 3 add url http://htmlhelp.com/reference/html40/attrs.html into index
+[19:17:42:706 debug] WebCrawler.java@116 Time-limited test: count 4 add url http://htmlhelp.com/reference/css/ into index
+[19:17:42:707 debug] WebCrawler.java@116 Time-limited test: count 5 add url http://htmlhelp.com/ into index
+[19:17:42:709 debug] WebCrawler.java@116 Time-limited test: count 6 add url http://htmlhelp.com/about/ into index
+[19:17:42:711 debug] WebCrawler.java@116 Time-limited test: count 7 add url http://forums.htmlhelp.com into index
+[19:17:42:717 debug] WebCrawler.java@116 Time-limited test: count 8 add url http://htmlhelp.com into index
+[19:17:42:718 debug] WebCrawler.java@116 Time-limited test: count 9 add url http://htmlhelp.com/reference/ into index
+[19:17:42:719 debug] WebCrawler.java@116 Time-limited test: count 10 add url http://htmlhelp.com/reference/html40/ into index
+[19:17:42:720 debug] WebCrawler.java@116 Time-limited test: count 11 add url http://htmlhelp.com/de/reference/html40/ into index
+[19:17:42:721 debug] WebCrawler.java@116 Time-limited test: count 12 add url http://www.matheboard.de/ into index
+[19:17:42:724 debug] WebCrawler.java@116 Time-limited test: count 13 add url http://www.matheboard.de/index.php into index
+[19:17:42:729 debug] WebCrawler.java@116 Time-limited test: count 14 add url http://www.matheboard.de/stellenanzeigen/2014-04-22-HA_Implementierungsberatung.pdf into index
+[19:17:42:729 debug] WebCrawler.java@116 Time-limited test: count 15 add url http://www.matheboard.de/fragen.php into index
+[19:17:42:730 debug] WebCrawler.java@116 Time-limited test: count 16 add url http://www.matheboard.de/search.php into index
+[19:17:42:732 debug] WebCrawler.java@116 Time-limited test: count 17 add url http://www.matheboard.de/materialien.php into index
+[19:17:42:733 debug] WebCrawler.java@116 Time-limited test: count 18 add url http://www.matheboard.de/tools.php into index
+[19:17:42:734 debug] WebCrawler.java@116 Time-limited test: count 19 add url http://www.matheboard.de/ueberuns.php into index
+[19:17:42:735 debug] WebCrawler.java@116 Time-limited test: count 20 add url http://www.matheboard.de/thread.php?threadid=879 into index
+[19:17:42:742 debug] WebCrawler.java@116 Time-limited test: count 21 add url http://www.matheboard.de/index.php?sid=771f26a52e209e51bee2d51d4f9c692a into index
+[19:17:42:747 debug] WebCrawler.java@116 Time-limited test: count 22 add url http://www.matheboard.de/register.php into index
+[19:17:42:749 debug] WebCrawler.java@116 Time-limited test: count 23 add url http://www.matheboard.de/nutzungsbedingungen.php into index
+[19:17:42:755 debug] WebCrawler.java@116 Time-limited test: count 24 add url http://www.youronlinechoices.eu into index
+[19:17:42:756 debug] WebCrawler.java@116 Time-limited test: count 25 add url http://www.youronlinechoices.com/goodpractice into index
+[19:17:42:757 debug] WebCrawler.java@116 Time-limited test: count 26 add url http://www.youronlinechoices.com/ into index
+[19:17:42:758 debug] WebCrawler.java@116 Time-limited test: count 27 add url http://www.youronlinechoices.com/how_does_this_website_work.html into index
+[19:17:42:758 debug] WebCrawler.java@116 Time-limited test: count 28 add url http://www.youronlinechoices.com/uk/about-behavioural-advertising into index
+[19:17:42:761 debug] WebCrawler.java@116 Time-limited test: count 29 add url http://www.youronlinechoices.com/uk into index
+[19:17:42:761 debug] WebCrawler.java@116 Time-limited test: count 30 add url http://www.youronlinechoices.com/uk/ into index
+[19:17:42:762 debug] WebCrawler.java@116 Time-limited test: count 31 add url http://www.youronlinechoices.com/uk/protecting-your-privacy into index
+[19:17:42:767 debug] WebCrawler.java@116 Time-limited test: count 32 add url https://www.youronlinechoices.com/uk/ into index
+[19:17:42:769 debug] WebCrawler.java@116 Time-limited test: count 33 add url https://www.youronlinechoices.com/uk/protecting-your-privacy into index
+[19:17:42:772 debug] WebCrawler.java@116 Time-limited test: count 34 add url https://www.youronlinechoices.com/uk/about-behavioural-advertising into index
+[19:17:42:775 debug] WebCrawler.java@116 Time-limited test: count 35 add url https://www.youronlinechoices.com/uk/your-ad-choices into index
+[19:17:42:777 debug] WebCrawler.java@116 Time-limited test: count 36 add url https://www.youronlinechoices.com/uk/five-top-tips into index
+[19:17:42:779 debug] WebCrawler.java@116 Time-limited test: count 37 add url https://www.youronlinechoices.com/uk/faqs into index
+[19:17:42:785 debug] WebCrawler.java@116 Time-limited test: count 38 add url https://www.youronlinechoices.com/uk/download-guide into index
+[19:17:42:786 debug] WebCrawler.java@116 Time-limited test: count 39 add url https://www.youronlinechoices.com/uk/helpful-videos into index
+[19:17:42:787 debug] WebCrawler.java@116 Time-limited test: count 40 add url https://www.youronlinechoices.com/uk/jargon-buster into index
+[19:17:42:789 debug] WebCrawler.java@116 Time-limited test: count 41 add url https://www.youronlinechoices.com/uk/make-a-complaint into index
+[19:17:42:791 debug] WebCrawler.java@116 Time-limited test: count 42 add url https://www.youronlinechoices.com/uk/opt-out-help into index
+[19:17:42:792 debug] WebCrawler.java@116 Time-limited test: count 43 add url https://www.youronlinechoices.com/uk/browser-extension into index
+[19:17:42:794 debug] WebCrawler.java@116 Time-limited test: count 44 add url http://www.youronlinechoices.com/uk/your-ad-choices into index
+[19:17:42:796 debug] WebCrawler.java@116 Time-limited test: count 45 add url http://www.youronlinechoices.com/uk/opt-out-help into index
+[19:17:42:798 debug] WebCrawler.java@116 Time-limited test: count 46 add url http://www.youronlinechoices.com/uk/jargon-buster into index
+[19:17:42:800 debug] WebCrawler.java@116 Time-limited test: count 47 add url https://www.youronlinechoices.com/uk/terms-conditions into index
+[19:17:42:814 debug] WebCrawler.java@116 Time-limited test: count 48 add url http://www.youronlinechoices.eu/ into index
+[19:17:42:815 debug] WebCrawler.java@116 Time-limited test: count 49 add url http://www.youronlinechoices.eu/how_does_this_website_work.html into index
+[19:17:42:815 debug] WebCrawler.java@128 Time-limited test: done with adding
+[19:17:42:815 debug] Driver.java@159 Time-limited test: $$$$$$$$$$$$$$$$$$ done with traversing URL
+[19:17:42:815 debug] Driver.java@165 Time-limited test: calling shut down
+[19:17:42:815 debug] MultiThreadInvertedIndexBuilder.java@46 Time-limited test: Shutting down
+[19:17:42:816 debug] WorkQueue.java@132 Time-limited test: work queue been shut down.
+[19:17:42:816 debug] Driver.java@167 Time-limited test: Done with traverseDirectory
+[19:17:42:816 debug] Driver.java@177 Time-limited test: Done with parsing queries
+[19:17:42:817 debug] ThreadSafePartialSearchBuilder.java@127 Time-limited test: Shutting down
+[19:17:42:817 debug] WorkQueue.java@132 Time-limited test: work queue been shut down.
+[19:17:42:817 debug] Driver.java@188 Time-limited test: going to print index
+[19:17:42:937 debug] Driver.java@200 Time-limited test: done with print index

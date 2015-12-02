@@ -158,7 +158,8 @@ public class Driver {
 							(ThreadSafeInvertedIndex) index);
 					logger.debug("$$$$$$$$$$$$$$$$$$ done with traversing URL");
 				} catch (IOException e) {
-					System.err.println("Invalid link");
+					System.err.println("Invalid link.");
+					e.printStackTrace();
 				} /* URL */
 			}
 			logger.debug("calling shut down");
