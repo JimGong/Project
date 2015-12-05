@@ -25,6 +25,14 @@ public class LinkParser {
 	 */
 	public static final int GROUP = 1;
 
+	// TODO
+	/* Modify or add new version of this...
+	public static ArrayList<URL> listLinks(URL base, String text) {
+		in the while loop...
+			convert to absolute before returning
+	}
+	*/
+
 	/**
 	 * Parses the provided text for HTML links.
 	 *
