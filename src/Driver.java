@@ -3,6 +3,9 @@ import java.nio.file.Paths;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 
 /**
  * This software driver class provides a consistent entry point for the search
@@ -152,6 +155,7 @@ public class Driver {
 			}
 			else {
 				try {
+
 					logger.debug("$$$$$$$$$$$$$$$$$$ traversing URL");
 					multiThreadInvertedIndexBuilder.traverseURL(
 							parser.getValue(SEED_FLAG),
@@ -167,6 +171,43 @@ public class Driver {
 			logger.debug("Done with InvertedIndex");
 			search = new ThreadSafePartialSearchBuilder(numThreads, index);
 		} /* multi thread version */
+
+		/** project 5 */
+		/* get thread count */
+		int numThreads = THREAD_DEFAULT;;
+		try {
+			if (parser.hasFlag(THREAD_FLAG)) {
+				numThreads = Integer.parseInt(parser.getValue(THREAD_FLAG));
+				if (numThreads <= 0) {
+					numThreads = THREAD_DEFAULT;
+				}
+			}
+		} catch (NumberFormatException e) {
+			System.err.println("Wrong number of thread.");
+		}
+		/* end of getting thread count */
+		Server server = new Server(PORT_DEFAULT);
+
+		ServletContextHandler handler = new ServletContextHandler(
+				ServletContextHandler.SESSIONS);
+
+		handler.setContextPath("/");
+		handler.addServlet(
+				new ServletHolder(new SearchServlet(index, numThreads)), "/");
+
+		handler.addServlet(CookieConfigServlet.class, "/config");
+
+		/* setup jetty server */
+		server.setHandler(handler);
+		try {
+			server.start();
+
+			server.join();
+
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		/* end of project 5 */
 
 		/* partial search */
 		try {
@@ -215,5 +256,6 @@ public class Driver {
 		} catch (IOException e) {
 			System.out.println("No output file for search");
 		} /* print partial search */
+
 	}
 }

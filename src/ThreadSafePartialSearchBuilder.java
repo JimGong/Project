@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -154,6 +155,15 @@ public class ThreadSafePartialSearchBuilder
 			logger.debug("######## Minion finished {}", line);
 		}
 
+	}
+
+	@Override
+	public String toString() {
+		return result.toString();
+	}
+
+	public Map<String, List<SearchResult>> getResult() {
+		return Collections.unmodifiableMap(result);
 	}
 
 }

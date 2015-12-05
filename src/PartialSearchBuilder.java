@@ -95,7 +95,7 @@ public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 
 	@Override
 	public String toString() {
-		return "PartialSearch [result=" + result + "]";
+		return "PartialSearch [result=" + result.toString() + "]";
 	}
 
 }
