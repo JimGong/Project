@@ -97,12 +97,9 @@ public class ThreadSafeInvertedIndex extends InvertedIndex {
 
 	@Override
 	public void addAll(InvertedIndex local) {
-		logger.debug("going lock");
 		lock.lockReadWrite();
-		logger.debug("locked");
 		try {
 			super.addAll(local);
-
 		} finally {
 			logger.debug("going to unlock");
 			lock.unlockReadWrite();

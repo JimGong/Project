@@ -57,7 +57,7 @@ public class SearchServlet extends HttpServlet {
 
 		out.printf(
 				"<center><img src=http://simpleicon.com/wp-content/uploads/smile.png width=\"150\" height=\"150\">");
-		out.printf("<h1>Search Engine</h1>");
+		out.printf("<h1>Search Engine</h1></center>");
 
 		printForm(session, request, response);/* build text box */
 
@@ -158,8 +158,7 @@ public class SearchServlet extends HttpServlet {
 				"<font size='2'><p>This request was handled by thread %s.</p></font>%n",
 				Thread.currentThread().getName());
 
-		out.printf("<font size='3'><p>It is %s.</p></font></center>%n",
-				getDate());
+		out.printf("<font size='3'><p>It is %s.</p></font></center>%n", getDate());
 
 		out.printf("</body>%n");
 		out.printf("</html>%n");

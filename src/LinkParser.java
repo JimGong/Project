@@ -1,3 +1,5 @@
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,14 +27,6 @@ public class LinkParser {
 	 */
 	public static final int GROUP = 1;
 
-	// TODO
-	/* Modify or add new version of this...
-	public static ArrayList<URL> listLinks(URL base, String text) {
-		in the while loop...
-			convert to absolute before returning
-	}
-	*/
-
 	/**
 	 * Parses the provided text for HTML links.
 	 *
@@ -40,8 +34,11 @@ public class LinkParser {
 	 *            - valid HTML code, with quoted attributes and URL encoded
 	 *            links
 	 * @return list of links found in HTML code
+	 * @throws MalformedURLException
 	 */
-	public static ArrayList<String> listLinks(String text) {
+	public static ArrayList<String> listLinks(URL base, String text)
+			throws MalformedURLException {
+
 		// list to store links
 		ArrayList<String> links = new ArrayList<String>();
 
@@ -54,7 +51,13 @@ public class LinkParser {
 		// loop through every match found in text
 		while (m.find()) {
 			// add the appropriate group from regular expression to list
-			links.add(m.group(GROUP));
+
+			URL absolute = new URL(base, m.group(GROUP));
+
+			// System.out.println(absolute.toString());
+			if (!absolute.toString().contains("#")) {
+				links.add(absolute.toString());
+			}
 		}
 
 		return links;
