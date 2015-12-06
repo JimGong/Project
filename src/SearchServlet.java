@@ -12,7 +12,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 
@@ -41,10 +40,15 @@ public class SearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
+		if (request.getRequestURI().endsWith("favicon.ico")) {
+			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+			return;
+		}
+		System.out.println(Thread.currentThread().getName() + ": "
+				+ request.getRequestURI());
+
 		response.setContentType("text/html");
 		response.setStatus(HttpServletResponse.SC_OK);
-
-		HttpSession session = request.getSession(true);
 
 		PrintWriter out = response.getWriter();
 		out.printf("<html>%n");
@@ -56,17 +60,14 @@ public class SearchServlet extends HttpServlet {
 		out.printf("<div align=right> <p>Welcome, user</p></div>%n");
 
 		out.printf(
-				"<center><img src=http://simpleicon.com/wp-content/uploads/smile.png width=\"150\" height=\"150\">");
-		out.printf("<h1>Search Engine</h1></center>");
+				"<center><img src=http://simpleicon.com/wp-content/uploads/smile.png width=\"150\" height=\"150\">%n");
+		out.printf("<h1>Search Engine</h1>%n");
 
-		printForm(session, request, response);/* build text box */
+		printForm(request, response);/* build text box */
 
 		/* get input */
 
-		String query = "";
-		query = request.getParameter("search");
-		// query = (String) session.getAttribute("search");
-		System.out.println("++++++user input: " + query);
+		String query = request.getParameter("search");
 
 		query = ((query == null) || query.equals("")) ? "" : query;
 
@@ -81,15 +82,19 @@ public class SearchServlet extends HttpServlet {
 					searchHistory.removeFirst();
 				}
 			}
-			System.out.println("searching " + query + " in inverted index ");
+			System.out.println("searching " + query + " in inverted index");
 			search.parseLine(query);
 			search.finish();
 
 			Map<String, List<SearchResult>> result = search.getResult();
 
-			System.out.println("print to website " + result.size());
 			for (String url : result.keySet()) {
 				List<SearchResult> list = result.get(url);
+
+				if (list.size() == 0) {
+					out.printf("<p>No result found<p>%n");
+				}
+
 				for (SearchResult a : list) {
 					out.printf("<p><a href=" + a.getLocation() + ">"
 							+ a.getLocation() + "</a><p>%n");
@@ -158,7 +163,8 @@ public class SearchServlet extends HttpServlet {
 				"<font size='2'><p>This request was handled by thread %s.</p></font>%n",
 				Thread.currentThread().getName());
 
-		out.printf("<font size='3'><p>It is %s.</p></font></center>%n", getDate());
+		out.printf("<font size='3'><p>It is %s.</p></font></center>%n",
+				getDate());
 
 		out.printf("</body>%n");
 		out.printf("</html>%n");
@@ -166,9 +172,8 @@ public class SearchServlet extends HttpServlet {
 		response.setStatus(HttpServletResponse.SC_OK);
 	}
 
-	private static void printForm(HttpSession session,
-			HttpServletRequest request, HttpServletResponse response)
-					throws IOException {
+	private static void printForm(HttpServletRequest request,
+			HttpServletResponse response) throws IOException {
 
 		PrintWriter out = response.getWriter();
 		out.printf("<form method=\"get\" action=\"%s\">%n",
@@ -181,8 +186,6 @@ public class SearchServlet extends HttpServlet {
 				"\t\t<input type=\"text\" name=\"search\" maxlength=\"70\" size=\"80\">%n");
 		out.printf("\t</td>%n");
 		out.printf("</tr>%n");
-
-		session.setAttribute("query", request.getParameter("search"));
 
 		out.printf("</table>%n");
 		out.printf("<p><input type=\"submit\" value=\"Search\"></p>");
