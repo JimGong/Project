@@ -24,8 +24,9 @@ public class SearchServlet extends HttpServlet {
 	private ThreadSafeInvertedIndex index;
 	ThreadSafePartialSearchBuilder search;
 
-	public static String VISIT_DATE = "Visited";
-	public static String VISIT_COUNT = "Count";
+	public String VISIT_DATE = "Visited";
+	public String VISIT_COUNT = "Count";
+	public String SEARCH_HISTORY = "History";
 
 	public SearchServlet(InvertedIndex index, int numThread) {
 
@@ -69,6 +70,8 @@ public class SearchServlet extends HttpServlet {
 
 		String query = request.getParameter("search");
 
+		response.addCookie(new Cookie(SEARCH_HISTORY, query));
+
 		query = ((query == null) || query.equals("")) ? "" : query;
 
 		query = StringEscapeUtils.escapeHtml4(query);
@@ -107,22 +110,35 @@ public class SearchServlet extends HttpServlet {
 		/* end printing search result */
 
 		/* show history */
-		synchronized (searchHistory) {
-			if (!searchHistory.isEmpty()) {
-				out.printf("<p>Search History<p>%n");
-				for (String history : searchHistory) {
-					out.printf("<p>%s</p>%n%n", history);
-				}
-			}
-		}
+		// synchronized (searchHistory) {
+		// if (!searchHistory.isEmpty()) {
+		// out.printf("<p>Search History<p>%n");
+		// for (String history : searchHistory) {
+		// out.printf("<p>%s</p>%n%n", history);
+		// }
+		// }
+		// }
 		/* end of printing history */
 
 		/* cookie */
 		Map<String, String> cookies = cookieBaseServlet.getCookieMap(request);
 		String visitDate = cookies.get(VISIT_DATE);
 		String visitCount = cookies.get(VISIT_COUNT);
+		String history = cookies.get(SEARCH_HISTORY);
 
 		out.printf("<p>");
+		if ((history == null) || (history == "")) {
+			history = query;
+		}
+		else {
+			history = history + ", " + query;
+		}
+		System.out.println("history: " + history);
+		if ((history != null) && !history.equals("")) {
+			out.printf("<p>Search History<p>%n");
+			out.printf("<p>%s</p>%n%n", history);
+		}
+
 		/* Update visit count as necessary and output information. */
 
 		if ((visitDate == null) || (visitCount == null)) {
@@ -143,21 +159,15 @@ public class SearchServlet extends HttpServlet {
 		 * not a standard header! Try this in Safari private browsing mode.
 		 */
 		if (request.getIntHeader("DNT") != 1) {
-			response.addCookie(new Cookie("Visited", getDate()));
-			response.addCookie(new Cookie("Count", visitCount));
+			response.addCookie(new Cookie(VISIT_DATE, getDate()));
+			response.addCookie(new Cookie(VISIT_COUNT, visitCount));
+			// response.addCookie(new Cookie(SEARCH_HISTORY, query));
 		}
 		else {
 			cookieBaseServlet.clearCookies(request, response);
 			out.printf("<p>Your visits will not be tracked.</p>");
 		}
 		/* end of cookie stuff */
-
-		/* clear search history */
-		// cleanHistory();
-		// PrintWriter out = response.getWriter();
-		// out.printf("<p>Your cookies for this site have been
-		// cleared.</p>%n%n");
-		/* end of clean search history */
 
 		out.printf(
 				"<font size='2'><p>This request was handled by thread %s.</p></font>%n",
