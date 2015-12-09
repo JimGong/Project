@@ -58,8 +58,21 @@ public class SearchServlet extends HttpServlet {
 				"<body background=http://img0.gtsstatic.com/wallpapers/f94bda506ba71e59ee5ad53fff49729c_large.jpeg>");
 		out.printf("<body>%n");
 
-		out.printf("<div align=right> <p>Welcome, user</p></div>%n");
+		/* get user name */
+		String user = new LoginBaseServlet().getUsername(request);
 
+		if (user == null) {
+			user = "Login";
+		}
+		System.out.println("user: " + user);
+		out.printf("<div align=right> <p>Welcome, <a href=/login>" + user
+				+ "</a></p>%n");
+
+		if (!user.equals("Login")) {
+			out.printf("<p>Not " + user
+					+ "? <a href='/login'>Sign Out</a><p></div>%n");
+			user = "Login";
+		}
 		out.printf(
 				"<center><img src=http://simpleicon.com/wp-content/uploads/smile.png width=\"150\" height=\"150\">%n");
 		out.printf("<h1>Search Engine</h1>%n");
@@ -70,8 +83,6 @@ public class SearchServlet extends HttpServlet {
 
 		String query = request.getParameter("search");
 
-		response.addCookie(new Cookie(SEARCH_HISTORY, query));
-
 		query = ((query == null) || query.equals("")) ? "" : query;
 
 		query = StringEscapeUtils.escapeHtml4(query);
@@ -80,12 +91,22 @@ public class SearchServlet extends HttpServlet {
 		if ((!query.equals(null)) && (!query.isEmpty())) {
 			System.out.println("------user input: " + query);
 			synchronized (searchHistory) {
+				// System.out.println("before add " + query + " into the hist: "
+				// + searchHistory.toString());
 				searchHistory.addLast(query);
+				// System.out.println(query + " added, new hist: "
+				// + searchHistory.toString());
+
 				while (searchHistory.size() > 5) {
+					// System.out.println("remove the first");
 					searchHistory.removeFirst();
 				}
 			}
-			System.out.println("searching " + query + " in inverted index");
+			// System.out.println(
+			// "before adding to cookie: " + searchHistory.toString());
+			// response.addCookie(new Cookie(SEARCH_HISTORY, searchHistory
+			// .toString().replace("[", "").replace("]", "")));
+			// System.out.println("searching " + query + " in inverted index");
 			search.parseLine(query);
 			search.finish();
 
@@ -110,34 +131,42 @@ public class SearchServlet extends HttpServlet {
 		/* end printing search result */
 
 		/* show history */
-		// synchronized (searchHistory) {
-		// if (!searchHistory.isEmpty()) {
-		// out.printf("<p>Search History<p>%n");
-		// for (String history : searchHistory) {
-		// out.printf("<p>%s</p>%n%n", history);
-		// }
-		// }
-		// }
+		synchronized (searchHistory) {
+			if (!searchHistory.isEmpty()) {
+				out.printf("<p>Search History<p>%n");
+				for (String history : searchHistory) {
+					out.printf("<p>%s</p>%n%n", history);
+				}
+			}
+		}
 		/* end of printing history */
 
 		/* cookie */
 		Map<String, String> cookies = cookieBaseServlet.getCookieMap(request);
 		String visitDate = cookies.get(VISIT_DATE);
 		String visitCount = cookies.get(VISIT_COUNT);
-		String history = cookies.get(SEARCH_HISTORY);
+		// String history = cookies.get(SEARCH_HISTORY);
 
 		out.printf("<p>");
-		if ((history == null) || (history == "")) {
-			history = query;
-		}
-		else {
-			history = history + ", " + query;
-		}
-		System.out.println("history: " + history);
-		if ((history != null) && !history.equals("")) {
-			out.printf("<p>Search History<p>%n");
-			out.printf("<p>%s</p>%n%n", history);
-		}
+
+		// if ((!query.equals(null)) && (!query.isEmpty())) {
+		// System.out.println("old history: " + history);
+		// if (history == null) {
+		// System.out.println("1");
+		// history = query;
+		// }
+		// else {
+		// System.out.println("2");
+		// history = history + ", " + query;
+		//
+		// }
+		// System.out.println("new history: " + history);
+		// }
+		//
+		// if ((history != null) && !history.equals("")) {
+		// out.printf("<p>Search History<p>%n");
+		// out.printf("<p>%s</p>%n%n", history);
+		// }
 
 		/* Update visit count as necessary and output information. */
 

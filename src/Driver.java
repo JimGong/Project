@@ -182,6 +182,10 @@ public class Driver {
 			handler.addServlet(
 					new ServletHolder(new SearchServlet(index, numThreads)),
 					"/");
+			handler.addServlet(LoginUserServlet.class, "/login");
+			handler.addServlet(LoginRegisterServlet.class, "/register");
+			handler.addServlet(LoginWelcomeServlet.class, "/welcome");
+			// handler.addServlet(LoginRedirectServlet.class, "/*");
 
 			handler.addServlet(CookieConfigServlet.class, "/config");
 
@@ -189,6 +193,7 @@ public class Driver {
 			server.setHandler(handler);
 			try {
 				server.start();
+				System.out.println();
 
 				server.join();
 
