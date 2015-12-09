@@ -26,13 +26,19 @@ public class LoginDatabaseHandler {
 	private static LoginDatabaseHandler singleton = new LoginDatabaseHandler();
 
 	/** Used to determine if necessary tables are provided. */
-	private static final String TABLES_SQL = "SHOW TABLES LIKE 'login_users';";
+	private static final String LOGIN_USER_TABLES_SQL = "SHOW TABLES LIKE 'login_users';";
+	private static final String SEARCH_HISTORY_TABLES_SQL = "SHOW TABLES LIKE 'search_history';";
 
 	/** Used to create necessary tables for this example. */
-	private static final String CREATE_SQL = "CREATE TABLE login_users ("
+	private static final String CREATE_LOGIN_USERS_SQL = "CREATE TABLE login_users ("
 			+ "userid INTEGER AUTO_INCREMENT PRIMARY KEY, "
 			+ "username VARCHAR(32) NOT NULL UNIQUE, "
 			+ "password CHAR(64) NOT NULL, " + "usersalt CHAR(32) NOT NULL);";
+
+	/** Used to create search history tables for this example. */
+	private static final String CREATE_SEARCH_HISTORY_SQL = "CREATE TABLE search_history ("
+			+ "userid INTEGER AUTO_INCREMENT PRIMARY KEY, "
+			+ "query CHAR(64) NOT NULL);";
 
 	/** Used to insert a new user into the database. */
 	private static final String REGISTER_SQL = "INSERT INTO login_users (username, password, usersalt) "
@@ -40,6 +46,14 @@ public class LoginDatabaseHandler {
 
 	/** Used to determine if a username already exists. */
 	private static final String USER_SQL = "SELECT username FROM login_users WHERE username = ?";
+
+	/***/
+	private static final String ADD_QUERY_SQL = "INSERT INTO Search_History (username, searchquery) "
+			+ "VALUES (?, ?);";
+
+	/** Used to change the passward for the user */
+	private static final String UPDATE_SQL = "UPDATE login_users SET password = ?, usersalt = ? "
+			+ "WHERE username = ?;";
 
 	/** Used to retrieve the salt associated with a specific user. */
 	private static final String SALT_SQL = "SELECT usersalt FROM login_users WHERE username = ?";
@@ -66,8 +80,6 @@ public class LoginDatabaseHandler {
 		random = new Random(System.currentTimeMillis());
 
 		try {
-			// TODO Change to "database.properties" or whatever your file is
-			// called
 			db = new DatabaseConnector("database.properties");
 			status = db.testConnection() ? setupTables()
 					: Status.CONNECTION_FAILED;
@@ -93,7 +105,7 @@ public class LoginDatabaseHandler {
 
 	/**
 	 * Checks to see if a String is null or empty.
-	 * 
+	 *
 	 * @param text
 	 *            - String to check
 	 * @return true if non-null and non-empty
@@ -113,13 +125,27 @@ public class LoginDatabaseHandler {
 
 		try (Connection connection = db.getConnection();
 				Statement statement = connection.createStatement();) {
-			if (!statement.executeQuery(TABLES_SQL).next()) {
+			if (!statement.executeQuery(LOGIN_USER_TABLES_SQL).next()) {
 				// Table missing, must create
-				log.debug("Creating tables...");
-				statement.executeUpdate(CREATE_SQL);
+				log.debug("Creating login user tables...");
+				statement.executeUpdate(CREATE_LOGIN_USERS_SQL);
 
 				// Check if create was successful
-				if (!statement.executeQuery(TABLES_SQL).next()) {
+				if (!statement.executeQuery(LOGIN_USER_TABLES_SQL).next()) {
+					status = Status.CREATE_FAILED;
+				}
+				else {
+					status = Status.OK;
+				}
+			}
+			else if (!statement.executeQuery(SEARCH_HISTORY_TABLES_SQL)
+					.next()) {
+				// Table missing, must create
+				log.debug("Creating search history tables...");
+				statement.executeUpdate(CREATE_SEARCH_HISTORY_SQL);
+
+				// Check if create was successful
+				if (!statement.executeQuery(SEARCH_HISTORY_TABLES_SQL).next()) {
 					status = Status.CREATE_FAILED;
 				}
 				else {
@@ -448,6 +474,98 @@ public class LoginDatabaseHandler {
 				status = removeUser(connection, username, password);
 			}
 		} catch (Exception ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+
+		return status;
+	}
+
+	private Status updatePassword(Connection connection, String user,
+			String newpass) {
+
+		Status status = Status.ERROR;
+		byte[] saltBytes = new byte[16];
+		random.nextBytes(saltBytes);
+
+		String usersalt = encodeHex(saltBytes, 32);
+		String passhash = getHash(newpass, usersalt);
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(UPDATE_SQL);) {
+			statement.setString(1, passhash);
+			statement.setString(2, usersalt);
+			statement.setString(3, user);
+			statement.executeUpdate();
+
+			status = Status.OK;
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status updatePassword(String user, String newpass) {
+		Status status = Status.ERROR;
+		System.out.println("Updating password for " + user + ".");
+		log.debug("Updating password for " + user + ".");
+
+		// // make sure we have non-null and non-emtpy values for login
+		if (isBlank(user) || isBlank(newpass)) {
+			status = Status.INVALID_LOGIN;
+			log.debug(status);
+			return status;
+		}
+
+		// try to connect to database
+		try (Connection connection = db.getConnection();) {
+
+			status = updatePassword(connection, user, newpass);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+
+		return status;
+	}
+
+	private Status addSearchHistory(Connection connection, String username,
+			String query) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(UPDATE_SQL);) {
+			statement.setString(1, query);
+			statement.setString(2, username);
+			statement.executeUpdate();
+
+			status = Status.OK;
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+		return status;
+	}
+
+	public Status addSearchHistory(String username, String query) {
+		Status status = Status.ERROR;
+		System.out.println("add " + query + " for " + username);
+		log.debug("add " + query + " for " + username);
+
+		if (isBlank(query) || isBlank(username)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+
+		try (Connection connection = db.getConnection();) {
+
+			status = addSearchHistory(connection, username, query);
+
+		} catch (SQLException ex) {
 			status = Status.CONNECTION_FAILED;
 			log.debug(status, ex);
 		}

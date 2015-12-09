@@ -172,33 +172,46 @@ public class Driver {
 			search = new ThreadSafePartialSearchBuilder(numThreads, index);
 
 			/** project 5 */
+			System.out.println("Starting server");
+			if (parser.hasFlag(PORT_FLAG)) {
+				Server server = null;
+				if (parser.hasValue(PORT_FLAG)) {
+					server = new Server(
+							Integer.parseInt(parser.getValue(PORT_FLAG)));
+				}
+				else {
+					server = new Server(PORT_DEFAULT);
+				}
 
-			Server server = new Server(PORT_DEFAULT);
+				ServletContextHandler handler = new ServletContextHandler(
+						ServletContextHandler.SESSIONS);
 
-			ServletContextHandler handler = new ServletContextHandler(
-					ServletContextHandler.SESSIONS);
+				handler.setContextPath("/");
+				handler.addServlet(
+						new ServletHolder(new SearchServlet(index, numThreads)),
+						"/");
+				handler.addServlet(LoginUserServlet.class, "/login");
+				handler.addServlet(LoginRegisterServlet.class, "/register");
+				handler.addServlet(LoginWelcomeServlet.class, "/welcome");
+				handler.addServlet(PasswordServlet.class, "/reset_password");
+				// handler.addServlet(LoginRedirectServlet.class, "/*");
 
-			handler.setContextPath("/");
-			handler.addServlet(
-					new ServletHolder(new SearchServlet(index, numThreads)),
-					"/");
-			handler.addServlet(LoginUserServlet.class, "/login");
-			handler.addServlet(LoginRegisterServlet.class, "/register");
-			handler.addServlet(LoginWelcomeServlet.class, "/welcome");
-			// handler.addServlet(LoginRedirectServlet.class, "/*");
+				handler.addServlet(CookieConfigServlet.class, "/config");
 
-			handler.addServlet(CookieConfigServlet.class, "/config");
+				/* setup jetty server */
+				server.setHandler(handler);
+				try {
+					server.start();
+					System.out.println("server started");
 
-			/* setup jetty server */
-			server.setHandler(handler);
-			try {
-				server.start();
-				System.out.println();
+					server.join();
 
-				server.join();
-
-			} catch (Exception e1) {
-				e1.printStackTrace();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}
+			else {
+				System.err.println("Can not set up the right server");
 			}
 			/** end of project 5 */
 

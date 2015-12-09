@@ -32,8 +32,10 @@ public class DatabaseConnector {
 	 * Creates a connector from a "database.properties" file located in the
 	 * current working directory.
 	 *
-	 * @throws IOException if unable to properly parse properties file
-	 * @throws FileNotFoundException if properties file not found
+	 * @throws IOException
+	 *             if unable to properly parse properties file
+	 * @throws FileNotFoundException
+	 *             if properties file not found
 	 */
 	public DatabaseConnector() throws FileNotFoundException, IOException {
 		this("database.properties");
@@ -42,9 +44,12 @@ public class DatabaseConnector {
 	/**
 	 * Creates a connector from the provided database properties file.
 	 *
-	 * @param configPath path to the database properties file
-	 * @throws IOException if unable to properly parse properties file
-	 * @throws FileNotFoundException if properties file not found
+	 * @param configPath
+	 *            path to the database properties file
+	 * @throws IOException
+	 *             if unable to properly parse properties file
+	 * @throws FileNotFoundException
+	 *             if properties file not found
 	 */
 	public DatabaseConnector(String configPath)
 			throws FileNotFoundException, IOException {
@@ -54,8 +59,7 @@ public class DatabaseConnector {
 
 		// Create database URI in proper format
 		uri = String.format("jdbc:mysql://%s/%s",
-				config.getProperty("hostname"),
-				config.getProperty("database"));
+				config.getProperty("hostname"), config.getProperty("database"));
 
 		// Create database login properties
 		login = new Properties();
@@ -67,10 +71,13 @@ public class DatabaseConnector {
 	 * Attempts to load properties file with database configuration. Must
 	 * include username, password, database, and hostname.
 	 *
-	 * @param configPath path to database properties file
+	 * @param configPath
+	 *            path to database properties file
 	 * @return database properties
-	 * @throws IOException if unable to properly parse properties file
-	 * @throws FileNotFoundException if properties file not found
+	 * @throws IOException
+	 *             if unable to properly parse properties file
+	 * @throws FileNotFoundException
+	 *             if properties file not found
 	 */
 	private Properties loadConfig(String configPath)
 			throws FileNotFoundException, IOException {
@@ -99,7 +106,8 @@ public class DatabaseConnector {
 	 * Attempts to connect to database using loaded configuration.
 	 *
 	 * @return database connection
-	 * @throws SQLException if unable to establish database connection
+	 * @throws SQLException
+	 *             if unable to establish database connection
 	 */
 	public Connection getConnection() throws SQLException {
 		Connection dbConnection = DriverManager.getConnection(uri, login);
@@ -132,8 +140,8 @@ public class DatabaseConnector {
 	}
 
 	/**
-	 * Opens a database connection, executes a simple statement, and closes
-	 * the database connection.
+	 * Opens a database connection, executes a simple statement, and closes the
+	 * database connection.
 	 *
 	 * @return true if all operations successful
 	 */
@@ -151,8 +159,7 @@ public class DatabaseConnector {
 
 				okay = true;
 			}
-		}
-		catch (SQLException e) {
+		} catch (SQLException e) {
 			System.err.println(e.getMessage());
 		}
 
@@ -164,12 +171,13 @@ public class DatabaseConnector {
 	 * you see the message "Connection to database established" then your
 	 * settings are correct
 	 *
-	 * @param args unused
+	 * @param args
+	 *            unused
 	 */
 	public static void main(String[] args) {
 		try {
-		    // TODO Change to database.properties (or whatever you named your properties file)!
-			DatabaseConnector test = new DatabaseConnector("database.properties");
+			DatabaseConnector test = new DatabaseConnector(
+					"database.properties");
 			System.out.println("Connecting to " + test.uri);
 
 			if (test.testConnection()) {
@@ -178,8 +186,7 @@ public class DatabaseConnector {
 			else {
 				System.err.println("Unable to connect properly to database.");
 			}
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			System.err.println("Unable to connect properly to database.");
 			System.err.println(e.getMessage());
 		}

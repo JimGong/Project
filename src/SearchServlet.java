@@ -243,5 +243,12 @@ public class SearchServlet extends HttpServlet {
 	}
 
 	/* cookie stuff */
+	@Override
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		String username = new LoginBaseServlet().getUsername(request);
+		String query = request.getParameter("search");
 
+		LoginBaseServlet.dbhandler.addSearchHistory(username, query);
+	}
 }

@@ -71,7 +71,10 @@ public class WebCrawler {
 				for (int i = 0; (i < innerURLs.size())
 						&& (urlSet.size() < MAX_CAPACITY); i++) {
 					String innerAbsoluteLink = innerURLs.get(i);
-					minions.execute(new CrawlMinion(innerAbsoluteLink, urlSet));
+					if (!urlSet.contains(innerAbsoluteLink)) {
+						minions.execute(
+								new CrawlMinion(innerAbsoluteLink, urlSet));
+					}
 				}
 				lock.unlockReadWrite();
 
