@@ -1,5 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.sql.Connection;
@@ -33,27 +34,37 @@ public class LoginDatabaseHandler {
 	private static final String CREATE_LOGIN_USERS_SQL = "CREATE TABLE login_users ("
 			+ "userid INTEGER AUTO_INCREMENT PRIMARY KEY, "
 			+ "username VARCHAR(32) NOT NULL UNIQUE, "
-			+ "password CHAR(64) NOT NULL, " + "usersalt CHAR(32) NOT NULL);";
+			+ "password CHAR(64) NOT NULL, " + "usersalt CHAR(32) NOT NULL"
+			+ "lastlogin CHAR(64) NOT NULL UNIQUE);";
 
 	/** Used to create search history tables for this example. */
 	private static final String CREATE_SEARCH_HISTORY_SQL = "CREATE TABLE search_history ("
 			+ "userid INTEGER AUTO_INCREMENT PRIMARY KEY, "
-			+ "query CHAR(64) NOT NULL);";
+			+ "username VARCHAR(32) NOT NULL, " + "query CHAR(64) NOT NULL"
+			+ "time CHAR(64) NOT NULL);";
 
 	/** Used to insert a new user into the database. */
-	private static final String REGISTER_SQL = "INSERT INTO login_users (username, password, usersalt) "
-			+ "VALUES (?, ?, ?);";
+	private static final String REGISTER_SQL = "INSERT INTO login_users (username, password, usersalt, lastlogin) "
+			+ "VALUES (?, ?, ?, NOW());";
 
 	/** Used to determine if a username already exists. */
 	private static final String USER_SQL = "SELECT username FROM login_users WHERE username = ?";
 
 	/***/
-	private static final String ADD_QUERY_SQL = "INSERT INTO Search_History (username, searchquery) "
-			+ "VALUES (?, ?);";
+	private static final String ADD_QUERY_SQL = "INSERT INTO search_history (username, query, time) "
+			+ "VALUES (?, ?, NOW());";
 
 	/** Used to change the passward for the user */
-	private static final String UPDATE_SQL = "UPDATE login_users SET password = ?, usersalt = ? "
+	private static final String UPDATE_PASSWORD_SQL = "UPDATE login_users SET password = ?, usersalt = ? "
 			+ "WHERE username = ?;";
+
+	private static final String UPDATE_LOGIN_TIME_SQL = "UPDATE login_users SET lastlogin = NOW() "
+			+ "WHERE username = ?;";
+
+	private static final String GET_LOGIN_TIME_SQL = "SELECT DISTINCT(lastlogin) FROM login_users "
+			+ "WHERE username= ?;";
+
+	private static final String GET_LOGGED_IN_USERS_SQL = "SELECT username FROM  login_users ORDER BY lastlogin DESC LIMIT 5;";
 
 	/** Used to retrieve the salt associated with a specific user. */
 	private static final String SALT_SQL = "SELECT usersalt FROM login_users WHERE username = ?";
@@ -64,6 +75,11 @@ public class LoginDatabaseHandler {
 
 	/** Used to remove a user from the database. */
 	private static final String DELETE_SQL = "DELETE FROM login_users WHERE username = ?";
+
+	private static final String GET_HISTORY_SQL = "SELECT CONCAT(time, '&nbsp;&nbsp;&nbsp;', query)"
+			+ "AS full_history FROM search_history WHERE username= ? ORDER BY time ASC;";
+
+	private static final String CLEAN_HISTORY_SQL = "DELETE FROM search_history WHERE username = ?;";
 
 	/** Used to configure connection to database. */
 	private DatabaseConnector db;
@@ -81,8 +97,10 @@ public class LoginDatabaseHandler {
 
 		try {
 			db = new DatabaseConnector("database.properties");
-			status = db.testConnection() ? setupTables()
+
+			status = db.testConnection() ? setupLoginTables()
 					: Status.CONNECTION_FAILED;
+
 		} catch (FileNotFoundException e) {
 			status = Status.MISSING_CONFIG;
 		} catch (IOException e) {
@@ -120,7 +138,8 @@ public class LoginDatabaseHandler {
 	 *
 	 * @return {@link Status.OK} if table exists or create is successful
 	 */
-	private Status setupTables() {
+	private Status setupLoginTables() {
+		System.out.println("login table");
 		Status status = Status.ERROR;
 
 		try (Connection connection = db.getConnection();
@@ -138,20 +157,6 @@ public class LoginDatabaseHandler {
 					status = Status.OK;
 				}
 			}
-			else if (!statement.executeQuery(SEARCH_HISTORY_TABLES_SQL)
-					.next()) {
-				// Table missing, must create
-				log.debug("Creating search history tables...");
-				statement.executeUpdate(CREATE_SEARCH_HISTORY_SQL);
-
-				// Check if create was successful
-				if (!statement.executeQuery(SEARCH_HISTORY_TABLES_SQL).next()) {
-					status = Status.CREATE_FAILED;
-				}
-				else {
-					status = Status.OK;
-				}
-			}
 			else {
 				log.debug("Tables found.");
 				status = Status.OK;
@@ -160,7 +165,6 @@ public class LoginDatabaseHandler {
 			status = Status.CREATE_FAILED;
 			log.debug(status, ex);
 		}
-
 		return status;
 	}
 
@@ -492,7 +496,7 @@ public class LoginDatabaseHandler {
 		String passhash = getHash(newpass, usersalt);
 
 		try (PreparedStatement statement = connection
-				.prepareStatement(UPDATE_SQL);) {
+				.prepareStatement(UPDATE_PASSWORD_SQL);) {
 			statement.setString(1, passhash);
 			statement.setString(2, usersalt);
 			statement.setString(3, user);
@@ -509,7 +513,6 @@ public class LoginDatabaseHandler {
 
 	public Status updatePassword(String user, String newpass) {
 		Status status = Status.ERROR;
-		System.out.println("Updating password for " + user + ".");
 		log.debug("Updating password for " + user + ".");
 
 		// // make sure we have non-null and non-emtpy values for login
@@ -532,14 +535,57 @@ public class LoginDatabaseHandler {
 		return status;
 	}
 
+	private Status updateLastLoginTime(Connection connection, String user) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(UPDATE_LOGIN_TIME_SQL);) {
+
+			statement.setString(1, user);
+			statement.executeUpdate();
+
+			status = Status.OK;
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status updateLastLoginTime(String user) {
+		Status status = Status.ERROR;
+
+		log.debug("Updating last login time for " + user + ".");
+
+		// // make sure we have non-null and non-emtpy values for login
+		if (isBlank(user)) {
+			status = Status.INVALID_LOGIN;
+			log.debug(status);
+			return status;
+		}
+
+		// try to connect to database
+		try (Connection connection = db.getConnection();) {
+
+			status = updateLastLoginTime(connection, user);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+
+		return status;
+	}
+
 	private Status addSearchHistory(Connection connection, String username,
 			String query) {
 		Status status = Status.ERROR;
 
 		try (PreparedStatement statement = connection
-				.prepareStatement(UPDATE_SQL);) {
-			statement.setString(1, query);
-			statement.setString(2, username);
+				.prepareStatement(ADD_QUERY_SQL);) {
+			statement.setString(1, username);
+			statement.setString(2, query);
 			statement.executeUpdate();
 
 			status = Status.OK;
@@ -552,8 +598,6 @@ public class LoginDatabaseHandler {
 
 	public Status addSearchHistory(String username, String query) {
 		Status status = Status.ERROR;
-		System.out.println("add " + query + " for " + username);
-		log.debug("add " + query + " for " + username);
 
 		if (isBlank(query) || isBlank(username)) {
 			status = Status.MISSING_VALUES;
@@ -561,9 +605,186 @@ public class LoginDatabaseHandler {
 			return status;
 		}
 
+		System.out.println("add " + query + " for " + username);
+		log.debug("add " + query + " for " + username);
+
 		try (Connection connection = db.getConnection();) {
 
 			status = addSearchHistory(connection, username, query);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
+	private Status getSearchHistory(Connection connection, String username,
+			PrintWriter out) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_HISTORY_SQL);) {
+
+			statement.setString(1, username);
+
+			status = Status.OK;
+
+			ResultSet searchHistory = statement.executeQuery();
+			System.out.println("trying to get the searchhistory for user: "
+					+ username + "&&& " + searchHistory.toString());
+			int size = 0;
+
+			while ((searchHistory != null) && searchHistory.next()) {
+
+				out.printf("\t<p>%s </p>",
+						searchHistory.getString("full_history"));
+				size++;
+			}
+			if (size == 0) {
+				out.printf("%n<p>You have no search history<p>");
+			}
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status getSearchHistory(String username, PrintWriter out) {
+
+		Status status = Status.ERROR;
+
+		if (isBlank(username)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = getSearchHistory(connection, username, out);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+
+		return status;
+	}
+
+	private Status getLastLoginTime(Connection connection, String username,
+			PrintWriter out) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_LOGIN_TIME_SQL);) {
+			statement.setString(1, username);
+
+			status = Status.OK;
+
+			ResultSet time = statement.executeQuery();
+
+			while ((time != null) && time.next()) {
+				out.printf("<p>" + username + ", your last visit was on "
+						+ time.getString("lastlogin") + "<p>%n");
+			}
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status getLastLoginTime(String username, PrintWriter out) {
+		Status status = Status.ERROR;
+
+		if (isBlank(username)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = getLastLoginTime(connection, username, out);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
+	private Status getLoggedInUser(Connection connection, PrintWriter out) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_LOGGED_IN_USERS_SQL);) {
+
+			status = Status.OK;
+
+			System.out.println();
+			ResultSet users = statement.executeQuery();
+			out.printf("<p>The last 5 logged in users:<p>");
+			while ((users != null) && users.next()) {
+				out.printf("<p>%s<p>", users.getString("username"));
+			}
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status getLoggedInUser(PrintWriter out) {
+		Status status = Status.ERROR;
+
+		try (Connection connection = db.getConnection();) {
+
+			status = getLoggedInUser(connection, out);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
+	private Status cleanSearchHistory(Connection connection, String username) {
+		Status status = Status.ERROR;
+		try (PreparedStatement statement = connection
+				.prepareStatement(CLEAN_HISTORY_SQL);) {
+
+			statement.setString(1, username);
+
+			statement.executeUpdate();
+
+			status = Status.OK;
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status cleanSearchHistory(String username) {
+		Status status = Status.ERROR;
+
+		if (isBlank(username)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = cleanSearchHistory(connection, username);
 
 		} catch (SQLException ex) {
 			status = Status.CONNECTION_FAILED;

@@ -1,6 +1,4 @@
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.UnknownHostException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -118,20 +116,4 @@ public class MultiThreadInvertedIndexBuilder {
 		minions.execute(new FileMinion(file, index));
 	}
 
-	/**
-	 * Traverse the URL given and find up to 50 URL find in the URL.
-	 *
-	 * @param link
-	 * @param index
-	 * @throws UnknownHostException
-	 * @throws MalformedURLException
-	 * @throws IOException
-	 */
-	public void traverseURL(String link, ThreadSafeInvertedIndex index)
-			throws UnknownHostException, MalformedURLException, IOException {
-		WebCrawler webCrawler = new WebCrawler(minions.size(), index);
-
-		webCrawler.traverse(link);
-
-	}
 }

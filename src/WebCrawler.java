@@ -24,39 +24,37 @@ public class WebCrawler {
 	}
 
 	public void traverse(String url) throws MalformedURLException {
+		lock.lockReadWrite();
+		urlHelper(url);
+		lock.unlockReadWrite();
 
-		if ((urlSet.size() < MAX_CAPACITY) && (!urlSet.contains(url))) {
-			minions.execute(new CrawlMinion(url, urlSet));
-		}
 		finish();
 		logger.debug("total size:" + urlSet.size());
+	}
+
+	private void urlHelper(String url) {
+		if ((urlSet.size() < MAX_CAPACITY) && (!urlSet.contains(url))) {
+			urlSet.add(url);
+			minions.execute(new CrawlMinion(url));
+		}
 	}
 
 	private class CrawlMinion implements Runnable {
 
 		private String link;
-		private HashSet<String> urlSet;
 
-		public CrawlMinion(String link, HashSet<String> urlSet) {
+		public CrawlMinion(String link) {
 			logger.debug("******** Minion created for {}", link);
 			this.link = link;
-			this.urlSet = urlSet;
+
 		}
 
 		@Override
 		public void run() {
 			logger.debug("urlsize: {}, {}", urlSet.size(),
 					urlSet.size() < MAX_CAPACITY);
-			if (urlSet.size() >= MAX_CAPACITY) {
-				return;
-			}
 
 			try {
-
-				lock.lockReadWrite();
-				urlSet.add(link);
-				logger.debug("size {}, {} added", urlSet.size(), link);
-				lock.unlockReadWrite();
 
 				/* get html from the link */
 				String html = HTTPFetcher.fetchHTML(link);
@@ -71,10 +69,7 @@ public class WebCrawler {
 				for (int i = 0; (i < innerURLs.size())
 						&& (urlSet.size() < MAX_CAPACITY); i++) {
 					String innerAbsoluteLink = innerURLs.get(i);
-					if (!urlSet.contains(innerAbsoluteLink)) {
-						minions.execute(
-								new CrawlMinion(innerAbsoluteLink, urlSet));
-					}
+					urlHelper(innerAbsoluteLink);
 				}
 				lock.unlockReadWrite();
 

@@ -43,22 +43,19 @@ public class LoginUserServlet extends LoginBaseServlet {
 			out.println("<p>Successfully logged out.</p>");
 		}
 
-		printForm(out);
+		printForm(request, out);
 		finishResponse(response);
 	}
 
 	@Override
-	public void doPost(HttpServletRequest request,
-			HttpServletResponse response) {
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
 
 		String user = request.getParameter("user");
 		String pass = request.getParameter("pass");
 
-		if (request.getParameter("guest") != null) {
-			user = "Login";
-			pass = "Guest";
-		}
 		Status status = dbhandler.authenticateUser(user, pass);
+		dbhandler.updateLastLoginTime(user);
 
 		try {
 			if (status == Status.OK) {
@@ -78,7 +75,7 @@ public class LoginUserServlet extends LoginBaseServlet {
 		}
 	}
 
-	private void printForm(PrintWriter out) {
+	private void printForm(HttpServletRequest request, PrintWriter out) {
 		assert out != null;
 
 		out.println("<form action=\"/login\" method=\"post\">");
@@ -94,15 +91,14 @@ public class LoginUserServlet extends LoginBaseServlet {
 				"\t\t<td><input type=\"password\" name=\"pass\" size=\"30\"></td>");
 		out.println("</tr>");
 		out.println("</table>");
-		out.println("<p><input type=\"submit\" value=\"Login\"></p>");
+		out.println("<p><input type=\"submit\"  value=\"Login\"></p>");
 		out.println("</form>");
 
 		out.println(
 				"<p>(<a href=\"/register\">new user? register here.</a>)</p>");
 
 		out.printf("<form action=\"/login\" method=\"post\">");
-		out.printf(
-				"<input type=\"submit\" name=\"guest\" value=\"Continue as a guest\">");
+
 		out.printf("</form>");
 
 	}

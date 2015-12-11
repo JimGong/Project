@@ -157,9 +157,10 @@ public class Driver {
 				try {
 
 					logger.debug("$$$$$$$$$$$$$$$$$$ traversing URL");
-					multiThreadInvertedIndexBuilder.traverseURL(
-							parser.getValue(SEED_FLAG),
+					WebCrawler webCrawler = new WebCrawler(numThreads,
 							(ThreadSafeInvertedIndex) index);
+					webCrawler.traverse(parser.getValue(SEED_FLAG));
+
 					logger.debug("$$$$$$$$$$$$$$$$$$ done with traversing URL");
 				} catch (IOException e) {
 					System.err.println("Invalid link.");
@@ -174,6 +175,29 @@ public class Driver {
 			/** project 5 */
 			System.out.println("Starting server");
 			if (parser.hasFlag(PORT_FLAG)) {
+				/* test database connection first */
+
+				try {
+					DatabaseConnector test = new DatabaseConnector(
+							"database.properties");
+					System.out.println("Connecting to " + test.uri);
+
+					if (test.testConnection()) {
+						System.out
+								.println("Connection to database established.");
+					}
+					else {
+						System.err.println(
+								"Unable to connect properly to database. Turn down server");
+						System.exit(0);
+					}
+				} catch (Exception e) {
+					System.err
+							.println("Unable to connect properly to database.");
+					System.err.println(e.getMessage());
+				}
+				/* finish testing database connection */
+
 				Server server = null;
 				if (parser.hasValue(PORT_FLAG)) {
 					server = new Server(
@@ -193,6 +217,7 @@ public class Driver {
 				handler.addServlet(LoginUserServlet.class, "/login");
 				handler.addServlet(LoginRegisterServlet.class, "/register");
 				handler.addServlet(LoginWelcomeServlet.class, "/welcome");
+				handler.addServlet(History.class, "/history");
 				handler.addServlet(PasswordServlet.class, "/reset_password");
 				// handler.addServlet(LoginRedirectServlet.class, "/*");
 
@@ -202,7 +227,6 @@ public class Driver {
 				server.setHandler(handler);
 				try {
 					server.start();
-					System.out.println("server started");
 
 					server.join();
 

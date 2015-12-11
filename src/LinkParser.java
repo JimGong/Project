@@ -53,22 +53,12 @@ public class LinkParser {
 			// add the appropriate group from regular expression to list
 
 			URL absolute = new URL(base, m.group(GROUP));
-			// System.out.println(absolute.getProtocol() + " --- "
-			// + absolute.getHost() + " --- " + absolute.getFile());
+
 			URL cleanAbsolute = new URL(absolute.getProtocol(),
 					absolute.getHost(), absolute.getFile());
 
-			// System.out.println(cleanAbsolute.toString());
-			// String absoluteURL = absolute.getProtocol() + "://"
-			// + absolute.getHost() + absolute.getFile();
-
-			// if (!absolute.toString().contains("#")) {
-			// if (!links.contains(cleanAbsolute.toString())) {
 			links.add(cleanAbsolute.toString());
-			// links.add(absolute.toString());
-			// }
 
-			// }
 		}
 
 		return links;
