@@ -24,7 +24,8 @@ import org.apache.logging.log4j.Logger;
 public class LoginBaseServlet extends HttpServlet {
 
 	protected static Logger log = LogManager.getLogger();
-	protected static final LoginDatabaseHandler dbhandler = LoginDatabaseHandler.getInstance();
+	protected static final LoginDatabaseHandler dbhandler = LoginDatabaseHandler
+			.getInstance();
 
 	protected void prepareResponse(String title, HttpServletResponse response) {
 		try {
@@ -37,8 +38,7 @@ public class LoginBaseServlet extends HttpServlet {
 			writer.printf("\t<meta charset=\"utf-8\">%n");
 			writer.printf("</head>%n%n");
 			writer.printf("<body>%n%n");
-		}
-		catch (IOException ex) {
+		} catch (IOException ex) {
 			log.warn("Unable to prepare HTTP response.");
 			return;
 		}
@@ -60,8 +60,7 @@ public class LoginBaseServlet extends HttpServlet {
 
 			response.setStatus(HttpServletResponse.SC_OK);
 			response.flushBuffer();
-		}
-		catch (IOException ex) {
+		} catch (IOException ex) {
 			log.warn("Unable to finish HTTP response.");
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 			return;
@@ -88,21 +87,23 @@ public class LoginBaseServlet extends HttpServlet {
 		return map;
 	}
 
-	protected void clearCookies(HttpServletRequest request, HttpServletResponse response) {
+	protected void clearCookies(HttpServletRequest request,
+			HttpServletResponse response) {
 		Cookie[] cookies = request.getCookies();
 
-		if(cookies == null) {
+		if (cookies == null) {
 			return;
 		}
 
-		for(Cookie cookie : cookies) {
+		for (Cookie cookie : cookies) {
 			cookie.setValue("");
 			cookie.setMaxAge(0);
 			response.addCookie(cookie);
 		}
 	}
 
-	protected void clearCookie(String cookieName, HttpServletResponse response) {
+	protected void clearCookie(String cookieName,
+			HttpServletResponse response) {
 		Cookie cookie = new Cookie(cookieName, null);
 		cookie.setMaxAge(0);
 		response.addCookie(cookie);
@@ -111,17 +112,15 @@ public class LoginBaseServlet extends HttpServlet {
 	protected void debugCookies(HttpServletRequest request) {
 		Cookie[] cookies = request.getCookies();
 
-		if(cookies == null) {
+		if (cookies == null) {
 			log.info("Saved Cookies: []");
 		}
 		else {
 			String[] names = new String[cookies.length];
 
-			for(int i = 0; i < names.length; i++) {
-				names[i] = String.format("(%s, %s, %d)",
-						cookies[i].getName(),
-						cookies[i].getValue(),
-						cookies[i].getMaxAge());
+			for (int i = 0; i < names.length; i++) {
+				names[i] = String.format("(%s, %s, %d)", cookies[i].getName(),
+						cookies[i].getValue(), cookies[i].getMaxAge());
 			}
 
 			log.info("Saved Cookies: " + Arrays.toString(names));
@@ -133,8 +132,7 @@ public class LoginBaseServlet extends HttpServlet {
 
 		try {
 			status = Status.valueOf(errorName);
-		}
-		catch (Exception ex) {
+		} catch (Exception ex) {
 			log.debug(errorName, ex);
 			status = Status.ERROR;
 		}
@@ -147,8 +145,7 @@ public class LoginBaseServlet extends HttpServlet {
 
 		try {
 			status = Status.values()[code];
-		}
-		catch (Exception ex) {
+		} catch (Exception ex) {
 			log.debug(ex.getMessage(), ex);
 			status = Status.ERROR;
 		}
@@ -160,7 +157,7 @@ public class LoginBaseServlet extends HttpServlet {
 		Map<String, String> cookies = getCookieMap(request);
 
 		String login = cookies.get("login");
-		String user  = cookies.get("name");
+		String user = cookies.get("name");
 
 		if ((login != null) && login.equals("true") && (user != null)) {
 			// this is not safe!

@@ -29,6 +29,7 @@ public class LoginDatabaseHandler {
 	/** Used to determine if necessary tables are provided. */
 	private static final String LOGIN_USER_TABLES_SQL = "SHOW TABLES LIKE 'login_users';";
 	private static final String SEARCH_HISTORY_TABLES_SQL = "SHOW TABLES LIKE 'search_history';";
+	private static final String URL_TABLES_SQL = "SHOW TABLES LIKE 'url';";
 
 	/** Used to create necessary tables for this example. */
 	private static final String CREATE_LOGIN_USERS_SQL = "CREATE TABLE login_users ("
@@ -43,6 +44,9 @@ public class LoginDatabaseHandler {
 			+ "username VARCHAR(32) NOT NULL, " + "query CHAR(64) NOT NULL"
 			+ "time CHAR(64) NOT NULL);";
 
+	private static final String CREATE_URL_SQL = "CREATE TABLE URL (id INTEGER AUTO_INCREMENT PRIMARY KEY, "
+			+ "url CHAR(250) NOT NULL UNIQUE, snippet CHAR(250), lastvisit CHAR(64) NOT NULL);";
+
 	/** Used to insert a new user into the database. */
 	private static final String REGISTER_SQL = "INSERT INTO login_users (username, password, usersalt, lastlogin) "
 			+ "VALUES (?, ?, ?, NOW());";
@@ -54,6 +58,8 @@ public class LoginDatabaseHandler {
 	private static final String ADD_QUERY_SQL = "INSERT INTO search_history (username, query, time) "
 			+ "VALUES (?, ?, NOW());";
 
+	private static final String ADD_URL_SQL = "INSERT INTO URL (url, snippet, lastvisit) VALUES(?, ?, ?);";
+
 	/** Used to change the passward for the user */
 	private static final String UPDATE_PASSWORD_SQL = "UPDATE login_users SET password = ?, usersalt = ? "
 			+ "WHERE username = ?;";
@@ -61,10 +67,16 @@ public class LoginDatabaseHandler {
 	private static final String UPDATE_LOGIN_TIME_SQL = "UPDATE login_users SET lastlogin = NOW() "
 			+ "WHERE username = ?;";
 
+	private static final String UPDATE_VISITED_TIME_SQL = "UPDATE URL SET lastvisit = NOW() WHERE url = ?;";
+
 	private static final String GET_LOGIN_TIME_SQL = "SELECT DISTINCT(lastlogin) FROM login_users "
 			+ "WHERE username= ?;";
 
 	private static final String GET_LOGGED_IN_USERS_SQL = "SELECT username FROM  login_users ORDER BY lastlogin DESC LIMIT 5;";
+
+	private static final String GET_URL_VISITED_TIME_SQL = "SELECT lastvisit FROM URL WHERE url = ?;";
+
+	private static final String GET_SNIPPET_SQL = "SELECT snippet FROM URL WHERE url = ?;";
 
 	/** Used to retrieve the salt associated with a specific user. */
 	private static final String SALT_SQL = "SELECT usersalt FROM login_users WHERE username = ?";
@@ -139,7 +151,6 @@ public class LoginDatabaseHandler {
 	 * @return {@link Status.OK} if table exists or create is successful
 	 */
 	private Status setupLoginTables() {
-		System.out.println("login table");
 		Status status = Status.ERROR;
 
 		try (Connection connection = db.getConnection();
@@ -158,7 +169,42 @@ public class LoginDatabaseHandler {
 				}
 			}
 			else {
-				log.debug("Tables found.");
+				log.debug("Login Users Table found.");
+				status = Status.OK;
+			}
+			if (!statement.executeQuery(SEARCH_HISTORY_TABLES_SQL).next()) {
+				// Table missing, must create
+				log.debug("Creating search history tables...");
+				statement.executeUpdate(CREATE_SEARCH_HISTORY_SQL);
+
+				// Check if create was successful
+				if (!statement.executeQuery(SEARCH_HISTORY_TABLES_SQL).next()) {
+					status = Status.CREATE_FAILED;
+				}
+				else {
+					status = Status.OK;
+				}
+			}
+			else {
+				log.debug("Search History Tables found.");
+				status = Status.OK;
+			}
+
+			if (!statement.executeQuery(URL_TABLES_SQL).next()) {
+				// Table missing, must create
+				log.debug("Creating url tables...");
+				statement.executeUpdate(CREATE_URL_SQL);
+
+				// Check if create was successful
+				if (!statement.executeQuery(URL_TABLES_SQL).next()) {
+					status = Status.CREATE_FAILED;
+				}
+				else {
+					status = Status.OK;
+				}
+			}
+			else {
+				log.debug("URL Tables found.");
 				status = Status.OK;
 			}
 		} catch (Exception ex) {
@@ -631,8 +677,8 @@ public class LoginDatabaseHandler {
 			status = Status.OK;
 
 			ResultSet searchHistory = statement.executeQuery();
-			System.out.println("trying to get the searchhistory for user: "
-					+ username + "&&& " + searchHistory.toString());
+			// System.out.println("trying to get the searchhistory for user: "
+			// + username + "&&& " + searchHistory.toString());
 			int size = 0;
 
 			while ((searchHistory != null) && searchHistory.next()) {
@@ -726,7 +772,6 @@ public class LoginDatabaseHandler {
 
 			status = Status.OK;
 
-			System.out.println();
 			ResultSet users = statement.executeQuery();
 			out.printf("<p>The last 5 logged in users:<p>");
 			while ((users != null) && users.next()) {
@@ -791,6 +836,164 @@ public class LoginDatabaseHandler {
 			log.debug(status, ex);
 		}
 
+		return status;
+	}
+
+	private Status addURL(Connection connection, String url, String snippet) {
+		Status status = Status.ERROR;
+		try (PreparedStatement statement = connection
+				.prepareStatement(ADD_URL_SQL);) {
+			statement.setString(1, url);
+			statement.setString(2, snippet);
+			statement.setString(3, "NotVisited");
+
+			statement.executeUpdate();
+
+			status = Status.OK;
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status addURL(String url, String snippet) {
+		Status status = Status.ERROR;
+
+		if (isBlank(url)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = addURL(connection, url, snippet);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+
+		return status;
+	}
+
+	private Status updateURLVisitedTime(Connection connection, String url) {
+		Status status = Status.ERROR;
+		try (PreparedStatement statement = connection
+				.prepareStatement(UPDATE_VISITED_TIME_SQL);) {
+			// System.out.println("update visited time for url: " + url);
+			statement.setString(1, url);
+
+			statement.executeUpdate();
+
+			status = Status.OK;
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status updateURLVisitedTime(String url) {
+		Status status = Status.ERROR;
+
+		if (isBlank(url)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = updateURLVisitedTime(connection, url);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
+	private Status getURLVisitedTime(Connection connection, String url,
+			PrintWriter out) {
+		Status status = Status.ERROR;
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_URL_VISITED_TIME_SQL);) {
+			// System.out.println("get visited time for url: " + url);
+			statement.setString(1, url);
+			ResultSet time = statement.executeQuery();
+
+			while ((time != null) && time.next()) {
+				out.printf("&nbsp;" + time.getString("lastvisit") + "<p>%n");
+			}
+
+			status = Status.OK;
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+		return status;
+	}
+
+	public Status getURLVisitedTime(String url, PrintWriter out) {
+		Status status = Status.ERROR;
+
+		if (isBlank(url)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = getURLVisitedTime(connection, url, out);
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
+	private Status getSnippet(Connection connection, String url,
+			PrintWriter out) {
+		Status status = Status.ERROR;
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_SNIPPET_SQL);) {
+			// System.out.println("get snippet for url: " + url);
+			statement.setString(1, url);
+			ResultSet snippet = statement.executeQuery();
+
+			while ((snippet != null) && snippet.next()) {
+				out.printf("<p>" + snippet.getString("snippet") + "<p>");
+			}
+
+			status = Status.OK;
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+		return status;
+	}
+
+	public Status getSnippet(String url, PrintWriter out) {
+		Status status = Status.ERROR;
+
+		if (isBlank(url)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = getSnippet(connection, url, out);
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
 		return status;
 	}
 }

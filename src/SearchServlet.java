@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -60,7 +59,7 @@ public class SearchServlet extends HttpServlet {
 		/* get user name */
 		String user = new LoginBaseServlet().getUsername(request);
 
-		LoginBaseServlet.dbhandler.updateLastLoginTime(user);
+		// LoginBaseServlet.dbhandler.updateLastLoginTime(user);
 
 		System.out.println("user: " + user);
 
@@ -77,12 +76,17 @@ public class SearchServlet extends HttpServlet {
 
 		printForm(request, response);/* build text box */
 
-		// search(request, out);
+		// String privateSearch = request.getParameter("privateSearch");
+		// String particalSearch = request.getParameter("partialSearch");
+		// if (privateSearch != null) {
+		// System.out.println("ps: " + privateSearch.toString());
+		// }
+		// System.out.println("&& " + privateSearch + particalSearch);
 
 		/* cookie */
 		Map<String, String> cookies = cookieBaseServlet.getCookieMap(request);
-		String visitDate = cookies.get(VISIT_DATE);
-		String visitCount = cookies.get(VISIT_COUNT);
+		// String visitDate = cookies.get(VISIT_DATE);
+		// String visitCount = cookies.get(VISIT_COUNT);
 
 		out.printf("<p>");
 
@@ -107,8 +111,8 @@ public class SearchServlet extends HttpServlet {
 		 * not a standard header! Try this in Safari private browsing mode.
 		 */
 		if (request.getIntHeader("DNT") != 1) {
-			response.addCookie(new Cookie(VISIT_DATE, getDate()));
-			response.addCookie(new Cookie(VISIT_COUNT, visitCount));
+			// response.addCookie(new Cookie(VISIT_DATE, getDate()));
+			// response.addCookie(new Cookie(VISIT_COUNT, visitCount));
 		}
 		else {
 			cookieBaseServlet.clearCookies(request, response);
@@ -140,6 +144,10 @@ public class SearchServlet extends HttpServlet {
 		out.printf("\t<td>%n");
 		out.printf(
 				"\t\t<input type=\"text\" name=\"search\" maxlength=\"70\" size=\"80\">%n");
+		out.printf(
+				"<input type=\"checkbox\" name=\"privateSearch\" value=\"privateSearch\">Private Search<br>");
+		out.printf(
+				"<input type=\"checkbox\" name=\"partialSearch\" value=\"partialSearch\">Partial Search<br>%n");
 		out.printf("\t</td>%n");
 		out.printf("</tr>%n");
 
@@ -163,15 +171,15 @@ public class SearchServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		String username = new LoginBaseServlet().getUsername(request);
+		// String username = new LoginBaseServlet().getUsername(request);
 		String query = request.getParameter("search");
 
 		PrintWriter out = response.getWriter();
 
-		LoginBaseServlet.dbhandler.addSearchHistory(username, query);
-		// response.sendRedirect("/");
 		if ((!query.equals(null)) && (!query.isEmpty())) {
+
 			search(request, out);
+
 		}
 		else {
 			response.sendRedirect("/");
@@ -181,7 +189,6 @@ public class SearchServlet extends HttpServlet {
 
 	private void search(HttpServletRequest request, PrintWriter out) {
 		/* get input */
-		System.out.println("in search ^^^^^^^^^^");
 		String query = request.getParameter("search");
 		System.out.println("query: " + query);
 
@@ -192,10 +199,13 @@ public class SearchServlet extends HttpServlet {
 		/* show search result */
 		if ((!query.equals(null)) && (!query.isEmpty())) {
 			System.out.println("------user input: " + query);
-
+			long startTime = System.nanoTime();
 			search.parseLine(query);
 			search.finish();
-
+			long endTime = System.nanoTime();
+			out.printf("<p>Search Result for %s<p>", query);
+			long duration = (endTime - startTime) / 1000000;
+			out.printf("<p>Total cost: %s seconds<p>", duration);
 			Map<String, List<SearchResult>> result = search.getResult();
 
 			for (String url : result.keySet()) {
@@ -204,10 +214,16 @@ public class SearchServlet extends HttpServlet {
 				if (list.size() == 0) {
 					out.printf("<p>No result found<p>%n");
 				}
+				else {
+					out.printf("<p>%s results found<p>%n", list.size());
+				}
 
 				for (SearchResult a : list) {
-					out.printf("<p><a href=" + a.getLocation() + ">"
-							+ a.getLocation() + "</a><p>%n");
+					out.printf("<p><a href=/visited?url=" + a.getLocation()
+							+ ">" + a.getLocation() + "</a>" + "<p>%n");
+					LoginBaseServlet.dbhandler
+							.getURLVisitedTime(a.getLocation(), out);
+					LoginBaseServlet.dbhandler.getSnippet(a.getLocation(), out);
 					out.printf("\n");
 				}
 			}
@@ -215,6 +231,18 @@ public class SearchServlet extends HttpServlet {
 			/* write search */
 		}
 		/* end printing search result */
+
+		String privateSearch = request.getParameter("privateSearch");
+		String particalSearch = request.getParameter("partialSearch");
+		privateSearch = privateSearch == null ? "" : privateSearch;
+		if (privateSearch.equals("privateSearch")) {
+			out.printf(
+					"<p>You are in private search model. Search History won't be record<p>");
+		}
+		else {
+			LoginBaseServlet.dbhandler.addSearchHistory(
+					new LoginBaseServlet().getUsername(request), query);
+		}
 
 		out.printf("<a href='/'>Back to Search</a>");
 

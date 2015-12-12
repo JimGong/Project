@@ -219,6 +219,7 @@ public class Driver {
 				handler.addServlet(LoginWelcomeServlet.class, "/welcome");
 				handler.addServlet(History.class, "/history");
 				handler.addServlet(PasswordServlet.class, "/reset_password");
+				handler.addServlet(VisitedURLServlet.class, "/visited");
 				// handler.addServlet(LoginRedirectServlet.class, "/*");
 
 				handler.addServlet(CookieConfigServlet.class, "/config");

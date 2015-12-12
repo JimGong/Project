@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.StringReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -58,6 +60,44 @@ public class WebCrawler {
 
 				/* get html from the link */
 				String html = HTTPFetcher.fetchHTML(link);
+				String body = HTMLCleaner.cleanHTML(html);
+				// System.out.println(
+				// "###" + link + "####" + body + "################");
+				BufferedReader reader = new BufferedReader(
+						new StringReader(body));
+				StringBuffer firstSentense = new StringBuffer();
+				String line;
+				while (((line = reader.readLine()) != null)
+						&& (firstSentense.length() < 250)) {
+					if (line.contains("?") || line.contains(":")
+							|| line.contains(";") || line.contains(".")) {
+						int index = line.indexOf(".");
+						if (index == -1) {
+							index = line.indexOf(":");
+						}
+						else if (index == -1) {
+							index = line.indexOf("?");
+						}
+						else if (index == -1) {
+							index = line.indexOf(";");
+						}
+						if (index >= 0) {
+							line = line.substring(0, index);
+							firstSentense.append(line);
+						}
+						break;
+					}
+					else {
+						firstSentense.append(line);
+						break;
+					}
+				}
+
+				LoginBaseServlet.dbhandler.addURL(link,
+						firstSentense.toString());
+						// System.out.println(
+						// "******firstSentense: " + firstSentense +
+						// "**********");
 
 				/*
 				 * find url add to the ArrayList if urlSet size smaller than 50

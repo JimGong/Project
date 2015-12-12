@@ -1,343 +1,1456 @@
-[03:28:37:067 debug] Driver.java@159 main: $$$$$$$$$$$$$$$$$$ traversing URL
-[03:28:37:069 debug] WebCrawler.java@47 main: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/birds.html
-[03:28:37:069 debug] WorkQueue.java@70 main: increasing, Pending is now 1
-[03:28:37:069 debug] WebCrawler.java@54 Thread-10: urlsize: 1, true
-[03:28:37:163 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/albatross.html
-[03:28:37:164 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 2
-[03:28:37:164 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/blackbird.html
-[03:28:37:164 debug] WebCrawler.java@54 Thread-6: urlsize: 3, true
-[03:28:37:164 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 3
-[03:28:37:164 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/bluebird.html
-[03:28:37:164 debug] WebCrawler.java@54 Thread-9: urlsize: 4, true
-[03:28:37:164 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 4
-[03:28:37:164 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/cardinal.html
-[03:28:37:165 debug] WebCrawler.java@54 Thread-7: urlsize: 5, true
-[03:28:37:165 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 5
-[03:28:37:165 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/chickadee.html
-[03:28:37:165 debug] WebCrawler.java@54 Thread-8: urlsize: 6, true
-[03:28:37:165 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 6
-[03:28:37:165 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/crane.html
-[03:28:37:165 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 7
-[03:28:37:166 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/crow.html
-[03:28:37:166 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 8
-[03:28:37:166 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/cuckoo.html
-[03:28:37:166 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 9
-[03:28:37:166 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/dove.html
-[03:28:37:166 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 10
-[03:28:37:166 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/duck.html
-[03:28:37:166 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 11
-[03:28:37:166 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/eagle.html
-[03:28:37:166 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 12
-[03:28:37:167 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/egret.html
-[03:28:37:167 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 13
-[03:28:37:167 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/falcon.html
-[03:28:37:167 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 14
-[03:28:37:167 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/finch.html
-[03:28:37:167 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 15
-[03:28:37:167 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/goose.html
-[03:28:37:167 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 16
-[03:28:37:167 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/gull.html
-[03:28:37:167 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 17
-[03:28:37:168 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/hawk.html
-[03:28:37:168 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 18
-[03:28:37:168 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/heron.html
-[03:28:37:168 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 19
-[03:28:37:168 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/hummingbird.html
-[03:28:37:168 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 20
-[03:28:37:168 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/ibis.html
-[03:28:37:168 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 21
-[03:28:37:168 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/kingfisher.html
-[03:28:37:168 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 22
-[03:28:37:169 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/loon.html
-[03:28:37:169 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 23
-[03:28:37:169 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/magpie.html
-[03:28:37:169 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 24
-[03:28:37:169 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/mallard.html
-[03:28:37:169 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 25
-[03:28:37:169 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/meadowlark.html
-[03:28:37:169 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 26
-[03:28:37:169 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/mockingbird.html
-[03:28:37:169 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 27
-[03:28:37:169 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/nighthawk.html
-[03:28:37:169 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 28
-[03:28:37:170 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/osprey.html
-[03:28:37:170 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 29
-[03:28:37:170 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/owl.html
-[03:28:37:170 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 30
-[03:28:37:170 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pelican.html
-[03:28:37:170 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 31
-[03:28:37:170 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pheasant.html
-[03:28:37:170 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 32
-[03:28:37:170 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pigeon.html
-[03:28:37:170 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 33
-[03:28:37:171 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/puffin.html
-[03:28:37:171 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 34
-[03:28:37:171 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/quail.html
-[03:28:37:171 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 35
-[03:28:37:171 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/raven.html
-[03:28:37:171 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 36
-[03:28:37:171 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/roadrunner.html
-[03:28:37:171 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 37
-[03:28:37:171 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/robin.html
-[03:28:37:171 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 38
-[03:28:37:171 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/sandpiper.html
-[03:28:37:172 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 39
-[03:28:37:172 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/sparrow.html
-[03:28:37:172 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 40
-[03:28:37:172 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/starling.html
-[03:28:37:172 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 41
-[03:28:37:172 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/stork.html
-[03:28:37:172 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 42
-[03:28:37:172 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/swallow.html
-[03:28:37:172 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 43
-[03:28:37:172 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/swan.html
-[03:28:37:172 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 44
-[03:28:37:173 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/tern.html
-[03:28:37:173 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 45
-[03:28:37:173 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/turkey.html
-[03:28:37:173 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 46
-[03:28:37:173 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/vulture.html
-[03:28:37:173 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 47
-[03:28:37:173 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/warbler.html
-[03:28:37:173 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 48
-[03:28:37:173 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/woodpecker.html
-[03:28:37:173 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 49
-[03:28:37:173 debug] WebCrawler.java@47 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/wren.html
-[03:28:37:173 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 50
-[03:28:37:180 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:37:181 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/birds.html
-[03:28:37:181 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 49
-[03:28:37:181 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:37:190 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:37:190 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/cardinal.html
-[03:28:37:190 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 48
-[03:28:37:191 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:37:199 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:37:199 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/bluebird.html
-[03:28:37:199 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 47
-[03:28:37:199 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:37:211 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:37:211 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/albatross.html
-[03:28:37:211 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 46
-[03:28:37:211 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:37:223 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:37:223 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/blackbird.html
-[03:28:37:223 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 45
-[03:28:37:224 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:37:235 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:37:235 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/chickadee.html
-[03:28:37:235 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 44
-[03:28:37:235 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:37:247 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:37:247 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/crane.html
-[03:28:37:247 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 43
-[03:28:37:247 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:37:259 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:37:259 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/crow.html
-[03:28:37:259 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 42
-[03:28:37:260 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:37:272 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:37:272 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/cuckoo.html
-[03:28:37:272 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 41
-[03:28:37:272 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:37:286 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:37:286 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/dove.html
-[03:28:37:286 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 40
-[03:28:37:286 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:37:297 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:37:297 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/duck.html
-[03:28:37:297 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 39
-[03:28:37:297 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:37:310 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:37:310 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/eagle.html
-[03:28:37:310 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 38
-[03:28:37:310 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:37:319 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:37:319 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/egret.html
-[03:28:37:319 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 37
-[03:28:37:319 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:37:331 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:37:331 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/falcon.html
-[03:28:37:331 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 36
-[03:28:37:331 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:37:346 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:37:346 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/finch.html
-[03:28:37:346 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 35
-[03:28:37:346 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:37:358 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:37:358 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/goose.html
-[03:28:37:358 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 34
-[03:28:37:358 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:38:159 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:38:159 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/hawk.html
-[03:28:38:160 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 33
-[03:28:38:160 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:38:160 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:38:160 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/gull.html
-[03:28:38:160 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 32
-[03:28:38:160 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:38:171 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:38:172 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/heron.html
-[03:28:38:172 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:38:172 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 31
-[03:28:38:172 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/hummingbird.html
-[03:28:38:172 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:38:172 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 30
-[03:28:38:173 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:38:185 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:38:185 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/kingfisher.html
-[03:28:38:185 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:38:185 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 29
-[03:28:38:185 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/ibis.html
-[03:28:38:185 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:38:185 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 28
-[03:28:38:185 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:38:197 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:38:198 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/loon.html
-[03:28:38:198 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:38:198 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 27
-[03:28:38:198 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:38:201 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/mallard.html
-[03:28:38:201 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 26
-[03:28:38:201 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:38:210 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:38:210 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/meadowlark.html
-[03:28:38:210 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:38:210 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 25
-[03:28:38:210 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/magpie.html
-[03:28:38:210 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:38:210 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 24
-[03:28:38:210 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:38:223 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:38:224 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/nighthawk.html
-[03:28:38:224 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:38:224 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 23
-[03:28:38:224 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/mockingbird.html
-[03:28:38:224 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:38:224 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 22
-[03:28:38:224 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:38:237 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:38:238 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pelican.html
-[03:28:38:238 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:38:238 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 21
-[03:28:38:238 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/osprey.html
-[03:28:38:238 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:38:238 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 20
-[03:28:38:238 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:38:250 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:38:251 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pheasant.html
-[03:28:38:251 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:38:251 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 19
-[03:28:38:251 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/owl.html
-[03:28:38:251 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:38:251 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 18
-[03:28:38:251 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:38:262 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:38:262 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pigeon.html
-[03:28:38:262 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:38:262 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 17
-[03:28:38:262 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/puffin.html
-[03:28:38:262 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:38:262 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 16
-[03:28:38:262 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:38:274 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:38:274 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/raven.html
-[03:28:38:274 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:38:275 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 15
-[03:28:38:275 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/quail.html
-[03:28:38:275 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:38:275 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 14
-[03:28:38:275 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:38:286 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:38:286 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/robin.html
-[03:28:38:286 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 13
-[03:28:38:286 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:38:286 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:38:287 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/roadrunner.html
-[03:28:38:287 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 12
-[03:28:38:287 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:38:298 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:38:298 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/sandpiper.html
-[03:28:38:298 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 11
-[03:28:38:298 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:38:298 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:38:298 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/sparrow.html
-[03:28:38:299 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 10
-[03:28:38:299 debug] WebCrawler.java@54 Thread-8: urlsize: 50, false
-[03:28:38:310 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:38:310 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/starling.html
-[03:28:38:310 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:38:310 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 9
-[03:28:38:310 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/stork.html
-[03:28:38:310 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:38:310 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 8
-[03:28:38:310 debug] WebCrawler.java@54 Thread-10: urlsize: 50, false
-[03:28:38:321 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:38:322 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/swallow.html
-[03:28:38:322 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:38:322 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 7
-[03:28:38:322 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/swan.html
-[03:28:38:322 debug] WebCrawler.java@54 Thread-7: urlsize: 50, false
-[03:28:38:322 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 6
-[03:28:38:322 debug] WebCrawler.java@54 Thread-6: urlsize: 50, false
-[03:28:38:334 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:38:334 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/turkey.html
-[03:28:38:334 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
-[03:28:38:334 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 5
-[03:28:38:334 debug] WebCrawler.java@94 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/tern.html
-[03:28:38:334 debug] WebCrawler.java@54 Thread-9: urlsize: 50, false
-[03:28:38:334 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 4
-[03:28:38:346 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
-[03:28:38:346 debug] WebCrawler.java@94 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/warbler.html
-[03:28:38:346 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
-[03:28:38:347 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 3
-[03:28:38:347 debug] WebCrawler.java@94 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/vulture.html
-[03:28:38:347 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 2
-[03:28:38:358 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
-[03:28:38:358 debug] WebCrawler.java@94 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/wren.html
-[03:28:38:358 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
-[03:28:38:358 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 1
-[03:28:38:358 debug] WebCrawler.java@94 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/woodpecker.html
-[03:28:38:358 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
-[03:28:38:359 debug] WebCrawler.java@32 main: total size:50
-[03:28:38:359 debug] Driver.java@164 main: $$$$$$$$$$$$$$$$$$ done with traversing URL
-[03:28:38:359 debug] Driver.java@170 main: calling shut down
-[03:28:38:359 debug] MultiThreadInvertedIndexBuilder.java@44 main: Shutting down
-[03:28:38:359 debug] WorkQueue.java@132 main: work queue been shut down.
-[03:28:38:359 debug] Driver.java@172 main: Done with InvertedIndex
-[03:28:42:468 debug] LoginDatabaseHandler.java@161 qtp2619171-39: Tables found.
-[03:28:42:468 debug] LoginDatabaseHandler.java@559 qtp2619171-39: Updating last login time for Jim.
-[03:28:44:243 debug] LoginDatabaseHandler.java@559 qtp2619171-40: Updating last login time for Jim.
-[03:28:45:543 debug] LoginDatabaseHandler.java@559 qtp2619171-41: Updating last login time for Jim.
-[03:29:28:630 debug] LoginDatabaseHandler.java@604 qtp2619171-40: Missing values in configuration file.
-[03:29:28:634 debug] LoginDatabaseHandler.java@559 qtp2619171-41: Updating last login time for Jim.
-[03:29:35:035 debug] LoginDatabaseHandler.java@559 qtp2619171-41: Updating last login time for Jim.
-[03:29:38:026 debug] LoginDatabaseHandler.java@609 qtp2619171-34: add log for Jim
-[03:29:38:198 debug] ThreadSafePartialSearchBuilder.java@142 qtp2619171-34: ******** Minion created for log
-[03:29:38:198 debug] WorkQueue.java@70 qtp2619171-34: increasing, Pending is now 1
-[03:29:38:199 debug] ThreadSafePartialSearchBuilder.java@149 Thread-34: --------- Minion going to run for log
-[03:29:38:200 debug] ThreadSafePartialSearchBuilder.java@155 Thread-34: ######## Minion finished log
-[03:29:38:200 debug] WorkQueue.java@81 Thread-34: decreasing, Pending is now 0
-[03:29:39:768 debug] LoginDatabaseHandler.java@559 qtp2619171-39: Updating last login time for Jim.
-[03:29:43:897 debug] LoginDatabaseHandler.java@609 qtp2619171-40: add bird for Jim
-[03:29:44:061 debug] ThreadSafePartialSearchBuilder.java@142 qtp2619171-40: ******** Minion created for bird
-[03:29:44:061 debug] WorkQueue.java@70 qtp2619171-40: increasing, Pending is now 1
-[03:29:44:062 debug] ThreadSafePartialSearchBuilder.java@149 Thread-39: --------- Minion going to run for bird
-[03:29:44:063 debug] ThreadSafePartialSearchBuilder.java@155 Thread-39: ######## Minion finished bird
-[03:29:44:063 debug] WorkQueue.java@81 Thread-39: decreasing, Pending is now 0
-[03:29:50:547 debug] LoginDatabaseHandler.java@559 qtp2619171-41: Updating last login time for Jim.
-[03:29:56:346 debug] LoginDatabaseHandler.java@609 qtp2619171-34: add send for Jim
-[03:29:56:486 debug] ThreadSafePartialSearchBuilder.java@142 qtp2619171-34: ******** Minion created for send
-[03:29:56:487 debug] WorkQueue.java@70 qtp2619171-34: increasing, Pending is now 1
-[03:29:56:487 debug] ThreadSafePartialSearchBuilder.java@149 Thread-44: --------- Minion going to run for send
-[03:29:56:487 debug] ThreadSafePartialSearchBuilder.java@155 Thread-44: ######## Minion finished send
-[03:29:56:488 debug] WorkQueue.java@81 Thread-44: decreasing, Pending is now 0
-[03:29:58:355 debug] LoginDatabaseHandler.java@559 qtp2619171-39: Updating last login time for Jim.
-[03:30:04:386 debug] LoginDatabaseHandler.java@609 qtp2619171-40: add chickadee for Jim
-[03:30:04:536 debug] ThreadSafePartialSearchBuilder.java@142 qtp2619171-40: ******** Minion created for chickadee
-[03:30:04:537 debug] WorkQueue.java@70 qtp2619171-40: increasing, Pending is now 1
-[03:30:04:537 debug] ThreadSafePartialSearchBuilder.java@149 Thread-49: --------- Minion going to run for chickadee
-[03:30:04:537 debug] ThreadSafePartialSearchBuilder.java@155 Thread-49: ######## Minion finished chickadee
-[03:30:04:538 debug] WorkQueue.java@81 Thread-49: decreasing, Pending is now 0
-[03:30:06:017 debug] LoginDatabaseHandler.java@559 qtp2619171-41: Updating last login time for Jim.
-[03:30:19:831 debug] LoginDatabaseHandler.java@559 qtp2619171-34: Updating last login time for Jim.
+[20:40:41:475 debug] Driver.java@159 main: $$$$$$$$$$$$$$$$$$ traversing URL
+[20:40:41:479 debug] WebCrawler.java@49 main: ******** Minion created for http://www.computerhope.com/jargon/c/cpu.htm
+[20:40:41:479 debug] WorkQueue.java@70 main: increasing, Pending is now 1
+[20:40:41:479 debug] WebCrawler.java@56 Thread-10: urlsize: 1, true
+[20:40:42:954 debug] LoginDatabaseHandler.java@172 Thread-10: Login Users Table found.
+[20:40:42:988 debug] LoginDatabaseHandler.java@189 Thread-10: Search History Tables found.
+[20:40:43:004 debug] LoginDatabaseHandler.java@195 Thread-10: Creating url tables...
+[20:40:43:026 debug] LoginDatabaseHandler.java@212 Thread-10: Failed to create necessary tables.
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'URL' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:939) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2547) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1541) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2605) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1469) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.setupLoginTables(LoginDatabaseHandler.java:196) [bin/:?]
+	at LoginDatabaseHandler.<init>(LoginDatabaseHandler.java:113) [bin/:?]
+	at LoginDatabaseHandler.<clinit>(LoginDatabaseHandler.java:27) [bin/:?]
+	at LoginBaseServlet.<clinit>(LoginBaseServlet.java:28) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:43:030 fatal] LoginDatabaseHandler.java@123 Thread-10: Failed to create necessary tables.
+[20:40:43:334 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/jargon/c/cpu.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/cpu.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:43:342 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/
+[20:40:43:342 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 2
+[20:40:43:342 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/oh.htm
+[20:40:43:342 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 3
+[20:40:43:342 debug] WebCrawler.java@56 Thread-6: urlsize: 3, true
+[20:40:43:342 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/tips/
+[20:40:43:342 debug] WebCrawler.java@56 Thread-9: urlsize: 4, true
+[20:40:43:343 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 4
+[20:40:43:343 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon.htm
+[20:40:43:343 debug] WebCrawler.java@56 Thread-7: urlsize: 5, true
+[20:40:43:343 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 5
+[20:40:43:343 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/history/
+[20:40:43:343 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 6
+[20:40:43:343 debug] WebCrawler.java@56 Thread-8: urlsize: 6, true
+[20:40:43:343 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/forum/
+[20:40:43:343 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 7
+[20:40:43:343 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/contact/
+[20:40:43:344 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 8
+[20:40:43:344 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/jc.htm
+[20:40:43:344 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 9
+[20:40:43:344 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/compinst.htm
+[20:40:43:344 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 10
+[20:40:43:344 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/h/hardware.htm
+[20:40:43:344 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 11
+[20:40:43:344 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/s/software.htm
+[20:40:43:344 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 12
+[20:40:43:344 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/calc.htm
+[20:40:43:345 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 13
+[20:40:43:345 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/computer.htm
+[20:40:43:345 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 14
+[20:40:43:345 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/m/monitor.htm
+[20:40:43:345 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 15
+[20:40:43:345 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/p/pentium.htm
+[20:40:43:345 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 16
+[20:40:43:345 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/m/mothboar.htm
+[20:40:43:345 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 17
+[20:40:43:345 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/h/heatsink.htm
+[20:40:43:346 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 18
+[20:40:43:346 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/comp/intel.htm
+[20:40:43:346 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 19
+[20:40:43:346 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/comp/amd.htm
+[20:40:43:346 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 20
+[20:40:43:346 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/s/slot.htm
+[20:40:43:346 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 21
+[20:40:43:346 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/s/socket.htm
+[20:40:43:346 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 22
+[20:40:43:346 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/a/alu.htm
+[20:40:43:346 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 23
+[20:40:43:346 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/contunit.htm
+[20:40:43:346 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 24
+[20:40:43:347 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/clockspe.htm
+[20:40:43:347 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 25
+[20:40:43:347 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/4004.htm
+[20:40:43:347 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 26
+[20:40:43:347 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/history/1971.htm
+[20:40:43:347 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 27
+[20:40:43:347 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/t/transist.htm
+[20:40:43:347 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 28
+[20:40:43:347 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/80486.htm
+[20:40:43:347 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 29
+[20:40:43:347 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/80386.htm
+[20:40:43:347 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 30
+[20:40:43:348 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/32bit.htm
+[20:40:43:348 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 31
+[20:40:43:348 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/64bit.htm
+[20:40:43:348 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 32
+[20:40:43:348 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/a/athlon.htm
+[20:40:43:348 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 33
+[20:40:43:348 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/d/duron.htm
+[20:40:43:348 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 34
+[20:40:43:348 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/8080.htm
+[20:40:43:348 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 35
+[20:40:43:348 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/8086.htm
+[20:40:43:348 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 36
+[20:40:43:349 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/8087.htm
+[20:40:43:349 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 37
+[20:40:43:349 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/8088.htm
+[20:40:43:349 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 38
+[20:40:43:349 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/num/80286.htm
+[20:40:43:349 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 39
+[20:40:43:349 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/m/mmx.htm
+[20:40:43:349 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 40
+[20:40:43:349 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/p/pentpro.htm
+[20:40:43:349 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 41
+[20:40:43:350 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/p/p2.htm
+[20:40:43:350 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 42
+[20:40:43:350 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/celeron.htm
+[20:40:43:350 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 43
+[20:40:43:350 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/p/p3.htm
+[20:40:43:350 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 44
+[20:40:43:350 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/p/pentiumm.htm
+[20:40:43:350 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 45
+[20:40:43:350 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/p/pentium_4.htm
+[20:40:43:350 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 46
+[20:40:43:350 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/coreduo.htm
+[20:40:43:350 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 47
+[20:40:43:351 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/core2.htm
+[20:40:43:351 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 48
+[20:40:43:351 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/core-i3.htm
+[20:40:43:351 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 49
+[20:40:43:351 debug] WebCrawler.java@49 Thread-10: ******** Minion created for http://www.computerhope.com/jargon/c/core-i5.htm
+[20:40:43:351 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 50
+[20:40:43:363 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:43:363 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/jargon/c/cpu.htm
+[20:40:43:364 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 49
+[20:40:43:364 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:44:011 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/oh.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/oh.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:44:011 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/tips/' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/tips/' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:44:015 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:44:015 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/oh.htm
+[20:40:44:015 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 48
+[20:40:44:015 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:44:018 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:44:018 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/tips/
+[20:40:44:018 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 47
+[20:40:44:018 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:44:122 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/history/' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/history/' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:44:129 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:44:130 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/history/
+[20:40:44:130 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 46
+[20:40:44:130 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:44:147 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:44:147 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:44:150 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:44:150 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/
+[20:40:44:150 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 45
+[20:40:44:150 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:44:154 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:44:155 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon.htm
+[20:40:44:155 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 44
+[20:40:44:155 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:45:223 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/contact/' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/contact/' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:225 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:45:225 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/contact/
+[20:40:45:225 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 43
+[20:40:45:225 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:45:237 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/h/hardware.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/h/hardware.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:237 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/jargon/c/compinst.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/compinst.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:241 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:45:241 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/jargon/c/compinst.htm
+[20:40:45:242 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 42
+[20:40:45:242 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:45:242 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:45:242 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/h/hardware.htm
+[20:40:45:242 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 41
+[20:40:45:242 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:45:285 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/forum/' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/forum/' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:298 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:45:299 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/forum/
+[20:40:45:299 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 40
+[20:40:45:299 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:45:314 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/jargon/jc.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/jc.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:332 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:45:332 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/jargon/jc.htm
+[20:40:45:332 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 39
+[20:40:45:332 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:45:751 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/jargon/c/calc.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/calc.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:755 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:45:755 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/jargon/c/calc.htm
+[20:40:45:756 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 38
+[20:40:45:756 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:45:765 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/jargon/m/monitor.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/m/monitor.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:765 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/jargon/p/pentium.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/p/pentium.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:768 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:45:768 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/jargon/m/monitor.htm
+[20:40:45:769 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 37
+[20:40:45:769 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:45:769 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:45:769 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/jargon/p/pentium.htm
+[20:40:45:769 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 36
+[20:40:45:769 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:45:777 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/jargon/s/software.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/s/software.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:778 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/c/computer.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/computer.htm' for key 'url'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40-ea]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40-ea]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:45:783 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:45:783 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/jargon/s/software.htm
+[20:40:45:783 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 35
+[20:40:45:783 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:45:784 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:45:784 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/c/computer.htm
+[20:40:45:784 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 34
+[20:40:45:784 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:46:459 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/comp/amd.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/comp/amd.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:46:459 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/comp/intel.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/comp/intel.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:46:465 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:46:465 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/comp/amd.htm
+[20:40:46:465 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 33
+[20:40:46:465 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:46:466 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:46:466 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/comp/intel.htm
+[20:40:46:466 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 32
+[20:40:46:466 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:46:478 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/jargon/h/heatsink.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/h/heatsink.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:46:481 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:46:481 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/jargon/h/heatsink.htm
+[20:40:46:482 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 31
+[20:40:46:482 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:46:494 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/s/slot.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/s/slot.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:46:494 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/jargon/m/mothboar.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/m/mothboar.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:46:511 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:46:513 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/s/slot.htm
+[20:40:46:513 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 30
+[20:40:46:514 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:46:515 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:46:515 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/jargon/m/mothboar.htm
+[20:40:46:515 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 29
+[20:40:46:515 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:47:148 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/jargon/num/4004.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/4004.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:151 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:47:151 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/jargon/num/4004.htm
+[20:40:47:151 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 28
+[20:40:47:151 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:47:160 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/jargon/c/contunit.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/contunit.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:160 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/c/clockspe.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/clockspe.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:160 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/jargon/a/alu.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/a/alu.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:160 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/jargon/s/socket.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/s/socket.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:164 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:47:164 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/jargon/c/contunit.htm
+[20:40:47:164 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 27
+[20:40:47:165 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:47:165 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:47:165 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/c/clockspe.htm
+[20:40:47:166 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 26
+[20:40:47:166 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:47:166 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:47:166 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/jargon/a/alu.htm
+[20:40:47:166 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 25
+[20:40:47:166 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:47:166 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:47:167 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/jargon/s/socket.htm
+[20:40:47:167 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 24
+[20:40:47:167 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:47:626 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/history/1971.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/history/1971.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:631 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:47:631 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/history/1971.htm
+[20:40:47:631 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 23
+[20:40:47:631 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:47:655 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/num/80486.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/80486.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:655 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/jargon/t/transist.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/t/transist.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:655 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/jargon/num/32bit.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/32bit.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:655 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/jargon/num/80386.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/80386.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:47:657 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:47:658 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/num/80486.htm
+[20:40:47:658 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 22
+[20:40:47:658 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:47:658 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:47:658 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/jargon/t/transist.htm
+[20:40:47:658 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 21
+[20:40:47:658 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:47:658 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:47:658 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/jargon/num/32bit.htm
+[20:40:47:659 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 20
+[20:40:47:659 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:47:659 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:47:659 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/jargon/num/80386.htm
+[20:40:47:659 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 19
+[20:40:47:659 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:48:096 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/jargon/num/64bit.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/64bit.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:098 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:48:098 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/jargon/num/64bit.htm
+[20:40:48:098 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 18
+[20:40:48:098 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:48:110 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/jargon/num/8086.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/8086.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:110 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/jargon/d/duron.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/d/duron.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:114 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:48:114 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/jargon/num/8086.htm
+[20:40:48:114 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 17
+[20:40:48:114 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:48:114 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:48:114 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/jargon/d/duron.htm
+[20:40:48:114 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 16
+[20:40:48:115 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:48:125 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/a/athlon.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/a/athlon.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:125 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/jargon/num/8080.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/8080.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:128 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:48:128 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/a/athlon.htm
+[20:40:48:128 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 15
+[20:40:48:128 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:48:128 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:48:129 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/jargon/num/8080.htm
+[20:40:48:129 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 14
+[20:40:48:129 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:48:561 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/jargon/num/8087.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/8087.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:563 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:48:564 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/jargon/num/8087.htm
+[20:40:48:564 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 13
+[20:40:48:564 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:48:579 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/jargon/num/8088.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/8088.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:581 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:48:581 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/jargon/num/8088.htm
+[20:40:48:581 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 12
+[20:40:48:581 debug] WebCrawler.java@56 Thread-10: urlsize: 50, false
+[20:40:48:589 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/jargon/num/80286.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/num/80286.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:589 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/jargon/p/pentpro.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/p/pentpro.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:591 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:48:592 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/jargon/num/80286.htm
+[20:40:48:592 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 11
+[20:40:48:592 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:48:592 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:48:592 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/jargon/p/pentpro.htm
+[20:40:48:592 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 10
+[20:40:48:592 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:48:607 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/m/mmx.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/m/mmx.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:48:610 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:48:610 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/m/mmx.htm
+[20:40:48:610 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 9
+[20:40:48:610 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:49:051 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/jargon/p/p2.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/p/p2.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:055 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:49:055 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/jargon/p/p2.htm
+[20:40:49:055 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 8
+[20:40:49:055 debug] WebCrawler.java@56 Thread-6: urlsize: 50, false
+[20:40:49:074 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/jargon/p/p3.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/p/p3.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:074 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/jargon/p/pentiumm.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/p/pentiumm.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:074 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/p/pentium_4.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/p/pentium_4.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:074 debug] LoginDatabaseHandler.java@856 Thread-10: Duplicate entry 'http://www.computerhope.com/jargon/c/celeron.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/celeron.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:079 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:49:079 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/jargon/p/p3.htm
+[20:40:49:079 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 7
+[20:40:49:079 debug] WebCrawler.java@56 Thread-9: urlsize: 50, false
+[20:40:49:079 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:49:079 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/jargon/p/pentiumm.htm
+[20:40:49:080 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 6
+[20:40:49:080 debug] WebCrawler.java@56 Thread-7: urlsize: 50, false
+[20:40:49:080 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:49:080 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/p/pentium_4.htm
+[20:40:49:080 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 5
+[20:40:49:081 debug] WebCrawler.java@56 Thread-8: urlsize: 50, false
+[20:40:49:081 debug] ThreadSafeInvertedIndex.java@104 Thread-10: going to unlock
+[20:40:49:081 debug] WebCrawler.java@134 Thread-10: ######## Minion finished http://www.computerhope.com/jargon/c/celeron.htm
+[20:40:49:081 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 4
+[20:40:49:685 debug] LoginDatabaseHandler.java@856 Thread-6: Duplicate entry 'http://www.computerhope.com/jargon/c/coreduo.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/coreduo.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:688 debug] ThreadSafeInvertedIndex.java@104 Thread-6: going to unlock
+[20:40:49:688 debug] WebCrawler.java@134 Thread-6: ######## Minion finished http://www.computerhope.com/jargon/c/coreduo.htm
+[20:40:49:688 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 3
+[20:40:49:716 debug] LoginDatabaseHandler.java@856 Thread-7: Duplicate entry 'http://www.computerhope.com/jargon/c/core-i3.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/core-i3.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:716 debug] LoginDatabaseHandler.java@856 Thread-9: Duplicate entry 'http://www.computerhope.com/jargon/c/core2.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/core2.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:716 debug] LoginDatabaseHandler.java@856 Thread-8: Duplicate entry 'http://www.computerhope.com/jargon/c/core-i5.htm' for key 'url'
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'http://www.computerhope.com/jargon/c/core-i5.htm' for key 'url'
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40-ea]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[?:1.8.0_40-ea]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994) ~[mysql-connector-java-5.1.38-bin.jar:5.1.38]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:850) [bin/:?]
+	at LoginDatabaseHandler.addURL(LoginDatabaseHandler.java:872) [bin/:?]
+	at WebCrawler$CrawlMinion.run(WebCrawler.java:96) [bin/:?]
+	at WorkQueue$PoolWorker.run(WorkQueue.java:181) [bin/:?]
+[20:40:49:720 debug] ThreadSafeInvertedIndex.java@104 Thread-7: going to unlock
+[20:40:49:720 debug] WebCrawler.java@134 Thread-7: ######## Minion finished http://www.computerhope.com/jargon/c/core-i3.htm
+[20:40:49:720 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 2
+[20:40:49:720 debug] ThreadSafeInvertedIndex.java@104 Thread-9: going to unlock
+[20:40:49:721 debug] WebCrawler.java@134 Thread-9: ######## Minion finished http://www.computerhope.com/jargon/c/core2.htm
+[20:40:49:721 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 1
+[20:40:49:721 debug] ThreadSafeInvertedIndex.java@104 Thread-8: going to unlock
+[20:40:49:721 debug] WebCrawler.java@134 Thread-8: ######## Minion finished http://www.computerhope.com/jargon/c/core-i5.htm
+[20:40:49:721 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 0
+[20:40:49:721 debug] WebCrawler.java@34 main: total size:50
+[20:40:49:721 debug] Driver.java@164 main: $$$$$$$$$$$$$$$$$$ done with traversing URL
+[20:40:49:721 debug] Driver.java@170 main: calling shut down
+[20:40:49:721 debug] MultiThreadInvertedIndexBuilder.java@44 main: Shutting down
+[20:40:49:722 debug] WorkQueue.java@132 main: work queue been shut down.
+[20:40:49:722 debug] Driver.java@172 main: Done with InvertedIndex
+[20:41:06:101 debug] ThreadSafePartialSearchBuilder.java@142 qtp1050349584-40: ******** Minion created for black
+[20:41:06:101 debug] WorkQueue.java@70 qtp1050349584-40: increasing, Pending is now 1
+[20:41:06:102 debug] ThreadSafePartialSearchBuilder.java@149 Thread-34: --------- Minion going to run for black
+[20:41:06:103 debug] ThreadSafePartialSearchBuilder.java@155 Thread-34: ######## Minion finished black
+[20:41:06:103 debug] WorkQueue.java@81 Thread-34: decreasing, Pending is now 0
+[20:41:06:501 debug] LoginDatabaseHandler.java@655 qtp1050349584-40: add black for Jim
