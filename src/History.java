@@ -12,10 +12,12 @@ public class History extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
+		PrintWriter out = response.getWriter();
+		out.printf(
+				"<body background=http://img0.gtsstatic.com/wallpapers/f94bda506ba71e59ee5ad53fff49729c_large.jpeg>");
+		out.printf("<body>%n");
 		new LoginBaseServlet().prepareResponse("History", response);
 
-		PrintWriter out = response.getWriter();
 		String user = new LoginBaseServlet().getUsername(request);
 
 		out.printf("<h1>Welcome, " + user + "</h1>");

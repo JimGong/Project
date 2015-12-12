@@ -84,7 +84,8 @@ public class SearchServlet extends HttpServlet {
 		// System.out.println("&& " + privateSearch + particalSearch);
 
 		/* cookie */
-		Map<String, String> cookies = cookieBaseServlet.getCookieMap(request);
+		// Map<String, String> cookies =
+		// cookieBaseServlet.getCookieMap(request);
 		// String visitDate = cookies.get(VISIT_DATE);
 		// String visitCount = cookies.get(VISIT_COUNT);
 
@@ -189,10 +190,12 @@ public class SearchServlet extends HttpServlet {
 	}
 
 	private void search(HttpServletRequest request, PrintWriter out) {
+		out.printf(
+				"<body background=http://img0.gtsstatic.com/wallpapers/f94bda506ba71e59ee5ad53fff49729c_large.jpeg>");
+		// out.printf("<body>%n");
 		/* get input */
 		String query = request.getParameter("search");
 		System.out.println("query: " + query);
-
 		query = ((query == null) || query.equals("")) ? "" : query;
 
 		query = StringEscapeUtils.escapeHtml4(query);
@@ -204,9 +207,11 @@ public class SearchServlet extends HttpServlet {
 			search.parseLine(query);
 			search.finish();
 			long endTime = System.nanoTime();
-			out.printf("<p>Search Result for %s<p>", query);
-			long duration = (endTime - startTime) / 1000000;
-			out.printf("<p>Total cost: %s seconds<p>", duration);
+			out.printf("<p><font size='5'>Search Result for %s</font><p>",
+					query);
+			long duration = (endTime - startTime);
+			double seconds = duration / 1000000000.0;
+
 			Map<String, List<SearchResult>> result = search.getResult();
 
 			for (String url : result.keySet()) {
@@ -216,16 +221,21 @@ public class SearchServlet extends HttpServlet {
 					out.printf("<p>No result found<p>%n");
 				}
 				else {
-					out.printf("<p>%s results found<p>%n", list.size());
+					out.printf(
+							"<p><font size='3' color='darkgray'>About %s results (%s seconds)<p>%n",
+							list.size(), seconds);
 				}
 
 				for (SearchResult a : list) {
-					out.printf("<p><a href=/visited?url=" + a.getLocation()
-							+ ">" + a.getLocation() + "</a>" + "<p>%n");
+					out.printf("<p>");
+					LoginBaseServlet.dbhandler.getTitle(a.getLocation(), out);
+					out.printf("<a href=/visited?url=" + a.getLocation() + ">"
+							+ a.getLocation() + "</a>" + "<p>%n");
+
+					LoginBaseServlet.dbhandler.getSnippet(a.getLocation(), out);
 					LoginBaseServlet.dbhandler
 							.getURLVisitedTime(a.getLocation(), out);
-					LoginBaseServlet.dbhandler.getSnippet(a.getLocation(), out);
-					out.printf("\n");
+					out.printf("<br>");
 				}
 			}
 			System.out.println("done with printing to website");

@@ -220,6 +220,10 @@ public class Driver {
 				handler.addServlet(History.class, "/history");
 				handler.addServlet(PasswordServlet.class, "/reset_password");
 				handler.addServlet(VisitedURLServlet.class, "/visited");
+				handler.addServlet(
+						new ServletHolder(
+								new NewCrawlServlet(index, numThreads)),
+						"/new_crawl");
 				// handler.addServlet(LoginRedirectServlet.class, "/*");
 
 				handler.addServlet(CookieConfigServlet.class, "/config");

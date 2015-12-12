@@ -5,6 +5,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -61,43 +63,7 @@ public class WebCrawler {
 				/* get html from the link */
 				String html = HTTPFetcher.fetchHTML(link);
 				String body = HTMLCleaner.cleanHTML(html);
-				// System.out.println(
-				// "###" + link + "####" + body + "################");
-				BufferedReader reader = new BufferedReader(
-						new StringReader(body));
-				StringBuffer firstSentense = new StringBuffer();
-				String line;
-				while (((line = reader.readLine()) != null)
-						&& (firstSentense.length() < 250)) {
-					if (line.contains("?") || line.contains(":")
-							|| line.contains(";") || line.contains(".")) {
-						int index = line.indexOf(".");
-						if (index == -1) {
-							index = line.indexOf(":");
-						}
-						else if (index == -1) {
-							index = line.indexOf("?");
-						}
-						else if (index == -1) {
-							index = line.indexOf(";");
-						}
-						if (index >= 0) {
-							line = line.substring(0, index);
-							firstSentense.append(line);
-						}
-						break;
-					}
-					else {
-						firstSentense.append(line);
-						break;
-					}
-				}
-
-				LoginBaseServlet.dbhandler.addURL(link,
-						firstSentense.toString());
-						// System.out.println(
-						// "******firstSentense: " + firstSentense +
-						// "**********");
+				String title = getTitle(html);
 
 				/*
 				 * find url add to the ArrayList if urlSet size smaller than 50
@@ -114,8 +80,47 @@ public class WebCrawler {
 				lock.unlockReadWrite();
 
 				html = HTMLCleaner.cleanHTML(html);
+
+				System.out.println("html for " + link);
+				System.out.println(html);
+				/* page snipper */
+				BufferedReader reader = new BufferedReader(
+						new StringReader(body));
+				StringBuffer firstSentense = new StringBuffer();
+				String line;
+				while (((line = reader.readLine()) != null)
+						&& (firstSentense.length() < 250)) {
+					System.out.println("^^^^^ " + line);
+					if (line.contains("?") || line.contains(":")
+							|| line.contains(";") || line.contains(".")) {
+						int index = line.indexOf(".");
+						if (index == -1) {
+							index = line.indexOf(":");
+						}
+						else if (index == -1) {
+							index = line.indexOf("?");
+						}
+						else if (index == -1) {
+							index = line.indexOf(";");
+						}
+						if (index >= 0) {
+							line = line.substring(0, index);
+							firstSentense.append(line + " ");
+						}
+						break;
+					}
+					else {
+						firstSentense.append(line + " ");
+					}
+				}
+
+				LoginBaseServlet.dbhandler.addURL(link,
+						firstSentense.toString().trim());
+				/* page snipper */
+
 				String[] words = InvertedIndexBuilder
 						.splitLine(html); /* split html into words */
+
 				int position = 1;
 
 				InvertedIndex local = new InvertedIndex();
@@ -133,6 +138,18 @@ public class WebCrawler {
 			}
 			logger.debug("######## Minion finished {}", link);
 		}
+
+	}
+
+	private String getTitle(String dirtyHTML) {
+		dirtyHTML = dirtyHTML.replaceAll("\\s+", " ");
+		Pattern p = Pattern.compile("<title>(.*?)</title>");
+		Matcher m = p.matcher(dirtyHTML);
+		while (m.find() == true) {
+			System.out.println("$$$$$$$$$$$$ " + m.group(1));
+			return m.group(1);
+		}
+		return "";
 
 	}
 

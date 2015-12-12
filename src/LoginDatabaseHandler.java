@@ -78,6 +78,8 @@ public class LoginDatabaseHandler {
 
 	private static final String GET_SNIPPET_SQL = "SELECT snippet FROM URL WHERE url = ?;";
 
+	private static final String GET_TITLE_SQL = "SELECT title FROM URL WHERE url=?;";
+
 	/** Used to retrieve the salt associated with a specific user. */
 	private static final String SALT_SQL = "SELECT usersalt FROM login_users WHERE username = ?";
 
@@ -925,10 +927,16 @@ public class LoginDatabaseHandler {
 			// System.out.println("get visited time for url: " + url);
 			statement.setString(1, url);
 			ResultSet time = statement.executeQuery();
-
+			out.printf("<font size='3' color='dimgray'>");
 			while ((time != null) && time.next()) {
-				out.printf("&nbsp;" + time.getString("lastvisit") + "<p>%n");
+				out.printf(
+						"<p style='line-height:3px';>&nbsp;"
+								+ ((time.getString("lastvisit") == "NotVisited")
+										? "You have never visited it."
+										: time.getString("lastvisit"))
+								+ "<p>%n");
 			}
+			out.printf("</font>");
 
 			status = Status.OK;
 
@@ -965,10 +973,12 @@ public class LoginDatabaseHandler {
 			// System.out.println("get snippet for url: " + url);
 			statement.setString(1, url);
 			ResultSet snippet = statement.executeQuery();
-
+			out.printf("<font size='3' color='dimgray'>");
 			while ((snippet != null) && snippet.next()) {
-				out.printf("<p>" + snippet.getString("snippet") + "<p>");
+				out.printf("<p style='line-height:3px';>"
+						+ snippet.getString("snippet") + "<p>");
 			}
+			out.printf("</font>");
 
 			status = Status.OK;
 
@@ -990,6 +1000,46 @@ public class LoginDatabaseHandler {
 		try (Connection connection = db.getConnection();) {
 
 			status = getSnippet(connection, url, out);
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
+	private Status getTitle(Connection connection, String url,
+			PrintWriter out) {
+		Status status = Status.ERROR;
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_TITLE_SQL);) {
+			statement.setString(1, url);
+			ResultSet title = statement.executeQuery();
+			out.printf("<font size='5' >");
+			while ((title != null) && title.next()) {
+				out.printf("<p><b>" + title.getString("title") + "</b><p>");
+			}
+			out.printf("</font>");
+
+			status = Status.OK;
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+		return status;
+	}
+
+	public Status getTitle(String url, PrintWriter out) {
+		Status status = Status.ERROR;
+
+		if (isBlank(url)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = getTitle(connection, url, out);
 		} catch (SQLException ex) {
 			status = Status.CONNECTION_FAILED;
 			log.debug(status, ex);
