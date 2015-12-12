@@ -146,8 +146,9 @@ public class SearchServlet extends HttpServlet {
 				"\t\t<input type=\"text\" name=\"search\" maxlength=\"70\" size=\"80\">%n");
 		out.printf(
 				"<input type=\"checkbox\" name=\"privateSearch\" value=\"privateSearch\">Private Search<br>");
-		out.printf(
-				"<input type=\"checkbox\" name=\"partialSearch\" value=\"partialSearch\">Partial Search<br>%n");
+		// out.printf(
+		// "<input type=\"checkbox\" name=\"partialSearch\"
+		// value=\"partialSearch\">Partial Search<br>%n");
 		out.printf("\t</td>%n");
 		out.printf("</tr>%n");
 
@@ -233,7 +234,7 @@ public class SearchServlet extends HttpServlet {
 		/* end printing search result */
 
 		String privateSearch = request.getParameter("privateSearch");
-		String particalSearch = request.getParameter("partialSearch");
+		// String particalSearch = request.getParameter("partialSearch");
 		privateSearch = privateSearch == null ? "" : privateSearch;
 		if (privateSearch.equals("privateSearch")) {
 			out.printf(
