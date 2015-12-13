@@ -76,10 +76,11 @@ public class ThreadSafeInvertedIndex extends InvertedIndex {
 	}
 
 	@Override
-	public List<SearchResult> partialSearch(String[] queryWords) {
+	public List<SearchResult> partialSearch(String[] queryWords,
+			boolean isPartialSearch) {
 		lock.lockReadOnly();
 		try {
-			return super.partialSearch(queryWords);
+			return super.partialSearch(queryWords, isPartialSearch);
 		} finally {
 			lock.unlockReadOnly();
 		}

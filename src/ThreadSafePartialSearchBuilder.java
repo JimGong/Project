@@ -21,6 +21,7 @@ public class ThreadSafePartialSearchBuilder
 
 	private final Map<String, List<SearchResult>> result;
 	private final InvertedIndex index;
+	private final boolean isPartialSearch;
 
 	/**
 	 * Create a logger for debug
@@ -37,10 +38,12 @@ public class ThreadSafePartialSearchBuilder
 	 * @param numThreads
 	 * @param index
 	 */
-	public ThreadSafePartialSearchBuilder(int numThreads, InvertedIndex index) {
+	public ThreadSafePartialSearchBuilder(int numThreads, InvertedIndex index,
+			boolean isPartialSeach) {
 		result = new LinkedHashMap<>();
 		minions = new WorkQueue(numThreads);
 		this.index = index;
+		this.isPartialSearch = isPartialSeach;
 	}
 
 	/**
@@ -72,7 +75,7 @@ public class ThreadSafePartialSearchBuilder
 		synchronized (result) {
 			result.put(line, null);
 		}
-		minions.execute(new LineMinion(line, this.index));
+		minions.execute(new LineMinion(line, this.index, isPartialSearch));
 	}
 
 	/**
@@ -137,18 +140,22 @@ public class ThreadSafePartialSearchBuilder
 
 		private String line;
 		private ThreadSafeInvertedIndex index;
+		private boolean isPartialSearch;
 
-		public LineMinion(String line, InvertedIndex index) {
+		public LineMinion(String line, InvertedIndex index,
+				boolean isPartialSearch) {
 			logger.debug("******** Minion created for {}", line);
 			this.line = line;
 			this.index = (ThreadSafeInvertedIndex) index;
+			this.isPartialSearch = isPartialSearch;
 		}
 
 		@Override
 		public void run() {
 			logger.debug("--------- Minion going to run for {}", line);
 			String[] queryWords = InvertedIndexBuilder.splitLine(line);
-			List<SearchResult> resultList = index.partialSearch(queryWords);
+			List<SearchResult> resultList = index.partialSearch(queryWords,
+					isPartialSearch);
 			synchronized (result) {
 				result.put(line, resultList);
 			}

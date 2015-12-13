@@ -138,7 +138,8 @@ public class InvertedIndex {
 	 * @param queryWords
 	 * @return sorted list of search results
 	 */
-	public List<SearchResult> partialSearch(String[] queryWords) {
+	public List<SearchResult> partialSearch(String[] queryWords,
+			boolean isPartialSearch) {
 		String location = "NULL"; /* where */
 		int frequency = 0; /* count */
 		int position = Integer.MAX_VALUE; /* index */
@@ -150,7 +151,8 @@ public class InvertedIndex {
 			frequency = 0;
 			for (String word : index.tailMap(queryWord, true).keySet()) {
 
-				if (word.startsWith(queryWord)) {
+				if (isPartialSearch ? word.startsWith(queryWord)
+						: word.equals(queryWord)) {
 					TreeMap<String, TreeSet<Integer>> value = index.get(word);
 
 					for (String mylocation : value.keySet()) {

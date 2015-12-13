@@ -35,7 +35,7 @@ public class SearchServlet extends HttpServlet {
 		cookieBaseServlet = new CookieBaseServlet();
 		this.index = (ThreadSafeInvertedIndex) index;
 		this.numThread = numThread;
-		search = new ThreadSafePartialSearchBuilder(numThread, this.index);
+		// search = new ThreadSafePartialSearchBuilder(numThread, this.index);
 	}
 
 	@Override
@@ -154,9 +154,8 @@ public class SearchServlet extends HttpServlet {
 				"\t\t<input type=\"text\" name=\"search\" maxlength=\"70\" size=\"80\">%n");
 		out.printf(
 				"<input type=\"checkbox\" name=\"privateSearch\" value=\"privateSearch\">Private Search<br>");
-		// out.printf(
-		// "<input type=\"checkbox\" name=\"partialSearch\"
-		// value=\"partialSearch\">Partial Search<br>%n");
+		out.printf(
+				"<input type=\"checkbox\" name=\"partialSearch\" value=\"partialSearch\">Partial Search<br>%n");
 		out.printf("\t</td>%n");
 		out.printf("</tr>%n");
 
@@ -168,6 +167,8 @@ public class SearchServlet extends HttpServlet {
 		out.printf("<form method=\"get\" action=\"%s\">%n",
 				request.getServletPath());
 		out.printf("<button formaction=/history>History</button></p>");
+		out.printf("<button formaction=/new_crawl>Add new crawl</button></p>");
+
 		out.printf("</form> \n%n");
 	}
 
@@ -206,7 +207,19 @@ public class SearchServlet extends HttpServlet {
 		query = ((query == null) || query.equals("")) ? "" : query;
 
 		query = StringEscapeUtils.escapeHtml4(query);
-		search = new ThreadSafePartialSearchBuilder(5, this.index);
+
+		String partialSearch = request.getParameter("partialSearch");
+		boolean isPartialSearch;
+		if (partialSearch == null) {
+			isPartialSearch = false;
+		}
+		else {
+			isPartialSearch = true;
+		}
+		System.out.println("partial search: " + partialSearch);
+
+		search = new ThreadSafePartialSearchBuilder(numThread, this.index,
+				isPartialSearch);
 		/* show search result */
 		if ((!query.equals(null)) && (!query.isEmpty())) {
 			System.out.println("------user input: " + query);
@@ -248,7 +261,7 @@ public class SearchServlet extends HttpServlet {
 					LoginBaseServlet.dbhandler.getTitle(a.getLocation(), out);
 					out.printf("<p><a href=/visited?url=" + a.getLocation()
 							+ ">" + a.getLocation() + "</a>" + "<p>%n");
-
+					out.printf("");
 					LoginBaseServlet.dbhandler.getSnippet(a.getLocation(), out);
 					LoginBaseServlet.dbhandler
 							.getURLVisitedTime(a.getLocation(), out);

@@ -170,7 +170,8 @@ public class Driver {
 			logger.debug("calling shut down");
 			multiThreadInvertedIndexBuilder.shutdown();
 			logger.debug("Done with InvertedIndex");
-			search = new ThreadSafePartialSearchBuilder(numThreads, index);
+			search = new ThreadSafePartialSearchBuilder(numThreads, index,
+					true);
 
 			/** project 5 */
 			System.out.println("Starting server");

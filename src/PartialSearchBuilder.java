@@ -56,7 +56,7 @@ public class PartialSearchBuilder implements PartialSearchBuilderInterface {
 	public void parseLine(String line) {
 		String[] queryWords = InvertedIndexBuilder.splitLine(line);
 
-		List<SearchResult> resultList = index.partialSearch(queryWords);
+		List<SearchResult> resultList = index.partialSearch(queryWords, true);
 
 		result.put(line, resultList);
 	}
