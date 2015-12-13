@@ -29,7 +29,7 @@ public class LoginDatabaseHandler {
 	/** Used to determine if necessary tables are provided. */
 	private static final String LOGIN_USER_TABLES_SQL = "SHOW TABLES LIKE 'login_users';";
 	private static final String SEARCH_HISTORY_TABLES_SQL = "SHOW TABLES LIKE 'search_history';";
-	private static final String URL_TABLES_SQL = "SHOW TABLES LIKE 'url';";
+	private static final String URL_TABLES_SQL = "SHOW TABLES LIKE 'URL';";
 
 	/** Used to create necessary tables for this example. */
 	private static final String CREATE_LOGIN_USERS_SQL = "CREATE TABLE login_users ("
@@ -44,8 +44,7 @@ public class LoginDatabaseHandler {
 			+ "username VARCHAR(32) NOT NULL, " + "query CHAR(64) NOT NULL"
 			+ "time CHAR(64) NOT NULL);";
 
-	private static final String CREATE_URL_SQL = "CREATE TABLE URL (id INTEGER AUTO_INCREMENT PRIMARY KEY, "
-			+ "url CHAR(250) NOT NULL UNIQUE, snippet CHAR(250), lastvisit CHAR(64) NOT NULL);";
+	private static final String CREATE_URL_SQL = "CREATE TABLE URL (id INTEGER AUTO_INCREMENT PRIMARY KEY, url CHAR(250) NOT NULL UNIQUE, title CHAR(64) NOT NULL, snippet CHAR(250), lastvisit CHAR(64) NOT NULL);";
 
 	/** Used to insert a new user into the database. */
 	private static final String REGISTER_SQL = "INSERT INTO login_users (username, password, usersalt, lastlogin) "
@@ -58,7 +57,7 @@ public class LoginDatabaseHandler {
 	private static final String ADD_QUERY_SQL = "INSERT INTO search_history (username, query, time) "
 			+ "VALUES (?, ?, NOW());";
 
-	private static final String ADD_URL_SQL = "INSERT INTO URL (url, snippet, lastvisit) VALUES(?, ?, ?);";
+	private static final String ADD_URL_SQL = "INSERT INTO URL (url, title, snippet, lastvisit) VALUES(?, ?, ?, ?);";
 
 	/** Used to change the passward for the user */
 	private static final String UPDATE_PASSWORD_SQL = "UPDATE login_users SET password = ?, usersalt = ? "
@@ -841,13 +840,15 @@ public class LoginDatabaseHandler {
 		return status;
 	}
 
-	private Status addURL(Connection connection, String url, String snippet) {
+	private Status addURL(Connection connection, String url, String title,
+			String snippet) {
 		Status status = Status.ERROR;
 		try (PreparedStatement statement = connection
 				.prepareStatement(ADD_URL_SQL);) {
 			statement.setString(1, url);
-			statement.setString(2, snippet);
-			statement.setString(3, "NotVisited");
+			statement.setString(2, title);
+			statement.setString(3, snippet);
+			statement.setString(4, "NotVisited");
 
 			statement.executeUpdate();
 
@@ -861,7 +862,7 @@ public class LoginDatabaseHandler {
 		return status;
 	}
 
-	public Status addURL(String url, String snippet) {
+	public Status addURL(String url, String title, String snippet) {
 		Status status = Status.ERROR;
 
 		if (isBlank(url)) {
@@ -871,7 +872,7 @@ public class LoginDatabaseHandler {
 		}
 		try (Connection connection = db.getConnection();) {
 
-			status = addURL(connection, url, snippet);
+			status = addURL(connection, url, title, snippet);
 
 		} catch (SQLException ex) {
 			status = Status.CONNECTION_FAILED;
@@ -930,7 +931,7 @@ public class LoginDatabaseHandler {
 			out.printf("<font size='3' color='dimgray'>");
 			while ((time != null) && time.next()) {
 				out.printf(
-						"<p style='line-height:3px';>&nbsp;"
+						"<p style='line-height:3px';>"
 								+ ((time.getString("lastvisit") == "NotVisited")
 										? "You have never visited it."
 										: time.getString("lastvisit"))
@@ -1014,11 +1015,10 @@ public class LoginDatabaseHandler {
 				.prepareStatement(GET_TITLE_SQL);) {
 			statement.setString(1, url);
 			ResultSet title = statement.executeQuery();
-			out.printf("<font size='5' >");
+
 			while ((title != null) && title.next()) {
-				out.printf("<p><b>" + title.getString("title") + "</b><p>");
+				out.printf("<h1>" + title.getString("title") + "</h1>%n");
 			}
-			out.printf("</font>");
 
 			status = Status.OK;
 

@@ -114,7 +114,7 @@ public class WebCrawler {
 					}
 				}
 
-				LoginBaseServlet.dbhandler.addURL(link,
+				LoginBaseServlet.dbhandler.addURL(link, title,
 						firstSentense.toString().trim());
 				/* page snipper */
 

@@ -191,7 +191,7 @@ public class SearchServlet extends HttpServlet {
 
 	private void search(HttpServletRequest request, PrintWriter out) {
 		out.printf(
-				"<body background=http://img0.gtsstatic.com/wallpapers/f94bda506ba71e59ee5ad53fff49729c_large.jpeg>");
+				"<body background=http://img0.gtsstatic.com/wallpapers/f94bda506ba71e59ee5ad53fff49729c_large.jpeg>%n");
 		// out.printf("<body>%n");
 		/* get input */
 		String query = request.getParameter("search");
@@ -207,12 +207,22 @@ public class SearchServlet extends HttpServlet {
 			search.parseLine(query);
 			search.finish();
 			long endTime = System.nanoTime();
-			out.printf("<p><font size='5'>Search Result for %s</font><p>",
-					query);
+			out.printf(
+					"<h1><img src=http://simpleicon.com/wp-content/uploads/smile.png width=\"60\" height=\"60\">%n");
+
+			out.printf("Search Result for %s</h1>%n", query);
 			long duration = (endTime - startTime);
 			double seconds = duration / 1000000000.0;
 
 			Map<String, List<SearchResult>> result = search.getResult();
+
+			/* format */
+			out.printf("%n<style type='text/css'>");
+			out.printf("d.pos_right{");
+			out.printf("position:relative; left:70px }");
+			out.printf("</style>%n%n");
+			out.printf("<d class='pos_right'>");
+			/* end of format */
 
 			for (String url : result.keySet()) {
 				List<SearchResult> list = result.get(url);
@@ -222,15 +232,15 @@ public class SearchServlet extends HttpServlet {
 				}
 				else {
 					out.printf(
-							"<p><font size='3' color='darkgray'>About %s results (%s seconds)<p>%n",
+							"<p>%n<font size='3' color='darkgray'>%nAbout %s results (%s seconds)%n</font><p>%n%n",
 							list.size(), seconds);
 				}
 
 				for (SearchResult a : list) {
-					out.printf("<p>");
+
 					LoginBaseServlet.dbhandler.getTitle(a.getLocation(), out);
-					out.printf("<a href=/visited?url=" + a.getLocation() + ">"
-							+ a.getLocation() + "</a>" + "<p>%n");
+					out.printf("<p><a href=/visited?url=" + a.getLocation()
+							+ ">" + a.getLocation() + "</a>" + "<p>%n");
 
 					LoginBaseServlet.dbhandler.getSnippet(a.getLocation(), out);
 					LoginBaseServlet.dbhandler
@@ -241,6 +251,7 @@ public class SearchServlet extends HttpServlet {
 			System.out.println("done with printing to website");
 			/* write search */
 		}
+		out.printf("</d>%n");
 		/* end printing search result */
 
 		String privateSearch = request.getParameter("privateSearch");
