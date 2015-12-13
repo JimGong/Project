@@ -26,12 +26,15 @@ public class SearchServlet extends HttpServlet {
 	public String VISIT_COUNT = "Count";
 	public String SEARCH_HISTORY = "History";
 
+	private final int numThread;
+
 	public SearchServlet(InvertedIndex index, int numThread) {
 
 		super();
 		// searchHistory = new LinkedList<>();
 		cookieBaseServlet = new CookieBaseServlet();
 		this.index = (ThreadSafeInvertedIndex) index;
+		this.numThread = numThread;
 		search = new ThreadSafePartialSearchBuilder(numThread, this.index);
 	}
 
@@ -107,6 +110,10 @@ public class SearchServlet extends HttpServlet {
 		LoginBaseServlet.dbhandler.getLastLoginTime(user, out);
 		LoginBaseServlet.dbhandler.getLoggedInUser(out);
 		out.printf("</p>%n");
+		out.printf("<p>Your suggested query is: <p>");
+
+		LoginBaseServlet.dbhandler.getSuggestedQuery(
+				new LoginBaseServlet().getUsername(request), out);
 		/*
 		 * Checks if the browser indicates visits should not be tracked. This is
 		 * not a standard header! Try this in Safari private browsing mode.
@@ -192,7 +199,7 @@ public class SearchServlet extends HttpServlet {
 	private void search(HttpServletRequest request, PrintWriter out) {
 		out.printf(
 				"<body background=http://img0.gtsstatic.com/wallpapers/f94bda506ba71e59ee5ad53fff49729c_large.jpeg>%n");
-		// out.printf("<body>%n");
+
 		/* get input */
 		String query = request.getParameter("search");
 		System.out.println("query: " + query);

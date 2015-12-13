@@ -96,6 +96,8 @@ public class LoginUserServlet extends LoginBaseServlet {
 
 		out.println(
 				"<p>(<a href=\"/register\">new user? register here.</a>)</p>");
+		out.println(
+				"<p>(<a href=\"/reset_password\">forget your password? change here.</a>)</p>");
 
 		out.printf("<form action=\"/login\" method=\"post\">");
 

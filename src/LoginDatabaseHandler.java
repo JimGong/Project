@@ -68,6 +68,8 @@ public class LoginDatabaseHandler {
 
 	private static final String UPDATE_VISITED_TIME_SQL = "UPDATE URL SET lastvisit = NOW() WHERE url = ?;";
 
+	private static final String UPDATE_SNIPPET_SQL = "UPDATE URL SET snippet = ? WHERE url = ?;";
+
 	private static final String GET_LOGIN_TIME_SQL = "SELECT DISTINCT(lastlogin) FROM login_users "
 			+ "WHERE username= ?;";
 
@@ -79,12 +81,16 @@ public class LoginDatabaseHandler {
 
 	private static final String GET_TITLE_SQL = "SELECT title FROM URL WHERE url=?;";
 
+	private static final String GET_SUGGESTED_QUERY_SQL = "SELECT DISTINCT(query) AS query FROM search_history WHERE username <> ? ORDER BY time DESC LIMIT 5;";
+
 	/** Used to retrieve the salt associated with a specific user. */
 	private static final String SALT_SQL = "SELECT usersalt FROM login_users WHERE username = ?";
 
 	/** Used to authenticate a user. */
 	private static final String AUTH_SQL = "SELECT username FROM login_users "
 			+ "WHERE username = ? AND password = ?";
+
+	private static final String CHECK_URL_SQL = "SELECT url FROM URL WHERE url = ?;";
 
 	/** Used to remove a user from the database. */
 	private static final String DELETE_SQL = "DELETE FROM login_users WHERE username = ?";
@@ -473,6 +479,38 @@ public class LoginDatabaseHandler {
 		}
 
 		return status;
+	}
+
+	private boolean urlExisted(Connection connection, String url) {
+
+		boolean isExistent = false;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(CHECK_URL_SQL);) {
+
+			statement.setString(1, url);
+
+			ResultSet results = statement.executeQuery();
+			isExistent = results.next() ? true : false;
+		} catch (SQLException e) {
+			log.debug(e.getMessage(), e);
+
+		}
+		return isExistent;
+	}
+
+	public boolean urlExisted(String url) {
+
+		log.debug("Checking if url " + url + "existed.");
+		boolean isExistent = false;
+		try (Connection connection = db.getConnection();) {
+			isExistent = urlExisted(connection, url);
+		} catch (SQLException ex) {
+
+			log.debug(false, ex);
+		}
+
+		return isExistent;
 	}
 
 	/**
@@ -920,6 +958,44 @@ public class LoginDatabaseHandler {
 		return status;
 	}
 
+	private Status updateSnippet(Connection connection, String url,
+			String snippet) {
+		Status status = Status.ERROR;
+		try (PreparedStatement statement = connection
+				.prepareStatement(UPDATE_SNIPPET_SQL);) {
+			statement.setString(1, snippet);
+			statement.setString(2, url);
+			statement.executeUpdate();
+
+			status = Status.OK;
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status updateSnippet(String url, String snippet) {
+		Status status = Status.ERROR;
+
+		if (isBlank(url)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = updateSnippet(connection, url, snippet);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
 	private Status getURLVisitedTime(Connection connection, String url,
 			PrintWriter out) {
 		Status status = Status.ERROR;
@@ -1040,6 +1116,51 @@ public class LoginDatabaseHandler {
 		try (Connection connection = db.getConnection();) {
 
 			status = getTitle(connection, url, out);
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
+	private Status getSuggestedQuery(Connection connection, String user,
+			PrintWriter out) {
+		Status status = Status.ERROR;
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_SUGGESTED_QUERY_SQL);) {
+			statement.setString(1, user);
+
+			ResultSet queries = statement.executeQuery();
+			int size = 0;
+			while ((queries != null) && queries.next()) {
+				out.printf("<p>" + queries.getString("query") + "</p>%n");
+				size++;
+			}
+
+			if (size == 0) {
+				out.printf("<p>You have no suggestion<p>%n");
+			}
+
+			status = Status.OK;
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+		return status;
+	}
+
+	public Status getSuggestedQuery(String user, PrintWriter out) {
+		Status status = Status.ERROR;
+
+		if (isBlank(user)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			status = getSuggestedQuery(connection, user, out);
 		} catch (SQLException ex) {
 			status = Status.CONNECTION_FAILED;
 			log.debug(status, ex);

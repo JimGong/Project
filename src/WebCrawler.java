@@ -81,8 +81,8 @@ public class WebCrawler {
 
 				html = HTMLCleaner.cleanHTML(html);
 
-				System.out.println("html for " + link);
-				System.out.println(html);
+				// System.out.println("html for " + link);
+				// System.out.println(html);
 				/* page snipper */
 				BufferedReader reader = new BufferedReader(
 						new StringReader(body));
@@ -90,7 +90,7 @@ public class WebCrawler {
 				String line;
 				while (((line = reader.readLine()) != null)
 						&& (firstSentense.length() < 250)) {
-					System.out.println("^^^^^ " + line);
+					// System.out.println("^^^^^ " + line);
 					if (line.contains("?") || line.contains(":")
 							|| line.contains(";") || line.contains(".")) {
 						int index = line.indexOf(".");
@@ -114,8 +114,16 @@ public class WebCrawler {
 					}
 				}
 
-				LoginBaseServlet.dbhandler.addURL(link, title,
-						firstSentense.toString().trim());
+				boolean urlExisted = LoginBaseServlet.dbhandler
+						.urlExisted(link);
+				if (!urlExisted) {
+					LoginBaseServlet.dbhandler.addURL(link, title,
+							firstSentense.toString().trim());
+				}
+				else {
+					LoginBaseServlet.dbhandler.updateSnippet(line,
+							firstSentense.toString().trim());
+				}
 				/* page snipper */
 
 				String[] words = InvertedIndexBuilder
@@ -146,7 +154,7 @@ public class WebCrawler {
 		Pattern p = Pattern.compile("<title>(.*?)</title>");
 		Matcher m = p.matcher(dirtyHTML);
 		while (m.find() == true) {
-			System.out.println("$$$$$$$$$$$$ " + m.group(1));
+			// System.out.println("$$$$$$$$$$$$ " + m.group(1));
 			return m.group(1);
 		}
 		return "";
