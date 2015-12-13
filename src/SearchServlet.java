@@ -188,7 +188,7 @@ public class SearchServlet extends HttpServlet {
 
 		if ((!query.equals(null)) && (!query.isEmpty())) {
 
-			search(request, out);
+			search(request, response, out);
 
 		}
 		else {
@@ -197,7 +197,8 @@ public class SearchServlet extends HttpServlet {
 
 	}
 
-	private void search(HttpServletRequest request, PrintWriter out) {
+	private void search(HttpServletRequest request,
+			HttpServletResponse response, PrintWriter out) throws IOException {
 		out.printf(
 				"<body background=http://img0.gtsstatic.com/wallpapers/f94bda506ba71e59ee5ad53fff49729c_large.jpeg>%n");
 
@@ -261,7 +262,10 @@ public class SearchServlet extends HttpServlet {
 					LoginBaseServlet.dbhandler.getTitle(a.getLocation(), out);
 					out.printf("<p><a href=/visited?url=" + a.getLocation()
 							+ ">" + a.getLocation() + "</a>" + "<p>%n");
-					out.printf("");
+					printAddFav(request, response, a.getLocation());
+
+					System.out.println(
+							"add to fav: " + request.getParameter("addfav"));
 					LoginBaseServlet.dbhandler.getSnippet(a.getLocation(), out);
 					LoginBaseServlet.dbhandler
 							.getURLVisitedTime(a.getLocation(), out);
@@ -287,6 +291,29 @@ public class SearchServlet extends HttpServlet {
 		}
 
 		out.printf("<a href='/'>Back to Search</a>");
+
+	}
+
+	private void printAddFav(HttpServletRequest request,
+			HttpServletResponse response, String url) throws IOException {
+		PrintWriter out = response.getWriter();
+
+		out.printf("<form method=\"post\" action=\"%s\">%n", "/");
+
+		out.printf("<table cellspacing=\"0\" cellpadding=\"2\"%n");
+		out.printf("<tr>%n");
+		out.printf("\t<td nowrap></td>%n");
+		out.printf("\t<td>%n");
+
+		out.printf(
+				"<input type=\"checkbox\" onchange='f(this)' name=\"addfav\" value=\"addfav\">Add to favourite<br>");
+
+		out.printf("\t</td>%n");
+		out.printf("</tr>%n");
+
+		out.printf("</table>%n");
+		out.printf("<p><input type=\"submit\" value=\"add to favourite\">");
+		out.printf("</form> \n%n");
 
 	}
 }

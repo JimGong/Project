@@ -30,6 +30,7 @@ public class LoginDatabaseHandler {
 	private static final String LOGIN_USER_TABLES_SQL = "SHOW TABLES LIKE 'login_users';";
 	private static final String SEARCH_HISTORY_TABLES_SQL = "SHOW TABLES LIKE 'search_history';";
 	private static final String URL_TABLES_SQL = "SHOW TABLES LIKE 'URL';";
+	private static final String FAVOURITE_SQL = "SHOW TABLES LIKE favourite;";
 
 	/** Used to create necessary tables for this example. */
 	private static final String CREATE_LOGIN_USERS_SQL = "CREATE TABLE login_users ("
@@ -44,7 +45,10 @@ public class LoginDatabaseHandler {
 			+ "username VARCHAR(32) NOT NULL, " + "query CHAR(64) NOT NULL"
 			+ "time CHAR(64) NOT NULL);";
 
-	private static final String CREATE_URL_SQL = "CREATE TABLE URL (id INTEGER AUTO_INCREMENT PRIMARY KEY, url CHAR(250) NOT NULL UNIQUE, title CHAR(64) NOT NULL, snippet CHAR(250), lastvisit CHAR(64) NOT NULL);";
+	private static final String CREATE_URL_SQL = "CREATE TABLE URL (id INTEGER AUTO_INCREMENT PRIMARY KEY,"
+			+ " url CHAR(250) NOT NULL UNIQUE, title CHAR(64) NOT NULL, snippet CHAR(250), lastvisit CHAR(64) NOT NULL);";
+
+	private static final String CREATE_FAVOURITE_SQL = "CREATE TABLE favourite (id INTEGER AUTO_INCREMENT PRIMARY KEY, username CHAR(64), url CHAR(250));";
 
 	/** Used to insert a new user into the database. */
 	private static final String REGISTER_SQL = "INSERT INTO login_users (username, password, usersalt, lastlogin) "
@@ -59,9 +63,13 @@ public class LoginDatabaseHandler {
 
 	private static final String ADD_URL_SQL = "INSERT INTO URL (url, title, snippet, lastvisit) VALUES(?, ?, ?, ?);";
 
+	private static final String ADD_FAVOURIATE_SQL = "INSERT INTO favourite (username, url) VALUES(?, ?);";
+
 	/** Used to change the passward for the user */
 	private static final String UPDATE_PASSWORD_SQL = "UPDATE login_users SET password = ?, usersalt = ? "
 			+ "WHERE username = ?;";
+
+	private static final String UPDATE_FAVOURITE_SQL = "UPDATE favourite SET url = ? WHERE username = ?;";
 
 	private static final String UPDATE_LOGIN_TIME_SQL = "UPDATE login_users SET lastlogin = NOW() "
 			+ "WHERE username = ?;";
@@ -99,6 +107,8 @@ public class LoginDatabaseHandler {
 			+ "AS full_history FROM search_history WHERE username= ? ORDER BY time ASC;";
 
 	private static final String CLEAN_HISTORY_SQL = "DELETE FROM search_history WHERE username = ?;";
+
+	private static final String CLEAN_FAVOURITE_SQL = "DELETE FROM favourite WHERE username = ?;";
 
 	/** Used to configure connection to database. */
 	private DatabaseConnector db;
@@ -204,6 +214,24 @@ public class LoginDatabaseHandler {
 
 				// Check if create was successful
 				if (!statement.executeQuery(URL_TABLES_SQL).next()) {
+					status = Status.CREATE_FAILED;
+				}
+				else {
+					status = Status.OK;
+				}
+			}
+			else {
+				log.debug("URL Tables found.");
+				status = Status.OK;
+			}
+
+			if (!statement.executeQuery(FAVOURITE_SQL).next()) {
+				// Table missing, must create
+				log.debug("Creating favourite url tables...");
+				statement.executeUpdate(CREATE_FAVOURITE_SQL);
+
+				// Check if create was successful
+				if (!statement.executeQuery(FAVOURITE_SQL).next()) {
 					status = Status.CREATE_FAILED;
 				}
 				else {
@@ -663,6 +691,51 @@ public class LoginDatabaseHandler {
 		return status;
 	}
 
+	private Status updateFavourite(Connection connection, String url,
+			String username) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(UPDATE_FAVOURITE_SQL);) {
+
+			statement.setString(1, url);
+			statement.setString(2, username);
+			statement.executeUpdate();
+
+			status = Status.OK;
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status updateFavourite(String url, String username) {
+		Status status = Status.ERROR;
+
+		log.debug("Updating isFavourite for " + url + ".");
+
+		// // make sure we have non-null and non-emtpy values for login
+		if (isBlank(url)) {
+			status = Status.INVALID_LOGIN;
+			log.debug(status);
+			return status;
+		}
+
+		// try to connect to database
+		try (Connection connection = db.getConnection();) {
+
+			status = updateFavourite(connection, url, username);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+
+		return status;
+	}
+
 	private Status addSearchHistory(Connection connection, String username,
 			String query) {
 		Status status = Status.ERROR;
@@ -702,6 +775,85 @@ public class LoginDatabaseHandler {
 			log.debug(status, ex);
 		}
 		return status;
+	}
+
+	private Status addFavourite(Connection connection, String username,
+			String url) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(ADD_FAVOURIATE_SQL);) {
+			statement.setString(1, username);
+			statement.setString(2, url);
+			statement.executeUpdate();
+
+			status = Status.OK;
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+		return status;
+	}
+
+	public Status addFavourite(String username, String url) {
+		Status status = Status.ERROR;
+
+		if (isBlank(url) || isBlank(username)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		System.out.println("add to favourite for " + username + " " + url);
+		log.debug("add to favourite for " + username + " " + url);
+
+		try (Connection connection = db.getConnection();) {
+
+			status = addFavourite(connection, username, url);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
+	private Status cleanFavourite(Connection connection, String username) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(CLEAN_FAVOURITE_SQL);) {
+			statement.setString(1, username);
+			statement.executeUpdate();
+
+			status = Status.OK;
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+		return status;
+	}
+
+	public Status cleanFavourite(String username) {
+		Status status = Status.ERROR;
+
+		if (isBlank(username)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+
+		log.debug("clean to favourite for " + username);
+
+		try (Connection connection = db.getConnection();) {
+
+			status = cleanFavourite(connection, username);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+
 	}
 
 	private Status getSearchHistory(Connection connection, String username,
