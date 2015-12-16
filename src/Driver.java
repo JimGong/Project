@@ -225,10 +225,12 @@ public class Driver {
 						new ServletHolder(
 								new NewCrawlServlet(index, numThreads)),
 						"/new_crawl");
+				handler.addServlet(FavouriteServlet.class, "/favourite");
 				// handler.addServlet(LoginRedirectServlet.class, "/*");
-
 				handler.addServlet(CookieConfigServlet.class, "/config");
-
+				handler.addServlet(SearchResultServlet.class, "/search_result");
+				handler.addServlet(FavouriteResultServlet.class,
+						"/favourite_result");
 				/* setup jetty server */
 				server.setHandler(handler);
 				try {

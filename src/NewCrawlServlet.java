@@ -49,7 +49,7 @@ public class NewCrawlServlet extends HttpServlet {
 		out.printf(
 				"<p><input type=\"submit\" value=\"add new crawl to the database\">");
 
-		out.printf("<a href='/'>Back to Search</a>");
+		out.printf("<br><a href='/'>Back to Search</a>");
 		String newcrawl = request.getParameter("newcrawl");
 		System.out.println(newcrawl);
 	}

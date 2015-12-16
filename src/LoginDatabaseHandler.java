@@ -48,7 +48,7 @@ public class LoginDatabaseHandler {
 	private static final String CREATE_URL_SQL = "CREATE TABLE URL (id INTEGER AUTO_INCREMENT PRIMARY KEY,"
 			+ " url CHAR(250) NOT NULL UNIQUE, title CHAR(64) NOT NULL, snippet CHAR(250), lastvisit CHAR(64) NOT NULL);";
 
-	private static final String CREATE_FAVOURITE_SQL = "CREATE TABLE favourite (id INTEGER AUTO_INCREMENT PRIMARY KEY, username CHAR(64), url CHAR(250));";
+	private static final String CREATE_FAVOURITE_SQL = "CREATE TABLE favourite (id INTEGER AUTO_INCREMENT PRIMARY KEY, username CHAR(64) NOT NULL, url CHAR(250) NOT NULL, time CHAR(64) NOT NULL);";
 
 	/** Used to insert a new user into the database. */
 	private static final String REGISTER_SQL = "INSERT INTO login_users (username, password, usersalt, lastlogin) "
@@ -63,7 +63,7 @@ public class LoginDatabaseHandler {
 
 	private static final String ADD_URL_SQL = "INSERT INTO URL (url, title, snippet, lastvisit) VALUES(?, ?, ?, ?);";
 
-	private static final String ADD_FAVOURIATE_SQL = "INSERT INTO favourite (username, url) VALUES(?, ?);";
+	private static final String ADD_FAVOURIATE_SQL = "INSERT INTO favourite (username, url, time) VALUES(?, ?, NOW());";
 
 	/** Used to change the passward for the user */
 	private static final String UPDATE_PASSWORD_SQL = "UPDATE login_users SET password = ?, usersalt = ? "
@@ -82,6 +82,10 @@ public class LoginDatabaseHandler {
 			+ "WHERE username= ?;";
 
 	private static final String GET_LOGGED_IN_USERS_SQL = "SELECT username FROM  login_users ORDER BY lastlogin DESC LIMIT 5;";
+
+	private static final String GET_FAVOURITE_SQL = "SELECT url FROM favourite WHERE username = ?;";
+
+	private static final String GET_FAVOURITE_RESULT = "SELECT CONCAT(time,'&nbsp;&nbsp;&nbsp;', url) AS full_favourite FROM favourite WHERE username = ? ORDER BY time;";
 
 	private static final String GET_URL_VISITED_TIME_SQL = "SELECT lastvisit FROM URL WHERE url = ?;";
 
@@ -911,6 +915,94 @@ public class LoginDatabaseHandler {
 		return status;
 	}
 
+	private boolean getFavrouite(Connection connection, String username,
+			String url) {
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_FAVOURITE_SQL);) {
+
+			statement.setString(1, username);
+
+			ResultSet searchHistory = statement.executeQuery();
+			// System.out.println("trying to get the searchhistory for user: "
+			// + username + "&&& " + searchHistory.toString());
+
+			while ((searchHistory != null) && searchHistory.next()) {
+
+				if (searchHistory.getString("url").equals(url)) {
+					return true;
+				}
+			}
+
+		} catch (SQLException ex) {
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return false;
+	}
+
+	public boolean getFavourite(String username, String url) {
+
+		boolean isFavourite = false;
+		if (isBlank(username) || isBlank(url)) {
+			return false;
+		}
+		try (Connection connection = db.getConnection();) {
+
+			isFavourite = getFavrouite(connection, username, url);
+
+		} catch (SQLException ex) {
+			log.debug(false, ex);
+		}
+
+		return isFavourite;
+	}
+
+	private Status getFavouriteResult(Connection connection, String username,
+			PrintWriter out) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(GET_FAVOURITE_RESULT);) {
+			statement.setString(1, username);
+
+			status = Status.OK;
+
+			ResultSet favResults = statement.executeQuery();
+
+			while ((favResults != null) && favResults.next()) {
+				out.printf("<p>" + favResults.getString("full_favourite")
+						+ "<p>%n");
+			}
+
+		} catch (SQLException ex) {
+			status = Status.SQL_EXCEPTION;
+			log.debug(ex.getMessage(), ex);
+		}
+
+		return status;
+	}
+
+	public Status getFavouriteResult(String username, PrintWriter out) {
+		Status status = Status.ERROR;
+
+		if (isBlank(username)) {
+			status = Status.MISSING_VALUES;
+			log.debug(status);
+			return status;
+		}
+		System.out.println("getting fav result for user: " + username);
+		try (Connection connection = db.getConnection();) {
+
+			status = getFavouriteResult(connection, username, out);
+
+		} catch (SQLException ex) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(status, ex);
+		}
+		return status;
+	}
+
 	private Status getLastLoginTime(Connection connection, String username,
 			PrintWriter out) {
 		Status status = Status.ERROR;
@@ -1158,12 +1250,16 @@ public class LoginDatabaseHandler {
 			ResultSet time = statement.executeQuery();
 			out.printf("<font size='3' color='dimgray'>");
 			while ((time != null) && time.next()) {
-				out.printf(
-						"<p style='line-height:3px';>"
-								+ ((time.getString("lastvisit") == "NotVisited")
-										? "You have never visited it."
-										: time.getString("lastvisit"))
-								+ "<p>%n");
+
+				// out.printf(
+				// "<p style='line-height:3px';>"
+				// + ((time.getString("lastvisit") == "NotVisited")
+				// ? "You have never visited it."
+				// : time.getString("lastvisit"))
+				// + "<p>%n");
+				out.printf("<p style='line-height:3px';>"
+						+ time.getString("lastvisit") + "<p>%n");
+
 			}
 			out.printf("</font>");
 

@@ -79,34 +79,10 @@ public class SearchServlet extends HttpServlet {
 
 		printForm(request, response);/* build text box */
 
-		// String privateSearch = request.getParameter("privateSearch");
-		// String particalSearch = request.getParameter("partialSearch");
-		// if (privateSearch != null) {
-		// System.out.println("ps: " + privateSearch.toString());
-		// }
-		// System.out.println("&& " + privateSearch + particalSearch);
-
-		/* cookie */
-		// Map<String, String> cookies =
-		// cookieBaseServlet.getCookieMap(request);
-		// String visitDate = cookies.get(VISIT_DATE);
-		// String visitCount = cookies.get(VISIT_COUNT);
-
 		out.printf("<p>");
 
 		/* Update visit count as necessary and output information. */
-		//
-		// if ((visitDate == null) || (visitCount == null)) {
-		// visitCount = "0";
-		//
-		// out.printf("You have never been to this webpage before! ");
-		// out.printf("Thank you for visiting.");
-		// }
-		// else {
-		// visitCount = Integer.toString(Integer.parseInt(visitCount) + 1);
-		// out.printf("You have visited this website %s times. ", visitCount);
-		// out.printf("Your last visit was on %s.", visitDate);
-		// }
+
 		LoginBaseServlet.dbhandler.getLastLoginTime(user, out);
 		LoginBaseServlet.dbhandler.getLoggedInUser(out);
 		out.printf("</p>%n");
@@ -145,17 +121,19 @@ public class SearchServlet extends HttpServlet {
 			HttpServletResponse response) throws IOException {
 
 		PrintWriter out = response.getWriter();
+		// out.printf("<form method=\"post\" action=\"%s\">%n", "/");
 		out.printf("<form method=\"post\" action=\"%s\">%n", "/");
+
 		out.printf("<table cellspacing=\"0\" cellpadding=\"2\"%n");
 		out.printf("<tr>%n");
 		out.printf("\t<td nowrap></td>%n");
 		out.printf("\t<td>%n");
 		out.printf(
-				"\t\t<input type=\"text\" name=\"search\" maxlength=\"70\" size=\"80\">%n");
+				"\t\t<input type=\"text\" name=\"search\" maxlength=\"70\" size=\"80\"><br>%n");
 		out.printf(
-				"<input type=\"checkbox\" name=\"privateSearch\" value=\"privateSearch\">Private Search<br>");
+				"<center><input type=\"checkbox\" name=\"privateSearch\" value=\"privateSearch\">Private Search");
 		out.printf(
-				"<input type=\"checkbox\" name=\"partialSearch\" value=\"partialSearch\">Partial Search<br>%n");
+				"<input type=\"checkbox\" name=\"partialSearch\" value=\"partialSearch\">Partial Search</center><br>%n");
 		out.printf("\t</td>%n");
 		out.printf("</tr>%n");
 
@@ -168,6 +146,8 @@ public class SearchServlet extends HttpServlet {
 				request.getServletPath());
 		out.printf("<button formaction=/history>History</button></p>");
 		out.printf("<button formaction=/new_crawl>Add new crawl</button></p>");
+		out.printf(
+				"<button formaction=/favourite_result>Favourite</button></p>");
 
 		out.printf("</form> \n%n");
 	}
@@ -186,7 +166,7 @@ public class SearchServlet extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 
-		if ((!query.equals(null)) && (!query.isEmpty())) {
+		if ((query != null) && (!query.isEmpty())) {
 
 			search(request, response, out);
 
@@ -261,11 +241,9 @@ public class SearchServlet extends HttpServlet {
 
 					LoginBaseServlet.dbhandler.getTitle(a.getLocation(), out);
 					out.printf("<p><a href=/visited?url=" + a.getLocation()
-							+ ">" + a.getLocation() + "</a>" + "<p>%n");
+							+ ">" + a.getLocation() + "</a>" + "%n");
 					printAddFav(request, response, a.getLocation());
 
-					System.out.println(
-							"add to fav: " + request.getParameter("addfav"));
 					LoginBaseServlet.dbhandler.getSnippet(a.getLocation(), out);
 					LoginBaseServlet.dbhandler
 							.getURLVisitedTime(a.getLocation(), out);
@@ -298,22 +276,29 @@ public class SearchServlet extends HttpServlet {
 			HttpServletResponse response, String url) throws IOException {
 		PrintWriter out = response.getWriter();
 
-		out.printf("<form method=\"post\" action=\"%s\">%n", "/");
+		out.printf("<form method=\"post\" action=\"''\">%n");
 
 		out.printf("<table cellspacing=\"0\" cellpadding=\"2\"%n");
 		out.printf("<tr>%n");
 		out.printf("\t<td nowrap></td>%n");
 		out.printf("\t<td>%n");
 
-		out.printf(
-				"<input type=\"checkbox\" onchange='f(this)' name=\"addfav\" value=\"addfav\">Add to favourite<br>");
+		boolean isFavourite = LoginBaseServlet.dbhandler
+				.getFavourite(new LoginBaseServlet().getUsername(request), url);
+
+		if (isFavourite) {
+			out.printf("You have already added as favourite%n");
+		}
+		else {
+			out.printf("<a href=/favourite?url=" + url + ">"
+					+ "add to favourite" + "</a>" + "<p>%n");
+		}
 
 		out.printf("\t</td>%n");
 		out.printf("</tr>%n");
 
 		out.printf("</table>%n");
-		out.printf("<p><input type=\"submit\" value=\"add to favourite\">");
-		out.printf("</form> \n%n");
 
+		out.printf("</form> \n%n");
 	}
 }
