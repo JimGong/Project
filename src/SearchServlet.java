@@ -17,7 +17,6 @@ import org.apache.commons.lang3.StringEscapeUtils;
 public class SearchServlet extends HttpServlet {
 
 	private static final String TITLE = "Search Engine";
-	// private LinkedList<String> searchHistory;
 	private CookieBaseServlet cookieBaseServlet;
 	private ThreadSafeInvertedIndex index;
 	ThreadSafePartialSearchBuilder search;
@@ -31,11 +30,9 @@ public class SearchServlet extends HttpServlet {
 	public SearchServlet(InvertedIndex index, int numThread) {
 
 		super();
-		// searchHistory = new LinkedList<>();
 		cookieBaseServlet = new CookieBaseServlet();
 		this.index = (ThreadSafeInvertedIndex) index;
 		this.numThread = numThread;
-		// search = new ThreadSafePartialSearchBuilder(numThread, this.index);
 	}
 
 	@Override
@@ -103,13 +100,12 @@ public class SearchServlet extends HttpServlet {
 			out.printf("<p>Your visits will not be tracked.</p>");
 		}
 		/* end of cookie stuff */
+		out.printf("<font size='3'><p>It is %s.</p></font></center>%n",
+				getDate());
 
 		out.printf(
 				"<font size='2'><p>This request was handled by thread %s.</p></font>%n",
 				Thread.currentThread().getName());
-
-		out.printf("<font size='3'><p>It is %s.</p></font></center>%n",
-				getDate());
 
 		out.printf("</body>%n");
 		out.printf("</html>%n");
@@ -121,7 +117,6 @@ public class SearchServlet extends HttpServlet {
 			HttpServletResponse response) throws IOException {
 
 		PrintWriter out = response.getWriter();
-		// out.printf("<form method=\"post\" action=\"%s\">%n", "/");
 		out.printf("<form method=\"post\" action=\"%s\">%n", "/");
 
 		out.printf("<table cellspacing=\"0\" cellpadding=\"2\"%n");
@@ -145,9 +140,10 @@ public class SearchServlet extends HttpServlet {
 		out.printf("<form method=\"get\" action=\"%s\">%n",
 				request.getServletPath());
 		out.printf("<button formaction=/history>History</button></p>");
-		out.printf("<button formaction=/new_crawl>Add new crawl</button></p>");
 		out.printf(
 				"<button formaction=/favourite_result>Favourite</button></p>");
+		out.printf(
+				"<button formaction=/new_crawl>Want a bigger database?Add new crawl</button></p>");
 
 		out.printf("</form> \n%n");
 	}
@@ -161,7 +157,6 @@ public class SearchServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		// String username = new LoginBaseServlet().getUsername(request);
 		String query = request.getParameter("search");
 
 		PrintWriter out = response.getWriter();
@@ -184,12 +179,13 @@ public class SearchServlet extends HttpServlet {
 
 		/* get input */
 		String query = request.getParameter("search");
-		System.out.println("query: " + query);
+
 		query = ((query == null) || query.equals("")) ? "" : query;
 
 		query = StringEscapeUtils.escapeHtml4(query);
 
 		String partialSearch = request.getParameter("partialSearch");
+
 		boolean isPartialSearch;
 		if (partialSearch == null) {
 			isPartialSearch = false;
@@ -197,13 +193,11 @@ public class SearchServlet extends HttpServlet {
 		else {
 			isPartialSearch = true;
 		}
-		System.out.println("partial search: " + partialSearch);
 
 		search = new ThreadSafePartialSearchBuilder(numThread, this.index,
 				isPartialSearch);
 		/* show search result */
 		if ((!query.equals(null)) && (!query.isEmpty())) {
-			System.out.println("------user input: " + query);
 			long startTime = System.nanoTime();
 			search.parseLine(query);
 			search.finish();
@@ -257,7 +251,6 @@ public class SearchServlet extends HttpServlet {
 		/* end printing search result */
 
 		String privateSearch = request.getParameter("privateSearch");
-		// String particalSearch = request.getParameter("partialSearch");
 		privateSearch = privateSearch == null ? "" : privateSearch;
 		if (privateSearch.equals("privateSearch")) {
 			out.printf(
@@ -287,7 +280,7 @@ public class SearchServlet extends HttpServlet {
 				.getFavourite(new LoginBaseServlet().getUsername(request), url);
 
 		if (isFavourite) {
-			out.printf("You have already added as favourite%n");
+			out.printf("<p>You have already added as favourite<p>%n");
 		}
 		else {
 			out.printf("<a href=/favourite?url=" + url + ">"
@@ -295,10 +288,7 @@ public class SearchServlet extends HttpServlet {
 		}
 
 		out.printf("\t</td>%n");
-		out.printf("</tr>%n");
+		out.printf("</tr></table></form>\n%n");
 
-		out.printf("</table>%n");
-
-		out.printf("</form> \n%n");
 	}
 }

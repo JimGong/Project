@@ -30,7 +30,7 @@ public class LoginDatabaseHandler {
 	private static final String LOGIN_USER_TABLES_SQL = "SHOW TABLES LIKE 'login_users';";
 	private static final String SEARCH_HISTORY_TABLES_SQL = "SHOW TABLES LIKE 'search_history';";
 	private static final String URL_TABLES_SQL = "SHOW TABLES LIKE 'URL';";
-	private static final String FAVOURITE_SQL = "SHOW TABLES LIKE favourite;";
+	private static final String FAVOURITE_TABLES_SQL = "SHOW TABLES LIKE 'favourite';";
 
 	/** Used to create necessary tables for this example. */
 	private static final String CREATE_LOGIN_USERS_SQL = "CREATE TABLE login_users ("
@@ -40,10 +40,7 @@ public class LoginDatabaseHandler {
 			+ "lastlogin CHAR(64) NOT NULL UNIQUE);";
 
 	/** Used to create search history tables for this example. */
-	private static final String CREATE_SEARCH_HISTORY_SQL = "CREATE TABLE search_history ("
-			+ "userid INTEGER AUTO_INCREMENT PRIMARY KEY, "
-			+ "username VARCHAR(32) NOT NULL, " + "query CHAR(64) NOT NULL"
-			+ "time CHAR(64) NOT NULL);";
+	private static final String CREATE_SEARCH_HISTORY_SQL = "CREATE TABLE search_history (userid INTEGER AUTO_INCREMENT PRIMARY KEY, username VARCHAR(32) NOT NULL, query CHAR(64) NOT NULL, time CHAR(64) NOT NULL);";
 
 	private static final String CREATE_URL_SQL = "CREATE TABLE URL (id INTEGER AUTO_INCREMENT PRIMARY KEY,"
 			+ " url CHAR(250) NOT NULL UNIQUE, title CHAR(64) NOT NULL, snippet CHAR(250), lastvisit CHAR(64) NOT NULL);";
@@ -85,7 +82,7 @@ public class LoginDatabaseHandler {
 
 	private static final String GET_FAVOURITE_SQL = "SELECT url FROM favourite WHERE username = ?;";
 
-	private static final String GET_FAVOURITE_RESULT = "SELECT CONCAT(time,'&nbsp;&nbsp;&nbsp;', url) AS full_favourite FROM favourite WHERE username = ? ORDER BY time;";
+	private static final String GET_FAVOURITE_RESULT = "SELECT CONCAT(time,'&nbsp;&nbsp;&nbsp;', url) AS full_favourite FROM favourite WHERE username = ? ORDER BY time DESC;";
 
 	private static final String GET_URL_VISITED_TIME_SQL = "SELECT lastvisit FROM URL WHERE url = ?;";
 
@@ -108,7 +105,7 @@ public class LoginDatabaseHandler {
 	private static final String DELETE_SQL = "DELETE FROM login_users WHERE username = ?";
 
 	private static final String GET_HISTORY_SQL = "SELECT CONCAT(time, '&nbsp;&nbsp;&nbsp;', query)"
-			+ "AS full_history FROM search_history WHERE username= ? ORDER BY time ASC;";
+			+ "AS full_history FROM search_history WHERE username= ? ORDER BY time DESC;";
 
 	private static final String CLEAN_HISTORY_SQL = "DELETE FROM search_history WHERE username = ?;";
 
@@ -229,13 +226,13 @@ public class LoginDatabaseHandler {
 				status = Status.OK;
 			}
 
-			if (!statement.executeQuery(FAVOURITE_SQL).next()) {
+			if (!statement.executeQuery(FAVOURITE_TABLES_SQL).next()) {
 				// Table missing, must create
 				log.debug("Creating favourite url tables...");
 				statement.executeUpdate(CREATE_FAVOURITE_SQL);
 
 				// Check if create was successful
-				if (!statement.executeQuery(FAVOURITE_SQL).next()) {
+				if (!statement.executeQuery(FAVOURITE_TABLES_SQL).next()) {
 					status = Status.CREATE_FAILED;
 				}
 				else {
@@ -767,7 +764,6 @@ public class LoginDatabaseHandler {
 			return status;
 		}
 
-		System.out.println("add " + query + " for " + username);
 		log.debug("add " + query + " for " + username);
 
 		try (Connection connection = db.getConnection();) {
@@ -807,7 +803,7 @@ public class LoginDatabaseHandler {
 			log.debug(status);
 			return status;
 		}
-		System.out.println("add to favourite for " + username + " " + url);
+
 		log.debug("add to favourite for " + username + " " + url);
 
 		try (Connection connection = db.getConnection();) {
@@ -872,8 +868,7 @@ public class LoginDatabaseHandler {
 			status = Status.OK;
 
 			ResultSet searchHistory = statement.executeQuery();
-			// System.out.println("trying to get the searchhistory for user: "
-			// + username + "&&& " + searchHistory.toString());
+
 			int size = 0;
 
 			while ((searchHistory != null) && searchHistory.next()) {
@@ -924,8 +919,6 @@ public class LoginDatabaseHandler {
 			statement.setString(1, username);
 
 			ResultSet searchHistory = statement.executeQuery();
-			// System.out.println("trying to get the searchhistory for user: "
-			// + username + "&&& " + searchHistory.toString());
 
 			while ((searchHistory != null) && searchHistory.next()) {
 
@@ -970,9 +963,14 @@ public class LoginDatabaseHandler {
 
 			ResultSet favResults = statement.executeQuery();
 
+			int size = 0;
 			while ((favResults != null) && favResults.next()) {
 				out.printf("<p>" + favResults.getString("full_favourite")
 						+ "<p>%n");
+				size++;
+			}
+			if (size == 0) {
+				out.printf("<p>You dont have any favourite result.<p>%n");
 			}
 
 		} catch (SQLException ex) {
@@ -991,7 +989,6 @@ public class LoginDatabaseHandler {
 			log.debug(status);
 			return status;
 		}
-		System.out.println("getting fav result for user: " + username);
 		try (Connection connection = db.getConnection();) {
 
 			status = getFavouriteResult(connection, username, out);
@@ -1168,7 +1165,7 @@ public class LoginDatabaseHandler {
 		Status status = Status.ERROR;
 		try (PreparedStatement statement = connection
 				.prepareStatement(UPDATE_VISITED_TIME_SQL);) {
-			// System.out.println("update visited time for url: " + url);
+
 			statement.setString(1, url);
 
 			statement.executeUpdate();
@@ -1245,20 +1242,22 @@ public class LoginDatabaseHandler {
 		Status status = Status.ERROR;
 		try (PreparedStatement statement = connection
 				.prepareStatement(GET_URL_VISITED_TIME_SQL);) {
-			// System.out.println("get visited time for url: " + url);
 			statement.setString(1, url);
 			ResultSet time = statement.executeQuery();
-			out.printf("<font size='3' color='dimgray'>");
+			out.printf("<font size='3' color='gray'>");
 			while ((time != null) && time.next()) {
 
-				// out.printf(
-				// "<p style='line-height:3px';>"
-				// + ((time.getString("lastvisit") == "NotVisited")
-				// ? "You have never visited it."
-				// : time.getString("lastvisit"))
-				// + "<p>%n");
-				out.printf("<p style='line-height:3px';>"
-						+ time.getString("lastvisit") + "<p>%n");
+				String lastVisitTime = time.getString("lastvisit");
+
+				if (lastVisitTime.equals("NotVisited")
+						|| lastVisitTime.contains("NotVisited")) {
+					lastVisitTime = "You have never visited this website.";
+				}
+				else {
+					lastVisitTime = "Your last visit was on " + lastVisitTime;
+				}
+				out.printf("<p style='line-height:3px';>" + lastVisitTime
+						+ "<p>%n");
 
 			}
 			out.printf("</font>");
@@ -1295,12 +1294,12 @@ public class LoginDatabaseHandler {
 		Status status = Status.ERROR;
 		try (PreparedStatement statement = connection
 				.prepareStatement(GET_SNIPPET_SQL);) {
-			// System.out.println("get snippet for url: " + url);
+
 			statement.setString(1, url);
 			ResultSet snippet = statement.executeQuery();
 			out.printf("<font size='3' color='dimgray'>");
 			while ((snippet != null) && snippet.next()) {
-				out.printf("<p style='line-height:3px';>"
+				out.printf("<p style='line-height:18px';>"
 						+ snippet.getString("snippet") + "<p>");
 			}
 			out.printf("</font>");

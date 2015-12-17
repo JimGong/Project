@@ -13,11 +13,8 @@ public class FavouriteServlet extends HttpServlet {
 			HttpServletResponse response) throws IOException {
 		String username = new LoginBaseServlet().getUsername(request);
 		String url = request.getQueryString().substring(4);
-		System.out
-				.println("(favourite) user name: " + username + " url: " + url);
 
 		LoginBaseServlet.dbhandler.addFavourite(username, url);
-		System.out.println("done adding to favourite");
 
 		PrintWriter out = response.getWriter();
 		out.printf("<html>%n");

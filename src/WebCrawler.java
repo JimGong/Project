@@ -13,13 +13,34 @@ import org.apache.logging.log4j.Logger;
 
 public class WebCrawler {
 
+	/**
+	 * Create a HashSet of URL String
+	 */
 	private HashSet<String> urlSet;
+	/**
+	 * Create ThreadSafeInverted index
+	 */
 	private ThreadSafeInvertedIndex index;
+	/**
+	 * Create a WorkQueue
+	 */
 	private final WorkQueue minions;
 	private static final Logger logger = LogManager.getLogger();
+	/**
+	 * Set the max capacity of the url set
+	 */
 	private final int MAX_CAPACITY = 50;
+	/**
+	 * Create a read-write lock
+	 */
 	private final ReadWriteLock lock;
 
+	/**
+	 * Initiate the WorkQueue and set the numThread
+	 *
+	 * @param numThreads
+	 * @param index
+	 */
 	public WebCrawler(int numThreads, ThreadSafeInvertedIndex index) {
 		urlSet = new HashSet<String>();
 		lock = new ReadWriteLock();
@@ -27,6 +48,12 @@ public class WebCrawler {
 		this.index = index;
 	}
 
+	/**
+	 * Traverse the URL to build inverted index map
+	 *
+	 * @param url
+	 * @throws MalformedURLException
+	 */
 	public void traverse(String url) throws MalformedURLException {
 		lock.lockReadWrite();
 		urlHelper(url);
@@ -36,6 +63,11 @@ public class WebCrawler {
 		logger.debug("total size:" + urlSet.size());
 	}
 
+	/**
+	 * Add to the url set and execute the minion for the url passed in
+	 *
+	 * @param url
+	 */
 	private void urlHelper(String url) {
 		if ((urlSet.size() < MAX_CAPACITY) && (!urlSet.contains(url))) {
 			urlSet.add(url);
@@ -43,6 +75,12 @@ public class WebCrawler {
 		}
 	}
 
+	/**
+	 * Handles pre-url parsing. If a url is encountered, a new
+	 * {@link CrawlMinion} is created to handle that url
+	 *
+	 *
+	 */
 	private class CrawlMinion implements Runnable {
 
 		private String link;
@@ -81,8 +119,6 @@ public class WebCrawler {
 
 				html = HTMLCleaner.cleanHTML(html);
 
-				// System.out.println("html for " + link);
-				// System.out.println(html);
 				/* page snipper */
 				BufferedReader reader = new BufferedReader(
 						new StringReader(body));
@@ -90,27 +126,29 @@ public class WebCrawler {
 				String line;
 				while (((line = reader.readLine()) != null)
 						&& (firstSentense.length() < 250)) {
-					// System.out.println("^^^^^ " + line);
-					if (line.contains("?") || line.contains(":")
-							|| line.contains(";") || line.contains(".")) {
-						int index = line.indexOf(".");
-						if (index == -1) {
-							index = line.indexOf(":");
+					line = line.trim();
+					if (!line.isEmpty()) {
+						if (line.contains("?") || line.contains(":")
+								|| line.contains(";") || line.contains(".")) {
+							int index = line.indexOf(".");
+							if (index == -1) {
+								index = line.indexOf(":");
+							}
+							else if (index == -1) {
+								index = line.indexOf("?");
+							}
+							else if (index == -1) {
+								index = line.indexOf(";");
+							}
+							if (index >= 0) {
+								line = line.substring(0, index);
+								firstSentense.append(line.trim() + "<br>");
+							}
+							break;
 						}
-						else if (index == -1) {
-							index = line.indexOf("?");
+						else {
+							firstSentense.append(line.trim() + "<br>");
 						}
-						else if (index == -1) {
-							index = line.indexOf(";");
-						}
-						if (index >= 0) {
-							line = line.substring(0, index);
-							firstSentense.append(line + " ");
-						}
-						break;
-					}
-					else {
-						firstSentense.append(line + " ");
 					}
 				}
 
