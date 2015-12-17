@@ -52,7 +52,6 @@ public class NewCrawlServlet extends HttpServlet {
 				response.sendRedirect("/new_crawl?ok");
 			}
 		}
-		// addNewDatabase(newcrawl, request, response);
 
 		out.printf("</body>%n");
 		out.printf("</html>%n");
