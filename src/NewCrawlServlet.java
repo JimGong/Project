@@ -1,5 +1,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +31,8 @@ public class NewCrawlServlet extends HttpServlet {
 		out.printf("<body>%n");
 		String error = request.getParameter("error");
 		if (error != null) {
-			out.printf("<p style=\"color: red;\">" + "Invalid link" + "</p>");
+			String errormsg = getStatusMessage(error);
+			out.printf("<p style=\"color: red;\">" + errormsg + "</p>");
 		}
 
 		String status = request.getParameter("ok");
@@ -44,8 +47,13 @@ public class NewCrawlServlet extends HttpServlet {
 
 		String userchoice = request.getParameter("addcrawl");
 		if (userchoice != null) {
-			if ((newcrawl == null) || newcrawl.trim().isEmpty()) {
+			try {
+				new URL(newcrawl);
+			} catch (MalformedURLException ex) {
 				response.sendRedirect("/new_crawl?error=invalid_link");
+			}
+			if ((newcrawl == null) || newcrawl.trim().isEmpty()) {
+				response.sendRedirect("/new_crawl?error=empty_link");
 			}
 			else {
 				addNewDatabase(newcrawl, request, response);
@@ -79,6 +87,15 @@ public class NewCrawlServlet extends HttpServlet {
 		webcrawler.traverse(seed);
 
 		index.addAll(newIndex);
+	}
+
+	private String getStatusMessage(String error) {
+		if (error.contains("invalid_link")) {
+			return "Invalid link";
+		}
+		else {
+			return "Empty link";
+		}
 	}
 
 }

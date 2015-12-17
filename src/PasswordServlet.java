@@ -57,7 +57,16 @@ public class PasswordServlet extends LoginBaseServlet {
 
 		String user = request.getParameter("user");
 		String newPassword = request.getParameter("newpassword");
-		dbhandler.updatePassword(user, newPassword);
-		response.sendRedirect("/login?new_password");
+		Status status = dbhandler.updatePassword(user, newPassword);
+
+		if (status == Status.OK) {
+			response.sendRedirect(
+					response.encodeRedirectURL("/login?passwordchanged=true"));
+		}
+		else {
+			String url = "/reset_password?error=" + status.name();
+			url = response.encodeRedirectURL(url);
+			response.sendRedirect(url);
+		}
 	}
 }

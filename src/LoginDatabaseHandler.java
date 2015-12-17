@@ -101,6 +101,8 @@ public class LoginDatabaseHandler {
 
 	private static final String CHECK_URL_SQL = "SELECT url FROM URL WHERE url = ?;";
 
+	private static final String CHECK_USER_EXIST_SQL = "SELECT username FROM login_users WHERE username=?;";
+
 	/** Used to remove a user from the database. */
 	private static final String DELETE_SQL = "DELETE FROM login_users WHERE username = ?";
 
@@ -295,6 +297,45 @@ public class LoginDatabaseHandler {
 
 		try (Connection connection = db.getConnection();) {
 			status = duplicateUser(connection, user);
+		} catch (SQLException e) {
+			status = Status.CONNECTION_FAILED;
+			log.debug(e.getMessage(), e);
+		}
+
+		return status;
+	}
+
+	private Status checkUserExit(Connection connection, String user) {
+		Status status = Status.ERROR;
+
+		try (PreparedStatement statement = connection
+				.prepareStatement(CHECK_USER_EXIST_SQL);) {
+			statement.setString(1, user);
+
+			ResultSet results = statement.executeQuery();
+			int size = 0;
+			while ((results != null) && results.next()) {
+				size++;
+			}
+			if (size == 0) {
+				status = Status.INVALID_USER;
+			}
+			else {
+				status = Status.OK;
+			}
+		} catch (SQLException e) {
+			log.debug(e.getMessage(), e);
+			status = Status.SQL_EXCEPTION;
+		}
+
+		return status;
+	}
+
+	public Status checkUserExit(String user) {
+		Status status = Status.ERROR;
+
+		try (Connection connection = db.getConnection();) {
+			status = checkUserExit(connection, user);
 		} catch (SQLException e) {
 			status = Status.CONNECTION_FAILED;
 			log.debug(e.getMessage(), e);
@@ -632,6 +673,11 @@ public class LoginDatabaseHandler {
 		// // make sure we have non-null and non-emtpy values for login
 		if (isBlank(user) || isBlank(newpass)) {
 			status = Status.INVALID_LOGIN;
+			log.debug(status);
+			return status;
+		}
+		if (checkUserExit(user) == Status.INVALID_USER) {
+			status = Status.INVALID_USER;
 			log.debug(status);
 			return status;
 		}

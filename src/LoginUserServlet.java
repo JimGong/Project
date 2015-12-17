@@ -43,6 +43,10 @@ public class LoginUserServlet extends LoginBaseServlet {
 			out.println("<p>Successfully logged out.</p>");
 		}
 
+		if (request.getParameter("passwordchanged") != null) {
+			out.printf("<p>Successfully changed your password</p>");
+		}
+
 		printForm(request, out);
 		finishResponse(response);
 	}
@@ -62,7 +66,7 @@ public class LoginUserServlet extends LoginBaseServlet {
 				// should eventually change this to something more secure
 				response.addCookie(new Cookie("login", "true"));
 				response.addCookie(new Cookie("name", user));
-				response.sendRedirect(response.encodeRedirectURL("/welcome"));
+				response.sendRedirect(response.encodeRedirectURL("/"));
 			}
 			else {
 				response.addCookie(new Cookie("login", "false"));

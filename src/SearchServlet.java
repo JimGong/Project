@@ -64,7 +64,7 @@ public class SearchServlet extends HttpServlet {
 
 		if (!(user == null)) {
 			out.printf("<p>Not " + user
-					+ "? <a href='/login'>Sign Out</a><p></div>%n");
+					+ "? <a href='/login?logout'>Sign Out</a><p></div>%n");
 		}
 		out.printf(
 				"<center><img src=http://simpleicon.com/wp-content/uploads/smile.png width=\"150\" height=\"150\">%n");
