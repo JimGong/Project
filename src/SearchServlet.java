@@ -59,10 +59,6 @@ public class SearchServlet extends HttpServlet {
 		/* get user name */
 		String user = new LoginBaseServlet().getUsername(request);
 
-		// LoginBaseServlet.dbhandler.updateLastLoginTime(user);
-
-		System.out.println("user: " + user);
-
 		out.printf("<div align=right> <p>Welcome, <a href=/login>"
 				+ (user == null ? "Login" : user) + "</a></p>%n");
 
@@ -100,11 +96,10 @@ public class SearchServlet extends HttpServlet {
 			out.printf("<p>Your visits will not be tracked.</p>");
 		}
 		/* end of cookie stuff */
-		out.printf("<font size='3'><p>It is %s.</p></font></center>%n",
-				getDate());
+		out.printf("<font size='3'><p>It is %s.</p></font>%n", getDate());
 
 		out.printf(
-				"<font size='2'><p>This request was handled by thread %s.</p></font>%n",
+				"<font size='2'><p>This request was handled by thread %s.</p></font></center>%n",
 				Thread.currentThread().getName());
 
 		out.printf("</body>%n");
@@ -219,8 +214,8 @@ public class SearchServlet extends HttpServlet {
 			out.printf("<d class='pos_right'>");
 			/* end of format */
 
-			for (String url : result.keySet()) {
-				List<SearchResult> list = result.get(url);
+			for (String b : result.keySet()) {
+				List<SearchResult> list = result.get(b);
 
 				if (list.size() == 0) {
 					out.printf("<p>No result found<p>%n");
@@ -236,7 +231,21 @@ public class SearchServlet extends HttpServlet {
 					LoginBaseServlet.dbhandler.getTitle(a.getLocation(), out);
 					out.printf("<p><a href=/visited?url=" + a.getLocation()
 							+ ">" + a.getLocation() + "</a>" + "%n");
-					printAddFav(request, response, a.getLocation());
+
+					boolean isFavourite = LoginBaseServlet.dbhandler
+							.getFavourite(
+									new LoginBaseServlet().getUsername(request),
+									a.getLocation());
+
+					if (isFavourite) {
+						out.printf(
+								"<p>You have already added as favourite<p>%n");
+					}
+					else {
+						out.printf("<p><a href=/favourite?url="
+								+ a.getLocation() + ">" + "add to favourite"
+								+ "</a>" + "<p>%n");
+					}
 
 					LoginBaseServlet.dbhandler.getSnippet(a.getLocation(), out);
 					LoginBaseServlet.dbhandler
@@ -244,7 +253,6 @@ public class SearchServlet extends HttpServlet {
 					out.printf("<br>");
 				}
 			}
-			System.out.println("done with printing to website");
 			/* write search */
 		}
 		out.printf("</d>%n");
@@ -261,34 +269,7 @@ public class SearchServlet extends HttpServlet {
 					new LoginBaseServlet().getUsername(request), query);
 		}
 
-		out.printf("<a href='/'>Back to Search</a>");
-
-	}
-
-	private void printAddFav(HttpServletRequest request,
-			HttpServletResponse response, String url) throws IOException {
-		PrintWriter out = response.getWriter();
-
-		out.printf("<form method=\"post\" action=\"''\">%n");
-
-		out.printf("<table cellspacing=\"0\" cellpadding=\"2\"%n");
-		out.printf("<tr>%n");
-		out.printf("\t<td nowrap></td>%n");
-		out.printf("\t<td>%n");
-
-		boolean isFavourite = LoginBaseServlet.dbhandler
-				.getFavourite(new LoginBaseServlet().getUsername(request), url);
-
-		if (isFavourite) {
-			out.printf("<p>You have already added as favourite<p>%n");
-		}
-		else {
-			out.printf("<a href=/favourite?url=" + url + ">"
-					+ "add to favourite" + "</a>" + "<p>%n");
-		}
-
-		out.printf("\t</td>%n");
-		out.printf("</tr></table></form>\n%n");
+		out.printf("<h2><a href='/'>Back to Search</a><h2>");
 
 	}
 }

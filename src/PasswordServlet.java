@@ -14,8 +14,7 @@ public class PasswordServlet extends LoginBaseServlet {
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(Thread.currentThread().getName() + ": "
-				+ request.getRequestURI());
+
 		prepareResponse("Change Password", response);
 
 		PrintWriter out = response.getWriter();
@@ -58,7 +57,6 @@ public class PasswordServlet extends LoginBaseServlet {
 
 		String user = request.getParameter("user");
 		String newPassword = request.getParameter("newpassword");
-		System.out.println("user: " + user + " new password: " + newPassword);
 		dbhandler.updatePassword(user, newPassword);
 		response.sendRedirect("/login?new_password");
 	}

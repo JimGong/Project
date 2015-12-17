@@ -31,7 +31,6 @@ public class History extends HttpServlet {
 		out.printf("</form>\n%n");
 		String userchoice = request.getParameter("showHistory");
 
-		// System.out.println("userchoice: " + userchoice);
 		if (!(userchoice == null)) {
 			printHistory(user, out);
 		}
@@ -40,8 +39,7 @@ public class History extends HttpServlet {
 			cleanHistory(user, out);
 		}
 
-		out.printf("<a href='/'>Back to Search</a>");
-
+		out.printf("<h2><a href='/'>Back to Search</a><h2>");
 	}
 
 	private void printHistory(String username, PrintWriter out) {

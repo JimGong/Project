@@ -1,373 +1,361 @@
-[10:49:11:075 debug] Driver.java@159 main: $$$$$$$$$$$$$$$$$$ traversing URL
-[10:49:11:078 debug] WebCrawler.java@89 main: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/birds.html
-[10:49:11:078 debug] WorkQueue.java@70 main: increasing, Pending is now 1
-[10:49:11:078 debug] WebCrawler.java@96 Thread-10: urlsize: 1, true
-[10:49:11:127 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/albatross.html
-[10:49:11:127 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 2
-[10:49:11:127 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/blackbird.html
-[10:49:11:127 debug] WebCrawler.java@96 Thread-6: urlsize: 3, true
-[10:49:11:127 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 3
-[10:49:11:127 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/bluebird.html
-[10:49:11:128 debug] WebCrawler.java@96 Thread-9: urlsize: 4, true
-[10:49:11:128 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 4
-[10:49:11:128 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/cardinal.html
-[10:49:11:128 debug] WebCrawler.java@96 Thread-7: urlsize: 5, true
-[10:49:11:128 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 5
-[10:49:11:128 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/chickadee.html
-[10:49:11:128 debug] WebCrawler.java@96 Thread-8: urlsize: 6, true
-[10:49:11:128 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 6
-[10:49:11:128 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/crane.html
-[10:49:11:129 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 7
-[10:49:11:129 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/crow.html
-[10:49:11:129 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 8
-[10:49:11:129 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/cuckoo.html
-[10:49:11:129 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 9
-[10:49:11:129 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/dove.html
-[10:49:11:129 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 10
-[10:49:11:129 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/duck.html
-[10:49:11:129 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 11
-[10:49:11:129 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/eagle.html
-[10:49:11:130 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 12
-[10:49:11:130 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/egret.html
-[10:49:11:130 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 13
-[10:49:11:130 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/falcon.html
-[10:49:11:130 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 14
-[10:49:11:130 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/finch.html
-[10:49:11:130 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 15
-[10:49:11:131 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/goose.html
-[10:49:11:131 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 16
-[10:49:11:131 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/gull.html
-[10:49:11:131 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 17
-[10:49:11:131 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/hawk.html
-[10:49:11:131 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 18
-[10:49:11:131 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/heron.html
-[10:49:11:131 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 19
-[10:49:11:131 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/hummingbird.html
-[10:49:11:132 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 20
-[10:49:11:132 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/ibis.html
-[10:49:11:132 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 21
-[10:49:11:132 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/kingfisher.html
-[10:49:11:132 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 22
-[10:49:11:132 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/loon.html
-[10:49:11:132 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 23
-[10:49:11:132 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/magpie.html
-[10:49:11:133 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 24
-[10:49:11:133 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/mallard.html
-[10:49:11:133 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 25
-[10:49:11:133 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/meadowlark.html
-[10:49:11:133 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 26
-[10:49:11:133 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/mockingbird.html
-[10:49:11:133 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 27
-[10:49:11:133 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/nighthawk.html
-[10:49:11:133 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 28
-[10:49:11:134 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/osprey.html
-[10:49:11:134 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 29
-[10:49:11:134 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/owl.html
-[10:49:11:134 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 30
-[10:49:11:134 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pelican.html
-[10:49:11:134 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 31
-[10:49:11:134 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pheasant.html
-[10:49:11:134 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 32
-[10:49:11:134 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pigeon.html
-[10:49:11:135 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 33
-[10:49:11:135 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/puffin.html
-[10:49:11:135 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 34
-[10:49:11:135 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/quail.html
-[10:49:11:135 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 35
-[10:49:11:135 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/raven.html
-[10:49:11:135 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 36
-[10:49:11:135 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/roadrunner.html
-[10:49:11:135 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 37
-[10:49:11:135 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/robin.html
-[10:49:11:135 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 38
-[10:49:11:136 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/sandpiper.html
-[10:49:11:136 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 39
-[10:49:11:136 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/sparrow.html
-[10:49:11:136 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 40
-[10:49:11:136 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/starling.html
-[10:49:11:136 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 41
-[10:49:11:136 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/stork.html
-[10:49:11:136 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 42
-[10:49:11:136 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/swallow.html
-[10:49:11:136 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 43
-[10:49:11:136 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/swan.html
-[10:49:11:136 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 44
-[10:49:11:137 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/tern.html
-[10:49:11:137 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 45
-[10:49:11:137 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/turkey.html
-[10:49:11:137 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 46
-[10:49:11:137 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/vulture.html
-[10:49:11:137 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 47
-[10:49:11:137 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/warbler.html
-[10:49:11:137 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 48
-[10:49:11:137 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/woodpecker.html
-[10:49:11:137 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 49
-[10:49:11:138 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/wren.html
-[10:49:11:138 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 50
-[10:49:11:597 debug] LoginDatabaseHandler.java@190 Thread-10: Login Users Table found.
-[10:49:11:608 debug] LoginDatabaseHandler.java@207 Thread-10: Search History Tables found.
-[10:49:11:617 debug] LoginDatabaseHandler.java@225 Thread-10: URL Tables found.
-[10:49:11:627 debug] LoginDatabaseHandler.java@243 Thread-10: URL Tables found.
-[10:49:11:628 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/birds.htmlexisted.
-[10:49:11:628 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/cardinal.htmlexisted.
-[10:49:11:628 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/bluebird.htmlexisted.
-[10:49:11:628 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/albatross.htmlexisted.
-[10:49:11:628 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/blackbird.htmlexisted.
-[10:49:11:951 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:11:951 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/bluebird.html
-[10:49:11:951 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:11:951 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 49
-[10:49:11:951 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/albatross.html
-[10:49:11:952 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:11:952 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:11:952 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 48
-[10:49:11:952 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/birds.html
-[10:49:11:952 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:11:952 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 47
-[10:49:11:952 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:11:958 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:11:959 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/cardinal.html
-[10:49:11:959 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:11:959 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 46
-[10:49:11:959 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/blackbird.html
-[10:49:11:959 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:11:959 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 45
-[10:49:11:959 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:11:976 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/crane.htmlexisted.
-[10:49:11:976 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/chickadee.htmlexisted.
-[10:49:11:981 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/crow.htmlexisted.
-[10:49:11:981 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/dove.htmlexisted.
-[10:49:11:992 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/cuckoo.htmlexisted.
-[10:49:12:280 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:12:280 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/chickadee.html
-[10:49:12:280 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 44
-[10:49:12:280 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:12:289 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:12:290 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/dove.html
-[10:49:12:290 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 43
-[10:49:12:290 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:12:295 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:12:295 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/crow.html
-[10:49:12:295 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:12:295 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 42
-[10:49:12:296 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/crane.html
-[10:49:12:296 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:12:296 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 41
-[10:49:12:296 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:12:305 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:12:305 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/cuckoo.html
-[10:49:12:305 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 40
-[10:49:12:306 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:12:308 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/duck.htmlexisted.
-[10:49:12:319 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/egret.htmlexisted.
-[10:49:12:319 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/eagle.htmlexisted.
-[10:49:12:331 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/finch.htmlexisted.
-[10:49:12:369 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/falcon.htmlexisted.
-[10:49:12:616 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:12:616 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/duck.html
-[10:49:12:616 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 39
-[10:49:12:616 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:12:625 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:12:626 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/eagle.html
-[10:49:12:626 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 38
-[10:49:12:626 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:12:634 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:12:634 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/egret.html
-[10:49:12:634 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 37
-[10:49:12:634 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:12:641 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/goose.htmlexisted.
-[10:49:12:648 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:12:648 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/finch.html
-[10:49:12:648 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 36
-[10:49:12:648 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:12:650 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/gull.htmlexisted.
-[10:49:12:661 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/hawk.htmlexisted.
-[10:49:12:667 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/heron.htmlexisted.
-[10:49:12:686 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:12:686 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/falcon.html
-[10:49:12:686 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 35
-[10:49:12:686 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:12:706 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/hummingbird.htmlexisted.
-[10:49:12:950 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:12:950 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/gull.html
-[10:49:12:950 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 34
-[10:49:12:950 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:12:970 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:12:970 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/goose.html
-[10:49:12:970 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 33
-[10:49:12:970 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:12:978 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/ibis.htmlexisted.
-[10:49:12:987 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:12:987 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/heron.html
-[10:49:12:987 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:12:988 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 32
-[10:49:12:988 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/hawk.html
-[10:49:12:988 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:12:988 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 31
-[10:49:12:988 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:12:994 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/kingfisher.htmlexisted.
-[10:49:13:010 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/loon.htmlexisted.
-[10:49:13:010 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/magpie.htmlexisted.
-[10:49:13:034 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:13:034 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/hummingbird.html
-[10:49:13:034 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 30
-[10:49:13:034 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:13:056 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/mallard.htmlexisted.
-[10:49:13:285 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:13:285 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/ibis.html
-[10:49:13:285 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 29
-[10:49:13:285 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:13:308 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/meadowlark.htmlexisted.
-[10:49:13:328 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:13:328 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/kingfisher.html
-[10:49:13:328 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 28
-[10:49:13:329 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:13:333 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:13:334 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/loon.html
-[10:49:13:334 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:13:334 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 27
-[10:49:13:334 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/magpie.html
-[10:49:13:334 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 26
-[10:49:13:334 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:13:334 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:13:353 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/mockingbird.htmlexisted.
-[10:49:13:358 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/osprey.htmlexisted.
-[10:49:13:363 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/nighthawk.htmlexisted.
-[10:49:13:381 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:13:382 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/mallard.html
-[10:49:13:382 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 25
-[10:49:13:382 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:13:405 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/owl.htmlexisted.
-[10:49:13:647 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:13:647 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/meadowlark.html
-[10:49:13:647 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 24
-[10:49:13:647 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:13:666 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/pelican.htmlexisted.
-[10:49:13:679 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:13:679 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/mockingbird.html
-[10:49:13:679 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 23
-[10:49:13:679 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:13:688 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:13:688 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/osprey.html
-[10:49:13:688 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 22
-[10:49:13:688 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:13:700 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/pheasant.htmlexisted.
-[10:49:13:709 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:13:709 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/nighthawk.html
-[10:49:13:709 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 21
-[10:49:13:709 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/pigeon.htmlexisted.
-[10:49:13:709 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:13:732 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/puffin.htmlexisted.
-[10:49:13:737 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:13:738 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/owl.html
-[10:49:13:738 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 20
-[10:49:13:738 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:13:763 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/quail.htmlexisted.
-[10:49:14:004 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:14:004 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pelican.html
-[10:49:14:004 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 19
-[10:49:14:004 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:14:023 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/raven.htmlexisted.
-[10:49:14:055 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:14:055 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pheasant.html
-[10:49:14:055 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 18
-[10:49:14:055 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:14:062 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:14:063 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pigeon.html
-[10:49:14:063 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 17
-[10:49:14:063 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:14:071 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:14:072 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/puffin.html
-[10:49:14:072 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 16
-[10:49:14:072 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:14:075 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/roadrunner.htmlexisted.
-[10:49:14:083 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/robin.htmlexisted.
-[10:49:14:092 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:14:093 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/sandpiper.htmlexisted.
-[10:49:14:093 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/quail.html
-[10:49:14:093 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 15
-[10:49:14:093 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:14:112 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/sparrow.htmlexisted.
-[10:49:14:331 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:14:331 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/raven.html
-[10:49:14:331 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 14
-[10:49:14:331 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:14:352 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/starling.htmlexisted.
-[10:49:14:373 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:14:373 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:14:373 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/roadrunner.html
-[10:49:14:373 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/robin.html
-[10:49:14:373 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 13
-[10:49:14:374 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 12
-[10:49:14:374 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:14:374 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:14:394 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:14:394 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/sandpiper.html
-[10:49:14:394 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 11
-[10:49:14:395 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:14:396 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/swallow.htmlexisted.
-[10:49:14:398 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/stork.htmlexisted.
-[10:49:14:416 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:14:416 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/sparrow.html
-[10:49:14:416 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 10
-[10:49:14:416 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:14:422 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/swan.htmlexisted.
-[10:49:14:437 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/tern.htmlexisted.
-[10:49:14:660 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:14:660 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/starling.html
-[10:49:14:660 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 9
-[10:49:14:660 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
-[10:49:14:681 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/turkey.htmlexisted.
-[10:49:14:725 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:14:725 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/swallow.html
-[10:49:14:725 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 8
-[10:49:14:725 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
-[10:49:14:732 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:14:732 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/stork.html
-[10:49:14:732 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 7
-[10:49:14:732 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
-[10:49:14:749 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:14:749 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/swan.html
-[10:49:14:749 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 6
-[10:49:14:750 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
-[10:49:14:751 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/vulture.htmlexisted.
-[10:49:14:751 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/warbler.htmlexisted.
-[10:49:14:768 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:14:768 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/tern.html
-[10:49:14:769 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 5
-[10:49:14:769 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
-[10:49:14:769 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/woodpecker.htmlexisted.
-[10:49:14:789 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/wren.htmlexisted.
-[10:49:15:008 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
-[10:49:15:008 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/turkey.html
-[10:49:15:008 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 4
-[10:49:15:078 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
-[10:49:15:078 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/warbler.html
-[10:49:15:078 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 3
-[10:49:15:087 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
-[10:49:15:087 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/vulture.html
-[10:49:15:087 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 2
-[10:49:15:104 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
-[10:49:15:104 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/woodpecker.html
-[10:49:15:104 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 1
-[10:49:15:121 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
-[10:49:15:122 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/wren.html
-[10:49:15:122 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 0
-[10:49:15:122 debug] WebCrawler.java@63 main: total size:50
-[10:49:15:122 debug] Driver.java@164 main: $$$$$$$$$$$$$$$$$$ done with traversing URL
-[10:49:15:122 debug] Driver.java@170 main: calling shut down
-[10:49:15:122 debug] MultiThreadInvertedIndexBuilder.java@44 main: Shutting down
-[10:49:15:122 debug] WorkQueue.java@132 main: work queue been shut down.
-[10:49:15:122 debug] Driver.java@172 main: Done with InvertedIndex
-[10:49:16:980 debug] ThreadSafePartialSearchBuilder.java@147 qtp1050349584-35: ******** Minion created for chickadee
-[10:49:16:980 debug] WorkQueue.java@70 qtp1050349584-35: increasing, Pending is now 1
-[10:49:16:980 debug] ThreadSafePartialSearchBuilder.java@155 Thread-29: --------- Minion going to run for chickadee
-[10:49:16:982 debug] ThreadSafePartialSearchBuilder.java@162 Thread-29: ######## Minion finished chickadee
-[10:49:16:982 debug] WorkQueue.java@81 Thread-29: decreasing, Pending is now 0
-[10:49:17:798 debug] LoginDatabaseHandler.java@767 qtp1050349584-35: add chickadee for Jim
-[10:49:44:265 debug] ThreadSafePartialSearchBuilder.java@147 qtp1050349584-31: ******** Minion created for chickadee
-[10:49:44:266 debug] WorkQueue.java@70 qtp1050349584-31: increasing, Pending is now 1
-[10:49:44:266 debug] ThreadSafePartialSearchBuilder.java@155 Thread-34: --------- Minion going to run for chickadee
-[10:49:44:266 debug] ThreadSafePartialSearchBuilder.java@162 Thread-34: ######## Minion finished chickadee
-[10:49:44:266 debug] WorkQueue.java@81 Thread-34: decreasing, Pending is now 0
-[10:49:45:119 debug] LoginDatabaseHandler.java@767 qtp1050349584-31: add chickadee for Jim
+[12:01:04:386 debug] Driver.java@159 main: $$$$$$$$$$$$$$$$$$ traversing URL
+[12:01:04:389 debug] WebCrawler.java@89 main: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/birds.html
+[12:01:04:390 debug] WorkQueue.java@70 main: increasing, Pending is now 1
+[12:01:04:390 debug] WebCrawler.java@96 Thread-10: urlsize: 1, true
+[12:01:04:434 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/albatross.html
+[12:01:04:434 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 2
+[12:01:04:434 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/blackbird.html
+[12:01:04:434 debug] WebCrawler.java@96 Thread-6: urlsize: 3, true
+[12:01:04:434 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 3
+[12:01:04:434 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/bluebird.html
+[12:01:04:434 debug] WebCrawler.java@96 Thread-9: urlsize: 4, true
+[12:01:04:434 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 4
+[12:01:04:435 debug] WebCrawler.java@96 Thread-7: urlsize: 5, true
+[12:01:04:435 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/cardinal.html
+[12:01:04:435 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 5
+[12:01:04:435 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/chickadee.html
+[12:01:04:435 debug] WebCrawler.java@96 Thread-8: urlsize: 6, true
+[12:01:04:435 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 6
+[12:01:04:435 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/crane.html
+[12:01:04:435 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 7
+[12:01:04:436 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/crow.html
+[12:01:04:436 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 8
+[12:01:04:436 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/cuckoo.html
+[12:01:04:436 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 9
+[12:01:04:436 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/dove.html
+[12:01:04:436 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 10
+[12:01:04:436 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/duck.html
+[12:01:04:436 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 11
+[12:01:04:436 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/eagle.html
+[12:01:04:437 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 12
+[12:01:04:437 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/egret.html
+[12:01:04:437 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 13
+[12:01:04:437 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/falcon.html
+[12:01:04:437 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 14
+[12:01:04:437 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/finch.html
+[12:01:04:437 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 15
+[12:01:04:437 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/goose.html
+[12:01:04:437 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 16
+[12:01:04:437 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/gull.html
+[12:01:04:437 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 17
+[12:01:04:437 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/hawk.html
+[12:01:04:438 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 18
+[12:01:04:438 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/heron.html
+[12:01:04:438 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 19
+[12:01:04:438 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/hummingbird.html
+[12:01:04:438 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 20
+[12:01:04:438 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/ibis.html
+[12:01:04:438 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 21
+[12:01:04:438 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/kingfisher.html
+[12:01:04:439 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 22
+[12:01:04:439 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/loon.html
+[12:01:04:439 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 23
+[12:01:04:439 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/magpie.html
+[12:01:04:439 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 24
+[12:01:04:439 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/mallard.html
+[12:01:04:439 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 25
+[12:01:04:439 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/meadowlark.html
+[12:01:04:439 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 26
+[12:01:04:439 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/mockingbird.html
+[12:01:04:440 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 27
+[12:01:04:440 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/nighthawk.html
+[12:01:04:440 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 28
+[12:01:04:440 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/osprey.html
+[12:01:04:440 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 29
+[12:01:04:440 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/owl.html
+[12:01:04:440 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 30
+[12:01:04:440 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pelican.html
+[12:01:04:440 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 31
+[12:01:04:440 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pheasant.html
+[12:01:04:441 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 32
+[12:01:04:441 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/pigeon.html
+[12:01:04:441 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 33
+[12:01:04:441 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/puffin.html
+[12:01:04:441 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 34
+[12:01:04:441 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/quail.html
+[12:01:04:441 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 35
+[12:01:04:441 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/raven.html
+[12:01:04:441 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 36
+[12:01:04:441 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/roadrunner.html
+[12:01:04:441 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 37
+[12:01:04:442 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/robin.html
+[12:01:04:442 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 38
+[12:01:04:442 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/sandpiper.html
+[12:01:04:442 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 39
+[12:01:04:442 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/sparrow.html
+[12:01:04:442 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 40
+[12:01:04:442 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/starling.html
+[12:01:04:442 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 41
+[12:01:04:442 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/stork.html
+[12:01:04:442 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 42
+[12:01:04:442 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/swallow.html
+[12:01:04:443 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 43
+[12:01:04:443 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/swan.html
+[12:01:04:443 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 44
+[12:01:04:443 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/tern.html
+[12:01:04:443 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 45
+[12:01:04:443 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/turkey.html
+[12:01:04:443 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 46
+[12:01:04:443 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/vulture.html
+[12:01:04:443 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 47
+[12:01:04:443 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/warbler.html
+[12:01:04:443 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 48
+[12:01:04:443 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/woodpecker.html
+[12:01:04:443 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 49
+[12:01:04:444 debug] WebCrawler.java@89 Thread-10: ******** Minion created for http://www.cs.usfca.edu/~sjengle/cs212/crawl/wren.html
+[12:01:04:444 debug] WorkQueue.java@70 Thread-10: increasing, Pending is now 50
+[12:01:04:896 debug] LoginDatabaseHandler.java@190 Thread-10: Login Users Table found.
+[12:01:04:907 debug] LoginDatabaseHandler.java@207 Thread-10: Search History Tables found.
+[12:01:04:916 debug] LoginDatabaseHandler.java@225 Thread-10: URL Tables found.
+[12:01:04:926 debug] LoginDatabaseHandler.java@243 Thread-10: URL Tables found.
+[12:01:04:926 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/albatross.htmlexisted.
+[12:01:04:926 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/birds.htmlexisted.
+[12:01:04:926 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/bluebird.htmlexisted.
+[12:01:04:926 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/cardinal.htmlexisted.
+[12:01:04:926 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/blackbird.htmlexisted.
+[12:01:05:317 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:05:317 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/blackbird.html
+[12:01:05:318 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 49
+[12:01:05:318 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:05:324 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:05:324 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/bluebird.html
+[12:01:05:324 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:05:324 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 48
+[12:01:05:325 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/cardinal.html
+[12:01:05:325 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:05:325 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:05:325 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 47
+[12:01:05:325 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/albatross.html
+[12:01:05:325 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:05:325 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 46
+[12:01:05:325 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:05:325 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:05:325 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/birds.html
+[12:01:05:325 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 45
+[12:01:05:325 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:05:338 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/chickadee.htmlexisted.
+[12:01:05:348 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/crow.htmlexisted.
+[12:01:05:348 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/dove.htmlexisted.
+[12:01:05:348 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/cuckoo.htmlexisted.
+[12:01:05:351 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/crane.htmlexisted.
+[12:01:05:656 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:05:657 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/crane.html
+[12:01:05:657 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 44
+[12:01:05:657 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:05:665 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:05:666 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/crow.html
+[12:01:05:666 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:05:666 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 43
+[12:01:05:666 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/chickadee.html
+[12:01:05:666 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:05:666 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:05:666 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 42
+[12:01:05:666 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/dove.html
+[12:01:05:666 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:05:666 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 41
+[12:01:05:666 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:05:666 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/cuckoo.html
+[12:01:05:666 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:05:666 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 40
+[12:01:05:666 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:05:686 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/duck.htmlexisted.
+[12:01:05:687 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/falcon.htmlexisted.
+[12:01:05:687 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/eagle.htmlexisted.
+[12:01:05:691 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/egret.htmlexisted.
+[12:01:05:696 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/finch.htmlexisted.
+[12:01:06:065 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:06:065 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/egret.html
+[12:01:06:066 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 39
+[12:01:06:066 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:06:074 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:06:074 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/falcon.html
+[12:01:06:074 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:06:074 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 38
+[12:01:06:074 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/finch.html
+[12:01:06:074 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:06:074 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:06:074 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 37
+[12:01:06:074 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/duck.html
+[12:01:06:074 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:06:074 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:06:075 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 36
+[12:01:06:075 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/eagle.html
+[12:01:06:075 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:06:075 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 35
+[12:01:06:075 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:06:089 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/goose.htmlexisted.
+[12:01:06:096 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/gull.htmlexisted.
+[12:01:06:096 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/heron.htmlexisted.
+[12:01:06:098 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/hawk.htmlexisted.
+[12:01:06:098 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/hummingbird.htmlexisted.
+[12:01:06:482 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:06:482 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/hummingbird.html
+[12:01:06:482 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 34
+[12:01:06:482 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:06:491 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:06:491 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/gull.html
+[12:01:06:491 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:06:491 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 33
+[12:01:06:491 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/goose.html
+[12:01:06:491 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:06:491 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:06:492 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 32
+[12:01:06:492 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:06:492 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/hawk.html
+[12:01:06:492 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:06:492 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/heron.html
+[12:01:06:492 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 31
+[12:01:06:492 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:06:492 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 30
+[12:01:06:492 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:06:504 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/ibis.htmlexisted.
+[12:01:06:513 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/kingfisher.htmlexisted.
+[12:01:06:515 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/mallard.htmlexisted.
+[12:01:06:516 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/loon.htmlexisted.
+[12:01:06:516 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/magpie.htmlexisted.
+[12:01:06:899 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:06:899 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/loon.html
+[12:01:06:899 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 29
+[12:01:06:899 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:06:908 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:06:909 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/ibis.html
+[12:01:06:909 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:06:909 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 28
+[12:01:06:909 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/magpie.html
+[12:01:06:909 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:06:909 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:06:909 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 27
+[12:01:06:909 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/kingfisher.html
+[12:01:06:909 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:06:909 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:06:909 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 26
+[12:01:06:909 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/mallard.html
+[12:01:06:909 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:06:909 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 25
+[12:01:06:909 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:06:922 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/meadowlark.htmlexisted.
+[12:01:06:931 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/mockingbird.htmlexisted.
+[12:01:06:932 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/osprey.htmlexisted.
+[12:01:06:932 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/nighthawk.htmlexisted.
+[12:01:06:934 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/owl.htmlexisted.
+[12:01:07:315 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:07:315 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/meadowlark.html
+[12:01:07:315 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 24
+[12:01:07:315 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:07:324 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:07:325 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/nighthawk.html
+[12:01:07:325 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:07:325 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 23
+[12:01:07:325 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/mockingbird.html
+[12:01:07:325 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:07:325 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:07:325 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 22
+[12:01:07:325 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/owl.html
+[12:01:07:325 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:07:325 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:07:325 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 21
+[12:01:07:325 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:07:325 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/osprey.html
+[12:01:07:325 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 20
+[12:01:07:325 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:07:337 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/pelican.htmlexisted.
+[12:01:07:361 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/pheasant.htmlexisted.
+[12:01:07:361 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/quail.htmlexisted.
+[12:01:07:361 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/pigeon.htmlexisted.
+[12:01:07:361 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/puffin.htmlexisted.
+[12:01:07:707 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:07:707 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pheasant.html
+[12:01:07:708 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 19
+[12:01:07:708 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:07:718 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:07:718 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pelican.html
+[12:01:07:718 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:07:718 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 18
+[12:01:07:718 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:07:718 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/quail.html
+[12:01:07:718 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:07:718 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 17
+[12:01:07:718 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/puffin.html
+[12:01:07:718 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:07:718 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:07:719 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 16
+[12:01:07:719 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/pigeon.html
+[12:01:07:719 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:07:719 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 15
+[12:01:07:719 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:07:729 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/raven.htmlexisted.
+[12:01:07:739 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/sandpiper.htmlexisted.
+[12:01:07:739 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/robin.htmlexisted.
+[12:01:07:743 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/roadrunner.htmlexisted.
+[12:01:07:743 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/sparrow.htmlexisted.
+[12:01:08:041 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:08:041 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/raven.html
+[12:01:08:042 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 14
+[12:01:08:042 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:08:052 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:08:052 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/roadrunner.html
+[12:01:08:052 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:08:052 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 13
+[12:01:08:052 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/robin.html
+[12:01:08:052 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:08:052 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:08:052 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 12
+[12:01:08:052 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/sandpiper.html
+[12:01:08:052 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:08:052 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 11
+[12:01:08:052 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:08:060 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:08:060 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/sparrow.html
+[12:01:08:060 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 10
+[12:01:08:060 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:08:064 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/starling.htmlexisted.
+[12:01:08:074 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/swallow.htmlexisted.
+[12:01:08:075 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/swan.htmlexisted.
+[12:01:08:075 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/stork.htmlexisted.
+[12:01:08:085 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/tern.htmlexisted.
+[12:01:08:399 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:08:399 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/swan.html
+[12:01:08:400 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 9
+[12:01:08:400 debug] WebCrawler.java@96 Thread-7: urlsize: 50, false
+[12:01:08:408 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:08:408 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/starling.html
+[12:01:08:408 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:08:408 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 8
+[12:01:08:409 debug] WebCrawler.java@96 Thread-6: urlsize: 50, false
+[12:01:08:409 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:08:409 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/stork.html
+[12:01:08:409 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 7
+[12:01:08:409 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/swallow.html
+[12:01:08:409 debug] WebCrawler.java@96 Thread-9: urlsize: 50, false
+[12:01:08:409 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 6
+[12:01:08:409 debug] WebCrawler.java@96 Thread-10: urlsize: 50, false
+[12:01:08:418 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:08:419 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/tern.html
+[12:01:08:419 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 5
+[12:01:08:419 debug] WebCrawler.java@96 Thread-8: urlsize: 50, false
+[12:01:08:420 debug] LoginDatabaseHandler.java@533 Thread-7: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/turkey.htmlexisted.
+[12:01:08:434 debug] LoginDatabaseHandler.java@533 Thread-9: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/warbler.htmlexisted.
+[12:01:08:434 debug] LoginDatabaseHandler.java@533 Thread-10: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/woodpecker.htmlexisted.
+[12:01:08:434 debug] LoginDatabaseHandler.java@533 Thread-6: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/vulture.htmlexisted.
+[12:01:08:446 debug] LoginDatabaseHandler.java@533 Thread-8: Checking if url http://www.cs.usfca.edu/~sjengle/cs212/crawl/wren.htmlexisted.
+[12:01:08:823 debug] ThreadSafeInvertedIndex.java@105 Thread-6: going to unlock
+[12:01:08:824 debug] WebCrawler.java@185 Thread-6: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/vulture.html
+[12:01:08:824 debug] WorkQueue.java@81 Thread-6: decreasing, Pending is now 4
+[12:01:08:833 debug] ThreadSafeInvertedIndex.java@105 Thread-8: going to unlock
+[12:01:08:833 debug] WebCrawler.java@185 Thread-8: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/wren.html
+[12:01:08:833 debug] ThreadSafeInvertedIndex.java@105 Thread-10: going to unlock
+[12:01:08:834 debug] WorkQueue.java@81 Thread-8: decreasing, Pending is now 3
+[12:01:08:834 debug] WebCrawler.java@185 Thread-10: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/woodpecker.html
+[12:01:08:834 debug] ThreadSafeInvertedIndex.java@105 Thread-9: going to unlock
+[12:01:08:834 debug] WorkQueue.java@81 Thread-10: decreasing, Pending is now 2
+[12:01:08:834 debug] WebCrawler.java@185 Thread-9: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/warbler.html
+[12:01:08:834 debug] ThreadSafeInvertedIndex.java@105 Thread-7: going to unlock
+[12:01:08:834 debug] WorkQueue.java@81 Thread-9: decreasing, Pending is now 1
+[12:01:08:834 debug] WebCrawler.java@185 Thread-7: ######## Minion finished http://www.cs.usfca.edu/~sjengle/cs212/crawl/turkey.html
+[12:01:08:834 debug] WorkQueue.java@81 Thread-7: decreasing, Pending is now 0
+[12:01:08:834 debug] WebCrawler.java@63 main: total size:50
+[12:01:08:835 debug] Driver.java@164 main: $$$$$$$$$$$$$$$$$$ done with traversing URL
+[12:01:08:835 debug] Driver.java@170 main: calling shut down
+[12:01:08:835 debug] MultiThreadInvertedIndexBuilder.java@44 main: Shutting down
+[12:01:08:835 debug] WorkQueue.java@132 main: work queue been shut down.
+[12:01:08:835 debug] Driver.java@172 main: Done with InvertedIndex

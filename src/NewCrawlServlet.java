@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.MalformedURLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -28,11 +27,33 @@ public class NewCrawlServlet extends HttpServlet {
 		out.printf(
 				"<body background=http://img0.gtsstatic.com/wallpapers/f94bda506ba71e59ee5ad53fff49729c_large.jpeg>");
 		out.printf("<body>%n");
-		out.printf("<p>Enter the new crawl if you want<p>");
+		String error = request.getParameter("error");
+		if (error != null) {
+			out.printf("<p style=\"color: red;\">" + "Invalid link" + "</p>");
+		}
 
+		String status = request.getParameter("ok");
+		if (status != null) {
+			out.printf(
+					"<p style=\"color: green;\">Your new crawl has been added</p>");
+		}
+
+		out.printf("<p>Enter the new crawl if you want<p>");
 		printForm(request, response);
 		String newcrawl = request.getParameter("newcrawl");
-		addNewDatabase(newcrawl);
+
+		String userchoice = request.getParameter("addcrawl");
+		if (userchoice != null) {
+			if ((newcrawl == null) || newcrawl.trim().isEmpty()) {
+				response.sendRedirect("/new_crawl?error=invalid_link");
+			}
+			else {
+				addNewDatabase(newcrawl, request, response);
+				response.sendRedirect("/new_crawl?ok");
+			}
+		}
+		// addNewDatabase(newcrawl, request, response);
+
 		out.printf("</body>%n");
 		out.printf("</html>%n");
 
@@ -47,16 +68,14 @@ public class NewCrawlServlet extends HttpServlet {
 		out.printf(
 				"<input type=\"text\" name=\"newcrawl\" maxlength=\"200\" size=\"100\">");
 		out.printf(
-				"<p><input type=\"submit\" value=\"add new crawl to the database\">");
+				"<p><input type=\"submit\" name=\"addcrawl\" value=\"add new crawl to the database\">");
 
-		out.printf("<br><a href='/'>Back to Search</a>");
-		String newcrawl = request.getParameter("newcrawl");
-		System.out.println(newcrawl);
+		out.printf("<h2><a href='/'>Back to Search</a><h2>");
 	}
 
-	private void addNewDatabase(String seed) throws MalformedURLException {
+	private void addNewDatabase(String seed, HttpServletRequest request,
+			HttpServletResponse response) throws IOException {
 		ThreadSafeInvertedIndex newIndex = new ThreadSafeInvertedIndex();
-		System.out.println("adding new ");
 		WebCrawler webcrawler = new WebCrawler(numThread, newIndex);
 		webcrawler.traverse(seed);
 

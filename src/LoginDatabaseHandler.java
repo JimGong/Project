@@ -1220,7 +1220,6 @@ public class LoginDatabaseHandler {
 
 	public Status updateSnippet(String url, String snippet) {
 		Status status = Status.ERROR;
-
 		if (isBlank(url)) {
 			status = Status.MISSING_VALUES;
 			log.debug(status);
@@ -1302,7 +1301,7 @@ public class LoginDatabaseHandler {
 				out.printf("<p style='line-height:18px';>"
 						+ snippet.getString("snippet") + "<p>");
 			}
-			out.printf("</font>");
+			out.printf("</font>%n");
 
 			status = Status.OK;
 

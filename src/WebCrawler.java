@@ -159,7 +159,7 @@ public class WebCrawler {
 							firstSentense.toString().trim());
 				}
 				else {
-					LoginBaseServlet.dbhandler.updateSnippet(line,
+					LoginBaseServlet.dbhandler.updateSnippet(link,
 							firstSentense.toString().trim());
 				}
 				/* page snipper */
@@ -192,7 +192,6 @@ public class WebCrawler {
 		Pattern p = Pattern.compile("<title>(.*?)</title>");
 		Matcher m = p.matcher(dirtyHTML);
 		while (m.find() == true) {
-			// System.out.println("$$$$$$$$$$$$ " + m.group(1));
 			return m.group(1);
 		}
 		return "";

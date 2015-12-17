@@ -18,8 +18,6 @@ public class VisitedURLServlet extends HttpServlet {
 
 		LoginBaseServlet.dbhandler.updateURLVisitedTime(url);
 
-		// stores for that user that the link was visited
-		System.out.println("redirect to url: " + url);
 		response.sendRedirect(url);
 
 	}
