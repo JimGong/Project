@@ -51,15 +51,17 @@ public class LinkParser {
 		// loop through every match found in text
 		while (m.find()) {
 			// add the appropriate group from regular expression to list
-			
-			// TODO Try/Catch exceptions INSIDE the while loop!
-			URL absolute = new URL(base, m.group(GROUP));
 
-			URL cleanAbsolute = new URL(absolute.getProtocol(),
-					absolute.getHost(), absolute.getFile());
+			try {
+				URL absolute = new URL(base, m.group(GROUP));
 
-			links.add(cleanAbsolute.toString());
+				URL cleanAbsolute = new URL(absolute.getProtocol(),
+						absolute.getHost(), absolute.getFile());
 
+				links.add(cleanAbsolute.toString());
+			} catch (MalformedURLException ex) {
+				System.err.println("invalid link");
+			}
 		}
 
 		return links;

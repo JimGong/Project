@@ -100,29 +100,27 @@ public class WebCrawler {
 
 				/* get html from the link */
 				String html = HTTPFetcher.fetchHTML(link);
-				String body = HTMLCleaner.cleanHTML(html); // TODO Remove this!
-				String title = getTitle(html);
 
 				/*
 				 * find url add to the ArrayList if urlSet size smaller than 50
 				 */
-				lock.lockReadWrite(); // TODO Put this AFTER list links
+
 				ArrayList<String> innerURLs = LinkParser
 						.listLinks(new URL(link), html);
+				lock.lockReadWrite();
 
-				// TODO Use an enhanced for loop
-				for (int i = 0; (i < innerURLs.size())
-						&& (urlSet.size() < MAX_CAPACITY); i++) {
-					String innerAbsoluteLink = innerURLs.get(i);
+				for (String innerAbsoluteLink : innerURLs) {
 					urlHelper(innerAbsoluteLink);
 				}
 				lock.unlockReadWrite();
+
+				String title = getTitle(html);
 
 				html = HTMLCleaner.cleanHTML(html);
 
 				/* page snipper */
 				BufferedReader reader = new BufferedReader(
-						new StringReader(body));
+						new StringReader(html));
 				StringBuffer firstSentense = new StringBuffer();
 				String line;
 				while (((line = reader.readLine()) != null)
