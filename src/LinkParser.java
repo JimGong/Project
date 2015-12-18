@@ -51,7 +51,8 @@ public class LinkParser {
 		// loop through every match found in text
 		while (m.find()) {
 			// add the appropriate group from regular expression to list
-
+			
+			// TODO Try/Catch exceptions INSIDE the while loop!
 			URL absolute = new URL(base, m.group(GROUP));
 
 			URL cleanAbsolute = new URL(absolute.getProtocol(),
